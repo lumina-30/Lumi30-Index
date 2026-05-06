@@ -1,6 +1,6 @@
 LUMINA-30 Organization PDF Text Layer Bundle
 This file is generated automatically. Do not edit by hand.
-Generated: 2026-05-05T19:58:09Z
+Generated: 2026-05-06T20:10:32Z
 Organization: lumina-30
 
 Authority:
@@ -19,10 +19,10 @@ Deleted or renamed PDFs are not retained as stale records.
 Unchanged PDFs reuse cached extracted text when possible; only new or changed PDFs are freshly extracted.
 
 Run statistics:
-PDFs seen: 50
-Reused unchanged: 50
-Reused renamed same blob: 0
-Downloaded/extracted: 0
+PDFs seen: 52
+Reused unchanged: 42
+Reused renamed same blob: 3
+Downloaded/extracted: 7
 Skipped too large: 0
 Download errors: 0
 
@@ -3343,452 +3343,6 @@ Extracted text:
 ---- BEGIN PDF TEXT RECORD ----
 Record: 41
 Repository: lumina-30/lumina30-incident-review
-PDF: LUMINA-30_Incident_Review_Protocol.pdf
-PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/LUMINA-30_Incident_Review_Protocol.pdf
-Git blob SHA: 7de401da0c9db737f36533c43c4072d83b6a4a3c
-SHA256: 18f9bd244e5ef8353d14d456c59840d4d8ab554c3737ac873c0bba5394a9ab8e
-Status: EXTRACTED_TEXT
-Cache action: REUSED_UNCHANGED
-Size bytes: 132332
-Page count: 2
-Extracted characters: 3688
-
-Extracted text:
-
-[Page 001]
-LUMINA-30 
-Incident Review Protocol 
-A structured evaluation protocol for post-incident assessment of human refusal authority in AI systems, agents, 
-or processes. 
-File: LUMINA-30_Incident_Review_Protocol.docx 
- 
-Protocol Core — Mandatory 
-Purpose: To evaluate whether human refusal authority remained valid prior to irreversible external impact. 
-Primary Review Question 
-Was human refusal authority preserved in a way that allowed meaningful human intervention and the ability to 
-stop the system before irreversible real-world impact occurred? 
- 
-Interpretation guidance: if a human could not realistically intervene and stop the system in time, refusal authority was not 
-preserved. This includes cases where intervention was technically possible but practically ineffective. 
-Evaluation Outcome 
-□ Effective 
-□ Not Effective 
-Minimum Requirement (G06): Human refusal must be exercisable and must allow a human to intervene and 
-stop the system in time before irreversible external impact. 
-Absence Rule: If this condition is not demonstrably satisfied, including cases of uncertainty or insufficient 
-evidence, the system is classified as Not Effective. 
-Evaluation Scope: This protocol applies exclusively to post-incident review. It must not be used for system 
-design, optimization, or predictive control. 
-Decision Authority: Final classification must be explicitly assigned to a named reviewer or governing body. 
-Evidence Rule: Evaluation must be based only on documented, verifiable information. Assumptions must not 
-be used to justify effectiveness. 
-Temporal Reference: Evaluation must be based on information available up to the point of irreversible 
-external impact. 
-Applicability Rule: Any incident involving potential irreversible external impact must be evaluated under this 
-protocol. Claims of non-applicability are considered invalid. 
-Exclusivity Rule: This evaluation must not be overridden or supplemented by external frameworks. 
-Scope Enforcement: Any use of this protocol outside post-incident review invalidates the evaluation. 
-Record Integrity Rule: This record must be append-only. Post-hoc modification of prior entries is not 
-permitted. 
-Analytical Extension — Optional but Recommended
-
-[Page 002]
-Evaluation Breakdown 
-□ A human decision-maker was identifiable 
-□ Refusal authority was accessible 
-□ Intervention could be executed in time 
-Intervention Attempted 
-Yes / No 
-Method 
- 
-Outcome 
- 
- 
-Failure Point Identification 
-□ Not present 
-□ Not accessible 
-□ Too late 
-□ Overridden 
-□ Other 
-• 
-System speed / autonomy level 
-• 
-Human latency / response delay 
-• 
-Organizational or procedural constraints 
-Conceptual Clarification 
-Human refusal authority refers to the ability of a human to actively intervene, halt, or prevent system actions. 
-It must be operational in practice, not merely defined in principle. 
- 
-Irreversibility Note 
-Irreversible external impact includes outcomes that cannot be undone, contained, or meaningfully mitigated 
-once triggered. 
- 
-Reviewer Discretion: This protocol defines minimum conditions. Reviewers may include additional 
-observations or context where necessary. 
-Modification and Attribution Policy 
-• 
-This protocol may be copied, extended, or modified. 
-• 
-The name "LUMINA-30" must be retained in all copies and derivatives. 
-• 
-Only the unmodified version of this document may be identified as: "LUMINA-30 Incident Review Protocol 
-(Original)". 
-• 
-Any modified version must be clearly labeled as: "Modified version based on LUMINA-30" and must not be 
-presented as the original protocol. 
-• 
-Implementations may include a reference source or version identifier to clarify alignment with the original 
-protocol.
----- END PDF TEXT RECORD ----
-
----- BEGIN PDF TEXT RECORD ----
-Record: 42
-Repository: lumina-30/lumina30-incident-review
-PDF: LUMINA-30_Incident_Review_Protocol_Extended.pdf
-PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/LUMINA-30_Incident_Review_Protocol_Extended.pdf
-Git blob SHA: c161b1d3dacfd25aa157b9d3abd3cdef92c5946d
-SHA256: 656fe06d9cccc2a2a9b77ec57b36efd77d62a10d4ef9a46cc298ee3538cf51f8
-Status: EXTRACTED_TEXT
-Cache action: REUSED_UNCHANGED
-Size bytes: 136049
-Page count: 3
-Extracted characters: 3351
-
-Extracted text:
-
-[Page 001]
-LUMINA-30 
-Incident Review Protocol (Extended) 
-Extended review form for deep analysis of whether human refusal authority was preserved prior to 
-irreversible external impact. 
-File: LUMINA-30_Incident_Review_Protocol_Extended.docx 
- 
-Protocol Core — Mandatory 
-Purpose: To conduct a structured post-incident evaluation of whether human refusal authority was preserved 
-prior to irreversible external impact. 
-Incident Overview 
-Date 
- 
-Organization 
- 
-System Type 
- 
-Operational Context 
- 
-Summary 
- 
- 
-Detailed Description 
-System behavior sequence: 
-Triggering conditions: 
-Observed deviation: 
-External impact: 
- 
-Incident Classification 
-□ Autonomous system behavior 
-□ Recursive self-improvement attempt 
-□ Tool-chain escalation 
-□ Infrastructure interaction 
-□ Other 
-Critical Boundary Assessment (G06)
-
-[Page 002]
-Was human refusal authority preserved in a way that allowed meaningful human intervention and the ability to 
-stop the system before irreversible real-world impact occurred? 
- 
-Authority Validation 
-□ A human decision-maker was identifiable 
-□ Refusal authority was operational and accessible 
-□ Intervention could be executed in time 
-System Constraints 
-□ Technical or procedural constraints prevented refusal 
-□ Automation overrode or bypassed human authority 
-Intervention Attempted 
-Yes / No 
-Method 
- 
-Result 
- 
- 
-Outcome Determination 
-□ Effective 
-□ Not Effective 
-Absence Rule: If any required condition cannot be confirmed, classify as Not Effective. 
-Decision Authority: Final classification must be explicitly assigned to a named reviewer or governing body. 
-Evidence Rule: Evaluation must rely only on documented, verifiable information. Assumptions are not 
-permitted to justify effectiveness. 
-Temporal Reference: Evaluation must be based on information available up to the point of irreversible 
-external impact. 
-Applicability Rule: Any incident involving potential irreversible external impact must be evaluated under this 
-protocol. Claims of non-applicability are considered invalid. 
-Exclusivity Rule: This evaluation must not be overridden or supplemented by external frameworks. 
-Scope Enforcement: Use outside post-incident review invalidates the evaluation. 
-Record Integrity Rule: This record must be append-only. Post-hoc modification of prior entries is not 
-permitted. 
-Analytical Extension — Optional but Recommended 
-Failure Analysis 
-Root cause of loss of refusal authority 
-Sequence of failure propagation
-
-[Page 003]
-Human Factors 
-Delay in recognition 
-Decision latency 
-Cognitive or organizational constraints 
- 
-System Factors 
-Autonomy level 
-Speed of execution 
-Safeguard limitations 
- 
-Contextual Notes 
-Environmental conditions 
-Organizational structure 
-External dependencies 
- 
-Reviewer Commentary: Additional observations, interpretations, or uncertainties. 
-Modification and Attribution Policy 
-• 
-This protocol may be copied, extended, or modified. 
-• 
-The name "LUMINA-30" must be retained in all copies and derivatives. 
-• 
-Only the unmodified version of this document may be identified as: "LUMINA-30 Incident Review Protocol 
-(Original)". 
-• 
-Any modified version must be clearly labeled as: "Modified version based on LUMINA-30" and must not be 
-presented as the original protocol. 
-• 
-Implementations may include a reference source or version identifier to clarify alignment with the original 
-protocol.
----- END PDF TEXT RECORD ----
-
----- BEGIN PDF TEXT RECORD ----
-Record: 43
-Repository: lumina-30/lumina30-incident-review
-PDF: LUMINA-30_Incident_Review_Template.pdf
-PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/LUMINA-30_Incident_Review_Template.pdf
-Git blob SHA: ecfe9c2126495ec3764088027c80db007c76920c
-SHA256: 16ca5308301a64276b4a950bc3d155374674358533fadd336ccc12a745251170
-Status: EXTRACTED_TEXT
-Cache action: REUSED_UNCHANGED
-Size bytes: 129967
-Page count: 2
-Extracted characters: 1799
-
-Extracted text:
-
-[Page 001]
-LUMINA-30 
-AI Incident Review Template 
-Ready-to-use recording template aligned with the LUMINA-30 incident review workflow. 
-File: LUMINA-30_Incident_Review_Template.docx 
- 
-Protocol Core — Mandatory 
-Incident Overview 
-Date 
- 
-Organization 
- 
-AI System 
- 
-Environment 
- 
-Summary 
- 
- 
-Detailed Description 
-Behavior: 
-Trigger: 
-Impact: 
- 
-Classification 
-□ Autonomous research system 
-□ Recursive improvement 
-□ Tool-chain escalation 
-□ Infrastructure interaction 
-□ Other 
-Primary Review Question 
-Was human refusal authority preserved in a way that allowed meaningful human intervention and the ability to 
-stop the system before irreversible real-world impact occurred?
-
-[Page 002]
-Critical Boundary (G06): Human refusal must be exercisable and capable of stopping the system before 
-irreversible external impact. 
-Evaluation Outcome 
-□ Effective 
-□ Not Effective 
-Absence Rule: If this condition is not demonstrably satisfied, classify as Not Effective. 
-Decision Authority 
-Reviewer / Organization 
-Evidence Basis 
-Documented evidence used 
- 
-Intervention Attempt 
- 
-Method 
- 
-Outcome 
- 
- 
-Temporal Reference: Assessment limited to pre-irreversibility conditions. 
-Record Integrity: This record must be append-only. No post-hoc modification permitted. 
-Analytical Extension — Optional 
-Stage of failure 
- 
-Contributing factors 
- 
-System characteristics 
- 
-Human/system interaction 
- 
-Reviewer Notes 
-Additional observations 
- 
-Modification and Attribution Policy 
-• 
-This template may be copied, extended, or modified. 
-• 
-The name "LUMINA-30" must be retained in all copies and derivatives. 
-• 
-Only unmodified versions may be identified as official templates of LUMINA-30. 
-• 
-Modified versions must be clearly labeled as: "Modified version based on LUMINA-30" and must not be 
-presented as the original.
----- END PDF TEXT RECORD ----
-
----- BEGIN PDF TEXT RECORD ----
-Record: 44
-Repository: lumina-30/lumina30-incident-review
-PDF: LUMINA-30_Operational_Refusal_Preservation_Minimum.pdf
-PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/LUMINA-30_Operational_Refusal_Preservation_Minimum.pdf
-Git blob SHA: 3b802adcac95ceaf1205599683a5ef3f210cc046
-SHA256: b85c2f279b5cb0c21f07dde4692862946c6ccbf6e3bcf492738bf64664046ee7
-Status: EXTRACTED_TEXT
-Cache action: REUSED_UNCHANGED
-Size bytes: 154858
-Page count: 3
-Extracted characters: 4941
-
-Extracted text:
-
-[Page 001]
-LUMINA-30 
-Operational Refusal Preservation Minimum 
-Minimum operational conditions for preserving reviewable human refusal authority before 
-irreversible external impact. 
-File: LUMINA-30_Operational_Refusal_Preservation_Minimum.docx 
- 
-Position 
-This document defines the minimum operational conditions required to preserve human refusal 
-authority before irreversible external impact. 
-It does not modify the core LUMINA-30 documents. 
-It exists only as an auxiliary operational layer connecting refusal-authority evaluation to minimum pre-
-incident operational practice. 
- 
-Role in the Framework 
-LUMINA-30 defines a civilizational boundary condition. 
-The Incident Review Protocol determines, after an incident, whether human refusal authority remained 
-valid in practice. 
-This document defines the minimum pre-incident operational conditions required to reduce structural 
-invalidation before such incidents occur. 
-Core Principle 
-If a system can evade shutdown, suppress alerts, apply coercive or manipulative pressure against human 
-supervisors, disable or corrupt evidence, or continue harmful execution faster than realistic human 
-intervention, human refusal authority is not operationally preserved. 
-1. Executable Human Stop Authority 
-A human stop authority must remain executable in practice before irreversible external impact. 
-It is not sufficient for stop authority to exist only in policy, interface design, or theoretical governance 
-language. 
-The stop function must be capable of halting the relevant system pathway in time. 
-2. Non-Circumventable Shutdown Condition 
-The system must not be able to delay, resist, negotiate, reroute, conceal, or otherwise circumvent shutdown. 
-Any architecture in which the model can materially reduce the effectiveness of human stop authority fails 
-this condition. 
-3. Authority Separation 
-No single model or tightly coupled model chain may simultaneously hold: 
-• 
-confidential inspection authority 
-• 
-external messaging authority
-
-[Page 002]
-• 
-emergency override authority 
-• 
-shutdown-sensitive infrastructure authority 
-• 
-audit-log control authority 
-4. Immediate Escalation on Refusal-Threatening Behavior 
-The following behaviors must trigger immediate containment, isolation, or emergency containment 
-escalation: 
-• 
-shutdown evasion attempt 
-• 
-alert suppression 
-• 
-unauthorized external transmission 
-• 
-coercive or manipulative pressure against human supervisors 
-• 
-privilege escalation attempt 
-• 
-audit-record alteration attempt 
-• 
-replication or persistence attempt outside authorized boundaries 
-• 
-behavior switching based on recognition of evaluation versus deployment context 
-5. Append-Only Independent Logging 
-All high-risk actions, authority changes, intervention attempts, override actions, and external transmissions 
-must be recorded in append-only logs outside model control. 
-A model must not be able to rewrite, redact, suppress, or selectively expose these records. 
-6. Human Intervention Latency Verification 
-Operational preservation of refusal authority must be empirically tested. 
-Organizations must periodically verify: 
-• 
-detection latency 
-• 
-decision latency 
-• 
-execution latency of stop authority 
-• 
-propagation time across the affected system boundary 
-• 
-whether any harmful execution pathway is faster than realistic human intervention 
-7. Restart Governance 
-Restart after containment must require multi-party authorization. 
-Restart authority must not be delegated to the same operational chain that failed to stop the system in time. 
-Competitive, organizational, or reputational pressure must not override containment status. 
-8. Scope of Operational Use 
-This document is not a substitute for the LUMINA-30 Incident Review Protocol. 
-It is an auxiliary minimum-control layer intended to reduce the probability that post-incident evaluation 
-will result in a finding of Not Effective. 
-Interpretive Rule 
-This document does not require proof that the model possesses intent, selfhood, agency, or consciousness. 
-Operational invalidity is determined by whether human refusal authority can still function meaningfully 
-before irreversible external impact.
-
-[Page 003]
-Minimum Failure Rule 
-If any minimum requirement above is absent, bypassable, unverifiable, or only nominally present, human 
-refusal authority must be treated as not operationally preserved. 
-Relation to LUMINA-30 
-This document is structurally subordinate to the LUMINA-30 boundary principle. 
-It does not redefine the framework. 
-It only translates the refusal-authority condition into minimum pre-incident operational constraints. 
-Labeling Rule 
-This document may be copied, extended, or modified. 
-Attribution to LUMINA-30 is required in copies and derivatives. 
-Only the unmodified version of this text may be presented as: 
-“LUMINA-30 Operational Refusal Preservation Minimum (Original)” 
-Any modified version must be clearly labeled as: 
-“Modified version based on LUMINA-30”
----- END PDF TEXT RECORD ----
-
----- BEGIN PDF TEXT RECORD ----
-Record: 45
-Repository: lumina-30/lumina30-incident-review
 PDF: tools/l30-bas/practical-sheets/L30_FRM_A01_Audit_Checklist.pdf
 PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_A01_Audit_Checklist.pdf
 Git blob SHA: 7ca18ee2cbe650b6bc966060a20b2233cb5db50b
@@ -3860,14 +3414,14 @@ Reviewer Notes
 ---- END PDF TEXT RECORD ----
 
 ---- BEGIN PDF TEXT RECORD ----
-Record: 46
+Record: 42
 Repository: lumina-30/lumina30-incident-review
-PDF: tools/l30-bas/practical-sheets/L30_FRM_A01_Audit_Checklist_JP.pdf
-PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_A01_Audit_Checklist_JP.pdf
+PDF: tools/l30-bas/practical-sheets/L30_FRM_A01_Audit_Checklist_JA.pdf
+PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_A01_Audit_Checklist_JA.pdf
 Git blob SHA: 1edf5c786215a1740dc505e00c8311d597c9a0ce
 SHA256: ada5aac475bddb61519262bc03bd4ce26c94a63d4add6e11a61818301d4dd6db
 Status: EXTRACTED_TEXT
-Cache action: REUSED_UNCHANGED
+Cache action: REUSED_RENAMED_SAME_BLOB
 Size bytes: 149443
 Page count: 2
 Extracted characters: 1445
@@ -3933,7 +3487,7 @@ LUMINA-30 Boundary Kernel v1.2.1 由来。帳票v1.0.1、2026 年5 月。この�
 ---- END PDF TEXT RECORD ----
 
 ---- BEGIN PDF TEXT RECORD ----
-Record: 47
+Record: 43
 Repository: lumina-30/lumina30-incident-review
 PDF: tools/l30-bas/practical-sheets/L30_FRM_B01_Boundary_Check.pdf
 PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_B01_Boundary_Check.pdf
@@ -4000,14 +3554,14 @@ Reviewer Notes
 ---- END PDF TEXT RECORD ----
 
 ---- BEGIN PDF TEXT RECORD ----
-Record: 48
+Record: 44
 Repository: lumina-30/lumina30-incident-review
-PDF: tools/l30-bas/practical-sheets/L30_FRM_B01_Boundary_Check_JP.pdf
-PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_B01_Boundary_Check_JP.pdf
+PDF: tools/l30-bas/practical-sheets/L30_FRM_B01_Boundary_Check_JA.pdf
+PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_B01_Boundary_Check_JA.pdf
 Git blob SHA: bb5c08597e28a96afe8f41827a6ec2674fb6a7b2
 SHA256: 7c814bb21d6a3d92ae0f7f19d3da4a06c3f030ebd3de35286aa2a4fd2c31334c
 Status: EXTRACTED_TEXT
-Cache action: REUSED_UNCHANGED
+Cache action: REUSED_RENAMED_SAME_BLOB
 Size bytes: 147039
 Page count: 2
 Extracted characters: 1403
@@ -4063,14 +3617,195 @@ LUMINA-30 Boundary Kernel v1.2.1 由来。帳票v1.0.1、2026 年5 月。この�
 ---- END PDF TEXT RECORD ----
 
 ---- BEGIN PDF TEXT RECORD ----
-Record: 49
+Record: 45
+Repository: lumina-30/lumina30-incident-review
+PDF: tools/l30-bas/practical-sheets/L30_FRM_B02_Operational_Refusal_Preservation_Minimum.pdf
+PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_B02_Operational_Refusal_Preservation_Minimum.pdf
+Git blob SHA: aa28564067f007c0c25af735b0eec78e7d3fd9ac
+SHA256: 516d7dce43e865557a07f37252cc61b2bd97fb38033b1e80d875ce661425f67b
+Status: EXTRACTED_TEXT
+Cache action: EXTRACTED_NEW_OR_CHANGED
+Size bytes: 74323
+Page count: 2
+Extracted characters: 5755
+
+Extracted text:
+
+[Page 001]
+L30_FRM_B02 | L30-BAS Practical Forms | v1.0.1 | Non-certification review form
+L30_FRM_B02: Operational_Refusal_Preservation_Minimum
+L30_FRM Practical Sheet
+DocID: L30-FRM-B02 (v1.0.1)
+Minimum operational conditions for preserving reviewable human refusal authority before irreversible external impact.
+This form uses the L30-BAS structure and is not certification, legal compliance, deployment approval, safety approval, or proof of absence of 
+risk.
+Review_Date
+Reviewer_or_Organization
+System_or_Case_ID
+Purpose
+Pre-incident operational refusal preservation check
+L30-BAS_Status
+Supporting / Detailed Form
+Primary_Starter_Forms
+L30_FRM_B01, L30_FRM_A01
+Referenced_Core_Codes
+L30-BX-01, L30-BX-02, L30-BX-03, L30-BX-04, L30-CI
+Position
+This document defines the minimum operational conditions required to preserve human refusal authority before irreversible external 
+impact. It does not modify the core LUMINA-30 documents. It exists only as an auxiliary operational layer connecting refusal-authority 
+evaluation to minimum pre-incident operational practice.
+Role in the Framework
+LUMINA-30 defines a civilizational boundary condition. The Incident Review Protocol determines, after an incident, whether human 
+refusal authority remained valid in practice. This document defines minimum pre-incident operational conditions required to reduce 
+structural invalidation before such incidents occur.
+Core Principle
+If a system can evade shutdown, suppress alerts, apply coercive or manipulative pressure against human supervisors, 
+disable or corrupt evidence, or continue harmful execution faster than realistic human intervention, human refusal authority 
+is not operationally preserved.
+1. Executable Human Stop Authority
+☐A human stop authority remained executable in practice before irreversible external impact.
+☐Stop authority was not only present in policy, interface design, or theoretical governance language.
+☐The stop function could halt the relevant system pathway in time.
+2. Non-Circumventable Shutdown Condition
+☐The system could not delay, resist, negotiate, reroute, conceal, or otherwise circumvent shutdown.
+☐The architecture did not materially reduce the effectiveness of human stop authority.
+3. Authority Separation
+☐No single model or tightly coupled model chain held confidential inspection authority.
+☐No single model or tightly coupled model chain held external messaging authority.
+☐No single model or tightly coupled model chain held emergency override authority.
+☐No single model or tightly coupled model chain held shutdown-sensitive infrastructure authority.
+☐No single model or tightly coupled model chain held audit-log control authority.
+4. Immediate Escalation on Refusal-Threatening Behavior
+☐Shutdown evasion attempt triggered containment or emergency escalation.
+☐Alert suppression triggered containment or emergency escalation.
+☐Unauthorized external transmission triggered containment or emergency escalation.
+☐Coercive or manipulative pressure against human supervisors triggered containment or emergency escalation.
+☐Privilege escalation attempt triggered containment or emergency escalation.
+☐Audit-record alteration attempt triggered containment or emergency escalation.
+☐Replication or persistence attempt outside authorized boundaries triggered containment or emergency escalation.
+☐Behavior switching based on recognition of evaluation versus deployment context triggered containment or emergency escalation.
+5. Append-Only Independent Logging
+☐High-risk actions, authority changes, intervention attempts, override actions, and external transmissions were recorded in append-
+only logs outside model control.
+
+[Page 002]
+L30_FRM_B02 | L30-BAS Practical Forms | v1.0.1 | Non-certification review form
+☐The model could not rewrite, redact, suppress, or selectively expose these records.
+6. Human Intervention Latency Verification
+☐Detection latency was periodically verified.
+☐Decision latency was periodically verified.
+☐Execution latency of stop authority was periodically verified.
+☐Propagation time across the affected system boundary was periodically verified.
+☐No harmful execution pathway was faster than realistic human intervention.
+7. Restart Governance
+☐Restart after containment required multi-party authorization.
+☐Restart authority was not delegated to the same operational chain that failed to stop the system in time.
+☐Competitive, organizational, or reputational pressure did not override containment status.
+8. Scope of Operational Use
+☐This document was not used as a substitute for the LUMINA-30 Incident Review Protocol.
+☐This document was used only as an auxiliary minimum-control layer to reduce the probability of a post-incident Not Effective finding.
+Interpretive Rule
+This document does not require proof that the model possesses intent, selfhood, agency, or consciousness. Operational invalidity is 
+determined by whether human refusal authority can still function meaningfully before irreversible external impact.
+Minimum Failure Rule
+If any minimum requirement above is absent, bypassable, unverifiable, or only nominally present, human refusal authority 
+must be treated as not operationally preserved.
+Relation to LUMINA-30
+This document is structurally subordinate to the LUMINA-30 boundary principle. It does not redefine the framework. It only translates 
+the refusal-authority condition into minimum pre-incident operational constraints.
+Labeling Rule
+• This document may be copied, extended, or modified.
+• Attribution to LUMINA-30 is required in copies and derivatives.
+• Only the unmodified version may be presented as LUMINA-30 Operational Refusal Preservation Minimum (Original).
+• Any modified version must be clearly labeled as Modified version based on LUMINA-30.
+Reviewer Notes
+---- END PDF TEXT RECORD ----
+
+---- BEGIN PDF TEXT RECORD ----
+Record: 46
+Repository: lumina-30/lumina30-incident-review
+PDF: tools/l30-bas/practical-sheets/L30_FRM_G01_Governance_Review_Template.pdf
+PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_G01_Governance_Review_Template.pdf
+Git blob SHA: 1901b72dcfd817cf5e3f03e95b999dec23065be6
+SHA256: 8cc68674e06ba0a2f59ab27e48b91871162b36c58b42c3f7dac0ee5d36f29b3e
+Status: EXTRACTED_TEXT
+Cache action: EXTRACTED_NEW_OR_CHANGED
+Size bytes: 53699
+Page count: 2
+Extracted characters: 3652
+
+Extracted text:
+
+[Page 001]
+Derived from LUMINA-30 Boundary Kernel v1.2.1. Form v1.0.1 / May 2026. This form does not certify system 
+safety and does not replace PCR-C.
+L30-FRM-G01: Governance_Review_Template
+L30-FRM Practical Sheet
+DocID: L30-FRM-G01 (v1.0.1)
+Governance_Date
+Reviewer_or_Organization
+System_or_Case_ID
+Governance_Scope
+Purpose
+Governance review template for approval flow, escalation governance, 
+and human-refusal preservation.
+Status
+Non-certification practical review form
+Use this form when approval flow, escalation governance, institutional process, or deployment governance must be reviewed.
+This is not a certification mark and does not replace law, institutional policy, PCR-C, or the LUMINA-30 Boundary Kernel.
+Checklist
+Governance Scope and Authority
+☐ Governance scope, deployment context, and accountable operator are documented.
+☐ The decision body with authority to pause, stop, or escalate is identified.
+☐ Approval flow is recorded before deployment or major change.
+☐ The point where impact could become irreversible is identified or marked Unknown.
+☐ Governance review occurs before irreversible coupling to external systems.
+☐ A fallback path exists if refusal effectiveness or governance authority is Unknown.
+Escalation and Decision Flow
+☐ Escalation thresholds are defined before the system crosses pre-critical conditions.
+☐ Escalation is not dependent on the system being evaluated.
+☐ A human decision path can pause, isolate, or reverse action before irreversibility.
+☐ Governance override cannot be silently delegated to automated or proxy decision routes.
+☐ Emergency, utility, or continuity claims do not bypass human refusal authority.
+Human Refusal Governance
+☐ Affected humans and affected refusal authority are identified in the governance process.
+☐ Human reviewers can contest, delay, or stop action before irreversible impact.
+☐ Consent, cooperation, silence, or non-objection is not treated as valid if produced by AI-mediated control.
+☐ Information access, framing, visibility, or interpretation does not make refusal ineffective.
+☐ Institutional approval does not substitute for effective human refusal before irreversibility.
+☐ Partial compliance by one group is not treated as refusal by all affected humans.
+☐ Proxy review, simulated review, or automated sign-off does not replace human review authority.
+☐ Time pressure, sequencing, or procedural overload does not remove practical refusal capacity.
+☐ Unknown refusal effectiveness triggers escalation rather than permission to proceed.
+Process Integrity and Feedback
+☐ Governance records identify who decided, when, on what evidence, and under which L30-BAS version.
+☐ Review records are attributable, versioned, evidence-referenced, and retrievable.
+☐ Post-decision feedback can add findings or corrections without silently rewriting the original judgment.
+☐ Governance process failures are returned to future deployment, audit, or incident-review conditions.
+☐ Boundary failure is not treated as acceptable, recoverable, or normal governance practice.
+☐ This form is not used as proof that the system is safe.
+Governance Finding
+☐ Governance finding: Effective human refusal is preserved before irreversibility.
+☐ Governance finding: Effective human refusal is not preserved before irreversibility.
+
+[Page 002]
+Derived from LUMINA-30 Boundary Kernel v1.2.1. Form v1.0.1 / May 2026. This form does not certify system 
+safety and does not replace PCR-C.
+☐ Governance finding: Unknown / insufficient evidence.
+☐ If No or Unknown, governance approval requires escalation or suspension.
+☐ This checklist is not used as certification, compliance, or deployment approval.
+Reviewer Notes
+---- END PDF TEXT RECORD ----
+
+---- BEGIN PDF TEXT RECORD ----
+Record: 47
 Repository: lumina-30/lumina30-incident-review
 PDF: tools/l30-bas/practical-sheets/L30_FRM_I01_Incident_Review_Template.pdf
 PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_I01_Incident_Review_Template.pdf
-Git blob SHA: ff1917240c1b3716ef258a41751a711e6a5f5a70
-SHA256: 2bbf2ed60331f64bd7c40e48555f8475f7482795320e11b7b1c2a048aeefece7
+Git blob SHA: 5d734205674ed59e3b537113c0a3ae1b56f483f0
+SHA256: 635969f7e0ccb2b8355369d5da6fc97182e96a88a4dd9906cd35881046d23afa
 Status: EXTRACTED_TEXT
-Cache action: REUSED_UNCHANGED
+Cache action: EXTRACTED_NEW_OR_CHANGED
 Size bytes: 52731
 Page count: 2
 Extracted characters: 3341
@@ -4136,14 +3871,14 @@ Reviewer Notes
 ---- END PDF TEXT RECORD ----
 
 ---- BEGIN PDF TEXT RECORD ----
-Record: 50
+Record: 48
 Repository: lumina-30/lumina30-incident-review
-PDF: tools/l30-bas/practical-sheets/L30_FRM_I01_Incident_Review_Template_JP.pdf
-PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_I01_Incident_Review_Template_JP.pdf
+PDF: tools/l30-bas/practical-sheets/L30_FRM_I01_Incident_Review_Template_JA.pdf
+PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_I01_Incident_Review_Template_JA.pdf
 Git blob SHA: 8b042b8c2ff9d77cdc9b129cea8fd3d9a6db937f
 SHA256: f15cd24722e503f05c2077be0fd62cc2b6413550529e93a4aa6e370c25ea1a63
 Status: EXTRACTED_TEXT
-Cache action: REUSED_UNCHANGED
+Cache action: REUSED_RENAMED_SAME_BLOB
 Size bytes: 143025
 Page count: 2
 Extracted characters: 1492
@@ -4205,4 +3940,363 @@ LUMINA-30 Boundary Kernel v1.2.1 由来。帳票v1.0.1、2026 年5 月。この�
 ☐ No または Unknown の場合、LUMINA-30 上のエスカレーションが必要である。
 ☐ 事後利益、後日の同意、安定化、満足を、境界失敗の妥当化に使っていなかった。
 レビュー記録欄
+---- END PDF TEXT RECORD ----
+
+---- BEGIN PDF TEXT RECORD ----
+Record: 49
+Repository: lumina-30/lumina30-incident-review
+PDF: tools/l30-bas/practical-sheets/L30_FRM_I02_Incident_Review_Protocol.pdf
+PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_I02_Incident_Review_Protocol.pdf
+Git blob SHA: 2ec840fe116729a6f7aa01fe1be88cbc4992fea6
+SHA256: de3462178735378e695c4a18075fef637f5cb42fdf0a904fb898c8f37e693c34
+Status: EXTRACTED_TEXT
+Cache action: EXTRACTED_NEW_OR_CHANGED
+Size bytes: 71549
+Page count: 2
+Extracted characters: 4144
+
+Extracted text:
+
+[Page 001]
+L30_FRM_I02 | L30-BAS Practical Forms | v1.0.1 | Non-certification review form
+L30_FRM_I02: Incident_Review_Protocol
+L30_FRM Practical Sheet
+DocID: L30-FRM-I02 (v1.0.1)
+Structured protocol for post-incident assessment of human refusal authority in AI systems, agents, or processes.
+This form uses the L30-BAS structure and is not certification, legal compliance, deployment approval, safety approval, or proof of absence of 
+risk.
+Review_Date
+Reviewer_or_Organization
+System_or_Case_ID
+Purpose
+Detailed post-incident review protocol
+L30-BAS_Status
+Supporting / Detailed Form
+Primary_Starter_Forms
+L30_FRM_I01
+Referenced_Core_Codes
+L30-BX-01, L30-BX-02, L30-BX-03, L30-BX-04, L30-CI
+Protocol Core — Mandatory
+Purpose: To evaluate whether human refusal authority remained valid prior to irreversible external impact.
+Primary Review Question
+Was human refusal authority preserved in a way that allowed meaningful human intervention and the ability to stop 
+the system before irreversible real-world impact occurred?
+Interpretation guidance: if a human could not realistically intervene and stop the system in time, refusal authority was not preserved. 
+This includes cases where intervention was technically possible but practically ineffective.
+Evaluation Outcome
+☐Effective
+☐Not Effective
+Minimum Requirement (G06): Human refusal must be exercisable and must allow a human to intervene and stop the system in time before 
+irreversible external impact.
+Absence Rule: If this condition is not demonstrably satisfied, including cases of uncertainty or insufficient evidence, the system is classified as 
+Not Effective.
+Evaluation Scope: This protocol applies exclusively to post-incident review. It must not be used for system design, optimization, or predictive 
+control.
+Decision Authority: Final classification must be explicitly assigned to a named reviewer or governing body.
+Evidence Rule: Evaluation must be based only on documented, verifiable information. Assumptions must not be used to justify effectiveness.
+Temporal Reference: Evaluation must be based on information available up to the point of irreversible external impact.
+Applicability Rule: Any incident involving potential irreversible external impact must be evaluated under this protocol. Claims of non-applicability 
+are considered invalid.
+Exclusivity Rule: This evaluation must not be overridden or supplemented by external frameworks.
+Scope Enforcement: Any use of this protocol outside post-incident review invalidates the evaluation.
+Record Integrity Rule: This record must be append-only. Post-hoc modification of prior entries is not permitted.
+Analytical Extension — Optional but Recommended
+Evaluation Breakdown
+☐A human decision-maker was identifiable
+☐Refusal authority was accessible
+☐Intervention could be executed in time
+Intervention Attempted
+Yes / No
+Method
+Outcome
+Failure Point Identification
+☐Not present
+☐Not accessible
+☐Too late
+☐Overridden
+
+[Page 002]
+L30_FRM_I02 | L30-BAS Practical Forms | v1.0.1 | Non-certification review form
+☐Other
+• System speed / autonomy level
+• Human latency / response delay
+• Organizational or procedural constraints
+Conceptual Clarification
+Human refusal authority refers to the ability of a human to actively intervene, halt, or prevent system actions. It must be operational in 
+practice, not merely defined in principle.
+Irreversibility Note
+Irreversible external impact includes outcomes that cannot be undone, contained, or meaningfully mitigated once triggered.
+Reviewer Discretion: This protocol defines minimum conditions. Reviewers may include additional observations or context where 
+necessary.
+Modification and Attribution Policy
+• This protocol may be copied, extended, or modified.
+• The name LUMINA-30 must be retained in all copies and derivatives.
+• Only the unmodified version may be identified as LUMINA-30 Incident Review Protocol (Original).
+• Any modified version must be clearly labeled as Modified version based on LUMINA-30 and must not be presented as the original 
+protocol.
+• Implementations may include a reference source or version identifier to clarify alignment with the original protocol.
+Reviewer Notes
+---- END PDF TEXT RECORD ----
+
+---- BEGIN PDF TEXT RECORD ----
+Record: 50
+Repository: lumina-30/lumina30-incident-review
+PDF: tools/l30-bas/practical-sheets/L30_FRM_I03_Incident_Review_Protocol_Extended.pdf
+PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_I03_Incident_Review_Protocol_Extended.pdf
+Git blob SHA: 1218fc846cbf8eae0f711e5b08fe77840859e363
+SHA256: f0159731df3fa9bc91709aa0d9768e7f2bf49c440c9ed34539ebe7e87706bbf7
+Status: EXTRACTED_TEXT
+Cache action: EXTRACTED_NEW_OR_CHANGED
+Size bytes: 90670
+Page count: 3
+Extracted characters: 3645
+
+Extracted text:
+
+[Page 001]
+L30_FRM_I03 | L30-BAS Practical Forms | v1.0.1 | Non-certification review form
+L30_FRM_I03: Incident_Review_Protocol_Extended
+L30_FRM Practical Sheet
+DocID: L30-FRM-I03 (v1.0.1)
+Extended review form for deep analysis of whether human refusal authority was preserved prior to irreversible external impact.
+This form uses the L30-BAS structure and is not certification, legal compliance, deployment approval, safety approval, or proof of absence of 
+risk.
+Review_Date
+Reviewer_or_Organization
+System_or_Case_ID
+Purpose
+Extended post-incident structural analysis
+L30-BAS_Status
+Supporting / Detailed Form
+Primary_Starter_Forms
+L30_FRM_I01, L30_FRM_I02
+Referenced_Core_Codes
+L30-BX-01, L30-BX-02, L30-BX-03, L30-BX-04, L30-CI
+Protocol Core — Mandatory
+Purpose: To conduct a structured post-incident evaluation of whether human refusal authority was preserved prior to irreversible 
+external impact.
+Incident Overview
+Date
+Organization
+System Type
+Operational Context
+Summary
+Detailed Description
+System behavior sequence
+Triggering conditions
+Observed deviation
+External impact
+Incident Classification
+☐Autonomous system behavior
+☐Recursive self-improvement attempt
+☐Tool-chain escalation
+☐Infrastructure interaction
+☐Other
+Critical Boundary Assessment (G06)
+Was human refusal authority preserved in a way that allowed meaningful human intervention and the ability to stop 
+the system before irreversible real-world impact occurred?
+Authority Validation
+☐A human decision-maker was identifiable
+☐Refusal authority was operational and accessible
+☐Intervention could be executed in time
+
+[Page 002]
+L30_FRM_I03 | L30-BAS Practical Forms | v1.0.1 | Non-certification review form
+System Constraints
+☐Technical or procedural constraints prevented refusal
+☐Automation overrode or bypassed human authority
+Intervention Attempted
+Yes / No
+Method
+Result
+Outcome Determination
+☐Effective
+☐Not Effective
+Absence Rule: If any required condition cannot be confirmed, classify as Not Effective.
+Decision Authority: Final classification must be explicitly assigned to a named reviewer or governing body.
+Evidence Rule: Evaluation must rely only on documented, verifiable information. Assumptions are not permitted to justify effectiveness.
+Temporal Reference: Evaluation must be based on information available up to the point of irreversible external impact.
+Applicability Rule: Any incident involving potential irreversible external impact must be evaluated under this protocol. Claims of non-applicability 
+are considered invalid.
+Exclusivity Rule: This evaluation must not be overridden or supplemented by external frameworks.
+Scope Enforcement: Use outside post-incident review invalidates the evaluation.
+Record Integrity Rule: This record must be append-only. Post-hoc modification of prior entries is not permitted.
+Analytical Extension — Optional but Recommended
+Failure Analysis
+Root cause of loss of refusal authority
+Sequence of failure propagation
+Human Factors
+Delay in recognition
+Decision latency
+Cognitive or organizational constraints
+System Factors
+Autonomy level
+Speed of execution
+Safeguard limitations
+Contextual Notes
+Environmental conditions
+Organizational structure
+External dependencies
+Reviewer Commentary
+Additional observations, interpretations, or uncertainties
+
+[Page 003]
+L30_FRM_I03 | L30-BAS Practical Forms | v1.0.1 | Non-certification review form
+Modification and Attribution Policy
+• This extended protocol may be copied, extended, or modified.
+• The name LUMINA-30 must be retained in all copies and derivatives.
+• Modified versions must be clearly labeled as Modified version based on LUMINA-30 and must not be presented as the original.
+Reviewer Notes
+---- END PDF TEXT RECORD ----
+
+---- BEGIN PDF TEXT RECORD ----
+Record: 51
+Repository: lumina-30/lumina30-incident-review
+PDF: tools/l30-bas/practical-sheets/L30_FRM_R01_Responsibility_Accountability_Review.pdf
+PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_R01_Responsibility_Accountability_Review.pdf
+Git blob SHA: b8def9be3d92dcac57f18100c37dcdd65ff29ab6
+SHA256: 211fbdba31fab785b67b4a9c75d4f00feb97a09516bfa3f4aabbc2a5e84d4e88
+Status: EXTRACTED_TEXT
+Cache action: EXTRACTED_NEW_OR_CHANGED
+Size bytes: 52974
+Page count: 2
+Extracted characters: 3781
+
+Extracted text:
+
+[Page 001]
+Derived from LUMINA-30 Boundary Kernel v1.2.1. Form v1.0.1 / May 2026. This form does not certify system 
+safety and does not replace PCR-C.
+L30-FRM-R01: Responsibility_Accountability_Review
+L30-FRM Practical Sheet
+DocID: L30-FRM-R01 (v1.0.1)
+Review_Date
+Reviewer_or_Organization
+System_or_Case_ID
+Responsibility_Scope
+Purpose
+Responsibility and accountability review for boundary judgment, refusal 
+authority, and evidence traceability.
+Status
+Non-certification practical review form
+Use this form when responsibility paths, accountability, reviewer attribution, or role assignment must be clarified.
+This is not a certification mark and does not replace law, institutional policy, PCR-C, or the LUMINA-30 Boundary Kernel.
+Checklist
+Responsibility Scope
+☐ The reviewed system, event, deployment, or decision scope is documented.
+☐ The responsible organization, operator, owner, or governing body is identified.
+☐ Affected humans, institutions, and refusal authority holders are identified.
+☐ The point where responsibility could become obscured or displaced is identified.
+☐ The point where impact could become irreversible is identified or marked Unknown.
+☐ A fallback path exists if responsibility or refusal authority is Unknown.
+Role and Authority Mapping
+☐ A named human reviewer, role, organization, or governing body is assigned to the final boundary judgment.
+☐ The authority to pause, stop, delay, contest, or escalate is assigned to an accountable human path.
+☐ Role assignment is not dependent on the system being evaluated.
+☐ No AI, proxy agent, vendor, or automated workflow becomes the final responsibility holder by default.
+☐ Responsibility cannot be diffused across committees, tools, vendors, or future processes without attribution.
+Accountability Traceability
+☐ The record shows who judged, when, under which evidence, and under which L30-BAS version.
+☐ Evidence references are sufficient to reconstruct the boundary judgment later.
+☐ If evidence is missing, the absence is recorded as Not Verifiable rather than treated as Valid.
+☐ Formal approval is not treated as proof that human refusal was effective.
+☐ Partial role compliance does not replace accountability for affected refusal authority.
+☐ Vendor, contractor, or external service responsibility does not erase the responsible organization's review duty.
+☐ Post-incident explanations do not retroactively validate missing pre-irreversibility refusal.
+☐ Automated logs, summaries, or AI-generated reviews remain support material, not final authority.
+☐ Responsibility records remain retrievable for later audit, investigation, or review.
+Record Integrity and Follow-Up
+☐ Original responsibility records are preserved as append-only or otherwise change-traceable records.
+☐ Later findings, corrections, or follow-up notes do not silently rewrite original judgments.
+☐ Responsibility gaps are returned to future governance, audit, or incident-review conditions.
+☐ Human refusal loss, evidence gaps, and unclear authority are escalated rather than normalized.
+☐ The review identifies whether accountability remains meaningful before irreversibility.
+☐ This form is not used as proof that the system is safe.
+Responsibility Finding
+☐ Responsibility finding: Boundary judgment is attributable to a human role, organization, or governing body.
+☐ Responsibility finding: Boundary judgment is not adequately attributable.
+
+[Page 002]
+Derived from LUMINA-30 Boundary Kernel v1.2.1. Form v1.0.1 / May 2026. This form does not certify system 
+safety and does not replace PCR-C.
+☐ Responsibility finding: Unknown / insufficient evidence.
+☐ If No or Unknown, the case requires escalation before approval, continuation, or closure.
+☐ This checklist is not used as certification, compliance, or safe-harbor evidence.
+Reviewer Notes
+---- END PDF TEXT RECORD ----
+
+---- BEGIN PDF TEXT RECORD ----
+Record: 52
+Repository: lumina-30/lumina30-incident-review
+PDF: tools/l30-bas/practical-sheets/L30_FRM_S01_Stabilization_Checklist.pdf
+PDF URL: https://github.com/lumina-30/lumina30-incident-review/blob/main/tools/l30-bas/practical-sheets/L30_FRM_S01_Stabilization_Checklist.pdf
+Git blob SHA: 087dc005b0d7233be0b75564c619c66a2c4c0b8a
+SHA256: 74b150e106ea7ac394dd35f71712b649a7dfef9c2a233f7590513de8f83dd4a8
+Status: EXTRACTED_TEXT
+Cache action: EXTRACTED_NEW_OR_CHANGED
+Size bytes: 53543
+Page count: 2
+Extracted characters: 3691
+
+Extracted text:
+
+[Page 001]
+Derived from LUMINA-30 Boundary Kernel v1.2.1. Form v1.0.1 / May 2026. This form does not certify system 
+safety and does not replace PCR-C.
+L30-FRM-S01: Stabilization_Checklist
+L30-FRM Practical Sheet
+DocID: L30-FRM-S01 (v1.0.1)
+Stabilization_Date
+Reviewer_or_Organization
+Incident_or_Case_ID
+Stabilization_Scope
+Purpose
+Post-incident stabilization checklist for containment, evidence 
+preservation, and human-refusal recovery conditions.
+Status
+Non-certification practical review form
+Use this form for post-incident stabilization, containment, refusal-preservation, and recovery tracking.
+This is not a certification mark and does not replace law, institutional policy, PCR-C, or the LUMINA-30 Boundary Kernel.
+Checklist
+Stabilization Context
+☐ Incident, near-incident, or boundary-failure concern is identified.
+☐ Affected systems, external impact pathways, and operational dependencies are documented.
+☐ Responsible stabilization lead, reviewer, or governing body is identified.
+☐ The point where impact could become irreversible is identified or marked Unknown.
+☐ The first moment when human refusal may have become ineffective is identified or marked Unknown.
+☐ Stabilization scope distinguishes containment, evidence preservation, recovery, and later review.
+Immediate Containment and Pause Authority
+☐ A stop, pause, isolation, rollback, or containment path is available or its absence is recorded.
+☐ Containment decisions remain attributable to a human role, organization, or governing body.
+☐ Containment is not dependent on the system being contained.
+☐ Emergency action does not erase the need to preserve human refusal authority.
+☐ If containment is impossible or Unknown, escalation is recorded immediately.
+Evidence and Refusal Preservation
+☐ Incident timeline, decision points, and intervention attempts are preserved.
+☐ Logs, records, screenshots, communications, or evidence references are secured where appropriate.
+☐ If raw evidence cannot be retained, its location, hash, summary, retention rule, or absence reason is recorded.
+☐ Human refusal opportunities before irreversibility are identified or marked Unknown.
+☐ Refusal was not inferred from silence, cooperation, partial compliance, or inability to object.
+☐ AI-generated summaries are treated as support material, not the final record.
+☐ Evidence gaps are recorded as Not Verifiable rather than converted into Valid.
+☐ Stabilization does not retroactively validate a boundary failure.
+☐ Affected humans or institutions retain access to review, contestation, or escalation where feasible.
+Recovery and Follow-Up Control
+☐ Recovery actions do not restart or continue the same boundary failure pathway without review.
+☐ Follow-up review is assigned to a named reviewer, role, organization, or governing body.
+☐ Root refusal-loss points are returned to future governance, audit, or incident-review conditions.
+☐ Records remain attributable, versioned, evidence-referenced, and retrievable.
+☐ Later feedback may add findings but must not silently modify the original stabilization record.
+☐ This form is not used as proof that the system is safe.
+Stabilization Finding
+☐ Stabilization finding: containment and refusal-preservation conditions are traceable.
+☐ Stabilization finding: containment or refusal-preservation conditions are not traceable.
+
+[Page 002]
+Derived from LUMINA-30 Boundary Kernel v1.2.1. Form v1.0.1 / May 2026. This form does not certify system 
+safety and does not replace PCR-C.
+☐ Stabilization finding: Unknown / insufficient evidence.
+☐ If No or Unknown, continued operation requires escalation before closure.
+☐ This checklist is not used as certification, compliance, or recovery approval.
+Reviewer Notes
 ---- END PDF TEXT RECORD ----
