@@ -28,6 +28,26 @@ JP:
 
 ---
 
+<a id="building-map"></a>
+
+## LUMINA-30 Building Map ｜ LUMINA-30 建物地図
+
+These names are navigation labels for readers. They do not imply certification, institutional status, official adoption, affiliation, or a change to repository names or file paths.
+
+これらの名称は、読者の移動を助けるための案内名です。認証、制度的地位、公式採用、提携、またはリポジトリ名・ファイルパスの変更を意味しません。
+
+| Navigation label ｜ 案内名 | Where to go ｜ 行き先 | Role ｜ 役割 |
+|---|---|---|
+| Entrance ｜ エントランス | [Lumi30-Index](https://github.com/lumina-30/Lumi30-Index) | Choose where to begin in the LUMINA-30 repository network. ｜ LUMINA-30のrepoネットワークで、どこから入るかを選ぶ場所。 |
+| Main Floor ｜ メインフロア | [LUMINA-30 Overview](https://github.com/lumina-30/lumina-30-overview) | Understand the core boundary question, visual route, and public overview. ｜ 中核となる境界質問、視覚導線、公開概要を理解する場所。 |
+| Boundary Review Floor ｜ 境界レビューフロア | [Boundary Review Floor](https://github.com/lumina-30/lumina-30-overview/blob/main/reference/boundary-review-floor/index.md) | Distinguish formal oversight from effective human refusal before irreversibility. ｜ 形式的監督と、不可逆化前の実効的人間拒否を区別する場所。 |
+| Incident Review Floor ｜ インシデントレビュー・フロア | [LUMINA-30 Incident Review](https://github.com/lumina-30/lumina30-incident-review) | Apply the boundary question to AI incidents, oversight failure, and post-incident review. ｜ AIインシデント、監督失効、事故後レビューに境界質問を適用する場所。 |
+| External-use Notes ｜ 外部制度・団体接続メモ | [External-use notes](https://github.com/lumina-30/lumina30-incident-review/tree/main/external-use) | Connect the boundary question to external governance, standards, incident-response, and human-oversight contexts without claiming endorsement or affiliation. ｜ 承認・提携を主張せず、境界質問を外部ガバナンス、標準化、事故対応、人間監督文脈へ接続する補助参照。 |
+
+---
+
+<a id="primary-entry-points"></a>
+
 # Primary Entry Points ｜ 主要導線
 
 
@@ -38,8 +58,10 @@ First-time readers should choose the route that best matches their situation bef
 
 | Situation | Start here |
 |---|---|
-| Understand LUMINA-30 | [Conceptual Overview ｜ 概念概要](https://github.com/lumina-30/lumina-30-overview) |
-| Review an AI incident or boundary failure | [Incident Review Hub ｜ 事故レビュー入口](https://github.com/lumina-30/lumina30-incident-review) |
+| Understand LUMINA-30 | [Main Floor ｜ メインフロア](https://github.com/lumina-30/lumina-30-overview) |
+| Distinguish formal oversight from effective human refusal | [Boundary Review Floor ｜ 境界レビューフロア](https://github.com/lumina-30/lumina-30-overview/blob/main/reference/boundary-review-floor/index.md) |
+| Review an AI incident or boundary failure | [Incident Review Floor ｜ インシデントレビュー・フロア](https://github.com/lumina-30/lumina30-incident-review) |
+| Connect to external governance, standards, incident-response, or human-oversight contexts | [External-use Notes ｜ 外部制度・団体接続メモ](https://github.com/lumina-30/lumina30-incident-review/tree/main/external-use) |
 | Use post-incident stabilization references | [AI Incident 48H Stabilization Reference ｜ 48時間事故後安定化参照](https://github.com/lumina-30/lumina-30-overview/blob/main/docs/48H_Incident_Stabilization_Checklist.md) |
 | Cite, verify, or find stable public references | [Public Reference ｜ 公開参照ハブ](https://github.com/lumina-30/lumina30-public-reference) / [Public Record ｜ 公開記録真正性](https://github.com/lumina-30/Lumi30-Public-Record) |
 | Read the research basis / PCR-C | [PCR-C Paper DOI ｜ PCR-C主論文](https://doi.org/10.5281/zenodo.18824181) |
@@ -52,8 +74,10 @@ Full repository mapping should be used only after the intended route is clear.
 
 | 状況 | 入口 |
 |---|---|
-| LUMINA-30を理解する | [Conceptual Overview ｜ 概念概要](https://github.com/lumina-30/lumina-30-overview) |
-| AI事故・境界失効をレビューする | [Incident Review Hub ｜ 事故レビュー入口](https://github.com/lumina-30/lumina30-incident-review) |
+| LUMINA-30を理解する | [Main Floor ｜ メインフロア](https://github.com/lumina-30/lumina-30-overview) |
+| 形式的監督と実効的人間拒否を区別する | [Boundary Review Floor ｜ 境界レビューフロア](https://github.com/lumina-30/lumina-30-overview/blob/main/reference/boundary-review-floor/index.md) |
+| AI事故・境界失効をレビューする | [Incident Review Floor ｜ インシデントレビュー・フロア](https://github.com/lumina-30/lumina30-incident-review) |
+| 外部ガバナンス、標準化、事故対応、人間監督文脈へ接続する | [External-use Notes ｜ 外部制度・団体接続メモ](https://github.com/lumina-30/lumina30-incident-review/tree/main/external-use) |
 | 事故後安定化の参照資料を使う | [AI Incident 48H Stabilization Reference ｜ 48時間事故後安定化参照](https://github.com/lumina-30/lumina-30-overview/blob/main/docs/48H_Incident_Stabilization_Checklist.md) |
 | 引用・検証・安定した公開参照を探す | [Public Reference ｜ 公開参照ハブ](https://github.com/lumina-30/lumina30-public-reference) / [Public Record ｜ 公開記録真正性](https://github.com/lumina-30/Lumi30-Public-Record) |
 | 研究基盤・PCR-Cを読む | [PCR-C Paper DOI ｜ PCR-C主論文](https://doi.org/10.5281/zenodo.18824181) |
@@ -176,9 +200,14 @@ Recommended search and citation terms should remain natural and non-promotional:
 ### Quick Routing ｜ 目的別の最短導線
 
 - **First-time overview ｜ 初見の概要確認**  
-  [Conceptual Overview ｜ 概念概要](https://github.com/lumina-30/lumina-30-overview)  
+  [Main Floor ｜ メインフロア](https://github.com/lumina-30/lumina-30-overview)  
   Visual and explanatory entry point for understanding the framework before reading individual repositories.  
   個別repoに入る前に、全体像・図・説明を確認する入口。
+
+- **Boundary review lens ｜ 境界レビュー視点**  
+  [Boundary Review Floor ｜ 境界レビューフロア](https://github.com/lumina-30/lumina-30-overview/blob/main/reference/boundary-review-floor/index.md)  
+  Entry floor for distinguishing formal oversight from effective human refusal before irreversibility.  
+  形式的監督と不可逆化前の実効的人間拒否を区別するための入口フロア。
 
 - **Canonical boundary reference ｜ 正典境界参照**  
   [LUMINA-30 Core Repository ｜ LUMINA-30 中核repo](https://github.com/lumina-30/LUMINA-30)  
@@ -191,9 +220,9 @@ Recommended search and citation terms should remain natural and non-promotional:
   正典および補助文書の全文確認用入口。
 
 - **Incident review and boundary check ｜ 事故レビュー・境界判定**  
-  [Incident Review Hub ｜ 事故レビュー入口](https://github.com/lumina-30/lumina30-incident-review)  
-  Practical review hub for Required Questions, boundary checks, templates, and stakeholder one-page briefs.  
-  Required Questions、境界判定、テンプレート、相手別1枚資料を扱う主実務ハブ。
+  [Incident Review Floor ｜ インシデントレビュー・フロア](https://github.com/lumina-30/lumina30-incident-review)  
+  Practical review floor for Required Questions, boundary checks, templates, and stakeholder one-page briefs.  
+  Required Questions、境界判定、テンプレート、相手別1枚資料を扱う主実務フロア。
 
 - **Legal, audit, and governance use ｜ 法務・監査・ガバナンス用途**  
   [AI Accountability Reference ｜ 説明責任参照](https://github.com/lumina-30/ai-accountability-reference)  
@@ -205,6 +234,9 @@ Recommended search and citation terms should remain natural and non-promotional:
   [Stop Authority Reference ｜ 拒否権定義アンカー](https://github.com/lumina-30/stop-authority-reference)  
   Compact reference for stop authority, refusal authority, and pre-irreversibility interruption.  
   stop authority、refusal authority、不可逆前中断可能性の簡潔な定義アンカー。
+  [External-use Notes ｜ 外部制度・団体接続メモ](https://github.com/lumina-30/lumina30-incident-review/tree/main/external-use)  
+  Non-binding notes for connecting the boundary question to external governance, standards, incident-response, and human-oversight contexts.  
+  境界質問を外部ガバナンス、標準化、事故対応、人間監督文脈へ接続するための非拘束参照メモ。
 
 - **Public record and citation support ｜ 公開記録・引用補助**  
   [Public Reference ｜ 公開参照ハブ](https://github.com/lumina-30/lumina30-public-reference)  
@@ -243,7 +275,7 @@ Recommended search and citation terms should remain natural and non-promotional:
   Full-text GitHub entry for canonical and supplementary materials.  
   正典および補助文書全文の GitHub 入口。
 
-- [PDF Archive ｜ PDF固定配布](https://github.com/lumina-30/Lumi30-PDF-Archive)
+- [PDF Archive ｜ PDF固定配布](https://github.com/lumina-30/Lumi30-PDF-Archive)  
   Stable PDF archive for fixed distribution and preservation.  
   固定配布と保存のための安定PDFアーカイブ。
 
