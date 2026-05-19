@@ -1,4 +1,3 @@
-
 # LUMINA-30
 ---
 
@@ -12,19 +11,21 @@ LUMINA-30は、高度AIシステムによる不可逆的な外部影響の前に
 
 ---
 
-## Non-Certification Notice ｜ 非認証注記
+## Status and Scope / Non-Certification Notice ｜ 状態と射程／非認証注記
 
 EN:  
 This repository is a navigation and reference index only.  
-It does not define certification, compliance status, approval status, institutional authorization, or any binding standard.
+It does not claim legal authority, regulatory force, certification status, compliance status, approval status, official adoption, institutional endorsement, established consensus, institutional authorization, or binding standard status.
 
-Historical, extracted, or local-context terms such as "standard", "approval", "authorization", or "policy pilot" must not be used to claim that any system, organization, document, or implementation is certified, approved, compliant, endorsed, or authorized by LUMINA-30.
+Historical, extracted, or local-context terms such as "standard", "approval", "authorization", or "policy pilot" are preserved for traceability only.  
+They do not support any claim that a system, organization, document, or implementation is certified, approved, compliant, endorsed, authorized, officially adopted, or institutionally recognized by LUMINA-30.
 
 JP:  
 本リポジトリは、参照導線および索引用のリポジトリである。  
-認証、準拠状態、承認状態、制度的認可、拘束的標準を定義しない。
+法的権限、規制上の効力、認証状態、準拠状態、承認状態、公式採用、制度的支持、確立済み合意、制度的認可、拘束的標準としての地位を主張しない。
 
-過去抽出本文または局所文脈に含まれる "standard", "approval", "authorization", "policy pilot" 等の語は、いかなるシステム・組織・文書・実装についても、LUMINA-30による認証・承認・準拠・支持・認可を主張するために使用してはならない。
+過去抽出本文または局所文脈に含まれる "standard", "approval", "authorization", "policy pilot" 等の語は、追跡可能性のために保存されている。  
+それらは、いかなるシステム・組織・文書・実装についても、LUMINA-30による認証・承認・準拠・支持・認可・公式採用・制度的認定を主張する根拠にはならない.
 
 ---
 
@@ -54,7 +55,7 @@ These names are navigation labels for readers. They do not imply certification, 
 ## Repository Entry Gate ｜ repo入口制御
 
 This index is a navigation map, not the recommended first-reading path.  
-First-time readers should choose the route that best matches their situation before browsing the full repository network.
+First-time readers can choose the route that best matches their situation before browsing the full repository network.
 
 | Situation | Start here |
 |---|---|
@@ -67,7 +68,7 @@ First-time readers should choose the route that best matches their situation bef
 | Read the research basis / PCR-C | [PCR-C Paper DOI ｜ PCR-C主論文](https://doi.org/10.5281/zenodo.18824181) |
 | Read the AI-readable boundary interpretation | [Boundary Kernel ｜ AI可読境界ノート](https://github.com/lumina-30/lumina-30-overview/blob/main/ai-readable/boundary-kernel.md) |
 
-Full repository mapping should be used only after the intended route is clear.
+Full repository mapping is most useful after the intended route is clear.
 
 本Indexはナビゲーション地図であり、初見向けの推奨読書順ではありません。  
 初見読者は、全repoネットワークを見る前に、自分の状況に最も近い入口を選んでください。
@@ -185,7 +186,7 @@ This table is a maintenance reference for keeping GitHub repository descriptions
 | `lumina-30-structure-map` | Structural map | Structural map showing how LUMINA-30 repositories relate to one another. |
 | `.github` | Organization profile | Public organization profile and repository discovery surface. |
 
-Recommended search and citation terms should remain natural and non-promotional:
+Recommended search and citation terms are kept natural and non-promotional:
 
 - LUMINA-30
 - human refusal authority
@@ -251,7 +252,7 @@ Recommended search and citation terms should remain natural and non-promotional:
 
 
   [External Visibility Tracking](https://github.com/lumina-30/lumina30-public-reference/blob/main/observability/External_Visibility_Tracking.md)  
-  Defines how GitHub, Zenodo, DOI / DataCite, arXiv proxy evidence, and external references should be observed without overclaiming adoption.  
+  Defines how GitHub, Zenodo, DOI / DataCite, arXiv proxy evidence, and external references can be observed without overclaiming adoption.  
   GitHub、Zenodo、DOI / DataCite、arXiv代替観測、外部参照を、採用実績と過剰主張せずに観測するための文書。
 
   [Visibility Snapshot Template](https://github.com/lumina-30/lumina30-public-reference/blob/main/observability/LUMINA30_Visibility_Snapshot_Template.md)  
@@ -295,5 +296,3 @@ Its purpose is structural documentation and boundary clarification.
 
 LUMINA-30 remains descriptive, non-directive, and non-binding.  
 LUMINA-30 は記述的構造であり、指示的・拘束的ではない。
-
-
