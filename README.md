@@ -42,6 +42,7 @@ These names are navigation labels for readers. They do not imply certification, 
 |---|---|---|
 | Entrance ｜ エントランス | [Lumi30-Index](https://github.com/lumina-30/Lumi30-Index) | Choose where to begin in the LUMINA-30 repository network. ｜ LUMINA-30のrepoネットワークで、どこから入るかを選ぶ場所。 |
 | Main Floor ｜ メインフロア | [LUMINA-30 Overview](https://github.com/lumina-30/lumina-30-overview) | Understand the core boundary question, visual route, and public overview. ｜ 中核となる境界質問、視覚導線、公開概要を理解する場所。 |
+| Reversible Prosperity Path ｜ 可逆的繁栄の道 | [EN](https://lumina-30.github.io/lumina-30-overview/docs/EN_L30_REVERSIBLE_PROSPERITY_PATH.html) / [JP](https://lumina-30.github.io/lumina-30-overview/docs/JP_L30_REVERSIBLE_PROSPERITY_PATH.html) | Understand the positive route: progress that remains stoppable, reviewable, and reversible before irreversibility. ｜ 不可逆化前に停止・検証・修正・撤回が可能であり続ける肯定側の道を理解する場所。 |
 | Boundary Review Floor ｜ 境界レビューフロア | [Boundary Review Floor](https://github.com/lumina-30/lumina-30-overview/blob/main/reference/boundary-review-floor/index.md) | Distinguish formal oversight from effective human refusal before irreversibility. ｜ 形式的監督と、不可逆化前の実効的人間拒否を区別する場所。 |
 | Incident Review Floor ｜ インシデントレビュー・フロア | [LUMINA-30 Incident Review](https://github.com/lumina-30/lumina30-incident-review) | Apply the boundary question to AI incidents, oversight failure, and post-incident review. ｜ AIインシデント、監督失効、事故後レビューに境界質問を適用する場所。 |
 | External-use Notes ｜ 外部制度・団体接続メモ | [External-use notes](https://github.com/lumina-30/lumina30-incident-review/tree/main/external-use) | Connect the boundary question to external governance, standards, incident-response, and human-oversight contexts without claiming endorsement or affiliation. ｜ 承認・提携を主張せず、境界質問を外部ガバナンス、標準化、事故対応、人間監督文脈へ接続する補助参照。 |
@@ -61,6 +62,7 @@ First-time readers can choose the route that best matches their situation before
 | Situation | Start here |
 |---|---|
 | Understand LUMINA-30 | [Main Floor ｜ メインフロア](https://github.com/lumina-30/lumina-30-overview) |
+| Understand the positive path that does not cross irreversibility ｜ 不可逆を越えない肯定側の道を読む | [Reversible Prosperity Path ｜ 可逆的繁栄の道](https://lumina-30.github.io/lumina-30-overview/docs/EN_L30_REVERSIBLE_PROSPERITY_PATH.html) / [JP](https://lumina-30.github.io/lumina-30-overview/docs/JP_L30_REVERSIBLE_PROSPERITY_PATH.html) |
 | Distinguish formal oversight from effective human refusal | [Boundary Review Floor ｜ 境界レビューフロア](https://github.com/lumina-30/lumina-30-overview/blob/main/reference/boundary-review-floor/index.md) |
 | Review an AI incident or boundary failure | [Incident Review Floor ｜ インシデントレビュー・フロア](https://github.com/lumina-30/lumina30-incident-review) |
 | Connect to external governance, standards, incident-response, or human-oversight contexts | [External-use Notes ｜ 外部制度・団体接続メモ](https://github.com/lumina-30/lumina30-incident-review/tree/main/external-use) |
