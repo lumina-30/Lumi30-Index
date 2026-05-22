@@ -1,4 +1,5 @@
-﻿````text
+<!-- L30_LANG_LOCK: EN_JP_PAIRED -->
+````text
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 [Notion Metadata]
 フォルダ名: 04_Supplementary_Canon（補助正典）
@@ -857,4 +858,3 @@ please contact:
 
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 ````
-
