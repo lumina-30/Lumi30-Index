@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-l30-lang-lock="EN_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="EN_ONLY" />
+  <meta name="description" content="Reader-facing HTML index for navigating the LUMINA-30 repository network." />
+  <title>LUMINA-30 Index</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    h3 { margin: 0 0 .55em; }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice { padding: 14px 16px; margin: 18px 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
+    .card { padding: 16px; }
+    .card p { margin: .3em 0 .85em; }
+    .muted { color: var(--muted); }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    [id] { scroll-margin-top: 92px; }
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Page navigation">
+      <a href="index.html">Index</a>
+      <a href="index-ja.html">Japanese</a>
+      <a href="https://lumina-30.github.io/lumina-30-overview/">Main Floor</a>
+      <a href="https://lumina-30.github.io/lumina30-incident-review/">Incident Review Floor</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index">GitHub Repository</a>
+    </nav>
+
+    <header>
+      <h1>LUMINA-30 Index</h1>
+      <p class="subtitle">Reader-facing HTML station for choosing where to go in the LUMINA-30 repository network.</p>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="Status and scope">
+        <strong>Status and scope.</strong> This index is a navigation and reference entry only. It does not create legal authority, certification, compliance status, approval, official adoption, institutional endorsement, or binding standard status.
+      </section>
+
+      <section id="routes">
+        <h2>Primary routes</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Understand LUMINA-30</h3>
+            <p>Start with the conceptual and visual public overview.</p>
+            <a class="button" href="https://lumina-30.github.io/lumina-30-overview/">Open Main Floor</a>
+          </article>
+          <article class="card">
+            <h3>Read the positive path</h3>
+            <p>Progress can remain stoppable, reviewable, correctable, and reversible before irreversibility.</p>
+            <a class="button" href="https://lumina-30.github.io/lumina-30-overview/docs/EN_L30_REVERSIBLE_PROSPERITY_PATH.html">Open Reversible Prosperity Path</a>
+          </article>
+          <article class="card">
+            <h3>Distinguish formal oversight from effective refusal</h3>
+            <p>Use the Boundary Review Floor before applying incident-review tools.</p>
+            <a class="button" href="https://lumina-30.github.io/lumina-30-overview/reference/boundary-review-floor/index.html">Open Boundary Review Floor</a>
+          </article>
+          <article class="card">
+            <h3>Review an AI incident</h3>
+            <p>Apply the boundary question to incidents, oversight failure, and post-incident review.</p>
+            <a class="button" href="https://lumina-30.github.io/lumina30-incident-review/">Open Incident Review Floor</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="tools">
+        <h2>Practical and AI-readable routes</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Practical Tools Quick Access</h3>
+            <p>Use this for repeat practical access to checklists, matrices, sequences, and review tools.</p>
+            <a class="button" href="https://lumina-30.github.io/lumina-30-overview/adoption/EN_L30_RETURN_TO_REVERSIBILITY_PRACTICAL_TOOLS_QUICK_ACCESS.html">Open Quick Access</a>
+          </article>
+          <article class="card">
+            <h3>Practical Use Sequence</h3>
+            <p>Use this when the order of practical tool use is not yet clear.</p>
+            <a class="button" href="https://lumina-30.github.io/lumina-30-overview/adoption/EN_L30_RETURN_TO_REVERSIBILITY_PRACTICAL_USE_SEQUENCE.html">Open Practical Use Sequence</a>
+          </article>
+          <article class="card">
+            <h3>AI-readable Practical Tools Manifest</h3>
+            <p>Use this when an AI assistant or search tool needs to route a user by task.</p>
+            <a class="button" href="https://lumina-30.github.io/lumina-30-overview/ai-readable/practical-tools-manifest.html">Open Manifest</a>
+          </article>
+          <article class="card">
+            <h3>Controlled Discovery Terms</h3>
+            <p>Use this for controlled search, discovery, and AI-readable terminology.</p>
+            <a class="button" href="https://lumina-30.github.io/lumina-30-overview/docs/L30_DISCOVERY_TERMS.html">Open Discovery Terms</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="source">
+        <h2>Source and preservation</h2>
+        <p>Markdown files are retained for text preservation, search discoverability, existing links, and source review. For reading and navigation, prefer the HTML pages.</p>
+        <p><a href="https://github.com/lumina-30/Lumi30-Index/blob/main/README.md">View Markdown source on GitHub</a></p>
+      </section>
+    </main>
+
+    <p class="footer">LUMINA-30 is a non-binding boundary reference framework asking whether effective human refusal remained available before irreversible impact.</p>
+  </div>
+</body>
+</html>
