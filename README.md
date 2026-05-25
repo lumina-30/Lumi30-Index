@@ -8,8 +8,12 @@
 > 読みやすさ、戻り導線、初回閲覧にはHTML版を使用してください：  
 > [LUMINA-30 Index HTML版を開く](https://lumina-30.github.io/Lumi30-Index/)  
 >
-> This Markdown file is retained for text preservation, search discoverability, existing links, and source review.  
-> 本Markdownは、文章保管、検索到達性、既存リンク維持、ソース確認のために残しています。
+> This Markdown file is retained for text preservation, search discoverability, existing links, and source review. GitHub Markdown is weaker for long-form navigation, return paths, and reader orientation; the HTML index is the preferred reader-facing route.  
+> 本Markdownは、文章保管、検索到達性、既存リンク維持、ソース確認のために残しています。GitHub Markdownは、長文移動、戻り導線、現在地維持に弱いため、読者向け導線ではHTML索引を優先してください。
+
+> **Terminology note ｜ 用語上の注意**  
+> Reversible Prosperity Path is not a replacement name for LUMINA-30. It is the positive direction made possible when LUMINA-30’s boundary condition is preserved.  
+> 可逆的繁栄の道は、LUMINA-30の代替名ではありません。LUMINA-30の境界条件が守られたときに開かれる、肯定側の文明進路です。
 ---
 
 ## 15-Second Definition ｜ 15秒定義
