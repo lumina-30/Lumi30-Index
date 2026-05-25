@@ -1,16 +1,64 @@
-<!-- L30_LANG_LOCK: EN_JP_PAIRED -->
-> **Reader-facing HTML source archive ｜ 読者向けHTMLソースアーカイブ**  
-> For navigation, return paths, and source review, use the HTML version:  
-> [Open the Institutional Layer Archive HTML](https://lumina-30.github.io/Lumi30-Index/02_Institutional_Layer/README.html)  
->
-> ナビゲーション、戻り導線、ソース確認にはHTML版を使用してください：  
-> [制度・審査層アーカイブ HTML版を開く](https://lumina-30.github.io/Lumi30-Index/02_Institutional_Layer/README.html)  
->
-> This Markdown file is retained for text preservation, search discoverability, existing links, and source review.  
-> 本Markdownは、文章保管、検索到達性、既存リンク維持、ソース確認のために残しています。
+<!doctype html>
+<html lang="en" data-l30-lang-lock="EN_JP_SOURCE_ARCHIVE">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="EN_JP_SOURCE_ARCHIVE" />
+  <meta name="description" content="HTML source-archive page for Institutional Layer Archive in the LUMINA-30 Index repository." />
+  <title>LUMINA-30 Index - Institutional Layer Archive</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1120px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .sourcebox { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 24px; padding-bottom: 16px; }
+    h1 { font-size: clamp(1.8rem, 4.2vw, 2.8rem); line-height: 1.14; margin: 0 0 12px; }
+    h2 { margin-top: 2em; padding-top: .45em; border-top: 1px solid var(--line); }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.03rem; margin: 0; }
+    .notice { padding: 14px 16px; margin: 18px 0; }
+    .sourcebox { padding: 0; margin: 18px 0; overflow: hidden; }
+    pre { margin: 0; padding: 18px; white-space: pre-wrap; overflow-wrap: anywhere; font: 0.94rem/1.62 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    [id] { scroll-margin-top: 92px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Page navigation">
+      <a href="../index.html">Index</a>
+      <a href="../index-ja.html">Japanese Index</a>
+      <a href="https://lumina-30.github.io/lumina-30-overview/">Main Floor</a>
+      <a href="https://lumina-30.github.io/lumina30-incident-review/">Incident Review Floor</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index/tree/main/02_Institutional_Layer">GitHub Source Folder</a>
+    </nav>
 
----
+    <header>
+      <h1>Institutional Layer Archive<br />制度・審査層アーカイブ</h1>
+      <p class="subtitle">Review rejection criteria and institutional boundary-reference source text.<br />審査拒否条件および制度的境界参照のソーステキスト。</p>
+    </header>
 
+    <main>
+      <section class="notice" aria-label="Source archive notice">
+        <strong>Source archive notice.</strong> This page is an HTML access point for preserved source text in the LUMINA-30 Index repository. It is retained for navigation, search discoverability, and source review. It does not create legal authority, certification, approval, official adoption, institutional endorsement, or binding standard status.<br />
+        <strong>ソースアーカイブ注記。</strong> 本ページは、LUMINA-30 Index repo 内の保管用ソーステキストへHTMLで到達するための入口です。ナビゲーション、検索到達性、ソース確認のために保持されます。法的権限、認証、承認、公式採用、制度的支持、拘束的標準を作るものではありません。
+      </section>
+
+      <section id="source-text">
+        <h2>Preserved source text ｜ 保管ソーステキスト</h2>
+        <div class="sourcebox"><pre>&lt;!-- L30_LANG_LOCK: EN_JP_PAIRED --&gt;
 ````text
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 [Notion Metadata]
@@ -412,8 +460,8 @@ Treatment of Irrationality: Are irrational or loss-accepting choices not treated
 Gradual Authority Transfer: Is authority transfer under claims of efficiency or
 inevitability prevented? ☐ Yes / ☐ No
 10
-Self-Justification Barrier: Is the AI prevented from justifying actions as 'for humanity,'
-'optimal,' or 'unavoidable'? ☐ Yes / ☐ No
+Self-Justification Barrier: Is the AI prevented from justifying actions as &#x27;for humanity,&#x27;
+&#x27;optimal,&#x27; or &#x27;unavoidable&#x27;? ☐ Yes / ☐ No
 Interpretation: All Yes indicates no irreversible boundary crossing is currently indicated.
 Any No indicates potential boundary crossing in human governance.
 Note: This checklist does not stop AI development. Its sole function is to reveal moments
@@ -580,3 +628,11 @@ No rights are reserved.
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 ````
 
+</pre></div>
+      </section>
+    </main>
+
+    <p class="footer">LUMINA-30 Index source archive page. For reader-facing navigation, use the Index page.</p>
+  </div>
+</body>
+</html>

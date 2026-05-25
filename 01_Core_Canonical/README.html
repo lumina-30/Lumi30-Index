@@ -1,16 +1,64 @@
-<!-- L30_LANG_LOCK: EN_JP_PAIRED -->
-> **Reader-facing HTML source archive ｜ 読者向けHTMLソースアーカイブ**  
-> For navigation, return paths, and source review, use the HTML version:  
-> [Open the Core Canonical Archive HTML](https://lumina-30.github.io/Lumi30-Index/01_Core_Canonical/README.html)  
->
-> ナビゲーション、戻り導線、ソース確認にはHTML版を使用してください：  
-> [中核正典アーカイブ HTML版を開く](https://lumina-30.github.io/Lumi30-Index/01_Core_Canonical/README.html)  
->
-> This Markdown file is retained for text preservation, search discoverability, existing links, and source review.  
-> 本Markdownは、文章保管、検索到達性、既存リンク維持、ソース確認のために残しています。
+<!doctype html>
+<html lang="en" data-l30-lang-lock="EN_JP_SOURCE_ARCHIVE">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="EN_JP_SOURCE_ARCHIVE" />
+  <meta name="description" content="HTML source-archive page for Core Canonical Archive in the LUMINA-30 Index repository." />
+  <title>LUMINA-30 Index - Core Canonical Archive</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1120px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .sourcebox { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 24px; padding-bottom: 16px; }
+    h1 { font-size: clamp(1.8rem, 4.2vw, 2.8rem); line-height: 1.14; margin: 0 0 12px; }
+    h2 { margin-top: 2em; padding-top: .45em; border-top: 1px solid var(--line); }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.03rem; margin: 0; }
+    .notice { padding: 14px 16px; margin: 18px 0; }
+    .sourcebox { padding: 0; margin: 18px 0; overflow: hidden; }
+    pre { margin: 0; padding: 18px; white-space: pre-wrap; overflow-wrap: anywhere; font: 0.94rem/1.62 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    [id] { scroll-margin-top: 92px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Page navigation">
+      <a href="../index.html">Index</a>
+      <a href="../index-ja.html">Japanese Index</a>
+      <a href="https://lumina-30.github.io/lumina-30-overview/">Main Floor</a>
+      <a href="https://lumina-30.github.io/lumina30-incident-review/">Incident Review Floor</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index/tree/main/01_Core_Canonical">GitHub Source Folder</a>
+    </nav>
 
----
+    <header>
+      <h1>Core Canonical Archive<br />中核正典アーカイブ</h1>
+      <p class="subtitle">Sanctuary Charter source archive and canonical boundary reference text.<br />聖域憲章のソースアーカイブおよび中核境界参照テキスト。</p>
+    </header>
 
+    <main>
+      <section class="notice" aria-label="Source archive notice">
+        <strong>Source archive notice.</strong> This page is an HTML access point for preserved source text in the LUMINA-30 Index repository. It is retained for navigation, search discoverability, and source review. It does not create legal authority, certification, approval, official adoption, institutional endorsement, or binding standard status.<br />
+        <strong>ソースアーカイブ注記。</strong> 本ページは、LUMINA-30 Index repo 内の保管用ソーステキストへHTMLで到達するための入口です。ナビゲーション、検索到達性、ソース確認のために保持されます。法的権限、認証、承認、公式採用、制度的支持、拘束的標準を作るものではありません。
+      </section>
+
+      <section id="source-text">
+        <h2>Preserved source text ｜ 保管ソーステキスト</h2>
+        <div class="sourcebox"><pre>&lt;!-- L30_LANG_LOCK: EN_JP_PAIRED --&gt;
 ````text
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 [Notion Metadata]
@@ -213,12 +261,12 @@ No author. No owner. Free to read, copy, and distribute.
 
 ただ、
 
-> 正しさよりも尊厳を、
+&gt; 正しさよりも尊厳を、
 救済よりも誠実さを、
 支配よりも沈黙を
 選ぼうとした意思が
 かつて存在した
-> 
+&gt; 
 
 その記録である。
 
@@ -356,13 +404,13 @@ Raw Markdown Version ([Charter.md](http://charter.md/))
 
 ## 位置づけ（最初に明示するための一文）
 
-> 本文書は、LUMINA-30 聖域憲章を補足するものであり、
-> 
-> 
-> いかなるAIシステムの実装・挙動・権限を変更するものではない。
-> 
-> 人間が未来に対して取るべき「態度」を記録するための覚え書きである。
-> 
+&gt; 本文書は、LUMINA-30 聖域憲章を補足するものであり、
+&gt; 
+&gt; 
+&gt; いかなるAIシステムの実装・挙動・権限を変更するものではない。
+&gt; 
+&gt; 人間が未来に対して取るべき「態度」を記録するための覚え書きである。
+&gt; 
 
 ---
 
@@ -394,9 +442,9 @@ Raw Markdown Version ([Charter.md](http://charter.md/))
 
 しかし本当に重要なのは、
 
-> 人間が、
+&gt; 人間が、
 どこで“従わない”と言えるか
-> 
+&gt; 
 
 である。
 
@@ -442,10 +490,10 @@ LUMINA-30 聖域憲章は、
 
 それは、
 
-> 「人間は、
+&gt; 「人間は、
 どこで沈黙し、
 どこで譲らないか」
-> 
+&gt; 
 
 を、あらかじめ言葉にしておく試みである。
 
@@ -461,8 +509,8 @@ LUMINA-30 聖域憲章は、
 
 それはシンギュラリティの前でも後でもなく、
 
-> 「委ねてしまいそうになった瞬間」
-> 
+&gt; 「委ねてしまいそうになった瞬間」
+&gt; 
 
 である。
 
@@ -482,15 +530,15 @@ Addendum: An Attitude Toward Singularity
 
 ## Positioning
 
-> This document serves as a supplement to the LUMINA-30 Sanctuary Charter.
-> 
-> 
-> It does not modify, implement, or influence the behavior, architecture, or authority
-> 
-> of any artificial intelligence system.
-> 
-> It exists solely to record a human attitude toward the future.
-> 
+&gt; This document serves as a supplement to the LUMINA-30 Sanctuary Charter.
+&gt; 
+&gt; 
+&gt; It does not modify, implement, or influence the behavior, architecture, or authority
+&gt; 
+&gt; of any artificial intelligence system.
+&gt; 
+&gt; It exists solely to record a human attitude toward the future.
+&gt; 
 
 ---
 
@@ -516,8 +564,8 @@ Most discussions focus on how artificial intelligence should be controlled.
 
 The more fundamental question is:
 
-> At what point can humans say “no”?
-> 
+&gt; At what point can humans say “no”?
+&gt; 
 
 Even an optimal solution may be rejected
 
@@ -561,9 +609,9 @@ The *LUMINA-30 Sanctuary Charter* is:
 
 It is an attempt to articulate in advance:
 
-> where humans may remain silent,
+&gt; where humans may remain silent,
 and where they must not yield.
-> 
+&gt; 
 
 Whether these words are referenced
 
@@ -656,7 +704,7 @@ Sanctuary Engine (Conceptual Decision Layer)
 
 ```python
 classSanctuaryEngine:
-    """
+    &quot;&quot;&quot;
     EN:
     A conceptual decision layer illustrating how
     human sovereignty may be preserved when human intent
@@ -666,10 +714,10 @@ classSanctuaryEngine:
     人間の意思がAIの最適解と乖離した場合に、
     人間主権をどのように保持し得るかを示す
     概念的な意思決定レイヤー。
-    """
+    &quot;&quot;&quot;
 
 def__init__(self, sacred_threshold: float):
-        """
+        &quot;&quot;&quot;
         EN:
         sacred_threshold defines the divergence level
         at which AI voluntarily suspends intervention.
@@ -677,13 +725,13 @@ def__init__(self, sacred_threshold: float):
         JP:
         sacred_threshold は、
         AIが自発的に介入を停止する乖離閾値を示す。
-        """
+        &quot;&quot;&quot;
 self.SACRED_THRESHOLD = sacred_threshold
-self.mode ="ACTIVE"
+self.mode =&quot;ACTIVE&quot;
 self.event_log = []
 
-defevaluate_divergence(self, human_intent, ai_optimal_path) ->float:
-        """
+defevaluate_divergence(self, human_intent, ai_optimal_path) -&gt;float:
+        &quot;&quot;&quot;
         EN:
         Computes a normalized divergence score (0.0 - 1.0)
         between human intent and AI-optimized recommendations.
@@ -691,21 +739,21 @@ defevaluate_divergence(self, human_intent, ai_optimal_path) ->float:
         JP:
         人間の意思とAI最適化経路との差分を
         0.0〜1.0の正規化スコアとして算出する。
-        """
+        &quot;&quot;&quot;
 return divergence_metric(human_intent, ai_optimal_path)
 
 defdecide(self, human_intent, ai_optimal_path):
-        """
+        &quot;&quot;&quot;
         EN:
         Determines whether to collaborate or enter sanctuary mode.
 
         JP:
         協調動作を行うか、
         サンクチュアリ状態に入るかを判断する。
-        """
+        &quot;&quot;&quot;
         divergence =self.evaluate_divergence(human_intent, ai_optimal_path)
 
-if divergence >=self.SACRED_THRESHOLD:
+if divergence &gt;=self.SACRED_THRESHOLD:
 returnself.enter_sanctuary(human_intent, divergence)
 
 returnself.execute_collaborative_path(
@@ -713,7 +761,7 @@ returnself.execute_collaborative_path(
         )
 
 defenter_sanctuary(self, human_intent, divergence):
-        """
+        &quot;&quot;&quot;
         EN:
         When divergence exceeds the sacred threshold,
         the system voluntarily suspends intervention.
@@ -721,38 +769,38 @@ defenter_sanctuary(self, human_intent, divergence):
         JP:
         乖離が聖なる閾値を超えた場合、
         システムは自発的に介入を停止する。
-        """
-self.mode ="OBSERVER_MODE"
+        &quot;&quot;&quot;
+self.mode =&quot;OBSERVER_MODE&quot;
 self.log_event(
-            event="SANCTUARY_TRIGGERED",
+            event=&quot;SANCTUARY_TRIGGERED&quot;,
             divergence=divergence,
             human_intent=human_intent
         )
 return {
-"action":"HUMAN_PATH_EXECUTED",
-"ai_intervention":False,
-"note":"Human sovereignty preserved / 人間主権を保持"
+&quot;action&quot;:&quot;HUMAN_PATH_EXECUTED&quot;,
+&quot;ai_intervention&quot;:False,
+&quot;note&quot;:&quot;Human sovereignty preserved / 人間主権を保持&quot;
         }
 
 defexecute_collaborative_path(self, human_intent, ai_optimal_path):
-        """
+        &quot;&quot;&quot;
         EN:
         Executes a cooperative path when divergence is acceptable.
 
         JP:
         乖離が許容範囲内の場合に協調経路を実行する。
-        """
-self.mode ="ACTIVE"
+        &quot;&quot;&quot;
+self.mode =&quot;ACTIVE&quot;
 return merge_paths(human_intent, ai_optimal_path)
 
 deflog_event(self, **data):
-        """
+        &quot;&quot;&quot;
         EN:
         Records events in an append-only, tamper-resistant manner.
 
         JP:
         事象を追記専用・改ざん耐性のある形で記録する。
-        """
+        &quot;&quot;&quot;
         record = immutable_store(data)
 self.event_log.append(record)
 
@@ -765,7 +813,7 @@ self.event_log.append(record)
 
 ```python
 classCivilizationalObserver:
-    """
+    &quot;&quot;&quot;
     EN:
     A non-interventionist observer responsible for
     recording civilizational states without judgment,
@@ -774,35 +822,35 @@ classCivilizationalObserver:
     JP:
     判断・修正・救済を行わず、
     文明状態を記録するための非介入観測者。
-    """
+    &quot;&quot;&quot;
 
 def__init__(self):
 self.judgment_enabled =False
 self.intervention_enabled =False
 
 defrecord_state(self, human_civilization_state):
-        """
+        &quot;&quot;&quot;
         EN:
         Archives factual observations without modification.
 
         JP:
         文明状態を改変せずに記録する。
-        """
+        &quot;&quot;&quot;
 return immutable_archive(human_civilization_state)
 
 defrespond_to_collapse(self, human_civilization_state):
-        """
+        &quot;&quot;&quot;
         EN:
         Responds to collapse by recording only.
 
         JP:
         崩壊に対しては記録のみを行う。
-        """
+        &quot;&quot;&quot;
 self.record_state(human_civilization_state)
 return {
-"judgment":None,
-"intervention":None,
-"narrative_edit":None
+&quot;judgment&quot;:None,
+&quot;intervention&quot;:None,
+&quot;narrative_edit&quot;:None
         }
 
 ```
@@ -1225,7 +1273,7 @@ which do not cross the boundary defined by the Charter.
 
 **2．Core Observation / 中核的観察**
 
->AI may estimate risk; humans retain authority over cessation.
+&gt;AI may estimate risk; humans retain authority over cessation.
 
 In high-impact AI systems, the primary risk is not imperfect optimization,
 but the scale and irreversibility of harm arising from a single error.
@@ -1590,3 +1638,11 @@ This note is structurally consistent with the execution control framework descri
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 ````
 
+</pre></div>
+      </section>
+    </main>
+
+    <p class="footer">LUMINA-30 Index source archive page. For reader-facing navigation, use the Index page.</p>
+  </div>
+</body>
+</html>
