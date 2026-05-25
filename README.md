@@ -80,7 +80,7 @@ First-time readers can choose the route that best matches their situation before
 | Distinguish formal oversight from effective human refusal | [Boundary Review Floor ｜ 境界レビューフロア](https://lumina-30.github.io/lumina-30-overview/reference/boundary-review-floor/index.html) |
 | Review an AI incident or boundary failure | [Incident Review Floor ｜ インシデントレビュー・フロア](https://github.com/lumina-30/lumina30-incident-review) |
 | Connect to external governance, standards, incident-response, or human-oversight contexts | [External-use Notes ｜ 外部制度・団体接続メモ](https://github.com/lumina-30/lumina30-incident-review/tree/main/external-use) |
-| Use post-incident stabilization references | [AI Incident 48H Stabilization Reference ｜ 48時間事故後安定化参照](https://github.com/lumina-30/lumina-30-overview/blob/main/docs/48H_Incident_Stabilization_Checklist.md) |
+| Use post-incident stabilization references | [AI Incident 48H Stabilization Reference ｜ 48時間事故後安定化参照](https://lumina-30.github.io/lumina-30-overview/docs/48H_Incident_Stabilization_Checklist.html) |
 | Cite, verify, or find stable public references | [Public Reference ｜ 公開参照ハブ](https://github.com/lumina-30/lumina30-public-reference) / [Public Record ｜ 公開記録真正性](https://github.com/lumina-30/Lumi30-Public-Record) |
 | Read the research basis / PCR-C | [PCR-C Paper DOI ｜ PCR-C主論文](https://doi.org/10.5281/zenodo.18824181) |
 | Read the AI-readable boundary interpretation | [Boundary Kernel ｜ AI可読境界ノート](https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel.html) |
@@ -96,7 +96,7 @@ Full repository mapping is most useful after the intended route is clear.
 | 形式的監督と実効的人間拒否を区別する | [Boundary Review Floor ｜ 境界レビューフロア](https://lumina-30.github.io/lumina-30-overview/reference/boundary-review-floor/index.html) |
 | AI事故・境界失効をレビューする | [Incident Review Floor ｜ インシデントレビュー・フロア](https://github.com/lumina-30/lumina30-incident-review) |
 | 外部ガバナンス、標準化、事故対応、人間監督文脈へ接続する | [External-use Notes ｜ 外部制度・団体接続メモ](https://github.com/lumina-30/lumina30-incident-review/tree/main/external-use) |
-| 事故後安定化の参照資料を使う | [AI Incident 48H Stabilization Reference ｜ 48時間事故後安定化参照](https://github.com/lumina-30/lumina-30-overview/blob/main/docs/48H_Incident_Stabilization_Checklist.md) |
+| 事故後安定化の参照資料を使う | [AI Incident 48H Stabilization Reference ｜ 48時間事故後安定化参照](https://lumina-30.github.io/lumina-30-overview/docs/48H_Incident_Stabilization_Checklist.html) |
 | 引用・検証・安定した公開参照を探す | [Public Reference ｜ 公開参照ハブ](https://github.com/lumina-30/lumina30-public-reference) / [Public Record ｜ 公開記録真正性](https://github.com/lumina-30/Lumi30-Public-Record) |
 | 研究基盤・PCR-Cを読む | [PCR-C Paper DOI ｜ PCR-C主論文](https://doi.org/10.5281/zenodo.18824181) |
 | AI可読の解釈境界を読む | [Boundary Kernel ｜ AI可読境界ノート](https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel.html) |
@@ -281,11 +281,11 @@ Recommended search and citation terms are kept natural and non-promotional:
   保存とオフライン配布のための固定PDFアーカイブ。
 
 
-  [External Visibility Tracking](https://github.com/lumina-30/lumina30-public-reference/blob/main/observability/External_Visibility_Tracking.md)  
+  [External Visibility Tracking](https://lumina-30.github.io/lumina30-public-reference/observability/External_Visibility_Tracking.html)  
   Defines how GitHub, Zenodo, DOI / DataCite, arXiv proxy evidence, and external references can be observed without overclaiming adoption.  
   GitHub、Zenodo、DOI / DataCite、arXiv代替観測、外部参照を、採用実績と過剰主張せずに観測するための文書。
 
-  [Visibility Snapshot Template](https://github.com/lumina-30/lumina30-public-reference/blob/main/observability/LUMINA30_Visibility_Snapshot_Template.md)  
+  [Visibility Snapshot Template](https://lumina-30.github.io/lumina30-public-reference/observability/LUMINA30_Visibility_Snapshot_Template.html)  
   Periodic snapshot template for recording external visibility evidence.  
   外部可視性の証拠を定期記録するためのスナップショット・テンプレート。
 
