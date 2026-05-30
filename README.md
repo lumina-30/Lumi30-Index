@@ -1,15 +1,15 @@
 <!-- L30_LANG_LOCK: EN_JP_PAIRED -->
 # LUMINA-30
 
-> **Reader-facing HTML index ｜ 読者向けHTML索引**  
-> For navigation, return paths, and first-time reading, use the HTML version:  
+> **Use the HTML index for reading ｜ 閲覧にはHTML索引を使用してください**  
+> For navigation, return paths, and first-time reading, do not stay on this README.md; use the HTML index site:  
 > [Open the LUMINA-30 Index HTML](https://lumina-30.github.io/Lumi30-Index/)  
 >
-> 読みやすさ、戻り導線、初回閲覧にはHTML版を使用してください：  
-> [LUMINA-30 Index HTML版を開く](https://lumina-30.github.io/Lumi30-Index/)  
+> 日本語で読む場合も、このREADME.mdに留まらず、日本語HTML索引を使用してください：  
+> [LUMINA-30索引 日本語HTML版を開く](https://lumina-30.github.io/Lumi30-Index/index-ja.html)  
 >
-> This Markdown file is retained for text preservation, search discoverability, existing links, and source review. GitHub Markdown is weaker for long-form navigation, return paths, and reader orientation; the HTML index is the preferred reader-facing route.  
-> 本Markdownは、文章保管、検索到達性、既存リンク維持、ソース確認のために残しています。GitHub Markdownは、長文移動、戻り導線、現在地維持に弱いため、読者向け導線ではHTML索引を優先してください。
+> This README.md is retained for canonical text preservation, search discoverability, existing links, source review, and version comparison. It is not the preferred reader-facing route.  
+> 本README.mdは、正本文書の保管、検索到達性、既存リンク維持、ソース確認、差分確認のために残しています。読者向けの閲覧・移動・戻り導線には、HTML索引を使用してください。
 
 > **Terminology note ｜ 用語上の注意**  
 > Reversible Prosperity Path is not a replacement name for LUMINA-30. It is the positive direction made possible when LUMINA-30’s boundary condition is preserved.  
