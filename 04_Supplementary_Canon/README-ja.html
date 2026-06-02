@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja" data-l30-lang-lock="JA_READER_HTML">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="JA_READER_HTML" />
+  <meta name="description" content="LUMINA-30 Index repository Japanese reader page for 補助正典アーカイブ." />
+  <title>補助正典アーカイブ - LUMINA-30 Index</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1040px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 22px; }
+    h1 { font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.1rem; }
+    .subtitle, .footer { color: var(--muted); }
+    .notice, .card { padding: 16px; margin: 18px 0 24px; }
+    ul { padding-left: 1.35rem; }
+    a { color: var(--accent); }
+    .footer { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 32px; font-size: .95rem; }
+    [id] { scroll-margin-top: 92px; }
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="ページ内ナビゲーション">
+      <a href="../index-ja.html">日本語索引</a>
+      <a href="README.html">英語版</a>
+      <a href="https://lumina-30.github.io/lumina-30-overview/index-ja.html">メインフロア</a>
+      <a href="https://lumina-30.github.io/lumina30-incident-review/index-ja.html">インシデントレビューフロア</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index/tree/main/04_Supplementary_Canon">GitHubソースフォルダ</a>
+    </nav>
+
+    <header>
+      <h1>補助正典アーカイブ</h1>
+      <p class="subtitle">補助正典、外部実務付録、補足文書への到達性を保つ階層です。</p>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="日本語ページ注記">
+        <strong>日本語ページ注記。</strong>
+        このページは、日本語読者が当該階層の役割と導線を確認するための入口です。
+        原文保管・差分確認・機械的なソース確認は、英語版およびGitHubソースフォルダを参照してください。
+        日本語ページ内に英語原文を混在させないため、ここでは概要と移動先を分離して示します。
+      </section>
+
+      <section id="role" class="card">
+        <h2>この階層の役割</h2>
+        <p>補助正典、外部実務付録、補足文書への到達性を保つ階層です。</p>
+      </section>
+
+      <section id="routes" class="card">
+        <h2>主要導線</h2>
+        <ul>
+          <li><a href="../index-ja.html">LUMINA-30 Index 日本語トップへ戻る</a></li>
+          <li><a href="README.html">英語版の保管ページを開く</a></li>
+          <li><a href="https://github.com/lumina-30/Lumi30-Index/tree/main/04_Supplementary_Canon">GitHub上のこの階層を開く</a></li>
+          <li><a href="https://lumina-30.github.io/lumina-30-overview/index-ja.html">LUMINA-30 メインフロアへ移動する</a></li>
+          <li><a href="https://lumina-30.github.io/lumina30-incident-review/index-ja.html">インシデントレビューフロアへ移動する</a></li>
+        </ul>
+      </section>
+
+      <section id="scope" class="card">
+        <h2>扱い</h2>
+        <p>
+          このHTMLは読者向け導線です。法的権限、認証、承認、公式採用、制度的支持、拘束的標準を作るものではありません。
+          正本確認、履歴確認、ファイル単位の確認が必要な場合は、GitHubソースフォルダを確認してください。
+        </p>
+      </section>
+    </main>
+
+    <p class="footer">LUMINA-30 Index / Japanese reader route. Non-binding public reference.</p>
+  </div>
+</body>
+</html>

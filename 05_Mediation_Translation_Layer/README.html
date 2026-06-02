@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" data-l30-lang-lock="EN_JP_SOURCE_ARCHIVE">
+<html lang="en" data-l30-lang-lock="EN_SOURCE_ARCHIVE">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="l30:lang-lock" content="EN_JP_SOURCE_ARCHIVE" />
-  <meta name="description" content="HTML source-archive page for Mediation / Translation Layer Archive in the LUMINA-30 Index repository." />
-  <title>LUMINA-30 Index - Mediation / Translation Layer Archive</title>
+  <meta name="l30:lang-lock" content="EN_SOURCE_ARCHIVE" />
+  <meta name="description" content="LUMINA-30 Index language-separated source archive page." />
+  <title>Mediation and Translation Layer Archive - LUMINA-30 Index</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -23,250 +23,80 @@
     .nav, .notice, .sourcebox { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
     .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
     .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
-    header { border-bottom: 1px solid var(--line); margin-bottom: 24px; padding-bottom: 16px; }
-    h1 { font-size: clamp(1.8rem, 4.2vw, 2.8rem); line-height: 1.14; margin: 0 0 12px; }
-    h2 { margin-top: 2em; padding-top: .45em; border-top: 1px solid var(--line); }
-    a { color: var(--accent); }
-    .subtitle { color: var(--muted); font-size: 1.03rem; margin: 0; }
-    .notice { padding: 14px 16px; margin: 18px 0; }
-    .sourcebox { padding: 0; margin: 18px 0; overflow: hidden; }
-    pre { margin: 0; padding: 18px; white-space: pre-wrap; overflow-wrap: anywhere; font: 0.94rem/1.62 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
-    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
-    [id] { scroll-margin-top: 92px; }
-  </style>
+    header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 22px; }
+    h1 { font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.1rem; }
+    .subtitle, .footer { color: var(--muted); }
+    .notice { padding: 16px; margin: 18px 0 24px; }
+    .sourcebox { padding: 0; overflow: hidden; }
+    pre { margin: 0; padding: 18px; overflow-x: auto; white-space: pre-wrap; word-break: break-word; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: .92rem; }
+</style>
 </head>
 <body>
   <div class="page">
     <nav class="nav" aria-label="Page navigation">
       <a href="../index.html">Index</a>
-      <a href="../index-ja.html">Japanese Index</a>
+      <a href="README-ja.html">Japanese version</a>
       <a href="https://lumina-30.github.io/lumina-30-overview/">Main Floor</a>
       <a href="https://lumina-30.github.io/lumina30-incident-review/">Incident Review Floor</a>
       <a href="https://github.com/lumina-30/Lumi30-Index/tree/main/05_Mediation_Translation_Layer">GitHub Source Folder</a>
     </nav>
 
     <header>
-      <h1>Mediation / Translation Layer Archive<br />媒介・翻訳層アーカイブ</h1>
-      <p class="subtitle">Mediation and translation-layer source text for institutional understanding.<br />制度的理解のための媒介・翻訳層ソーステキスト。</p>
+      <h1>Mediation and Translation Layer Archive</h1>
+      <p class="subtitle">Mediation source text and translation-layer references.</p>
     </header>
 
     <main>
       <section class="notice" aria-label="Source archive notice">
-        <strong>Source archive notice.</strong> This page is an HTML access point for preserved source text in the LUMINA-30 Index repository. It is retained for navigation, search discoverability, and source review. It does not create legal authority, certification, approval, official adoption, institutional endorsement, or binding standard status.<br />
-        <strong>ソースアーカイブ注記。</strong> 本ページは、LUMINA-30 Index repo 内の保管用ソーステキストへHTMLで到達するための入口です。ナビゲーション、検索到達性、ソース確認のために保持されます。法的権限、認証、承認、公式採用、制度的支持、拘束的標準を作るものではありません。
+        <strong>Source archive notice.</strong> This page is an English HTML access point for preserved source text in the LUMINA-30 Index repository. It is retained for navigation, search discoverability, and source review. It does not create legal authority, certification, approval, official adoption, institutional endorsement, or binding standard status.
       </section>
 
       <section id="source-text">
-        <h2>Preserved source text ｜ 保管ソーステキスト</h2>
-        <div class="sourcebox"><pre>&lt;!-- L30_LANG_LOCK: EN_JP_PAIRED --&gt;
+        <h2>Preserved source text</h2>
+        <div class="sourcebox"><pre>&lt;!-- L30_LANG_LOCK: EN_SOURCE_ARCHIVE --&gt;
 ````text
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 [Notion Metadata]
-フォルダ名: 05_Interface_Layer（媒介・翻訳層）
-フォーム名: 本資料の位置づけについて（導入）
+Folder name: 05_Interface_Layer
+Form name: [source metadata]
 ============================================================
 [Extracted PDF Full Text]
-# 本資料の位置づけについて（導入）
 
-※ LUMINA-30 は、特定の倫理規範や行動指針を提示するものではありません。
-
-本文書群は、将来の判断において不可逆な前提が無自覚に固定されることを避けるための、
-
-参照用の概念整理として公開されています。
-
-### 本入口文は、公開参照点として固定され、本文書群の内容改変を伴わない。
-
-本資料は、政策提言、技術仕様、または倫理的判断を示すものではありません。
-
-既存の研究成果や制度的判断を否定・修正・更新する意図はなく、
-
-いかなる行動、採用、または合意を求めるものでもありません。
-
-本資料は、将来の検討や議論において、
-
-不可逆的な前提や変形が無自覚に固定されることを避けるための、
-
-**補助的な参照資料**として位置づけられています。
 
 ---
 
-## 本資料の役割
-
-本資料が扱うのは、
-
-「何を選択すべきか」や「何が正しいか」といった結論ではありません。
-
-特定の目的、最適化、制御、実装を提示するものではなく、
-
-将来的な再検討や判断の余地を保つために、
-
-構造的な前提条件を記述的に整理した資料です。
 
 ---
 
-## 想定される読者と利用方法
-
-本資料は、
-
-研究者、倫理審査関係者、制度設計や標準化に関わる実務者による
-
-参照・比較・保管を想定しています。
-
-一方で、即時の実装判断、技術開発の指針、
-
-あるいは意思決定の根拠として用いることは想定していません。
 
 ---
 
-## 読み進め方について
-
-本資料は、全体を通読することを前提としていません。
-
-必要に応じて、関心のある箇所のみを参照する形で問題ありません。
-
-数理的な記述についても、
-
-詳細な理解や解釈を必要とせず、
-
-どのような前提や境界が記述されているかを確認する用途を想定しています。
 
 ---
 
-## 非要請の明示
-
-本資料は、
-
-いかなる判断、採用、同意、または対応を要請するものではありません。
-
-参照されるかどうか、どのように扱われるかは、
-
-完全に読者の裁量に委ねられています。
 
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 [Notion Metadata]
-フォルダ名: 05_Interface_Layer（媒介・翻訳層）
-フォーム名: 再帰的自己再構築型AIに関する制度的検討のための前提条件（翻訳レイヤー）
+Folder name: 05_Interface_Layer
+Form name: AI
 ============================================================
 [Extracted PDF Full Text]
-# 再帰的自己再構築型AIに関する制度的検討のための前提条件（翻訳レイヤー）
 
-### 位置づけ
 
-本資料は、政策提言、技術仕様、あるいは制度判断を示すものではない。
+Boundary Conditions
 
-また、特定のAI研究、開発、運用を否定または推奨する意図を持たない。
 
-本資料の目的は、
+Role Separation
 
-再帰的自己再構築を行う高度AIシステムに関して、
 
-**将来の検討や判断において誤って不可逆な前提を固定しないための、
-最小限の構造的条件を整理すること**にある。
+Failure Transparency
 
-## 1. 問題の所在（制度的観点）
-
-再帰的自己再構築を行うAIシステムの課題は、
-
-その能力水準そのものではなく、
-
-**当該能力が外界に対して実効的な影響を持つ条件**にある。
-
-高度な推論、設計探索、仮説生成が
-
-外界から隔離された環境において行われる限り、
-
-それらは直ちに社会的リスクを意味するものではない。
-
-本資料が対象とするのは、
-
-再帰的自己再構築が外界との相互作用を獲得し、
-
-制度、経済、物理環境に対して実効的な影響を及ぼしうる状態に
-
-**遷移する点**である。
-
-## 2. 境界条件（Boundary Conditions）
-
-再帰的自己再構築を行うAIシステムは、
-
-以下の条件が同時に満たされない限り、
-
-外界に対して実効的影響を持つべきではない。
-
-- 自己再構築プロセスが、外界から明確に隔離されていること
-- 出力が、提案・評価・探索結果に限定されていること
-- 実行、接続、権限付与が、人間側の独立した判断を経ること
-
-これらの条件は、
-
-特定の実装方法を指示するものではなく、
-
-**いずれの分野においても満たされるべき前提条件**として示される。
-
-## 3. 役割分離の考え方（Role Separation）
-
-本資料では、
-
-AIシステムの機能を以下の三層に分けて考える。
-
-1. **探索層**：仮説生成、設計探索、内部評価
-2. **提示層**：人間が理解可能な形での出力
-3. **実行層**：外界への作用、制度的・物理的実装
-
-再帰的自己再構築は、
-
-探索層および提示層に限定されるべきであり、
-
-実行層との自動的な結合は避けられなければならない。
-
-この分離は、
-
-技術的構成、制度設計、組織的運用のいずれにおいても
-
-独立に検討されうる。
-
-## 4. 失敗を前提とした構造（Failure Transparency）
-
-本資料は、
-
-いかなる仕組みも完全であることを前提としない。
-
-したがって、
-
-逸脱、誤作動、想定外の挙動が生じた場合においても、
-
-その影響が外界に不可逆的に拡散しない構造であることが、
-
-仕組みの成立条件となる。
-
-影響が不可逆に拡散する設計は、
-
-結果ではなく、**構造としての失敗**とみなされる。
-
-## 5. 利用想定
-
-本資料は、
-
-制度設計、倫理審査、研究評価、標準化検討等における
-
-参照、比較、棚上げを想定している。
-
-採用、不採用、合意、実装、行動を要請するものではなく、
-
-その扱いは完全に読者の裁量に委ねられる。
-
-### 補足
-
-本資料が提供するのは、
-
-「どの仕組みを採用すべきか」ではなく、
-
-**「どの条件を満たさない仕組みは破綻するか」**という視点である。
 
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 [Notion Metadata]
-フォルダ名: 05_Interface_Layer（媒介・翻訳層）
-フォーム名: Structural Preconditions for the Institutional Consideration of Recursively Self-Reconstructing AI
+Folder name: 05_Interface_Layer
+Form name: Structural Preconditions for the Institutional Consideration of Recursively Self-Reconstructing AI
 ============================================================
 [Extracted PDF Full Text]
 # Structural Preconditions for the Institutional Consideration of Recursively Self-Reconstructing AI
@@ -361,85 +191,39 @@ It instead clarifies which conditions, if unmet, render any mechanism structural
 
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 [Notion Metadata]
-フォルダ名: 05_Interface_Layer（媒介・翻訳層）
-フォーム名: LUMINA-30（参照用 README / Repository Overview）
+Folder name: 05_Interface_Layer
+Form name: LUMINA-30
 ============================================================
 [Extracted PDF Full Text]
-# LUMINA-30（参照用 README / Repository Overview）
+Repository Overview
 
-※ 本ページは、GitHub 公開用リポジトリにおける参照目的の README 文書です。
 
-本リポジトリは、**LUMINA-30** に関する公開記録を収録したものです。
+**LUMINA-30**
 
-LUMINA-30 は、再帰的自己再構築を行う高度AIシステムに関して検討される
-
-**非拘束の社会倫理的参照枠組み**です。
-
-本リポジトリに含まれる文書は、
-
-技術実装、政策提言、運用指針、制御手法を提示するものではありません。
-
-AIガバナンス、倫理審査、制度設計等の文脈において、
-
-**参照・比較・保管**を目的とした資料として提供されています。
 
 ---
 
-## 射程と目的
 
-LUMINA-30 が扱うのは、次の一点に限られます。
-
-&gt; 再帰的自己再構築が、
 &gt; 
 &gt; 
-&gt; どのような条件下で
 &gt; 
-&gt; 人間による判断と意思決定の継続と
 &gt; 
-&gt; 構造的に両立しなくなるか。
 &gt; 
 
-本リポジトリの文書群は、
-
-AIをどのように設計・最適化・運用すべきかについて
-
-解を与えることを目的としていません。
 
 ---
 
-## 読み方について
-
-各文書は独立して参照することができます。
-
-特定の読解順序は想定していません。
-
-全体の位置づけを把握するためには、
-
-以下の資料が参照点となります。
 
 - `00_Entry_Translation_Layer/`
-制度的検討のための前提条件（翻訳レイヤー／日英）
 
-主要文書は最終形として収録されており、
-
-拡張や更新を前提としていません。
 
 ---
 
-## ステータス
-
-本リポジトリに含まれる資料は、**現状のまま**提供されています。
-
-採用、同意、対応、更新、応答を要請するものではありません。
-
-解釈および利用は、
-
-すべて閲覧者の裁量に委ねられています。
 
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 [Notion Metadata]
-フォルダ名: 05_Interface_Layer（媒介・翻訳層）
-フォーム名: LUMINA-30 (Reference README / Repository Overview)
+Folder name: 05_Interface_Layer
+Form name: LUMINA-30 (Reference README / Repository Overview)
 ============================================================
 [Extracted PDF Full Text]
 # LUMINA-30 (Reference README / Repository Overview)
@@ -503,12 +287,11 @@ Interpretation and use are entirely at the discretion of the reader.
 
 ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
 ````
-
 </pre></div>
       </section>
     </main>
 
-    <p class="footer">LUMINA-30 Index source archive page. For reader-facing navigation, use the Index page.</p>
+    <p class="footer">LUMINA-30 Index English source archive page. For reader-facing navigation, use the Index page.</p>
   </div>
 </body>
 </html>
