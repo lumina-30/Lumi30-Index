@@ -71,7 +71,7 @@ These names are navigation labels for readers. They do not imply certification, 
 ## Repository Entry Gate ｜ repo入口制御
 
 This index is a navigation map, not the recommended first-reading path.  
-First-time readers can choose the route that best matches their situation before browsing the full repository network.
+First-time readers can choose the route that matches their situation before browsing the full repository network.
 
 | Situation | Start here |
 |---|---|
@@ -326,4 +326,5 @@ Its purpose is structural documentation and boundary clarification.
 
 LUMINA-30 remains descriptive, non-directive, and non-binding.  
 LUMINA-30 は記述的構造であり、指示的・拘束的ではない。
+
 
