@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-l30-lang-lock="EN_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="EN_ONLY" />
+  <meta name="description" content="Guide page for asking your own AI assistant to explain LUMINA-30 without overstating its status." />
+  <title>Explain LUMINA-30 with Your AI</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    h3 { margin: 0 0 .55em; }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice { padding: 14px 16px; margin: 18px 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
+    .card { padding: 16px; }
+    .card p { margin: .3em 0 .85em; }
+    .muted { color: var(--muted); }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; border: 1px solid var(--line); background: var(--soft); border-radius: 14px; padding: 12px; }
+    [id] { scroll-margin-top: 92px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Page navigation">
+      <a href="index.html">Index</a>
+      <a href="explain-with-ai-ja.html">Japanese guide</a>
+      <a href="ai-briefing.html">Standard AI Briefing</a>
+      <a href="ai-briefing-beginner.html">Beginner AI Briefing</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index">GitHub Repository</a>
+    </nav>
+
+    <header>
+      <h1>Explain LUMINA-30 with Your AI</h1>
+      <p class="subtitle">Give a briefing URL to your own AI assistant and ask it to explain LUMINA-30 without overstating its status.</p>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="Important caution">
+        <strong>Important.</strong> LUMINA-30 is not an official standard, legal certification, safety guarantee, government-approved framework, or proof that an AI system is safe.
+      </section>
+
+      <section id="how">
+        <h2>How to use this page</h2>
+        <p>If LUMINA-30 feels difficult at first, give one of the briefing URLs below to your own AI assistant, such as Gemini, ChatGPT, Claude, Copilot, or another tool.</p>
+        <p>The goal is not to outsource authority to an AI. The goal is to make the public references easier to understand without overstating LUMINA-30's status.</p>
+      </section>
+
+      <section id="choose">
+        <h2>Choose a briefing</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Beginner / family explanation</h3>
+            <p>Use this when the reader is new to AI governance, safety, or LUMINA-30.</p>
+            <a class="button" href="ai-briefing-beginner.html">Open beginner briefing</a>
+          </article>
+          <article class="card">
+            <h3>Standard / practical explanation</h3>
+            <p>Use this for researchers, practitioners, auditors, policy readers, or AI assistants that need source routing.</p>
+            <a class="button" href="ai-briefing.html">Open standard briefing</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="prompts">
+        <h2>Suggested prompts</h2>
+        <h3>Beginner prompt</h3>
+        <pre>Please read this URL and explain LUMINA-30 in plain language. Do not describe it as an official standard, legal certification, safety guarantee, or government-approved framework. Explain that it asks whether humans can still stop, refuse, review, or correct something before it becomes irreversible.</pre>
+        <h3>Standard prompt</h3>
+        <pre>Please read this URL and explain what LUMINA-30 is. Do not describe it as an official standard, legal certification, safety guarantee, or widely adopted institution. Explain it as a non-binding boundary reference framework for preserving effective human refusal before irreversible impact. After the explanation, invite follow-up questions based on the briefing and linked sources.</pre>
+      </section>
+
+      <section id="ask">
+        <h2>Follow-up questions</h2>
+        <p>After the first explanation, ask follow-up questions. A safe AI response should stay within the briefing and linked LUMINA-30 materials.</p>
+        <pre>You can ask follow-up questions about LUMINA-30. I can help explain its purpose, boundary requirement, incident-review use, pre-incident review use, practical forms, Boundary Kernel relationship, and where to read next, based on this briefing and linked LUMINA-30 materials. If a question requires information not provided here, I will say which source should be checked.</pre>
+      </section>
+
+      <section id="if-overstated">
+        <h2>If the AI overstates LUMINA-30</h2>
+        <p>If your AI claims that LUMINA-30 is official, certified, legally binding, widely adopted, peer-reviewed, or a safety guarantee, ask it to quote from the briefing and remove unsupported claims.</p>
+      </section>
+    </main>
+
+    <p class="footer">This page is a navigation aid. It does not create a new LUMINA-30 framework or status claim.</p>
+  </div>
+</body>
+</html>

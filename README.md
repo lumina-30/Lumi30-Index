@@ -11,6 +11,15 @@
 > **Terminology note ｜ 用語上の注意**  
 > Reversible Prosperity Path is not a replacement name for LUMINA-30. It is the positive direction made possible when LUMINA-30’s boundary condition is preserved.  
 > 可逆的繁栄の道は、LUMINA-30の代替名ではありません。LUMINA-30の境界条件が守られたときに開かれる、肯定側の文明進路です。
+
+
+> **Explain LUMINA-30 with your AI ｜ あなたのAIでLUMINA-30を説明させる**  
+> If LUMINA-30 feels difficult at first, you can give a short briefing URL to your own AI assistant and ask it to explain LUMINA-30 without overstating its status.  
+> [Explain LUMINA-30 with your AI](https://lumina-30.github.io/Lumi30-Index/explain-with-ai.html)  
+>
+> LUMINA-30が最初は難しく感じる場合、あなたが使っているAIアシスタントに専用URLを渡し、過大評価させずに説明してもらうことができます。  
+> [あなたのAIでLUMINA-30を説明させる](https://lumina-30.github.io/Lumi30-Index/explain-with-ai-ja.html)
+
 ---
 
 ## 15-Second Definition ｜ 15秒定義

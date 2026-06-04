@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja" data-l30-lang-lock="JP_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="JP_ONLY" />
+  <meta name="description" content="あなたのAIでLUMINA-30を過大評価させずに説明してもらうための案内ページ。" />
+  <title>あなたのAIでLUMINA-30を説明させる</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    h3 { margin: 0 0 .55em; }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice { padding: 14px 16px; margin: 18px 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
+    .card { padding: 16px; }
+    .card p { margin: .3em 0 .85em; }
+    .muted { color: var(--muted); }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; border: 1px solid var(--line); background: var(--soft); border-radius: 14px; padding: 12px; }
+    [id] { scroll-margin-top: 92px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="ページナビゲーション">
+      <a href="index-ja.html">索引</a>
+      <a href="explain-with-ai.html">English guide</a>
+      <a href="ai-briefing-ja.html">標準ブリーフィング</a>
+      <a href="ai-briefing-beginner-ja.html">初心者向けブリーフィング</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index">GitHubリポジトリ</a>
+    </nav>
+
+    <header>
+      <h1>あなたのAIでLUMINA-30を説明させる</h1>
+      <p class="subtitle">Gemini、ChatGPT、Claude、Copilotなどに専用URLを渡し、LUMINA-30を過大評価させずに説明してもらうための入口です。</p>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="重要な注意">
+        <strong>重要。</strong> LUMINA-30は、公式標準、法的認証、安全保証、政府承認済み制度、またはAIシステムが安全である証明ではありません。
+      </section>
+
+      <section id="how">
+        <h2>このページの使い方</h2>
+        <p>LUMINA-30が最初は難しく感じる場合は、下のブリーフィングURLを、あなたが普段使っているAIに渡してください。</p>
+        <p>目的は、AIに権威を委ねることではありません。公開参照を、過大評価させずに分かりやすく読むための補助として使うことです。</p>
+      </section>
+
+      <section id="choose">
+        <h2>ブリーフィングを選ぶ</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>初心者・家族向け説明</h3>
+            <p>AIや政策に詳しくない人、家族、一般読者向けです。</p>
+            <a class="button" href="ai-briefing-beginner-ja.html">初心者向けブリーフィングを開く</a>
+          </article>
+          <article class="card">
+            <h3>標準・実務者向け説明</h3>
+            <p>研究者、実務者、監査者、政策関係者、参照先案内が必要なAI向けです。</p>
+            <a class="button" href="ai-briefing-ja.html">標準ブリーフィングを開く</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="prompts">
+        <h2>推奨プロンプト</h2>
+        <h3>初心者向け</h3>
+        <pre>このURLを読んで、LUMINA-30を初心者にも分かる言葉で説明してください。公式標準、法的認証、安全保証、政府承認済み制度としては説明しないでください。取り返しがつかなくなる前に、人間がまだ止められるか、拒否できるか、見直せるか、修正できるかを問うものとして説明してください。</pre>
+        <h3>標準向け</h3>
+        <pre>このURLを読んで、LUMINA-30とは何かを説明してください。公式標準、法的認証、安全保証、広く採用済みの制度としては説明しないでください。不可逆的影響の前に人間の実効的拒否を残すための、非拘束の境界参照フレームとして説明してください。説明後、このブリーフィングと参照先に基づいて続けて質問できるよう案内してください。</pre>
+      </section>
+
+      <section id="ask">
+        <h2>続けて質問できます</h2>
+        <p>最初の説明を受けた後、続けて質問できます。安全なAI回答は、このブリーフィングとLUMINA-30の参照先に基づいて答えるべきです。</p>
+        <pre>LUMINA-30について質問できます。このブリーフィングと参照先に基づいて、目的、使い方、事故レビュー、事前レビュー、境界判定、実務フォーム、Boundary Kernelとの関係、次に読むべきページを案内します。ここにない情報が必要な場合は、確認すべき参照先を示します。</pre>
+      </section>
+
+      <section id="if-overstated">
+        <h2>AIが過大説明した場合</h2>
+        <p>AIがLUMINA-30を公式、認証済み、法的拘束力あり、広く採用済み、査読済み、安全保証などと説明した場合は、ブリーフィングから引用させ、根拠のない主張を除くよう指示してください。</p>
+      </section>
+    </main>
+
+    <p class="footer">このページは案内補助であり、LUMINA-30に新しい地位や別フレームワークを作るものではありません。</p>
+  </div>
+</body>
+</html>
