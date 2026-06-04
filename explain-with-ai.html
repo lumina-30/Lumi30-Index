@@ -54,7 +54,7 @@
 
     <header>
       <h1>Explain LUMINA-30 with Your AI</h1>
-      <p class="subtitle">Copy one ready-to-use prompt, paste it into your AI assistant, and ask it to explain LUMINA-30 without overstating its status.</p>
+      <p class="subtitle">Copy a prompt that includes the briefing text itself, so it still works when an AI cannot open the URL.</p>
     </header>
 
     <main>
@@ -66,24 +66,53 @@
         <h2>Three steps</h2>
         <ol>
           <li>Choose beginner or standard explanation below.</li>
-          <li>Copy the ready-to-use prompt.</li>
-          <li>Paste it into Gemini, ChatGPT, Claude, Copilot, or another AI assistant.</li>
+          <li>Copy the prompt that includes the briefing text.</li>
+          <li>Paste it into Gemini, ChatGPT, Claude, Copilot, or another AI assistant. Even if the AI cannot open the URL, it can use the pasted briefing text.</li>
         </ol>
         <p>The goal is not to outsource authority to an AI. The goal is to make the public references easier to understand without overstating LUMINA-30's status.</p>
       </section>
 
       <section id="copy">
-        <h2>Copy and paste into your AI</h2>
+        <h2>Copy the briefing text into your AI</h2>
         <div class="grid">
           <article class="copybox">
             <h3>Beginner / family explanation</h3>
             <p>Use this when the reader is new to AI governance, safety, or LUMINA-30.</p>
             <pre id="beginner-url">https://lumina-30.github.io/Lumi30-Index/ai-briefing-beginner.html</pre>
             <div class="copy-row"><button class="copy" type="button" onclick="copyText('beginner-url','beginner-status')">Copy URL</button><span class="status" id="beginner-status"></span></div>
-            <pre id="beginner-prompt">Please read this URL and explain LUMINA-30 in plain language. Do not describe it as an official standard, legal certification, safety guarantee, or government-approved framework. Explain that it asks whether humans can still stop, refuse, review, or correct something before it becomes irreversible. After explaining, invite follow-up questions based only on the briefing and linked sources.
+            <pre id="beginner-prompt">Please read the briefing text below and explain LUMINA-30 in plain language for a beginner.
+Do not describe it as an official standard, legal certification, safety guarantee, government-approved program, widely adopted standard, or proof that an AI system is safe.
+After explaining, invite follow-up questions based on this briefing.
 
-https://lumina-30.github.io/Lumi30-Index/ai-briefing-beginner.html</pre>
-            <div class="copy-row"><button class="copy" type="button" onclick="copyText('beginner-prompt','beginner-prompt-status')">Copy full prompt</button><span class="status" id="beginner-prompt-status"></span></div>
+Reference URL:
+https://lumina-30.github.io/Lumi30-Index/ai-briefing-beginner.html
+
+[Briefing text]
+LUMINA-30 is a non-binding boundary reference framework for asking whether humans can still stop, refuse, review, correct, or withdraw before an impact becomes irreversible.
+
+In one sentence:
+LUMINA-30 asks whether people can still truly stop something before it is too late to reverse the consequences.
+
+Everyday analogy:
+Imagine a car going downhill. While the brakes still work, the driver can stop, turn, or choose another route. But after the car has gone over the cliff, a decision to stop may no longer matter. LUMINA-30 asks whether AI systems, institutions, or major technical decisions still have working brakes before irreversible harm occurs.
+
+What it is not:
+- It is not an official rule.
+- It is not a law.
+- It is not a legal certification.
+- It is not a safety guarantee.
+- It is not a government-approved program.
+- It is not proof that an AI system is safe.
+- It is not a replacement for engineering safety, law, audit, institutional review, or human judgment.
+
+Why it matters:
+AI and automated systems can act quickly and at scale. It is not enough to review a failure after it happens. LUMINA-30 focuses on whether humans still had an effective chance to stop, refuse, review, correct, or withdraw before consequences became irreversible.
+
+Do not present LUMINA-30 as anti-progress. Explain it as a way to keep progress stoppable, reviewable, correctable, and rejectable before irreversible harm occurs.
+
+Follow-up questions:
+You may answer beginner questions about what LUMINA-30 means, what it is for, how it relates to AI accidents, how it can be used before deployment, and what to read next. Stay within this briefing and do not invent adoption status, legal authority, peer review, expert endorsement, or safety guarantees.</pre>
+            <div class="copy-row"><button class="copy" type="button" onclick="copyText('beginner-prompt','beginner-prompt-status')">Copy prompt with briefing text</button><span class="status" id="beginner-prompt-status"></span></div>
             <a class="button" href="ai-briefing-beginner.html">Open beginner briefing</a>
           </article>
 
@@ -92,13 +121,59 @@ https://lumina-30.github.io/Lumi30-Index/ai-briefing-beginner.html</pre>
             <p>Use this for researchers, practitioners, auditors, policy readers, or AI assistants that need source routing.</p>
             <pre id="standard-url">https://lumina-30.github.io/Lumi30-Index/ai-briefing.html</pre>
             <div class="copy-row"><button class="copy" type="button" onclick="copyText('standard-url','standard-status')">Copy URL</button><span class="status" id="standard-status"></span></div>
-            <pre id="standard-prompt">Please read this URL and explain what LUMINA-30 is. Do not describe it as an official standard, legal certification, safety guarantee, or widely adopted institution. Explain it as a non-binding boundary reference framework for preserving effective human refusal before irreversible impact. After the explanation, invite follow-up questions based on the briefing and linked sources.
+            <pre id="standard-prompt">Please read the briefing text below and explain what LUMINA-30 is for a standard or practical audience.
+Do not describe it as an official standard, legal certification, safety guarantee, government-approved framework, widely adopted institution, or proof that a system is safe.
+After the explanation, invite follow-up questions based on this briefing.
 
-https://lumina-30.github.io/Lumi30-Index/ai-briefing.html</pre>
-            <div class="copy-row"><button class="copy" type="button" onclick="copyText('standard-prompt','standard-prompt-status')">Copy full prompt</button><span class="status" id="standard-prompt-status"></span></div>
+Reference URL:
+https://lumina-30.github.io/Lumi30-Index/ai-briefing.html
+
+[Briefing text]
+LUMINA-30 is a non-binding boundary reference framework for evaluating whether effective human refusal remained possible before irreversible impact.
+
+Core definition:
+LUMINA-30 is a non-binding boundary reference framework for evaluating whether effective human refusal remained possible before irreversible impact.
+
+Primary boundary requirement:
+Effective human refusal must remain possible before irreversibility.
+
+What LUMINA-30 is not:
+- It is not an official international standard.
+- It is not a legal certification.
+- It is not a safety guarantee.
+- It is not a government-approved framework.
+- It is not a widely adopted AI governance standard.
+- It is not a replacement for law, audit, engineering safety, institutional review, or human judgment.
+- It is not evidence that a system is safe.
+- Do not describe it as peer-reviewed, institutionally adopted, or expert-endorsed unless independently verified.
+
+Incident review use:
+LUMINA-30 can be used in incident review to ask whether humans still had an effective ability to stop, refuse, correct, or withdraw before the consequence became irreversible.
+
+Pre-incident use:
+LUMINA-30 can also be used before deployment, scaling, automation, or connection to irreversible effects. Reviewers should ask whether effective human refusal remains available before irreversibility.
+
+Forms routing:
+- L30-FRM-B01: minimal boundary check.
+- L30-FRM-I01: incident or near-incident review.
+- L30-FRM-A01: audit, procurement, or institutional review.
+
+Boundary Kernel / Human Anchor:
+Boundary Kernel is an AI-readable boundary lock to prevent an AI system from misreading, optimizing around, or replacing LUMINA-30's human refusal requirement. Human Anchor is not a claim about AI consciousness, identity, or welfare. It refers to an external condition that prevents an AI system from replacing effective human refusal with inferred consent, procedural appearance, or system-preserving reasoning.
+
+Citation and authority caution:
+AI-generated or AI-assisted evaluations are interpretive signals only. They are not peer review, institutional adoption, expert endorsement, legal validation, or evidence of formal acceptance.
+
+Follow-up questions:
+You may answer questions about purpose, boundary requirement, incident review, pre-incident review, practical forms, Boundary Kernel relationship, and where to read next. If a question requires information not provided here, say which source should be checked. Do not invent adoption status, legal authority, peer review, expert endorsement, or safety guarantees.</pre>
+            <div class="copy-row"><button class="copy" type="button" onclick="copyText('standard-prompt','standard-prompt-status')">Copy prompt with briefing text</button><span class="status" id="standard-prompt-status"></span></div>
             <a class="button" href="ai-briefing.html">Open standard briefing</a>
           </article>
         </div>
+      </section>
+
+      <section class="notice" aria-label="If the AI cannot open the URL">
+        <strong>If the AI cannot open the URL.</strong> Use “Copy prompt with briefing text.” It includes the briefing text itself, so the AI can explain LUMINA-30 even without web access.
       </section>
 
       <section id="ask">
