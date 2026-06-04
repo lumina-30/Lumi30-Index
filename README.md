@@ -7,9 +7,6 @@
 >
 > 日本語で読む場合も、このREADME.mdに留まらず、日本語HTML索引を使用してください：  
 > [LUMINA-30索引 日本語HTML版を開く](https://lumina-30.github.io/Lumi30-Index/index-ja.html)  
->
-> This README.md is retained for canonical text preservation, search discoverability, existing links, source review, and version comparison. It is not the preferred reader-facing route.  
-> 本README.mdは、正本文書の保管、検索到達性、既存リンク維持、ソース確認、差分確認のために残しています。読者向けの閲覧・移動・戻り導線には、HTML索引を使用してください。
 
 > **Terminology note ｜ 用語上の注意**  
 > Reversible Prosperity Path is not a replacement name for LUMINA-30. It is the positive direction made possible when LUMINA-30’s boundary condition is preserved.  
@@ -326,5 +323,11 @@ Its purpose is structural documentation and boundary clarification.
 
 LUMINA-30 remains descriptive, non-directive, and non-binding.  
 LUMINA-30 は記述的構造であり、指示的・拘束的ではない。
+---
 
+## README Preservation Note ｜ README保管注記
+
+This README.md is retained for canonical text preservation, search discoverability, existing links, source review, and version comparison. It is not the preferred reader-facing route.
+
+本README.mdは、正本文書の保管、検索到達性、既存リンク維持、ソース確認、差分確認のために残しています。読者向けの閲覧・移動・戻り導線には、HTML索引を使用してください。
 
