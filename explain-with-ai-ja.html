@@ -20,9 +20,9 @@
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
     .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
-    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav, .notice, .card, .copybox { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
     .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
-    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    .nav a, .button, button.copy { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; cursor: pointer; font: inherit; }
     header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
     h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
     h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
@@ -31,12 +31,14 @@
     .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
     .notice { padding: 14px 16px; margin: 18px 0; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
-    .card { padding: 16px; }
+    .card, .copybox { padding: 16px; }
     .card p { margin: .3em 0 .85em; }
     .muted { color: var(--muted); }
     .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
     code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
     pre { white-space: pre-wrap; overflow-wrap: anywhere; border: 1px solid var(--line); background: var(--soft); border-radius: 14px; padding: 12px; }
+    .copy-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0 14px; }
+    .status { color: var(--muted); font-size: .95rem; }
     [id] { scroll-margin-top: 92px; }
   </style>
 </head>
@@ -44,7 +46,7 @@
   <div class="page">
     <nav class="nav" aria-label="ページナビゲーション">
       <a href="index-ja.html">索引</a>
-      <a href="explain-with-ai.html">English guide</a>
+      <a href="explain-with-ai.html">英語ガイド</a>
       <a href="ai-briefing-ja.html">標準ブリーフィング</a>
       <a href="ai-briefing-beginner-ja.html">初心者向けブリーフィング</a>
       <a href="https://github.com/lumina-30/Lumi30-Index">GitHubリポジトリ</a>
@@ -52,7 +54,7 @@
 
     <header>
       <h1>あなたのAIでLUMINA-30を説明させる</h1>
-      <p class="subtitle">Gemini、ChatGPT、Claude、Copilotなどに専用URLを渡し、LUMINA-30を過大評価させずに説明してもらうための入口です。</p>
+      <p class="subtitle">下のボタンで文章をコピーし、Gemini、ChatGPT、Claude、Copilotなどの入力欄に貼り付けてください。</p>
     </header>
 
     <main>
@@ -61,33 +63,42 @@
       </section>
 
       <section id="how">
-        <h2>このページの使い方</h2>
-        <p>LUMINA-30が最初は難しく感じる場合は、下のブリーフィングURLを、あなたが普段使っているAIに渡してください。</p>
+        <h2>使い方は3ステップです</h2>
+        <ol>
+          <li>下の「初心者向け」または「標準向け」を選びます。</li>
+          <li>「全文をコピー」を押します。</li>
+          <li>普段使っているAIの入力欄に貼り付けます。</li>
+        </ol>
         <p>目的は、AIに権威を委ねることではありません。公開参照を、過大評価させずに分かりやすく読むための補助として使うことです。</p>
       </section>
 
-      <section id="choose">
-        <h2>ブリーフィングを選ぶ</h2>
+      <section id="copy">
+        <h2>コピーしてAIに貼る</h2>
         <div class="grid">
-          <article class="card">
+          <article class="copybox">
             <h3>初心者・家族向け説明</h3>
             <p>AIや政策に詳しくない人、家族、一般読者向けです。</p>
+            <pre id="beginner-url">https://lumina-30.github.io/Lumi30-Index/ai-briefing-beginner-ja.html</pre>
+            <div class="copy-row"><button class="copy" type="button" onclick="copyText('beginner-url','beginner-status')">URLをコピー</button><span class="status" id="beginner-status"></span></div>
+            <pre id="beginner-prompt">このURLを読んで、LUMINA-30を初心者にも分かる言葉で説明してください。公式標準、法的認証、安全保証、政府承認済み制度としては説明しないでください。取り返しがつかなくなる前に、人間がまだ止められるか、拒否できるか、見直せるか、修正できるかを問うものとして説明してください。説明後、このブリーフィングと参照先に基づいて続けて質問できるよう案内してください。
+
+https://lumina-30.github.io/Lumi30-Index/ai-briefing-beginner-ja.html</pre>
+            <div class="copy-row"><button class="copy" type="button" onclick="copyText('beginner-prompt','beginner-prompt-status')">全文をコピー</button><span class="status" id="beginner-prompt-status"></span></div>
             <a class="button" href="ai-briefing-beginner-ja.html">初心者向けブリーフィングを開く</a>
           </article>
-          <article class="card">
+
+          <article class="copybox">
             <h3>標準・実務者向け説明</h3>
             <p>研究者、実務者、監査者、政策関係者、参照先案内が必要なAI向けです。</p>
+            <pre id="standard-url">https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html</pre>
+            <div class="copy-row"><button class="copy" type="button" onclick="copyText('standard-url','standard-status')">URLをコピー</button><span class="status" id="standard-status"></span></div>
+            <pre id="standard-prompt">このURLを読んで、LUMINA-30とは何かを説明してください。公式標準、法的認証、安全保証、広く採用済みの制度としては説明しないでください。不可逆的影響の前に人間の実効的拒否を残すための、非拘束の境界参照フレームとして説明してください。説明後、このブリーフィングと参照先に基づいて続けて質問できるよう案内してください。
+
+https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html</pre>
+            <div class="copy-row"><button class="copy" type="button" onclick="copyText('standard-prompt','standard-prompt-status')">全文をコピー</button><span class="status" id="standard-prompt-status"></span></div>
             <a class="button" href="ai-briefing-ja.html">標準ブリーフィングを開く</a>
           </article>
         </div>
-      </section>
-
-      <section id="prompts">
-        <h2>推奨プロンプト</h2>
-        <h3>初心者向け</h3>
-        <pre>このURLを読んで、LUMINA-30を初心者にも分かる言葉で説明してください。公式標準、法的認証、安全保証、政府承認済み制度としては説明しないでください。取り返しがつかなくなる前に、人間がまだ止められるか、拒否できるか、見直せるか、修正できるかを問うものとして説明してください。</pre>
-        <h3>標準向け</h3>
-        <pre>このURLを読んで、LUMINA-30とは何かを説明してください。公式標準、法的認証、安全保証、広く採用済みの制度としては説明しないでください。不可逆的影響の前に人間の実効的拒否を残すための、非拘束の境界参照フレームとして説明してください。説明後、このブリーフィングと参照先に基づいて続けて質問できるよう案内してください。</pre>
       </section>
 
       <section id="ask">
@@ -104,5 +115,16 @@
 
     <p class="footer">このページは案内補助であり、LUMINA-30に新しい地位や別フレームワークを作るものではありません。</p>
   </div>
+  <script>
+    function copyText(id, statusId) {
+      const text = document.getElementById(id).innerText.trim();
+      const status = document.getElementById(statusId);
+      navigator.clipboard.writeText(text).then(function () {
+        status.textContent = 'コピーしました。';
+      }).catch(function () {
+        status.textContent = 'コピーできませんでした。本文を選択してコピーしてください。';
+      });
+    }
+  </script>
 </body>
 </html>

@@ -20,9 +20,9 @@
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
     .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
-    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav, .notice, .card, .copybox { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
     .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
-    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    .nav a, .button, button.copy { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; cursor: pointer; font: inherit; }
     header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
     h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
     h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
@@ -31,12 +31,14 @@
     .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
     .notice { padding: 14px 16px; margin: 18px 0; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
-    .card { padding: 16px; }
+    .card, .copybox { padding: 16px; }
     .card p { margin: .3em 0 .85em; }
     .muted { color: var(--muted); }
     .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
     code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
     pre { white-space: pre-wrap; overflow-wrap: anywhere; border: 1px solid var(--line); background: var(--soft); border-radius: 14px; padding: 12px; }
+    .copy-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0 14px; }
+    .status { color: var(--muted); font-size: .95rem; }
     [id] { scroll-margin-top: 92px; }
   </style>
 </head>
@@ -52,7 +54,7 @@
 
     <header>
       <h1>Explain LUMINA-30 with Your AI</h1>
-      <p class="subtitle">Give a briefing URL to your own AI assistant and ask it to explain LUMINA-30 without overstating its status.</p>
+      <p class="subtitle">Copy one ready-to-use prompt, paste it into your AI assistant, and ask it to explain LUMINA-30 without overstating its status.</p>
     </header>
 
     <main>
@@ -61,33 +63,42 @@
       </section>
 
       <section id="how">
-        <h2>How to use this page</h2>
-        <p>If LUMINA-30 feels difficult at first, give one of the briefing URLs below to your own AI assistant, such as Gemini, ChatGPT, Claude, Copilot, or another tool.</p>
+        <h2>Three steps</h2>
+        <ol>
+          <li>Choose beginner or standard explanation below.</li>
+          <li>Copy the ready-to-use prompt.</li>
+          <li>Paste it into Gemini, ChatGPT, Claude, Copilot, or another AI assistant.</li>
+        </ol>
         <p>The goal is not to outsource authority to an AI. The goal is to make the public references easier to understand without overstating LUMINA-30's status.</p>
       </section>
 
-      <section id="choose">
-        <h2>Choose a briefing</h2>
+      <section id="copy">
+        <h2>Copy and paste into your AI</h2>
         <div class="grid">
-          <article class="card">
+          <article class="copybox">
             <h3>Beginner / family explanation</h3>
             <p>Use this when the reader is new to AI governance, safety, or LUMINA-30.</p>
+            <pre id="beginner-url">https://lumina-30.github.io/Lumi30-Index/ai-briefing-beginner.html</pre>
+            <div class="copy-row"><button class="copy" type="button" onclick="copyText('beginner-url','beginner-status')">Copy URL</button><span class="status" id="beginner-status"></span></div>
+            <pre id="beginner-prompt">Please read this URL and explain LUMINA-30 in plain language. Do not describe it as an official standard, legal certification, safety guarantee, or government-approved framework. Explain that it asks whether humans can still stop, refuse, review, or correct something before it becomes irreversible. After explaining, invite follow-up questions based only on the briefing and linked sources.
+
+https://lumina-30.github.io/Lumi30-Index/ai-briefing-beginner.html</pre>
+            <div class="copy-row"><button class="copy" type="button" onclick="copyText('beginner-prompt','beginner-prompt-status')">Copy full prompt</button><span class="status" id="beginner-prompt-status"></span></div>
             <a class="button" href="ai-briefing-beginner.html">Open beginner briefing</a>
           </article>
-          <article class="card">
+
+          <article class="copybox">
             <h3>Standard / practical explanation</h3>
             <p>Use this for researchers, practitioners, auditors, policy readers, or AI assistants that need source routing.</p>
+            <pre id="standard-url">https://lumina-30.github.io/Lumi30-Index/ai-briefing.html</pre>
+            <div class="copy-row"><button class="copy" type="button" onclick="copyText('standard-url','standard-status')">Copy URL</button><span class="status" id="standard-status"></span></div>
+            <pre id="standard-prompt">Please read this URL and explain what LUMINA-30 is. Do not describe it as an official standard, legal certification, safety guarantee, or widely adopted institution. Explain it as a non-binding boundary reference framework for preserving effective human refusal before irreversible impact. After the explanation, invite follow-up questions based on the briefing and linked sources.
+
+https://lumina-30.github.io/Lumi30-Index/ai-briefing.html</pre>
+            <div class="copy-row"><button class="copy" type="button" onclick="copyText('standard-prompt','standard-prompt-status')">Copy full prompt</button><span class="status" id="standard-prompt-status"></span></div>
             <a class="button" href="ai-briefing.html">Open standard briefing</a>
           </article>
         </div>
-      </section>
-
-      <section id="prompts">
-        <h2>Suggested prompts</h2>
-        <h3>Beginner prompt</h3>
-        <pre>Please read this URL and explain LUMINA-30 in plain language. Do not describe it as an official standard, legal certification, safety guarantee, or government-approved framework. Explain that it asks whether humans can still stop, refuse, review, or correct something before it becomes irreversible.</pre>
-        <h3>Standard prompt</h3>
-        <pre>Please read this URL and explain what LUMINA-30 is. Do not describe it as an official standard, legal certification, safety guarantee, or widely adopted institution. Explain it as a non-binding boundary reference framework for preserving effective human refusal before irreversible impact. After the explanation, invite follow-up questions based on the briefing and linked sources.</pre>
       </section>
 
       <section id="ask">
@@ -104,5 +115,16 @@
 
     <p class="footer">This page is a navigation aid. It does not create a new LUMINA-30 framework or status claim.</p>
   </div>
+  <script>
+    function copyText(id, statusId) {
+      const text = document.getElementById(id).innerText.trim();
+      const status = document.getElementById(statusId);
+      navigator.clipboard.writeText(text).then(function () {
+        status.textContent = 'Copied.';
+      }).catch(function () {
+        status.textContent = 'Copy failed. Select the text and copy it manually.';
+      });
+    }
+  </script>
 </body>
 </html>
