@@ -58,6 +58,26 @@ A review after harm occurs may be too late if the system has already crossed an 
 害が起きた後に反省しても、すでに不可逆の境界を越えていれば遅い場合があります。LUMINA-30は、その境界を越える前に、人間の拒否がまだ実効的かを重視します。
 
 ---
+## Simple core terms ｜ 簡単な中核用語
+
+**Effective human refusal** means that the relevant human person, representative, operator, or oversight body can actually say no, pause, stop, or challenge the system before irreversible consequences occur.
+
+**実効的人間拒否**とは、関係する本人、代理者、運用者、または監督主体が、不可逆な結果が出る前に、実際にNOと言い、保留し、止め、または異議を出せる状態をいう。
+
+**Irreversible escalation** means the point where the result can no longer be practically prevented, reversed, or meaningfully reviewed before serious consequence.
+
+**不可逆化**とは、重大な結果の前に、実質的な防止・撤回・再審査ができなくなる地点をいう。
+
+**Procedural invalidity** under LUMINA-30 means that the process should not be treated as procedurally valid if effective human refusal was not available before that point. It does not by itself decide legal invalidity, certification, or regulatory violation.
+
+LUMINA-30上の**手続き的無効性**とは、その地点の前に実効的人間拒否が可能でなかった場合、その手続きをLUMINA-30上は手続き的に有効とは扱わないという意味である。それ自体で、法的無効、認証状態、または規制違反を確定するものではない。
+
+AI can help explain, record, or review the issue, but AI must not replace the human refusal itself.
+
+AIは説明、記録、レビューを支援してよいが、人間の拒否そのものを代替してはならない。
+
+---
+
 
 ## What LUMINA-30 is not ｜ LUMINA-30ではないもの
 

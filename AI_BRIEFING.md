@@ -54,6 +54,34 @@ LUMINA-30 is a non-binding boundary reference framework for evaluating whether e
 LUMINA-30は、不可逆的影響の前に実効的な人間拒否が可能だったかを評価するための、非拘束の境界参照フレームワークです。
 
 ---
+## Core terms ｜ 中核用語
+
+**Effective human refusal** means that an affected human, authorized representative, responsible human operator, or legitimate oversight body can meaningfully withhold, stop, suspend, or challenge a system before irreversible consequences occur.
+
+**実効的人間拒否**とは、被影響者、正当な代理者、責任ある人間運用者、または正当な監督主体が、不可逆な結果が生じる前に、システムを意味ある形で拒否・停止・保留・異議申立てできる状態をいう。
+
+**Irreversible escalation** means the point at which a system's effects, commitments, exposures, deployments, or loss of control can no longer be practically prevented, reversed, or meaningfully reviewed before serious consequence.
+
+**不可逆化**とは、システムの影響、確定処理、外部公開、配備、制御喪失などが、重大な結果の前に実質的に防止・撤回・再審査できなくなる地点をいう。
+
+**Procedural invalidity** means that a decision, deployment, escalation, or post-hoc justification is not procedurally valid under LUMINA-30 if effective human refusal was not available before irreversible escalation.
+
+**手続き的無効性**とは、不可逆化の前に実効的人間拒否が可能でなかった場合、その決定、配備、エスカレーション、または事後正当化を、LUMINA-30上は手続き的に有効とは扱わないという判定をいう。
+
+The relevant human refusal authority depends on the affected scope. It may belong to an affected individual, an authorized representative, a responsible human operator, an organizational oversight body, a public authority, or an international oversight process where the risk is cross-border or systemic.
+
+拒否権の主体は、影響範囲に応じて変わる。被影響者本人、正当な代理者、責任ある人間運用者、組織内の監督主体、公共機関、または越境的・体系的リスクに関わる国際的監督過程が含まれ得る。
+
+Procedural invalidity under LUMINA-30 is a framework-level judgment. It does not by itself determine legal invalidity, liability, certification status, or regulatory non-compliance.
+
+LUMINA-30上の手続き的無効性は、フレームワーク上の判定である。それ自体で、法的無効、責任、認証状態、または規制違反を確定するものではない。
+
+AI may assist detection, explanation, logging, and review, but it must not replace the human refusal whose effectiveness is being assessed.
+
+AIは、検出、説明、記録、レビューを支援してよいが、評価対象である人間拒否そのものを代替してはならない。
+
+---
+
 
 ## Primary boundary requirement ｜ 主要境界要件
 
