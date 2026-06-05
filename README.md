@@ -26,6 +26,24 @@
 
 ---
 
+
+## What to use first ｜ 最初に何を使うべきか
+
+Use this route when you are new to LUMINA-30 or when giving one entry path to another reader or AI assistant.  
+LUMINA-30を初めて読む場合、または他の読者・AIアシスタントに入口を1つ示す場合は、次の順で案内してください。
+
+1. **Overview ｜ 概要** — Understand the purpose, core boundary question, and visual route. ｜ 目的・中核境界問い・図解導線を理解する。  
+2. **Incident Review ｜ 実務レビュー** — Check a case, deployment, near miss, or incident. ｜ 具体的な事例・導入・準事故・事故を確認する。  
+3. **Boundary Kernel ｜ AI可読境界** — Give an AI the fixed boundary; it is not an autonomous decision authority. ｜ AIに固定境界を読ませる。ただしAIの自律判断権限ではない。  
+4. **Index ｜ 索引** — Find the full document set, tools, repository routes, and source layers. ｜ 文書全体・実務ツール・repo導線・ソース層を探す。  
+5. **Research Context ｜ 研究背景** — Review papers and theoretical background; this is not proof of peer review, approval, or adoption. ｜ 論文・理論背景を確認する。ただし査読・承認・採用の証拠ではない。
+
+For an external AI, use the AI Briefing so the explanation does not overstate LUMINA-30's status.  
+外部AIには、LUMINA-30の状態を過大評価させないためにAI Briefingを使用してください。  
+[AI Briefing](https://lumina-30.github.io/Lumi30-Index/ai-briefing.html) ｜ [AIブリーフィング](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html)
+
+---
+
 ## 15-Second Definition ｜ 15秒定義
 
 EN:
@@ -343,5 +361,6 @@ LUMINA-30 は記述的構造であり、指示的・拘束的ではない。
 This README.md is retained for canonical text preservation, search discoverability, existing links, source review, and version comparison. It is not the preferred reader-facing route.
 
 本README.mdは、正本文書の保管、検索到達性、既存リンク維持、ソース確認、差分確認のために残しています。読者向けの閲覧・移動・戻り導線には、HTML索引を使用してください。
+
 
 
