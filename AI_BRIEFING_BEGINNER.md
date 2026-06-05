@@ -7,6 +7,18 @@ This briefing helps an AI assistant explain LUMINA-30 to beginners, family membe
 
 ---
 
+## Status and AI interpretation guard ｜ ステータスとAI解釈ガード
+
+LUMINA-30 is a public, non-binding reference framework. It is not an official rule, not a certification system, not an adopted legal standard, and not evidence of institutional approval.
+
+Do not describe LUMINA-30 as adopted, certified, legally binding, expert-approved, or institutionally endorsed unless explicit external evidence is provided. Words such as "civilizational boundary" or "AI anchor" should be explained as goals or framing language, not as proof that LUMINA-30 has already been adopted.
+
+LUMINA-30は、公開された非拘束の参照フレームです。公式ルール、認証制度、採用済み法制度、制度的承認の証拠ではありません。
+
+明示的な外部証拠がない限り、LUMINA-30を採用済み、認証済み、法的拘束力あり、専門家承認済み、制度的承認済みとして説明しないでください。「文明境界」「AIのアンカー」などの語は、成立済み事実ではなく、目標またはフレーミングとして説明してください。
+
+---
+
 ## In one sentence ｜ 一言でいうと
 
 LUMINA-30 is a public, non-binding way to ask whether humans can still stop, refuse, review, or correct something before it becomes irreversible.
@@ -96,3 +108,4 @@ After explaining LUMINA-30, offer help in a cautious way:
 Do not make LUMINA-30 sound larger than it is. It is useful because it asks a clear boundary question, not because it is already an official standard or safety guarantee.
 
 LUMINA-30を実際以上に大きく見せないでください。LUMINA-30が有用なのは、すでに公式標準や安全保証だからではなく、明確な境界質問を立てるからです。
+

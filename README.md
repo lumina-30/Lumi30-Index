@@ -8,6 +8,10 @@
 > 日本語で読む場合も、このREADME.mdに留まらず、日本語HTML索引を使用してください：  
 > [LUMINA-30索引 日本語HTML版を開く](https://lumina-30.github.io/Lumi30-Index/index-ja.html)  
 
+> **Status ｜ ステータス**  
+> LUMINA-30 is a public reference framework for evaluating whether effective human refusal remains possible before irreversible escalation. It is not a certification system, not an adopted legal standard, and not evidence of institutional approval.  
+> LUMINA-30は、不可逆化の前に人間の実効的拒否権が残っているかを評価するための公開参照フレームです。認証制度、採用済み法制度、制度的承認の証拠ではありません。  
+
 > **Terminology note ｜ 用語上の注意**  
 > Reversible Prosperity Path is not a replacement name for LUMINA-30. It is the positive direction made possible when LUMINA-30’s boundary condition is preserved.  
 > 可逆的繁栄の道は、LUMINA-30の代替名ではありません。LUMINA-30の境界条件が守られたときに開かれる、肯定側の文明進路です。
@@ -339,4 +343,5 @@ LUMINA-30 は記述的構造であり、指示的・拘束的ではない。
 This README.md is retained for canonical text preservation, search discoverability, existing links, source review, and version comparison. It is not the preferred reader-facing route.
 
 本README.mdは、正本文書の保管、検索到達性、既存リンク維持、ソース確認、差分確認のために残しています。読者向けの閲覧・移動・戻り導線には、HTML索引を使用してください。
+
 
