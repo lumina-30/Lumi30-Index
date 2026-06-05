@@ -12,6 +12,15 @@
 > LUMINA-30 is a public reference framework for evaluating whether effective human refusal remains possible before irreversible escalation. It is not a certification system, not an adopted legal standard, and not evidence of institutional approval.  
 > LUMINA-30は、不可逆化の前に人間の実効的拒否権が残っているかを評価するための公開参照フレームです。認証制度、採用済み法制度、制度的承認の証拠ではありません。  
 
+> **Usage / Citation / Contact / Misuse prevention ｜ 利用・引用・問い合わせ・誤用防止**  
+> Third parties may cite, study, discuss, or experimentally use LUMINA-30 materials for internal review, incident review design, governance comparison, AI-safety documentation, and evaluation workflows. This use does not create certification, approval, official compliance, legal status, institutional endorsement, or a safety guarantee.  
+> Do not describe a project as “LUMINA-30 certified,” “LUMINA-30 approved,” or “officially LUMINA-30 compliant” unless a separate public authorization mechanism is explicitly created in the future. Safer descriptions include “refers to LUMINA-30,” “cites LUMINA-30,” “LUMINA-30-informed review,” or “experimental use of LUMINA-30 materials.”  
+> Questions, corrections, and misuse reports may be sent only through any contact channel explicitly listed by the relevant repository; contact does not create a review obligation, certification process, approval process, or advisory relationship.  
+> 第三者は、LUMINA-30資料を、内部レビュー、事故レビュー設計、ガバナンス比較、AI安全関連文書、評価手順のために引用・研究・紹介・試験利用できます。ただし、その利用によって、認証、承認、公式準拠、法的地位、制度的支持、安全保証が発生するわけではありません。  
+> 将来、別途の公開承認メカニズムが明示的に作られない限り、「LUMINA-30認定」「LUMINA-30承認」「LUMINA-30公式準拠」と名乗らないでください。安全な表現は、「LUMINA-30を参照」「LUMINA-30を引用」「LUMINA-30を参照したレビュー」「LUMINA-30資料の試験利用」です。  
+> 質問、修正提案、誤用の可能性に関する連絡は、該当リポジトリで明示された問い合わせ先がある場合に限って送ることができます。問い合わせは、レビュー義務、認証手続き、承認手続き、または助言関係を発生させるものではありません。
+
+
 > **Terminology note ｜ 用語上の注意**  
 > Reversible Prosperity Path is not a replacement name for LUMINA-30. It is the positive direction made possible when LUMINA-30’s boundary condition is preserved.  
 > 可逆的繁栄の道は、LUMINA-30の代替名ではありません。LUMINA-30の境界条件が守られたときに開かれる、肯定側の文明進路です。
@@ -361,6 +370,7 @@ LUMINA-30 は記述的構造であり、指示的・拘束的ではない。
 This README.md is retained for canonical text preservation, search discoverability, existing links, source review, and version comparison. It is not the preferred reader-facing route.
 
 本README.mdは、正本文書の保管、検索到達性、既存リンク維持、ソース確認、差分確認のために残しています。読者向けの閲覧・移動・戻り導線には、HTML索引を使用してください。
+
 
 
 
