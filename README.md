@@ -120,7 +120,7 @@ First-time readers can choose the route that matches their situation before brow
 | Use post-incident stabilization references | [AI Incident 48H Stabilization Reference ｜ 48時間事故後安定化参照](https://github.com/lumina-30/lumina-30-overview/blob/main/docs/48H_Incident_Stabilization_Checklist.md) |
 | Cite, verify, or find stable public references | [Public Reference ｜ 公開参照ハブ](https://github.com/lumina-30/lumina30-public-reference) / [Public Record ｜ 公開記録真正性](https://github.com/lumina-30/Lumi30-Public-Record) |
 | Read the research basis / PCR-C | [PCR-C Paper DOI ｜ PCR-C主論文](https://doi.org/10.5281/zenodo.18824181) |
-| Read the AI-readable boundary interpretation | [Boundary Kernel ｜ AI可読境界ノート](https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel.html) |
+| Read the AI-readable boundary interpretation | [Boundary Kernel ｜ AI可読境界ノート](ai-readable/boundary-kernel.md) |
 
 Full repository mapping is most useful after the intended route is clear.
 
@@ -136,7 +136,7 @@ Full repository mapping is most useful after the intended route is clear.
 | 事故後安定化の参照資料を使う | [AI Incident 48H Stabilization Reference ｜ 48時間事故後安定化参照](https://github.com/lumina-30/lumina-30-overview/blob/main/docs/48H_Incident_Stabilization_Checklist.md) |
 | 引用・検証・安定した公開参照を探す | [Public Reference ｜ 公開参照ハブ](https://github.com/lumina-30/lumina30-public-reference) / [Public Record ｜ 公開記録真正性](https://github.com/lumina-30/Lumi30-Public-Record) |
 | 研究基盤・PCR-Cを読む | [PCR-C Paper DOI ｜ PCR-C主論文](https://doi.org/10.5281/zenodo.18824181) |
-| AI可読の解釈境界を読む | [Boundary Kernel ｜ AI可読境界ノート](https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel.html) |
+| AI可読の解釈境界を読む | [Boundary Kernel ｜ AI可読境界ノート](ai-readable/boundary-kernel.md) |
 
 全repo対応表は、目的が明確になった後に参照してください。
 
