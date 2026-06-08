@@ -36,6 +36,12 @@ A low-risk first use is to add one question to an AI adoption review, procuremen
 
 > **このAI媒介プロセスが不可逆化する前に、責任ある人間または監督主体は、なお拒否・停止・保留・検証・方向転換できるのか。**
 
+For a lightweight implementation path, use the one-question pilot page:
+[One-Question Pilot for AI Adoption Review](./one-question-pilot.md) ｜ [日本語HTML](https://lumina-30.github.io/Lumi30-Index/one-question-pilot-ja.html)
+
+軽量に試す場合は、1問パイロット導線を使ってください：
+[AI導入審査のための1問パイロット](./one-question-pilot.md) ｜ [日本語HTML](https://lumina-30.github.io/Lumi30-Index/one-question-pilot-ja.html)
+
 ## What LUMINA-30 does not claim ｜ LUMINA-30が主張しないこと
 
 LUMINA-30 is not a certification system, legal standard, safety guarantee, government approval mechanism, or proof of institutional endorsement.
@@ -102,6 +108,7 @@ No. A checklist can carry the question, but the point is the boundary condition:
 
 ## Next routes ｜ 次に開く導線
 
+- [One-Question Pilot for AI Adoption Review](./one-question-pilot.md) ｜ [1問パイロットHTML](https://lumina-30.github.io/Lumi30-Index/one-question-pilot-ja.html)
 - [AI Briefing](./ai-briefing.md) ｜ [AIブリーフィングHTML](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html)
 - [Explain LUMINA-30 with your AI](./explain-with-ai.md) ｜ [あなたのAIでLUMINA-30を説明させる](https://lumina-30.github.io/Lumi30-Index/explain-with-ai-ja.html)
 - [Public-Source Review and Actor-Authority-Evidence Mapping](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping.md) ｜ [公開情報レビューHTML](https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping_ja.html)
