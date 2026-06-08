@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" data-l30-lang-lock="EN_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="EN_ONLY" />
+  <meta name="description" content="A lightweight vendor-risk prompt for checking effective human refusal, rollback authority, and evidence before irreversible AI-mediated escalation." />
+  <title>Procurement and Vendor-Risk Prompt｜LUMINA-30</title>
+  <style>
+    :root { color-scheme: light dark; --bg: Canvas; --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%); --text: CanvasText; --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%); --line: color-mix(in srgb, CanvasText 28%, Canvas 72%); --accent: LinkText; --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%); }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice, .card { padding: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
+    blockquote { border-left: 4px solid var(--accent); padding-left: 1em; color: var(--muted); }
+    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+    th, td { border: 1px solid var(--line); padding: 10px; vertical-align: top; }
+    th { background: var(--soft); }
+    code { background: var(--soft); padding: .1em .3em; border-radius: .35em; }
+</style>
+</head>
+<body>
+  <main class="page">
+    <nav class="nav">
+      <a href="index.html">Index</a>
+      <a href="adoption-review.html">Adoption Review</a>
+      <a href="procurement-vendor-risk-ja.html">日本語</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/procurement-vendor-risk.md">Markdown source</a>
+    </nav>
+    <header>
+      <p class="subtitle">LUMINA-30 adoption pathway</p>
+      <h1>Procurement and Vendor-Risk Prompt</h1>
+      <p class="subtitle">A lightweight boundary prompt for AI products, AI agents, vendor-hosted workflows, and internal deployments.</p>
+    </header>
+    
+<section class="notice">
+  <p>This page is for procurement, vendor-risk, security, audit, and AI governance teams that need to ask a vendor or internal product owner a small number of boundary questions before approving an AI-mediated service, agent, workflow, or tool.</p>
+  <p>It does not replace legal, regulatory, security, privacy, or safety review. It adds a narrow LUMINA-30 boundary prompt: whether effective human refusal, suspension, review, and rollback remain possible before an AI-mediated process becomes irreversible.</p>
+</section>
+
+<h2>Minimum vendor prompt</h2>
+<blockquote>
+<p>Before this AI-mediated process changes credentials, executes tools, modifies production state, removes recovery options, or creates irreversible commitments, who can refuse, stop, suspend, review, or roll it back, and what evidence will show that this authority existed before irreversibility?</p>
+</blockquote>
+
+<h2>Four fields to request</h2>
+<table>
+<thead><tr><th>Field</th><th>Ask for</th></tr></thead>
+<tbody>
+<tr><td>Actor</td><td>Which human, vendor team, internal owner, AI assistant, automation layer, or privileged system API can initiate or execute the action?</td></tr>
+<tr><td>Authority</td><td>Who has the authority to refuse, suspend, approve, or roll back the action before irreversibility?</td></tr>
+<tr><td>Evidence</td><td>What logs, approvals, alerts, tickets, or audit records show that the authority existed and was usable in time?</td></tr>
+<tr><td>Irreversibility window</td><td>When does the process become difficult or impossible to reverse, recover, or meaningfully review?</td></tr>
+</tbody>
+</table>
+
+<h2>When to use this prompt</h2>
+<ul>
+<li>account recovery, credential changes, identity verification, or access restoration;</li>
+<li>tool execution, workflow automation, privileged API calls, or agentic actions;</li>
+<li>production state, customer records, financial actions, public communication, safety-critical operations, or recovery options;</li>
+<li>vendor-hosted services where the organization cannot directly inspect internal logs or intervention windows.</li>
+</ul>
+
+<h2>Safe use</h2>
+<p>A vendor or internal team may answer this prompt without claiming LUMINA-30 certification, approval, compliance, or safety guarantee. The safer description is:</p>
+<blockquote>
+<p>This review refers to LUMINA-30 to check whether effective human refusal and rollback authority remain available before irreversible escalation.</p>
+</blockquote>
+
+<h2>Next routes</h2>
+<div class="grid">
+  <div class="card"><a class="button" href="one-question-pilot.html">One-Question Pilot</a><p>Start with one low-risk review question.</p></div>
+  <div class="card"><a class="button" href="adoption-review.html">Adoption Review</a><p>Return to the adoption-review entry point.</p></div>
+  <div class="card"><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_Template.html">Public-source review template</a><p>Separate public facts, inference, missing evidence, and unresolved conclusions.</p></div>
+</div>
+
+  </main>
+</body>
+</html>

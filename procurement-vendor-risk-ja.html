@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja" data-l30-lang-lock="JP_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="JP_ONLY" />
+  <meta name="description" content="不可逆化前の実効的人間拒否、ロールバック権限、証拠を確認するための軽量なベンダーリスク確認プロンプト。" />
+  <title>調達・ベンダーリスク確認プロンプト｜LUMINA-30</title>
+  <style>
+    :root { color-scheme: light dark; --bg: Canvas; --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%); --text: CanvasText; --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%); --line: color-mix(in srgb, CanvasText 28%, Canvas 72%); --accent: LinkText; --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%); }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice, .card { padding: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
+    blockquote { border-left: 4px solid var(--accent); padding-left: 1em; color: var(--muted); }
+    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+    th, td { border: 1px solid var(--line); padding: 10px; vertical-align: top; }
+    th { background: var(--soft); }
+    code { background: var(--soft); padding: .1em .3em; border-radius: .35em; }
+</style>
+</head>
+<body>
+  <main class="page">
+    <nav class="nav">
+      <a href="index-ja.html">索引</a>
+      <a href="adoption-review-ja.html">採用審査</a>
+      <a href="procurement-vendor-risk.html">English</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/procurement-vendor-risk.md">Markdown正本</a>
+    </nav>
+    <header>
+      <p class="subtitle">LUMINA-30 採用導線</p>
+      <h1>調達・ベンダーリスク確認プロンプト</h1>
+      <p class="subtitle">AI製品、AIエージェント、ベンダー提供ワークフロー、内部導入のための軽量な境界確認です。</p>
+    </header>
+    
+<section class="notice">
+  <p>このページは、AI媒介サービス、AIエージェント、ワークフロー、ツールを承認する前に、ベンダーまたは内部プロダクト責任者へ少数の境界質問を投げる必要がある、調達、ベンダーリスク、セキュリティ、監査、AIガバナンス担当者向けです。</p>
+  <p>これは、法務、規制、セキュリティ、プライバシー、安全レビューの代替ではありません。LUMINA-30の狭い境界プロンプト――AI媒介プロセスが不可逆化する前に、実効的人間拒否、保留、検証、ロールバックがなお可能か――を追加するものです。</p>
+</section>
+
+<h2>最小ベンダー確認</h2>
+<blockquote>
+<p>このAI媒介プロセスが、認証情報を変更し、ツールを実行し、本番状態を変更し、復旧手段を失わせ、または不可逆な確定を作る前に、誰が拒否・停止・保留・検証・ロールバックできるのか。そして、その権限が不可逆化前に存在したことを示す証拠は何か。</p>
+</blockquote>
+
+<h2>確認すべき4項目</h2>
+<table>
+<thead><tr><th>項目</th><th>確認すること</th></tr></thead>
+<tbody>
+<tr><td>Actor</td><td>どの人間、ベンダーチーム、内部責任者、AIアシスタント、自動化層、特権システムAPIが、その行為を開始または実行できるのか。</td></tr>
+<tr><td>Authority</td><td>不可逆化前に、その行為を拒否、保留、承認、ロールバックできる権限を持つのは誰か。</td></tr>
+<tr><td>Evidence</td><td>その権限が時間内に存在し、実際に使えたことを示すログ、承認、アラート、チケット、監査記録は何か。</td></tr>
+<tr><td>Irreversibility window</td><td>いつそのプロセスは、撤回、復旧、または意味ある再審査が困難または不可能になるのか。</td></tr>
+</tbody>
+</table>
+
+<h2>使う場面</h2>
+<ul>
+<li>アカウント復旧、認証情報変更、本人確認、アクセス復旧。</li>
+<li>ツール実行、ワークフロー自動化、特権API呼び出し、エージェント的行為。</li>
+<li>本番状態、顧客記録、金融行為、公開コミュニケーション、安全重要運用、復旧手段。</li>
+<li>組織が内部ログや介入可能時間を直接確認できない、ベンダー提供サービス。</li>
+</ul>
+
+<h2>安全な使い方</h2>
+<p>ベンダーまたは内部チームは、このプロンプトに回答しても、LUMINA-30認証、承認、準拠、安全保証を主張することにはなりません。安全な説明は次です。</p>
+<blockquote>
+<p>このレビューは、不可逆化前に実効的人間拒否とロールバック権限が残っているかを確認するために、LUMINA-30を参照しています。</p>
+</blockquote>
+
+<h2>次に開く導線</h2>
+<div class="grid">
+  <div class="card"><a class="button" href="one-question-pilot-ja.html">1問パイロット</a><p>低リスクな1問から始めます。</p></div>
+  <div class="card"><a class="button" href="adoption-review-ja.html">採用審査入口</a><p>採用担当者向け入口へ戻ります。</p></div>
+  <div class="card"><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_Template_ja.html">公開情報レビュー・テンプレート</a><p>公開事実、推定、証拠不足、未確定結論を分けます。</p></div>
+</div>
+
+  </main>
+</body>
+</html>

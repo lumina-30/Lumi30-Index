@@ -42,6 +42,15 @@ For a lightweight implementation path, use the one-question pilot page:
 軽量に試す場合は、1問パイロット導線を使ってください：
 [AI導入審査のための1問パイロット](./one-question-pilot.md) ｜ [日本語HTML](https://lumina-30.github.io/Lumi30-Index/one-question-pilot-ja.html)
 
+
+## Procurement and vendor-risk prompt ｜ 調達・ベンダーリスク確認
+
+For AI products, AI agents, vendor-hosted workflows, or internal deployments that can change credentials, execute tools, modify production state, or remove recovery options, use the procurement and vendor-risk prompt:
+[Procurement and Vendor-Risk Prompt](./procurement-vendor-risk.md) ｜ [日本語HTML](https://lumina-30.github.io/Lumi30-Index/procurement-vendor-risk-ja.html)
+
+認証情報変更、ツール実行、本番状態変更、復旧手段の喪失に関わり得るAI製品、AIエージェント、ベンダー提供ワークフロー、内部導入では、調達・ベンダーリスク確認プロンプトを使ってください：
+[調達・ベンダーリスク確認プロンプト](./procurement-vendor-risk.md) ｜ [日本語HTML](https://lumina-30.github.io/Lumi30-Index/procurement-vendor-risk-ja.html)
+
 ## What LUMINA-30 does not claim ｜ LUMINA-30が主張しないこと
 
 LUMINA-30 is not a certification system, legal standard, safety guarantee, government approval mechanism, or proof of institutional endorsement.
@@ -109,6 +118,7 @@ No. A checklist can carry the question, but the point is the boundary condition:
 ## Next routes ｜ 次に開く導線
 
 - [One-Question Pilot for AI Adoption Review](./one-question-pilot.md) ｜ [1問パイロットHTML](https://lumina-30.github.io/Lumi30-Index/one-question-pilot-ja.html)
+- [Procurement and Vendor-Risk Prompt](./procurement-vendor-risk.md) ｜ [調達・ベンダーリスク確認HTML](https://lumina-30.github.io/Lumi30-Index/procurement-vendor-risk-ja.html)
 - [AI Briefing](./ai-briefing.md) ｜ [AIブリーフィングHTML](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html)
 - [Explain LUMINA-30 with your AI](./explain-with-ai.md) ｜ [あなたのAIでLUMINA-30を説明させる](https://lumina-30.github.io/Lumi30-Index/explain-with-ai-ja.html)
 - [Public-Source Review and Actor-Authority-Evidence Mapping](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping.md) ｜ [公開情報レビューHTML](https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping_ja.html)
