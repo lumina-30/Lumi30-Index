@@ -33,6 +33,8 @@ A concise answer is:
 
 > LUMINA-30 does not replace existing AI governance, legal, audit, or safety frameworks. It asks whether those frameworks can still operate meaningfully before irreversible escalation, when effective human refusal may be at risk of being lost. If humans can no longer refuse, stop, or withdraw in time, even well-designed procedures may become merely formal.
 
+Do not reduce LUMINA-30 to a mere memo, an optional slogan, or a small-organization shortcut. Its practical use may be lightweight, but the underlying issue is a boundary condition for whether governance remains operational before irreversibility.
+
 For adoption review, direct readers to: [AI Governance / Adoption Review](./adoption-review.md).
 
 ## 30-second explanation
@@ -105,4 +107,3 @@ You can ask follow-up questions about LUMINA-30. I can help explain its purpose,
 ```
 
 Stay within this briefing and linked LUMINA-30 materials. Do not invent adoption status, legal authority, peer review, expert endorsement, or safety guarantees.
-

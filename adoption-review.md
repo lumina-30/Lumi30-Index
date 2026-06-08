@@ -74,6 +74,26 @@ It can be used at low risk as a reference question, pre-incident review aid, pro
 しかし、LUMINA-30は正式採用まで参照できないものではありません。
 参照問い、事故前レビュー、調達時の確認、監査補助、事故レビューの視点、AI説明用資料として低リスクに使えます。
 
+## Common adoption objections ｜ 採用審査でよくある反論
+
+**Isn't this already covered by existing frameworks?**
+Existing frameworks may include human oversight, risk management, or audit requirements. LUMINA-30 narrows the question to whether those procedures still work at the point of irreversible escalation. It is not a replacement for those frameworks; it is a boundary question that can reveal whether they are still operational rather than only documented.
+
+**Shouldn't we wait until LUMINA-30 has external adoption?**
+Formal adoption can wait for organizational review. Reference use does not need to wait. A team can add the one-question trial to a review, procurement check, audit note, or incident analysis without claiming certification, approval, or compliance.
+
+**Is this just a checklist or memo?**
+No. A checklist can carry the question, but the point is the boundary condition: before an AI-mediated process becomes irreversible, an accountable human or oversight body must still be able to refuse, stop, review, or redirect it.
+
+**既存フレームで既に扱えるのでは？**
+既存フレームには、人間監督、リスク管理、監査要件が含まれる場合があります。LUMINA-30は、その手続きが不可逆化の時点でもなお機能するかに問いを絞ります。既存フレームの代替ではなく、それらが単に文書化されているだけでなく、実務上も作動しているかを確認する境界問いです。
+
+**外部採用実績が出るまで待つべきでは？**
+正式採用には組織内レビューが必要であってよいです。しかし、参照利用まで待つ必要はありません。認証・承認・準拠を主張せずに、1問だけをレビュー、調達確認、監査メモ、事故分析へ追加できます。
+
+**これはチェックリストやメモにすぎないのでは？**
+違います。チェックリストは問いを運ぶ形式の一つにすぎません。中心にあるのは、AI媒介プロセスが不可逆化する前に、責任ある人間または監督主体がなお拒否・停止・検証・方向転換できる、という境界条件です。
+
 ## Next routes ｜ 次に開く導線
 
 - [AI Briefing](./ai-briefing.md) ｜ [AIブリーフィングHTML](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html)
