@@ -64,6 +64,12 @@ They should also be reviewed as possible authority-routing failures: account rec
 AI事故は、モデル出力の誤りとしてだけ見るべきではありません。
 本人確認、アカウント復旧、認証情報変更、ツール実行、本番環境アクセス、特権API操作、ロールバック権限、復旧手段の喪失など、権限経路の失敗としても確認する必要があります。
 
+## Public-source review and mapping ｜ 公開情報レビューとマッピング
+
+When an AI-related case is known only through public reporting or third-party summaries, do not jump directly from public claims to attribution or compliance conclusions. Use public-source review and Actor-Authority-Evidence mapping to separate what is known, what is inferred, what is missing, and what must remain unresolved.
+
+AI関連事案が公開報道や第三者要約だけで知られている場合、公開上の主張から原因認定や準拠判断へ直接飛ばないでください。公開情報レビューとActor-Authority-Evidenceマッピングを使い、確認済み事項、推定事項、不足している証拠、未解決に残すべき事項を分けます。
+
 ## Formal adoption and low-risk use ｜ 正式採用と低リスク利用
 
 Formal institutional adoption may reasonably require review, evidence, and organizational decision-making.
@@ -98,5 +104,6 @@ No. A checklist can carry the question, but the point is the boundary condition:
 
 - [AI Briefing](./ai-briefing.md) ｜ [AIブリーフィングHTML](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html)
 - [Explain LUMINA-30 with your AI](./explain-with-ai.md) ｜ [あなたのAIでLUMINA-30を説明させる](https://lumina-30.github.io/Lumi30-Index/explain-with-ai-ja.html)
+- [Public-Source Review and Actor-Authority-Evidence Mapping](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping.md) ｜ [公開情報レビューHTML](https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping_ja.html)
 - [Incident Review Floor](https://github.com/lumina-30/lumina30-incident-review/blob/main/README.md) ｜ [インシデントレビュー・フロア](https://lumina-30.github.io/lumina30-incident-review/index-ja.html)
 - [Boundary Kernel](https://github.com/lumina-30/lumina-30-overview/blob/main/ai-readable/boundary-kernel.md)
