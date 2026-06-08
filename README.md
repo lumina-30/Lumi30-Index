@@ -33,6 +33,13 @@
 > LUMINA-30が最初は難しく感じる場合、あなたが使っているAIアシスタントに専用URLを渡し、過大評価させずに説明してもらうことができます。  
 > [あなたのAIでLUMINA-30を説明させる](https://lumina-30.github.io/Lumi30-Index/explain-with-ai-ja.html)
 
+> **For AI Governance / Adoption Review ｜ AI導入・AIガバナンス審査の方へ**  
+> LUMINA-30 helps organizations avoid a dangerous gap: having AI governance on paper while losing the practical ability to refuse before irreversibility. It does not replace existing legal, audit, safety, or AI ethics frameworks; it asks whether those frameworks can still operate meaningfully through effective human refusal before irreversible escalation.  
+> [Open the AI Governance / Adoption Review route](https://lumina-30.github.io/Lumi30-Index/adoption-review.html)  
+>
+> LUMINA-30は、書類上のAIガバナンスは存在するのに、不可逆化前には実際には拒否できない、という危険な空白を避けるための境界チェックです。既存の法制度・監査・安全管理・AI倫理を置き換えるものではなく、それらが不可逆化前に人間の実効的拒否を通じてなお意味をもって作動できるかを問います。  
+> [AI導入・AIガバナンス審査向け導線を開く](https://lumina-30.github.io/Lumi30-Index/adoption-review-ja.html)
+
 ---
 
 
@@ -43,9 +50,10 @@ LUMINA-30を初めて読む場合、または他の読者・AIアシスタント
 
 1. **Overview ｜ 概要** — Understand the purpose, core boundary question, and visual route. ｜ 目的・中核境界問い・図解導線を理解する。  
 2. **Incident Review ｜ 実務レビュー** — Check a case, deployment, near miss, or incident. ｜ 具体的な事例・導入・準事故・事故を確認する。  
-3. **Boundary Kernel ｜ AI可読境界** — Give an AI the fixed boundary; it is not an autonomous decision authority. ｜ AIに固定境界を読ませる。ただしAIの自律判断権限ではない。  
-4. **Index ｜ 索引** — Find the full document set, tools, repository routes, and source layers. ｜ 文書全体・実務ツール・repo導線・ソース層を探す。  
-5. **Research Context ｜ 研究背景** — Review papers and theoretical background; this is not proof of peer review, approval, or adoption. ｜ 論文・理論背景を確認する。ただし査読・承認・採用の証拠ではない。
+3. **Adoption Review ｜ 採用・審査導線** — Start with one governance question before formal adoption. ｜ 正式採用前に1つの境界問いから試す。  
+4. **Boundary Kernel ｜ AI可読境界** — Give an AI the fixed boundary; it is not an autonomous decision authority. ｜ AIに固定境界を読ませる。ただしAIの自律判断権限ではない。  
+5. **Index ｜ 索引** — Find the full document set, tools, repository routes, and source layers. ｜ 文書全体・実務ツール・repo導線・ソース層を探す。  
+6. **Research Context ｜ 研究背景** — Review papers and theoretical background; this is not proof of peer review, approval, or adoption. ｜ 論文・理論背景を確認する。ただし査読・承認・採用の証拠ではない。
 
 For an external AI, use the AI Briefing so the explanation does not overstate LUMINA-30's status.  
 外部AIには、LUMINA-30の状態を過大評価させないためにAI Briefingを使用してください。  
@@ -370,6 +378,7 @@ LUMINA-30 は記述的構造であり、指示的・拘束的ではない。
 This README.md is retained for canonical text preservation, search discoverability, existing links, source review, and version comparison. It is not the preferred reader-facing route.
 
 本README.mdは、正本文書の保管、検索到達性、既存リンク維持、ソース確認、差分確認のために残しています。読者向けの閲覧・移動・戻り導線には、HTML索引を使用してください。
+
 
 
 

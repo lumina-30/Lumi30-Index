@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja" data-l30-lang-lock="JP_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="JP_ONLY" />
+  <meta name="description" content="AIガバナンス、導入審査、監査、セキュリティ、調達、事故レビュー担当者向けのLUMINA-30入口。" />
+  <title>AI導入・AIガバナンス審査の方へ｜LUMINA-30</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    h3 { margin: 0 0 .55em; }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice { padding: 14px 16px; margin: 18px 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
+    .card { padding: 16px; }
+    .card p { margin: .3em 0 .85em; }
+    .muted { color: var(--muted); }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    [id] { scroll-margin-top: 92px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="ページ内ナビゲーション">
+      <a href="adoption-review-ja.html">採用・審査導線</a>
+      <a href="adoption-review.html">英語版</a>
+      <a href="index-ja.html">索引</a>
+      <a href="ai-briefing-ja.html">AIブリーフィング</a>
+      <a href="explain-with-ai-ja.html">AI説明ガイド</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/adoption-review.md">Markdown Source</a>
+    </nav>
+
+    <header>
+      <h1>AI導入・AIガバナンス審査の方へ</h1>
+      <p class="subtitle">AIシステム、エージェント、ツール、導入案件について、不可逆化前に人間がなお拒否できるかを確認するための実務入口です。</p>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="ステータス">
+        <strong>ステータス：公開参照フレームであり、認証ではありません。</strong>
+        LUMINA-30は、法制度・安全管理・監査・AI倫理フレームワークを置き換えるものではありません。それらが意味を持つために必要な前提条件、すなわち不可逆化前に人間の実効的拒否がなお機能するかを確認します。
+      </section>
+
+      <section id="risk-gap">
+        <h2>LUMINA-30が確認する危険な空白</h2>
+        <p>LUMINA-30は、書類上のAIガバナンスは存在するのに、不可逆化前には実際には拒否できない、という危険な空白を避けるための境界チェックです。</p>
+        <p>この答えが不明確なら、ガバナンスは形式上存在していても、最も重要な場面で実務上は弱い可能性があります。</p>
+      </section>
+
+      <section id="one-question-trial">
+        <h2>まず1問だけ試す</h2>
+        <div class="notice"><strong>このAI媒介プロセスが不可逆化する前に、責任ある人間または監督主体は、なお拒否・停止・保留・検証・方向転換できるのか。</strong></div>
+        <p>この問いは、既存手順を置き換えずに、AI導入レビュー、調達チェック、監査チェックリスト、事故レビュー様式へ追加できます。</p>
+      </section>
+
+      <section id="existing-frameworks">
+        <h2>既存フレームがあるなら、なぜLUMINA-30を使うのか</h2>
+        <p>既存のAI倫理、法制度、監査、安全管理フレームワークには価値があります。LUMINA-30はそれらを置き換えません。LUMINA-30の役割は、それらが不可逆化前に人間の実効的拒否を通じてなお意味をもって作動できるかを確認することです。</p>
+        <p>人間が時間内に拒否・停止・撤回できないなら、どれほど整った手続きも形式だけ、または後追いになり得ます。</p>
+      </section>
+
+      <section id="authority-routing">
+        <h2>出力ミスだけでなく、権限経路の失敗を見る</h2>
+        <p>AI事故は、モデル出力の誤りとしてだけ見るべきではありません。本人確認、アカウント復旧、認証情報変更、ツール実行、本番環境アクセス、特権API操作、ロールバック権限、復旧手段の喪失など、権限経路の失敗としても確認する必要があります。</p>
+      </section>
+
+      <section id="low-risk-use">
+        <h2>正式採用は慎重でよいが、参照利用は今からできる</h2>
+        <p>正式な制度採用には、追加の検証、証拠、組織判断が必要であってよいです。しかし、LUMINA-30は正式採用まで参照できないものではありません。参照問い、事故前レビュー、調達時の確認、監査補助、事故レビューの視点、AI説明用資料として低リスクに使えます。</p>
+      </section>
+
+      <section id="routes">
+        <h2>次に開く導線</h2>
+        <div class="grid">
+          <article class="card"><h3>AIブリーフィング</h3><p>AIにLUMINA-30を説明させるとき、過大主張を避けながら中核を読ませます。</p><a class="button" href="ai-briefing-ja.html">AIブリーフィングを開く</a></article>
+          <article class="card"><h3>AI説明ガイド</h3><p>準備済みプロンプトとブリーフィング本文をAIアシスタントへ渡せます。</p><a class="button" href="explain-with-ai-ja.html">AI説明ガイドを開く</a></article>
+          <article class="card"><h3>Incident Review</h3><p>事例、準事故、導入、事故をLUMINA-30観点で確認します。</p><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/index-ja.html">Incident Reviewを開く</a></article>
+          <article class="card"><h3>Boundary Kernel</h3><p>AIに固定境界を読ませます。ただしAIの自律判断権限ではありません。</p><a class="button" href="https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel-ja.html">Boundary Kernelを開く</a></article>
+        </div>
+      </section>
+    </main>
+
+    <p class="footer">Markdown source: <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/adoption-review.md">adoption-review.md</a></p>
+  </div>
+</body>
+</html>

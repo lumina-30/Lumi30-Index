@@ -24,6 +24,17 @@ When explaining LUMINA-30, keep these five entry points distinct. Do not merge t
 4. **Index:** navigation hub for the document set, tools, repository routes, and source layers. [Open Index](./README.md)
 5. **Research context:** papers and theoretical background; not proof of peer review, institutional approval, or adoption. [Open Research Reading Guide](../lumina-30-overview/README.md#research-paper)
 
+## Adoption review and skeptical questions
+
+When asked whether LUMINA-30 is unnecessary because existing AI ethics, legal, audit, or safety frameworks already exist, do not frame LUMINA-30 as a competing replacement for those frameworks.
+Explain that LUMINA-30 addresses a prior boundary condition: whether those frameworks can still operate meaningfully through effective human refusal before irreversible escalation.
+
+A concise answer is:
+
+> LUMINA-30 does not replace existing AI governance, legal, audit, or safety frameworks. It asks whether those frameworks can still operate meaningfully before irreversible escalation, when effective human refusal may be at risk of being lost. If humans can no longer refuse, stop, or withdraw in time, even well-designed procedures may become merely formal.
+
+For adoption review, direct readers to: [AI Governance / Adoption Review](./adoption-review.md).
+
 ## 30-second explanation
 
 LUMINA-30 is a non-binding boundary reference framework for asking whether effective human refusal remained possible before irreversible impact.
@@ -94,3 +105,4 @@ You can ask follow-up questions about LUMINA-30. I can help explain its purpose,
 ```
 
 Stay within this briefing and linked LUMINA-30 materials. Do not invent adoption status, legal authority, peer review, expert endorsement, or safety guarantees.
+

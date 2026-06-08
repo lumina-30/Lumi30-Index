@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-l30-lang-lock="EN_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="EN_ONLY" />
+  <meta name="description" content="LUMINA-30 entry point for AI governance, adoption review, audit, security, procurement, and incident review teams." />
+  <title>LUMINA-30 for AI Governance / Adoption Review</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    h3 { margin: 0 0 .55em; }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice { padding: 14px 16px; margin: 18px 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
+    .card { padding: 16px; }
+    .card p { margin: .3em 0 .85em; }
+    .muted { color: var(--muted); }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    [id] { scroll-margin-top: 92px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Page navigation">
+      <a href="adoption-review.html">Adoption Review</a>
+      <a href="adoption-review-ja.html">Japanese</a>
+      <a href="index.html">Index</a>
+      <a href="ai-briefing.html">AI Briefing</a>
+      <a href="explain-with-ai.html">Explain with AI</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/adoption-review.md">Markdown Source</a>
+    </nav>
+
+    <header>
+      <h1>LUMINA-30 for AI Governance / Adoption Review</h1>
+      <p class="subtitle">A practical entry point for teams deciding whether an AI system, agent, tool, or deployment can still be refused before irreversibility.</p>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="Status">
+        <strong>Status: public reference framework, not certification.</strong>
+        LUMINA-30 does not replace legal, safety, audit, or AI ethics frameworks. It checks a prior boundary condition those frameworks often depend on: whether effective human refusal can still operate before irreversible escalation.
+      </section>
+
+      <section id="risk-gap">
+        <h2>The risk gap LUMINA-30 checks</h2>
+        <p>LUMINA-30 helps organizations avoid a dangerous gap: having AI governance on paper while losing the practical ability to refuse before irreversibility.</p>
+        <p>If the answer is unclear, governance may still exist formally, but its practical effect may be weak at the moment it matters most.</p>
+      </section>
+
+      <section id="one-question-trial">
+        <h2>Start with one question</h2>
+        <div class="notice"><strong>Can an accountable human or oversight body still refuse, stop, suspend, review, or redirect this AI-mediated process before irreversible escalation?</strong></div>
+        <p>This can be added to an AI adoption review, procurement check, audit checklist, or incident-review form without replacing existing procedures.</p>
+      </section>
+
+      <section id="existing-frameworks">
+        <h2>If existing frameworks already exist, why use LUMINA-30?</h2>
+        <p>Existing AI ethics, legal, audit, and safety frameworks can be valuable. LUMINA-30 does not replace them. Its role is to ask whether they can still operate meaningfully through effective human refusal before irreversible escalation.</p>
+        <p>If humans can no longer refuse, stop, or withdraw in time, even well-designed procedures may become merely formal or retrospective.</p>
+      </section>
+
+      <section id="authority-routing">
+        <h2>Review authority-routing failures, not only output failures</h2>
+        <p>AI incidents should not be reviewed only as model-output failures. They should also be reviewed as possible authority-routing failures: account recovery, credential changes, tool execution, production access, privileged API actions, rollback authority, and removal of recovery options.</p>
+      </section>
+
+      <section id="low-risk-use">
+        <h2>Formal adoption can wait; reference use does not need to</h2>
+        <p>Formal institutional adoption may reasonably require review, evidence, and organizational decision-making. But LUMINA-30 can be used at low risk as a reference question, pre-incident review aid, procurement prompt, audit supplement, incident-review lens, or AI explanation aid.</p>
+      </section>
+
+      <section id="routes">
+        <h2>Next routes</h2>
+        <div class="grid">
+          <article class="card"><h3>AI Briefing</h3><p>Use this when asking an AI to explain LUMINA-30 without overstating its status.</p><a class="button" href="ai-briefing.html">Open AI Briefing</a></article>
+          <article class="card"><h3>Explain with AI</h3><p>Copy a prepared prompt and briefing text into an AI assistant.</p><a class="button" href="explain-with-ai.html">Open Explain with AI</a></article>
+          <article class="card"><h3>Incident Review Floor</h3><p>Use LUMINA-30 to review a case, near miss, deployment, or incident.</p><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/">Open Incident Review</a></article>
+          <article class="card"><h3>Boundary Kernel</h3><p>Give an AI the fixed boundary language; it is not an autonomous decision authority.</p><a class="button" href="https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel.html">Open Boundary Kernel</a></article>
+        </div>
+      </section>
+    </main>
+
+    <p class="footer">Markdown source: <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/adoption-review.md">adoption-review.md</a></p>
+  </div>
+</body>
+</html>
