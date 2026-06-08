@@ -105,5 +105,6 @@ No. A checklist can carry the question, but the point is the boundary condition:
 - [AI Briefing](./ai-briefing.md) ｜ [AIブリーフィングHTML](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html)
 - [Explain LUMINA-30 with your AI](./explain-with-ai.md) ｜ [あなたのAIでLUMINA-30を説明させる](https://lumina-30.github.io/Lumi30-Index/explain-with-ai-ja.html)
 - [Public-Source Review and Actor-Authority-Evidence Mapping](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping.md) ｜ [公開情報レビューHTML](https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping_ja.html)
+- [Public-Source Review Template](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_Template.md) ｜ [公開情報レビュー・テンプレートHTML](https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_Template_ja.html)
 - [Incident Review Floor](https://github.com/lumina-30/lumina30-incident-review/blob/main/README.md) ｜ [インシデントレビュー・フロア](https://lumina-30.github.io/lumina30-incident-review/index-ja.html)
 - [Boundary Kernel](https://github.com/lumina-30/lumina-30-overview/blob/main/ai-readable/boundary-kernel.md)
