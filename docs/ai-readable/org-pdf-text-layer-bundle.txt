@@ -1,6 +1,6 @@
 LUMINA-30 Organization PDF Text Layer Bundle
 This file is generated automatically. Do not edit by hand.
-Generated: 2026-06-09T20:29:47Z
+Generated: 2026-06-10T21:08:09Z
 Organization: lumina-30
 
 Authority:
@@ -20,9 +20,9 @@ Unchanged PDFs reuse cached extracted text when possible; only new or changed PD
 
 Run statistics:
 PDFs seen: 58
-Reused unchanged: 52
+Reused unchanged: 58
 Reused renamed same blob: 0
-Downloaded/extracted: 6
+Downloaded/extracted: 0
 Skipped too large: 0
 Download errors: 0
 
@@ -3348,7 +3348,7 @@ PDF URL: https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-inc
 Git blob SHA: 6392655064b198f1ad3e882e2fb6fa176aa643f7
 SHA256: a979d26b31bd4ce0dad402157482975c8bb193562fb3de92e8cef3d7393a4e2d
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 61099
 Page count: 15
 Extracted characters: 21071
@@ -4045,7 +4045,7 @@ PDF URL: https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-inc
 Git blob SHA: 6392655064b198f1ad3e882e2fb6fa176aa643f7
 SHA256: a979d26b31bd4ce0dad402157482975c8bb193562fb3de92e8cef3d7393a4e2d
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 61099
 Page count: 15
 Extracted characters: 21071
@@ -4742,7 +4742,7 @@ PDF URL: https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-inc
 Git blob SHA: 6392655064b198f1ad3e882e2fb6fa176aa643f7
 SHA256: a979d26b31bd4ce0dad402157482975c8bb193562fb3de92e8cef3d7393a4e2d
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 61099
 Page count: 15
 Extracted characters: 21071
@@ -5439,7 +5439,7 @@ PDF URL: https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-inc
 Git blob SHA: 42345897810940be98487b031608bb8e481175ea
 SHA256: 706846fb504ac7771cf8659948ae58f6140199fb95627d946fe2802069e1448c
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 462757
 Page count: 16
 Extracted characters: 9441
@@ -6074,7 +6074,7 @@ PDF URL: https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-inc
 Git blob SHA: 42345897810940be98487b031608bb8e481175ea
 SHA256: 706846fb504ac7771cf8659948ae58f6140199fb95627d946fe2802069e1448c
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 462757
 Page count: 16
 Extracted characters: 9441
@@ -6709,7 +6709,7 @@ PDF URL: https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-inc
 Git blob SHA: 42345897810940be98487b031608bb8e481175ea
 SHA256: 706846fb504ac7771cf8659948ae58f6140199fb95627d946fe2802069e1448c
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 462757
 Page count: 16
 Extracted characters: 9441
