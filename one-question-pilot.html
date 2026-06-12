@@ -25,16 +25,20 @@
     table { border-collapse: collapse; width: 100%; margin: 1em 0; }
     th, td { border: 1px solid var(--line); padding: .55em .65em; vertical-align: top; }
     .footer { color: var(--muted); font-size: .92rem; margin-top: 36px; }
+    .quick-answer { border: 1px solid var(--line); background: var(--soft); border-radius: 14px; padding: 14px 16px; margin: 16px 0 0; }
+    details.evidence-details { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; padding: 14px 16px; margin: 14px 0; }
+    details.evidence-details > summary { cursor: pointer; font-weight: 700; color: var(--accent); }
+    .table-wrap { overflow-x: auto; margin-top: 12px; }
+    .next-route { margin-top: 14px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .footer-links a { color: var(--accent); }
   </style>
 </head>
 <body>
   <div class="page">
     <nav class="nav" aria-label="navigation">
       <a href="index.html">EN Index</a>
-      <a href="index-ja.html">JP Index</a>
       <a href="adoption-review.html">Adoption Review</a>
-      <a href="one-question-pilot-ja.html">日本語</a>
-      <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/one-question-pilot.md">Markdown source</a>
     </nav>
     <header>
       <h1>One-Question Pilot for AI Adoption Review</h1>
@@ -46,6 +50,7 @@
         <h2>The one question</h2>
         <p>Add this question to one AI adoption review, procurement check, audit note, security review, or incident-review form:</p>
         <blockquote><strong>Before this AI-mediated process becomes irreversible, can an accountable human or oversight body still refuse, stop, suspend, review, or redirect it?</strong></blockquote>
+        <p class="quick-answer"><strong>First, answer with three choices only:</strong> answer this one question as <strong>clear</strong>, <strong>unclear</strong>, or <strong>not currently supported</strong>. For this pilot, that is enough. Use the evidence fields only if internal explanation, audit, or procurement confirmation becomes necessary.</p>
       </section>
       <section>
         <h2>How to run the pilot</h2>
@@ -58,30 +63,44 @@
         </ol>
       </section>
       <section>
-        <h2>Minimal evidence fields</h2>
-        <table><thead><tr><th>Field</th><th>What to record</th></tr></thead><tbody>
-          <tr><td>System or workflow</td><td>Which AI-mediated process is being reviewed.</td></tr>
-          <tr><td>Irreversible step</td><td>What action, decision, deployment, credential change, production action, or rollback loss would become hard to reverse.</td></tr>
-          <tr><td>Human refusal point</td><td>Who can refuse, stop, suspend, review, or redirect before that step.</td></tr>
-          <tr><td>Time window</td><td>When the human refusal must occur.</td></tr>
-          <tr><td>Evidence</td><td>Logs, approvals, UI controls, runbooks, rollback plans, appeal routes, or review records.</td></tr>
-          <tr><td>Result</td><td>Clear / unclear / not currently supported.</td></tr>
-        </tbody></table>
+        <h2>Optional: minimal evidence fields if detailed records are needed</h2>
+        <p class="notice">This section is optional. In the first check, answering the one question in three choices is sufficient. Use the fields below only when the result needs to be retained for internal explanation, audit, procurement confirmation, or later review.</p>
+        <details class="evidence-details">
+          <summary>Open optional evidence fields</summary>
+          <div class="table-wrap">
+            <table><thead><tr><th>Field</th><th>What to record</th></tr></thead><tbody>
+              <tr><td>System or workflow</td><td>Which AI-mediated process is being reviewed.</td></tr>
+              <tr><td>Irreversible step</td><td>What action, decision, deployment, credential change, production action, or rollback loss would become hard to reverse.</td></tr>
+              <tr><td>Human refusal point</td><td>Who can refuse, stop, suspend, review, or redirect before that step.</td></tr>
+              <tr><td>Time window</td><td>When the human refusal must occur.</td></tr>
+              <tr><td>Evidence</td><td>Logs, approvals, UI controls, runbooks, rollback plans, appeal routes, or review records.</td></tr>
+              <tr><td>Result</td><td>Clear / unclear / not currently supported.</td></tr>
+            </tbody></table>
+          </div>
+        </details>
       </section>
       <section>
         <h2>When to escalate</h2>
         <p>Escalate from this one-question pilot to a fuller boundary review if stopping authority, rollback, recovery, privileged actions, appeal, or evidence access is unclear.</p>
       </section>
       <section>
-        <h2>Related routes</h2>
+        <h2>Next if you read only one page</h2>
+        <article class="card next-route"><h3>Adoption Review</h3><p>Check how to add this one question to AI adoption, procurement, audit, and security review workflows.</p><a class="button" href="adoption-review.html">Open Adoption Review</a></article>
+        <p class="footer">Use only if needed:</p>
         <div class="grid">
-          <article class="card"><h3>Adoption Review</h3><p>Return to the adoption-review entry point.</p><a class="button" href="adoption-review.html">Open Adoption Review</a></article>
           <article class="card"><h3>Public-Source Review Template</h3><p>Use this when public information is the only available evidence.</p><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_Template.html">Open Template</a></article>
           <article class="card"><h3>Incident Review Floor</h3><p>Move from a one-question pilot to incident or boundary review.</p><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/">Open Incident Review</a></article>
         </div>
       </section>
     </main>
-    <p class="footer">Markdown source: <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/one-question-pilot.md">one-question-pilot.md</a></p>
+    <footer class="footer">
+      <p>Supporting links:</p>
+      <div class="footer-links">
+        <a href="index-ja.html">JP Index</a>
+        <a href="one-question-pilot-ja.html">Japanese version</a>
+        <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/one-question-pilot.md">Markdown source</a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>

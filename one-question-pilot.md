@@ -20,6 +20,10 @@ AI導入レビュー、調達確認、監査メモ、セキュリティレビュ
 
 > **このAI媒介プロセスが不可逆化する前に、責任ある人間または監督主体は、なお拒否・停止・保留・検証・方向転換できるのか。**
 
+First, answer this one question as **clear**, **unclear**, or **not currently supported**. For this pilot, that is enough. Use the evidence fields only if internal explanation, audit, or procurement confirmation becomes necessary.
+
+まずはこの1問に、**明確**、**不明確**、**現状では未対応** のいずれかで答えてください。今回は、それだけで十分です。証拠欄への記録は、社内説明・監査・調達確認などで必要になった場合だけ使います。
+
 ## How to run the pilot ｜ パイロットの進め方
 
 1. Choose one AI system, vendor feature, agent workflow, automation layer, or incident scenario.
@@ -34,7 +38,11 @@ AI導入レビュー、調達確認、監査メモ、セキュリティレビュ
 4. 不明確な場合は、不足している要素を分けます。時間窓、権限、証拠、ロールバック経路、異議申立・復旧経路、責任ある人間主体のいずれが不足しているかを確認します。
 5. LUMINA-30準拠を主張しないでください。結果は参照利用メモとして扱います。
 
-## Minimal evidence fields ｜ 最小証拠欄
+## Optional: minimal evidence fields ｜ 任意：詳しく記録したい場合の最小証拠欄
+
+The following fields are optional. In the first check, answering the one question in three choices is sufficient. Use the fields only when the result needs to be retained for internal explanation, audit, procurement confirmation, or later review.
+
+ここから先は任意です。最初の確認では、上の1問に3択で答えるだけで構いません。社内説明・監査・調達確認・後続レビューに残す必要がある場合のみ、以下を使ってください。
 
 | Field | What to record |
 |---|---|
@@ -80,7 +88,12 @@ The pilot is designed to make the boundary question visible without requiring fo
 
 ## Related routes ｜ 関連導線
 
-- [AI Governance / Adoption Review](./adoption-review.md)
-- [Public-Source Review Template](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_Template.md)
+Next if you read only one page: / 次に読むなら：
+
+- [AI Governance / Adoption Review](./adoption-review.md) ｜ [採用審査入口HTML](https://lumina-30.github.io/Lumi30-Index/adoption-review-ja.html)
+
+Use only if needed: / 必要になった場合のみ：
+
+- [Public-Source Review Template](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_Template.md) ｜ [公開情報レビュー・テンプレートHTML](https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_Template_ja.html)
 - [Public-Source Review and Actor-Authority-Evidence Mapping](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping.md)
-- [Incident Review Floor](https://github.com/lumina-30/lumina30-incident-review/blob/main/README.md)
+- [Incident Review Floor](https://github.com/lumina-30/lumina30-incident-review/blob/main/README.md) ｜ [Incident Review日本語入口](https://lumina-30.github.io/lumina30-incident-review/index-ja.html)

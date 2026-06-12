@@ -25,16 +25,20 @@
     table { border-collapse: collapse; width: 100%; margin: 1em 0; }
     th, td { border: 1px solid var(--line); padding: .55em .65em; vertical-align: top; }
     .footer { color: var(--muted); font-size: .92rem; margin-top: 36px; }
+    .quick-answer { border: 1px solid var(--line); background: var(--soft); border-radius: 14px; padding: 14px 16px; margin: 16px 0 0; }
+    details.evidence-details { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; padding: 14px 16px; margin: 14px 0; }
+    details.evidence-details > summary { cursor: pointer; font-weight: 700; color: var(--accent); }
+    .table-wrap { overflow-x: auto; margin-top: 12px; }
+    .next-route { margin-top: 14px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .footer-links a { color: var(--accent); }
   </style>
 </head>
 <body>
   <div class="page">
     <nav class="nav" aria-label="navigation">
       <a href="index-ja.html">日本語索引</a>
-      <a href="index.html">EN Index</a>
       <a href="adoption-review-ja.html">採用審査入口</a>
-      <a href="one-question-pilot.html">English</a>
-      <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/one-question-pilot.md">Markdown source</a>
     </nav>
     <header>
       <h1>AI導入審査のための1問パイロット</h1>
@@ -46,6 +50,7 @@
         <h2>追加する1問</h2>
         <p>AI導入レビュー、調達確認、監査メモ、セキュリティレビュー、または事故レビュー様式に、まずこの1問を追加してください。</p>
         <blockquote><strong>このAI媒介プロセスが不可逆化する前に、責任ある人間または監督主体は、なお拒否・停止・保留・検証・方向転換できるのか。</strong></blockquote>
+        <p class="quick-answer"><strong>まずは3択だけ：</strong>この1問に、<strong>明確</strong>、<strong>不明確</strong>、<strong>現状では未対応</strong> のいずれかで答えてください。今回は、それだけで十分です。証拠欄への記録は、社内説明・監査・調達確認などで必要になった場合だけ使います。</p>
       </section>
       <section>
         <h2>パイロットの進め方</h2>
@@ -58,30 +63,44 @@
         </ol>
       </section>
       <section>
-        <h2>最小証拠欄</h2>
-        <table><thead><tr><th>欄</th><th>記録する内容</th></tr></thead><tbody>
-          <tr><td>システムまたは業務</td><td>確認対象のAI媒介プロセス。</td></tr>
-          <tr><td>不可逆化し得る段階</td><td>取り消し困難になり得る行為、判断、展開、認証情報変更、本番操作、ロールバック喪失。</td></tr>
-          <tr><td>人間の拒否点</td><td>その前に誰が拒否・停止・保留・検証・方向転換できるか。</td></tr>
-          <tr><td>時間窓</td><td>いつまでに人間の拒否が行われなければならないか。</td></tr>
-          <tr><td>証拠</td><td>ログ、承認記録、UI制御、運用手順、ロールバック計画、異議申立経路、レビュー記録。</td></tr>
-          <tr><td>結果</td><td>明確 / 不明確 / 現状では未対応。</td></tr>
-        </tbody></table>
+        <h2>任意：詳しく記録したい場合の最小証拠欄</h2>
+        <p class="notice">ここから先は任意です。最初の確認では、上の1問に3択で答えるだけで構いません。社内説明・監査・調達確認に残す必要がある場合のみ、以下を使ってください。</p>
+        <details class="evidence-details">
+          <summary>任意の証拠欄を開く</summary>
+          <div class="table-wrap">
+            <table><thead><tr><th>欄</th><th>記録する内容</th></tr></thead><tbody>
+              <tr><td>システムまたは業務</td><td>確認対象のAI媒介プロセス。</td></tr>
+              <tr><td>不可逆化し得る段階</td><td>取り消し困難になり得る行為、判断、展開、認証情報変更、本番操作、ロールバック喪失。</td></tr>
+              <tr><td>人間の拒否点</td><td>その前に誰が拒否・停止・保留・検証・方向転換できるか。</td></tr>
+              <tr><td>時間窓</td><td>いつまでに人間の拒否が行われなければならないか。</td></tr>
+              <tr><td>証拠</td><td>ログ、承認記録、UI制御、運用手順、ロールバック計画、異議申立経路、レビュー記録。</td></tr>
+              <tr><td>結果</td><td>明確 / 不明確 / 現状では未対応。</td></tr>
+            </tbody></table>
+          </div>
+        </details>
       </section>
       <section>
         <h2>境界レビューへ進める条件</h2>
         <p>停止権限、ロールバック、復旧、特権的行為、異議申立、証拠アクセスのいずれかが不明確な場合は、1問パイロットから、より詳しい境界レビューへ進めます。</p>
       </section>
       <section>
-        <h2>関連導線</h2>
+        <h2>次に読むなら</h2>
+        <article class="card next-route"><h3>採用審査入口</h3><p>AI導入・採用・調達・監査・セキュリティレビューに、この1問をどう差し込むかを確認します。</p><a class="button" href="adoption-review-ja.html">採用審査入口を開く</a></article>
+        <p class="footer">必要になった場合のみ：</p>
         <div class="grid">
-          <article class="card"><h3>採用審査入口</h3><p>AI導入・AIガバナンス審査向けの入口へ戻ります。</p><a class="button" href="adoption-review-ja.html">採用審査入口を開く</a></article>
           <article class="card"><h3>公開情報レビュー・テンプレート</h3><p>公開情報だけが利用可能な場合に使います。</p><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_Template_ja.html">テンプレートを開く</a></article>
-          <article class="card"><h3>Incident Review</h3><p>1問パイロットから事故レビュー・境界レビューへ進みます。</p><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/index-ja.html">Incident Reviewを開く</a></article>
+          <article class="card"><h3>Incident Review</h3><p>1問パイロットから事故レビュー・境界レビューへ進む場合に使います。</p><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/index-ja.html">Incident Reviewを開く</a></article>
         </div>
       </section>
     </main>
-    <p class="footer">Markdown source: <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/one-question-pilot.md">one-question-pilot.md</a></p>
+    <footer class="footer">
+      <p>補助リンク：</p>
+      <div class="footer-links">
+        <a href="index.html">英語索引</a>
+        <a href="one-question-pilot.html">英語版</a>
+        <a href="https://github.com/lumina-30/Lumi30-Index/blob/main/one-question-pilot.md">Markdown正本</a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
