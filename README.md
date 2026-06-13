@@ -76,7 +76,7 @@ If you are not sure where to go next, return to the Central Square. LUMINA-30 ca
 | ⚖️ **Accountability Hall ｜ 責任・説明責任庁舎** | Check responsibility, evidence, and accountability. ｜ 責任・証跡・説明可能性を確認する場所。 | (repo: ai-accountability-reference) |
 | 🧱 **Institutional Friction Workshop ｜ 制度摩擦工房** | Keep stop, review, and refusal mechanisms inside organizations. ｜ 止める仕組みを組織内に残す場所。 | (repo: institutional-friction-toolkit) |
 | 📜 **Canon Archive ｜ 正典保管庫** | Check fixed canonical documents. ｜ 固定文書・正本を確認する場所。 | (repo: LUMINA-30) |
-| 🧬 **Research District ｜ 理論研究区** | Read PCR-C and the research background. ｜ PCR-Cや研究背景を読む場所。 | (repo: Lumi30-Research-Context) |
+| 🧬 **Research District ｜ 理論研究区** | Read PCR-C and the research background. ｜ PCR-Cや研究背景を読む場所。<br>[Open the research guide](https://lumina-30.github.io/lumina-30-overview/index.html#research-paper) ｜ [研究読書ガイドを開く](https://lumina-30.github.io/lumina-30-overview/index-ja.html#research-paper)<br>[Open reference materials](https://lumina-30.github.io/lumina30-incident-review/reference/Research_Landscape_Mapping.html) ｜ [参照資料を開く](https://lumina-30.github.io/lumina30-incident-review/reference/Research_Landscape_Mapping_ja.html) | — |
 | 📦 **PDF Archive ｜ PDF保管庫** | Check fixed PDFs and preserved evidence files. ｜ 固定PDF・証跡を確認する場所。 | (repo: Lumi30-PDF-Archive) |
 | 🤖 **AI Reading Room ｜ AI読解室** | Provide boundary-readable materials to external AI systems. ｜ 外部AIに読ませる境界資料を確認する場所。 | (repo: lumina-30-overview / ai-readable) |
 
