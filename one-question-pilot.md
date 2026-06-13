@@ -106,4 +106,6 @@ Use only if needed: / 必要になった場合のみ：
 Supporting links: / 補助リンク：
 
 - [LUMINA-30 overview](https://lumina-30.github.io/lumina-30-overview/index.html) ｜ [LUMINA-30全体概要](https://lumina-30.github.io/lumina-30-overview/index-ja.html)
+- [LUMINA-30 Landmark Map](https://lumina-30.github.io/Lumi30-Index/index.html#landmark-map) ｜ [迷ったら：LUMINA-30全体系地図へ戻る](https://lumina-30.github.io/Lumi30-Index/index-ja.html#landmark-map)
+
 

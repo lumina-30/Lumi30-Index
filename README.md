@@ -55,6 +55,33 @@ LUMINA-30を初めて読む場合、または他の読者・AIアシスタント
 5. **Index ｜ 索引** — Find the full document set, tools, repository routes, and source layers. ｜ 文書全体・実務ツール・repo導線・ソース層を探す。  
 6. **Research Context ｜ 研究背景** — Review papers and theoretical background; this is not proof of peer review, approval, or adoption. ｜ 論文・理論背景を確認する。ただし査読・承認・採用の証拠ではない。
 
+
+---
+
+<a id="landmark-map"></a>
+
+## LUMINA-30 Landmark Map ｜ 迷わないLUMINA-30地図
+
+If you are not sure where to go next, return to the Central Square. LUMINA-30 can be navigated by role and landmark, not by repository name.
+
+迷ったら中央広場へ戻ってください。LUMINA-30は、repo名ではなく「場所」と「役割」で移動できます。
+
+| Landmark ｜ ランドマーク | Role ｜ 役割 | Address label ｜ 住所ラベル |
+|---|---|---|
+| 🧭 **Central Square ｜ 中央広場** | Return here if you are lost. ｜ 迷ったら戻る場所。 | (repo: Lumi30-Index) |
+| 🏛️ **Entrance Arch ｜ 入口凱旋門** | Start with the One-Question Pilot. ｜ まず1問だけ試す場所。 | (repo: Lumi30-Index / one-question-pilot) |
+| 🏢 **Practical Hall ｜ 実務棟** | Add the question to existing review workflows. ｜ 既存レビューに差し込む場所。 | (repo: Lumi30-Index / adoption-review / procurement-vendor-risk) |
+| 🚨 **Incident Review Tower ｜ 事故レビュー塔** | Use this after incidents, failures, or public-source events. ｜ 事件・障害・事故後に確認する場所。 | (repo: lumina30-incident-review) |
+| 🛑 **Stop-Authority Gate ｜ 停止権限ゲート** | Check whether a responsible human can still stop, refuse, pause, or roll back. ｜ 人間が止められるか確認する場所。 | (repo: stop-authority-reference) |
+| ⚖️ **Accountability Hall ｜ 責任・説明責任庁舎** | Check responsibility, evidence, and accountability. ｜ 責任・証跡・説明可能性を確認する場所。 | (repo: ai-accountability-reference) |
+| 🧱 **Institutional Friction Workshop ｜ 制度摩擦工房** | Keep stop, review, and refusal mechanisms inside organizations. ｜ 止める仕組みを組織内に残す場所。 | (repo: institutional-friction-toolkit) |
+| 📜 **Canon Archive ｜ 正典保管庫** | Check fixed canonical documents. ｜ 固定文書・正本を確認する場所。 | (repo: LUMINA-30) |
+| 🧬 **Research District ｜ 理論研究区** | Read PCR-C and the research background. ｜ PCR-Cや研究背景を読む場所。 | (repo: Lumi30-Research-Context) |
+| 📦 **PDF Archive ｜ PDF保管庫** | Check fixed PDFs and preserved evidence files. ｜ 固定PDF・証跡を確認する場所。 | (repo: Lumi30-PDF-Archive) |
+| 🤖 **AI Reading Room ｜ AI読解室** | Provide boundary-readable materials to external AI systems. ｜ 外部AIに読ませる境界資料を確認する場所。 | (repo: lumina-30-overview / ai-readable) |
+
+Reader-facing HTML map: [LUMINA-30 Landmark Map](https://lumina-30.github.io/Lumi30-Index/index.html#landmark-map) ｜ [迷わないLUMINA-30地図](https://lumina-30.github.io/Lumi30-Index/index-ja.html#landmark-map)
+
 For an external AI, use the AI Briefing so the explanation does not overstate LUMINA-30's status.  
 外部AIには、LUMINA-30の状態を過大評価させないためにAI Briefingを使用してください。  
 [AI Briefing](https://lumina-30.github.io/Lumi30-Index/ai-briefing.html) ｜ [AIブリーフィング](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html)
@@ -378,6 +405,7 @@ LUMINA-30 は記述的構造であり、指示的・拘束的ではない。
 This README.md is retained for canonical text preservation, search discoverability, existing links, source review, and version comparison. It is not the preferred reader-facing route.
 
 本README.mdは、正本文書の保管、検索到達性、既存リンク維持、ソース確認、差分確認のために残しています。読者向けの閲覧・移動・戻り導線には、HTML索引を使用してください。
+
 
 
 
