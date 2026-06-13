@@ -32,11 +32,15 @@ First, answer this one question as **clear**, **unclear**, or **not currently su
 4. If the answer is unclear, identify which part is missing: time window, authority, evidence, rollback path, appeal path, or accountable human owner.
 5. Do not claim LUMINA-30 compliance. Treat the result as a reference-use note.
 
+The result is a one-line note you can drop directly into an existing review record — no new process or document required.
+
 1. AIシステム、ベンダー機能、エージェント業務、自動化層、または事故シナリオを1つ選びます。
 2. 承認、展開、拡張、事故クローズの前に、上記の1問を確認します。
 3. 回答を **明確**、**不明確**、**現状では未対応** のいずれかで記録します。
 4. 不明確な場合は、不足している要素を分けます。時間窓、権限、証拠、ロールバック経路、異議申立・復旧経路、責任ある人間主体のいずれが不足しているかを確認します。
 5. LUMINA-30準拠を主張しないでください。結果は参照利用メモとして扱います。
+
+この確認結果は、既存のレビュー記録やメモにそのまま1行で追記できます。新しい手続きや文書を作る必要はありません。
 
 ## Optional: minimal evidence fields ｜ 任意：詳しく記録したい場合の最小証拠欄
 
@@ -91,9 +95,15 @@ The pilot is designed to make the boundary question visible without requiring fo
 Next if you read only one page: / 次に読むなら：
 
 - [AI Governance / Adoption Review](./adoption-review.md) ｜ [採用審査入口HTML](https://lumina-30.github.io/Lumi30-Index/adoption-review-ja.html)
+  Includes where to add this question in vendor questionnaires, audit checklists, and security sign-offs. / ベンダー確認票、監査チェックリスト、セキュリティ承認欄のどこにこの1問を足すかを確認できます。
 
 Use only if needed: / 必要になった場合のみ：
 
 - [Public-Source Review Template](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_Template.md) ｜ [公開情報レビュー・テンプレートHTML](https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_Template_ja.html)
 - [Public-Source Review and Actor-Authority-Evidence Mapping](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping.md)
 - [Incident Review Floor](https://github.com/lumina-30/lumina30-incident-review/blob/main/README.md) ｜ [Incident Review日本語入口](https://lumina-30.github.io/lumina30-incident-review/index-ja.html)
+
+Supporting links: / 補助リンク：
+
+- [LUMINA-30 overview](https://lumina-30.github.io/lumina-30-overview/index.html) ｜ [LUMINA-30全体概要](https://lumina-30.github.io/lumina-30-overview/index-ja.html)
+
