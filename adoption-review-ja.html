@@ -36,7 +36,15 @@
     .muted { color: var(--muted); }
     .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
     [id] { scroll-margin-top: 92px; }
-  </style>
+  
+    .notice-title {
+      display: block;
+      font-size: clamp(1.16rem, 2.8vw, 1.48rem);
+      line-height: 1.32;
+      font-weight: 800;
+      margin-bottom: .35em;
+    }
+</style>
 </head>
 <body>
   <div class="page">
@@ -56,7 +64,7 @@
 
     <main>
       <section class="notice" aria-label="ステータス">
-        <strong>ステータス：公開参照フレームであり、認証ではありません。</strong>
+        <strong class="notice-title">ステータス：公開参照フレームであり、認証ではありません。</strong>
         LUMINA-30は、法制度・安全管理・監査・AI倫理フレームワークを置き換えるものではありません。それらが意味を持つために必要な前提条件、すなわち不可逆化前に人間の実効的拒否がなお機能するかを確認します。
       </section>
 
@@ -68,7 +76,7 @@
 
       <section id="one-question-trial">
         <h2>まず1問だけ試す</h2>
-        <div class="notice"><strong>このAI媒介プロセスが不可逆化する前に、責任ある人間または監督主体は、なお拒否・停止・保留・検証・方向転換できるのか。</strong></div>
+        <div class="notice"><strong class="notice-title">このAI媒介プロセスが不可逆化する前に、責任ある人間または監督主体は、なお拒否・停止・保留・検証・方向転換できるのか。</strong></div>
         <p>この問いは、既存手順を置き換えずに、AI導入レビュー、調達チェック、監査チェックリスト、事故レビュー様式へ追加できます。</p>
         <p><a class="button" href="one-question-pilot-ja.html">1問パイロットを開く</a></p>
       </section>

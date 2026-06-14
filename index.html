@@ -41,7 +41,15 @@
     .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
     [id] { scroll-margin-top: 92px; }
 
-  </style>
+  
+    .notice-title {
+      display: block;
+      font-size: clamp(1.16rem, 2.8vw, 1.48rem);
+      line-height: 1.32;
+      font-weight: 800;
+      margin-bottom: .35em;
+    }
+</style>
 </head>
 <body>
   <div class="page">
@@ -62,14 +70,14 @@
 
     <main>
       <section class="notice" aria-label="Status: public reference framework">
-        <strong>Status: Public Reference Framework — Not a Certification or Adopted Standard.</strong>
+        <strong class="notice-title">Status: Public Reference Framework — Not a Certification or Adopted Standard.</strong>
         LUMINA-30 is a public reference framework for evaluating whether effective human refusal remains possible before irreversible escalation.
         It is not a certification system, not an adopted legal standard, and not evidence of institutional approval.
         Its current role is to provide structured concepts, review templates, and AI-readable boundary language for third-party examination, discussion, and possible use.
       </section>
 
       <section class="notice" aria-label="Usage, citation, contact, and misuse prevention">
-        <strong>Usage, citation, contact, and misuse prevention.</strong>
+        <strong class="notice-title">Usage, citation, contact, and misuse prevention.</strong>
         Third parties may cite, study, discuss, or experimentally use LUMINA-30 materials for internal review, incident review design, governance comparison, AI-safety documentation, and evaluation workflows.
         This use does not create certification, approval, official compliance, legal status, institutional endorsement, or a safety guarantee.
         Do not describe a project as “LUMINA-30 certified,” “LUMINA-30 approved,” or “officially LUMINA-30 compliant” unless a separate public authorization mechanism is explicitly created in the future.
@@ -78,13 +86,13 @@
       </section>
 
       <section class="notice" aria-label="Explain LUMINA-30 with your AI">
-        <strong>Explain LUMINA-30 with your AI.</strong> If LUMINA-30 feels difficult at first, you can give a short briefing URL to your own AI assistant and ask it to explain LUMINA-30 without overstating its status.
+        <strong class="notice-title">Explain LUMINA-30 with your AI.</strong> If LUMINA-30 feels difficult at first, you can give a short briefing URL to your own AI assistant and ask it to explain LUMINA-30 without overstating its status.
         <br />
         <a class="button" href="./explain-with-ai.html">Open AI explanation guide</a>
       </section>
 
       <section class="notice" aria-label="For AI governance and adoption review">
-        <strong>For AI Governance / Adoption Review.</strong> LUMINA-30 helps organizations avoid a dangerous gap: having AI governance on paper while losing the practical ability to refuse before irreversibility. Start with one boundary question before changing existing procedures.
+        <strong class="notice-title">For AI Governance / Adoption Review.</strong> LUMINA-30 helps organizations avoid a dangerous gap: having AI governance on paper while losing the practical ability to refuse before irreversibility. Start with one boundary question before changing existing procedures.
         <br />
         <a class="button" href="./adoption-review.html">Open the adoption review route</a>
       </section>

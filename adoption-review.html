@@ -36,7 +36,15 @@
     .muted { color: var(--muted); }
     .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
     [id] { scroll-margin-top: 92px; }
-  </style>
+  
+    .notice-title {
+      display: block;
+      font-size: clamp(1.16rem, 2.8vw, 1.48rem);
+      line-height: 1.32;
+      font-weight: 800;
+      margin-bottom: .35em;
+    }
+</style>
 </head>
 <body>
   <div class="page">
@@ -56,7 +64,7 @@
 
     <main>
       <section class="notice" aria-label="Status">
-        <strong>Status: public reference framework, not certification.</strong>
+        <strong class="notice-title">Status: public reference framework, not certification.</strong>
         LUMINA-30 does not replace legal, safety, audit, or AI ethics frameworks. It checks a prior boundary condition those frameworks often depend on: whether effective human refusal can still operate before irreversible escalation.
       </section>
 
@@ -68,7 +76,7 @@
 
       <section id="one-question-trial">
         <h2>Start with one question</h2>
-        <div class="notice"><strong>Can an accountable human or oversight body still refuse, stop, suspend, review, or redirect this AI-mediated process before irreversible escalation?</strong></div>
+        <div class="notice"><strong class="notice-title">Can an accountable human or oversight body still refuse, stop, suspend, review, or redirect this AI-mediated process before irreversible escalation?</strong></div>
         <p>This can be added to an AI adoption review, procurement check, audit checklist, or incident-review form without replacing existing procedures.</p>
         <p><a class="button" href="one-question-pilot.html">Open the one-question pilot</a></p>
       </section>

@@ -26,6 +26,14 @@
     th, td { border: 1px solid var(--line); padding: 10px; vertical-align: top; }
     th { background: var(--soft); }
     code { background: var(--soft); padding: .1em .3em; border-radius: .35em; }
+
+    .notice-title {
+      display: block;
+      font-size: clamp(1.16rem, 2.8vw, 1.48rem);
+      line-height: 1.32;
+      font-weight: 800;
+      margin-bottom: .35em;
+    }
 </style>
 </head>
 <body>
@@ -43,13 +51,14 @@
     </header>
     
 <section class="notice">
+  <strong class="notice-title">調達・ベンダーリスクのための境界確認。</strong>
   <p>このページは、AI媒介サービス、AIエージェント、ワークフロー、ツールを承認する前に、ベンダーまたは内部プロダクト責任者へ少数の境界質問を投げる必要がある、調達、ベンダーリスク、セキュリティ、監査、AIガバナンス担当者向けです。</p>
   <p>これは、法務、規制、セキュリティ、プライバシー、安全レビューの代替ではありません。LUMINA-30の狭い境界プロンプト――AI媒介プロセスが不可逆化する前に、実効的人間拒否、保留、検証、ロールバックがなお可能か――を追加するものです。</p>
 </section>
 
 <h2>最小ベンダー確認</h2>
 <blockquote>
-<p>このAI媒介プロセスが、認証情報を変更し、ツールを実行し、本番状態を変更し、復旧手段を失わせ、または不可逆な確定を作る前に、誰が拒否・停止・保留・検証・ロールバックできるのか。そして、その権限が不可逆化前に存在したことを示す証拠は何か。</p>
+<p><strong class="notice-title">このAI媒介プロセスが、認証情報を変更し、ツールを実行し、本番状態を変更し、復旧手段を失わせ、または不可逆な確定を作る前に、誰が拒否・停止・保留・検証・ロールバックできるのか。</strong>そして、その権限が不可逆化前に存在したことを示す証拠は何か。</p>
 </blockquote>
 
 <h2>確認すべき4項目</h2>

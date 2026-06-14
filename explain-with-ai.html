@@ -40,7 +40,15 @@
     .copy-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0 14px; }
     .status { color: var(--muted); font-size: .95rem; }
     [id] { scroll-margin-top: 92px; }
-  </style>
+  
+    .notice-title {
+      display: block;
+      font-size: clamp(1.16rem, 2.8vw, 1.48rem);
+      line-height: 1.32;
+      font-weight: 800;
+      margin-bottom: .35em;
+    }
+</style>
 </head>
 <body>
   <div class="page">
@@ -59,7 +67,7 @@
 
     <main>
       <section class="notice" aria-label="Important caution">
-        <strong>Important.</strong> LUMINA-30 is not an official standard, legal certification, safety guarantee, government-approved framework, or proof that an AI system is safe.
+        <strong class="notice-title">Important.</strong> LUMINA-30 is not an official standard, legal certification, safety guarantee, government-approved framework, or proof that an AI system is safe.
       </section>
 
       <section id="how">

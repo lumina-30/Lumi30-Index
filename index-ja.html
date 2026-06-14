@@ -41,7 +41,15 @@
     .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
     [id] { scroll-margin-top: 92px; }
 
-  </style>
+  
+    .notice-title {
+      display: block;
+      font-size: clamp(1.16rem, 2.8vw, 1.48rem);
+      line-height: 1.32;
+      font-weight: 800;
+      margin-bottom: .35em;
+    }
+</style>
 </head>
 <body>
   <div class="page">
@@ -62,14 +70,14 @@
 
     <main>
       <section class="notice" aria-label="ステータス：公開参照フレーム">
-        <strong>ステータス：公開参照フレーム — 認証制度・採用済み標準ではありません。</strong>
+        <strong class="notice-title">ステータス：公開参照フレーム — 認証制度・採用済み標準ではありません。</strong>
         LUMINA-30は、不可逆化の前に人間の実効的拒否権が残っているかを評価するための公開参照フレームです。
         認証制度、採用済み法制度、制度的承認の証拠ではありません。
         現時点での役割は、第三者による検討・議論・試用のために、構造化された概念、レビュー様式、AI可読の境界記述を提供することです。
       </section>
 
       <section class="notice" aria-label="利用・引用・問い合わせ・誤用防止">
-        <strong>利用・引用・問い合わせ・誤用防止。</strong>
+        <strong class="notice-title">利用・引用・問い合わせ・誤用防止。</strong>
         第三者は、LUMINA-30資料を、内部レビュー、事故レビュー設計、ガバナンス比較、AI安全関連文書、評価手順のために引用・研究・紹介・試験利用できます。
         ただし、その利用によって、認証、承認、公式準拠、法的地位、制度的支持、安全保証が発生するわけではありません。
         将来、別途の公開承認メカニズムが明示的に作られない限り、「LUMINA-30認定」「LUMINA-30承認」「LUMINA-30公式準拠」と名乗らないでください。
@@ -78,13 +86,13 @@
       </section>
 
       <section class="notice" aria-label="あなたのAIでLUMINA-30を説明させる">
-        <strong>あなたのAIでLUMINA-30を説明させる。</strong> LUMINA-30が最初は難しく感じる場合、専用URLをGemini、ChatGPT、Claude、Copilotなどに渡し、過大評価させずに説明してもらうことができます。
+        <strong class="notice-title">あなたのAIでLUMINA-30を説明させる。</strong> LUMINA-30が最初は難しく感じる場合、専用プロンプトをお使いのAIに渡し、過大評価させずに説明してもらうことができます。
         <br />
         <a class="button" href="./explain-with-ai-ja.html">AI説明ガイドを開く</a>
       </section>
 
       <section class="notice" aria-label="AI導入・AIガバナンス審査の方へ">
-        <strong>AI導入・AIガバナンス審査の方へ。</strong> LUMINA-30は、書類上のAIガバナンスは存在するのに、不可逆化前には実際には拒否できない、という危険な空白を避けるための境界チェックです。既存手順を変える前に、まず1つの境界問いから試せます。
+        <strong class="notice-title">AI導入・AIガバナンス審査の方へ。</strong> LUMINA-30は、書類上のAIガバナンスは存在するのに、不可逆化前には実際には拒否できない、という危険な空白を避けるための境界チェックです。既存手順を変える前に、まず1つの境界問いから試せます。
         <br />
         <a class="button" href="./adoption-review-ja.html">採用・審査導線を開く</a>
       </section>

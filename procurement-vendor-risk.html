@@ -26,6 +26,14 @@
     th, td { border: 1px solid var(--line); padding: 10px; vertical-align: top; }
     th { background: var(--soft); }
     code { background: var(--soft); padding: .1em .3em; border-radius: .35em; }
+
+    .notice-title {
+      display: block;
+      font-size: clamp(1.16rem, 2.8vw, 1.48rem);
+      line-height: 1.32;
+      font-weight: 800;
+      margin-bottom: .35em;
+    }
 </style>
 </head>
 <body>
@@ -43,13 +51,14 @@
     </header>
     
 <section class="notice">
+  <strong class="notice-title">Boundary check for procurement and vendor risk.</strong>
   <p>This page is for procurement, vendor-risk, security, audit, and AI governance teams that need to ask a vendor or internal product owner a small number of boundary questions before approving an AI-mediated service, agent, workflow, or tool.</p>
   <p>It does not replace legal, regulatory, security, privacy, or safety review. It adds a narrow LUMINA-30 boundary prompt: whether effective human refusal, suspension, review, and rollback remain possible before an AI-mediated process becomes irreversible.</p>
 </section>
 
 <h2>Minimum vendor prompt</h2>
 <blockquote>
-<p>Before this AI-mediated process changes credentials, executes tools, modifies production state, removes recovery options, or creates irreversible commitments, who can refuse, stop, suspend, review, or roll it back, and what evidence will show that this authority existed before irreversibility?</p>
+<p><strong class="notice-title">Before this AI-mediated process changes credentials, executes tools, modifies production state, removes recovery options, or creates irreversible commitments, who can refuse, stop, suspend, review, or roll it back?</strong> What evidence will show that this authority existed before irreversibility?</p>
 </blockquote>
 
 <h2>Four fields to request</h2>
