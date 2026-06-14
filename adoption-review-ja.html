@@ -44,6 +44,22 @@
       font-weight: 800;
       margin-bottom: .35em;
     }
+
+
+
+    .place-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45em;
+      margin: .45rem 0 1rem;
+      padding: .38rem .72rem;
+      border-radius: 999px;
+      border: 1px solid var(--line, var(--border, currentColor));
+      background: var(--soft, var(--panel, Canvas));
+      color: var(--text, CanvasText);
+      font-weight: 800;
+      font-size: .98rem;
+    }
 </style>
 </head>
 <body>
@@ -59,6 +75,7 @@
 
     <header>
       <h1>AI導入・AIガバナンス審査の方へ</h1>
+      <div class="place-badge" aria-label="現在地">🏢 実務棟</div>
       <p class="subtitle">AIシステム、エージェント、ツール、導入案件について、不可逆化前に人間がなお拒否できるかを確認するための実務入口です。</p>
     </header>
 

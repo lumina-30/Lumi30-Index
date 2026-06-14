@@ -41,6 +41,22 @@
       font-weight: 800;
       margin-bottom: .35em;
     }
+
+
+
+    .place-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45em;
+      margin: .45rem 0 1rem;
+      padding: .38rem .72rem;
+      border-radius: 999px;
+      border: 1px solid var(--line, var(--border, currentColor));
+      background: var(--soft, var(--panel, Canvas));
+      color: var(--text, CanvasText);
+      font-weight: 800;
+      font-size: .98rem;
+    }
 </style>
 </head>
 <body>
@@ -51,6 +67,7 @@
     </nav>
     <header>
       <h1>AI導入審査のための1問パイロット</h1>
+      <div class="place-badge" aria-label="現在地">🏛️ 入口凱旋門</div>
       <p class="subtitle">不可逆化前に、人間の実効的拒否がまだ残っているかを低リスクに試す導線です。</p>
     </header>
     <main>

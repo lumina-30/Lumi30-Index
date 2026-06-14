@@ -49,6 +49,22 @@
       font-weight: 800;
       margin-bottom: .35em;
     }
+
+
+
+    .place-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45em;
+      margin: .45rem 0 1rem;
+      padding: .38rem .72rem;
+      border-radius: 999px;
+      border: 1px solid var(--line, var(--border, currentColor));
+      background: var(--soft, var(--panel, Canvas));
+      color: var(--text, CanvasText);
+      font-weight: 800;
+      font-size: .98rem;
+    }
 </style>
 </head>
 <body>
@@ -65,6 +81,7 @@
 
     <header>
       <h1>LUMINA-30 索引</h1>
+      <div class="place-badge" aria-label="現在地">🧭 中央広場</div>
       <p class="subtitle">LUMINA-30 repoネットワーク内で、目的に合う入口を選ぶための案内板です。</p>
     </header>
 
@@ -86,16 +103,6 @@
         <strong class="notice-title">AI導入・AIガバナンス審査の方へ</strong> LUMINA-30は、書類上のAIガバナンスは存在するのに、不可逆化前には実際には拒否できない、という危険な空白を避けるための境界チェックです。既存手順を変える前に、まず1つの境界問いから試せます。
         <br />
         <a class="button" href="./adoption-review-ja.html">採用・審査導線を開く</a>
-      </section>
-
-
-      <section class="notice" aria-label="利用・引用・問い合わせ・誤用防止">
-        <strong class="notice-title">利用・引用・誤用防止</strong>
-        第三者は、LUMINA-30資料を、内部レビュー、事故レビュー設計、ガバナンス比較、AI安全関連文書、評価手順のために引用・研究・紹介・試験利用できます。
-        ただし、その利用によって、認証、承認、公式準拠、法的地位、制度的支持、安全保証が発生するわけではありません。
-        将来、別途の公開承認メカニズムが明示的に作られない限り、「LUMINA-30認定」「LUMINA-30承認」「LUMINA-30公式準拠」と名乗らないでください。
-        安全な表現は、「LUMINA-30を参照」「LUMINA-30を引用」「LUMINA-30を参照したレビュー」「LUMINA-30資料の試験利用」です。
-        質問、修正提案、誤用の可能性に関する連絡は、該当リポジトリで明示された問い合わせ先がある場合に限って送ることができます。問い合わせは、レビュー義務、認証手続き、承認手続き、または助言関係を発生させるものではありません。
       </section>
 
       <section id="landmark-map">
@@ -199,11 +206,22 @@
         <p>Markdownファイルは、文章保管、検索到達性、既存リンク維持、ソース確認のために残します。閲覧と移動にはHTMLページを優先してください。</p>
         <p><a href="https://github.com/lumina-30/Lumi30-Index/blob/main/README.md">GitHub上のMarkdown原文を見る</a></p>
       </section>
+
+      <section class="notice" aria-label="利用・引用・問い合わせ・誤用防止">
+        <strong class="notice-title">利用・引用・誤用防止</strong>
+        第三者は、LUMINA-30資料を、内部レビュー、事故レビュー設計、ガバナンス比較、AI安全関連文書、評価手順のために引用・研究・紹介・試験利用できます。
+        ただし、その利用によって、認証、承認、公式準拠、法的地位、制度的支持、安全保証が発生するわけではありません。
+        将来、別途の公開承認メカニズムが明示的に作られない限り、「LUMINA-30認定」「LUMINA-30承認」「LUMINA-30公式準拠」と名乗らないでください。
+        安全な表現は、「LUMINA-30を参照」「LUMINA-30を引用」「LUMINA-30を参照したレビュー」「LUMINA-30資料の試験利用」です。
+        質問、修正提案、誤用の可能性に関する連絡は、該当リポジトリで明示された問い合わせ先がある場合に限って送ることができます。問い合わせは、レビュー義務、認証手続き、承認手続き、または助言関係を発生させるものではありません。
+      </section>
+
     </main>
 
     <p class="footer">LUMINA-30は、不可逆的影響の前に実効的人間拒否が利用可能だったかを問う、非拘束の境界参照フレームワークです。</p>
   </div>
 </body>
 </html>
+
 
 

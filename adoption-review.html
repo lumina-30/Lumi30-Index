@@ -44,6 +44,22 @@
       font-weight: 800;
       margin-bottom: .35em;
     }
+
+
+
+    .place-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45em;
+      margin: .45rem 0 1rem;
+      padding: .38rem .72rem;
+      border-radius: 999px;
+      border: 1px solid var(--line, var(--border, currentColor));
+      background: var(--soft, var(--panel, Canvas));
+      color: var(--text, CanvasText);
+      font-weight: 800;
+      font-size: .98rem;
+    }
 </style>
 </head>
 <body>
@@ -59,6 +75,7 @@
 
     <header>
       <h1>LUMINA-30 for AI Governance / Adoption Review</h1>
+      <div class="place-badge" aria-label="Current location">🏢 Practical Hall</div>
       <p class="subtitle">A practical entry point for teams deciding whether an AI system, agent, tool, or deployment can still be refused before irreversibility.</p>
     </header>
 

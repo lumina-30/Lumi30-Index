@@ -49,6 +49,22 @@
       font-weight: 800;
       margin-bottom: .35em;
     }
+
+
+
+    .place-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45em;
+      margin: .45rem 0 1rem;
+      padding: .38rem .72rem;
+      border-radius: 999px;
+      border: 1px solid var(--line, var(--border, currentColor));
+      background: var(--soft, var(--panel, Canvas));
+      color: var(--text, CanvasText);
+      font-weight: 800;
+      font-size: .98rem;
+    }
 </style>
 </head>
 <body>
@@ -65,6 +81,7 @@
 
     <header>
       <h1>LUMINA-30 Index</h1>
+      <div class="place-badge" aria-label="Current location">🧭 Central Square</div>
       <p class="subtitle">Choose where to go in the LUMINA-30 repository network.</p>
     </header>
 
@@ -86,16 +103,6 @@
         <strong class="notice-title">For AI governance / adoption review</strong> LUMINA-30 helps organizations avoid a dangerous gap: having AI governance on paper while losing the practical ability to refuse before irreversibility. Start with one boundary question before changing existing procedures.
         <br />
         <a class="button" href="./adoption-review.html">Open the adoption review route</a>
-      </section>
-
-
-      <section class="notice" aria-label="Usage, citation, contact, and misuse prevention">
-        <strong class="notice-title">Use, citation, and misuse prevention</strong>
-        Third parties may cite, study, discuss, or experimentally use LUMINA-30 materials for internal review, incident review design, governance comparison, AI-safety documentation, and evaluation workflows.
-        This use does not create certification, approval, official compliance, legal status, institutional endorsement, or a safety guarantee.
-        Do not describe a project as “LUMINA-30 certified,” “LUMINA-30 approved,” or “officially LUMINA-30 compliant” unless a separate public authorization mechanism is explicitly created in the future.
-        Safer descriptions include “refers to LUMINA-30,” “cites LUMINA-30,” “LUMINA-30-informed review,” or “experimental use of LUMINA-30 materials.”
-        Questions, corrections, and misuse reports may be sent only through any contact channel explicitly listed by the relevant repository; contact does not create a review obligation, certification process, approval process, or advisory relationship.
       </section>
 
       <section id="landmark-map">
@@ -199,12 +206,23 @@
         <p>Markdown files are retained for text preservation, search discoverability, existing links, and source review. For reading and navigation, prefer the HTML pages.</p>
         <p><a href="https://github.com/lumina-30/Lumi30-Index/blob/main/README.md">View Markdown source on GitHub</a></p>
       </section>
+
+      <section class="notice" aria-label="Usage, citation, contact, and misuse prevention">
+        <strong class="notice-title">Use, citation, and misuse prevention</strong>
+        Third parties may cite, study, discuss, or experimentally use LUMINA-30 materials for internal review, incident review design, governance comparison, AI-safety documentation, and evaluation workflows.
+        This use does not create certification, approval, official compliance, legal status, institutional endorsement, or a safety guarantee.
+        Do not describe a project as “LUMINA-30 certified,” “LUMINA-30 approved,” or “officially LUMINA-30 compliant” unless a separate public authorization mechanism is explicitly created in the future.
+        Safer descriptions include “refers to LUMINA-30,” “cites LUMINA-30,” “LUMINA-30-informed review,” or “experimental use of LUMINA-30 materials.”
+        Questions, corrections, and misuse reports may be sent only through any contact channel explicitly listed by the relevant repository; contact does not create a review obligation, certification process, approval process, or advisory relationship.
+      </section>
+
     </main>
 
     <p class="footer">LUMINA-30 is a non-binding boundary reference framework asking whether effective human refusal remained available before irreversible impact.</p>
   </div>
 </body>
 </html>
+
 
 
 
