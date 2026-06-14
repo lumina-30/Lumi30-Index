@@ -57,6 +57,30 @@
       font-weight: 800;
       font-size: .98rem;
     }
+
+    .square-return {
+      display: inline-flex;
+      align-items: center;
+      gap: .35em;
+      margin: .45rem 0 1rem .6rem;
+      padding: .36rem .68rem;
+      border-radius: 999px;
+      border: 1px solid var(--line, var(--border, currentColor));
+      background: transparent;
+      color: var(--accent, LinkText);
+      font-weight: 800;
+      font-size: .95rem;
+      text-decoration: none;
+    }
+    .square-return:hover,
+    .square-return:focus {
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .square-return {
+        margin-left: 0;
+      }
+    }
 </style>
 </head>
 <body>
@@ -68,6 +92,7 @@
     <header>
       <h1>AI導入審査のための1問パイロット</h1>
       <div class="place-badge" aria-label="現在地">🛩️ パイロット飛行場</div>
+<a class="square-return" href="https://lumina-30.github.io/Lumi30-Index/index-ja.html">🧭 中央広場へ戻る</a>
       <p class="subtitle">不可逆化前に、人間の実効的拒否がまだ残っているかを低リスクに試す導線です。</p>
     </header>
     <main>

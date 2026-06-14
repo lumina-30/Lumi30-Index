@@ -60,6 +60,30 @@
       font-weight: 800;
       font-size: .98rem;
     }
+
+    .square-return {
+      display: inline-flex;
+      align-items: center;
+      gap: .35em;
+      margin: .45rem 0 1rem .6rem;
+      padding: .36rem .68rem;
+      border-radius: 999px;
+      border: 1px solid var(--line, var(--border, currentColor));
+      background: transparent;
+      color: var(--accent, LinkText);
+      font-weight: 800;
+      font-size: .95rem;
+      text-decoration: none;
+    }
+    .square-return:hover,
+    .square-return:focus {
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .square-return {
+        margin-left: 0;
+      }
+    }
 </style>
 </head>
 <body>
@@ -76,6 +100,7 @@
     <header>
       <h1>LUMINA-30 for AI Governance / Adoption Review</h1>
       <div class="place-badge" aria-label="Current location">🏢 Practical Hall</div>
+<a class="square-return" href="https://lumina-30.github.io/Lumi30-Index/">🧭 Return to Central Square</a>
       <p class="subtitle">A practical entry point for teams deciding whether an AI system, agent, tool, or deployment can still be refused before irreversibility.</p>
     </header>
 

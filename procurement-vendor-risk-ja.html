@@ -50,6 +50,30 @@
       font-weight: 800;
       font-size: .98rem;
     }
+
+    .square-return {
+      display: inline-flex;
+      align-items: center;
+      gap: .35em;
+      margin: .45rem 0 1rem .6rem;
+      padding: .36rem .68rem;
+      border-radius: 999px;
+      border: 1px solid var(--line, var(--border, currentColor));
+      background: transparent;
+      color: var(--accent, LinkText);
+      font-weight: 800;
+      font-size: .95rem;
+      text-decoration: none;
+    }
+    .square-return:hover,
+    .square-return:focus {
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .square-return {
+        margin-left: 0;
+      }
+    }
 </style>
 </head>
 <body>
@@ -64,6 +88,7 @@
       <p class="subtitle">LUMINA-30 採用導線</p>
       <h1>調達・ベンダーリスク確認プロンプト</h1>
       <div class="place-badge" aria-label="現在地">🏢 実務棟</div>
+<a class="square-return" href="https://lumina-30.github.io/Lumi30-Index/index-ja.html">🧭 中央広場へ戻る</a>
       <p class="subtitle">AI製品、AIエージェント、ベンダー提供ワークフロー、内部導入のための軽量な境界確認です。</p>
     </header>
     
