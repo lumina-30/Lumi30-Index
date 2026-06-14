@@ -69,7 +69,7 @@ If you are not sure where to go next, return to the Central Square. LUMINA-30 ca
 | Landmark ｜ ランドマーク | Role ｜ 役割 | Address label ｜ 住所ラベル |
 |---|---|---|
 | 🧭 **Central Square ｜ 中央広場** | Return here if you are lost. ｜ 迷ったら戻る場所。 | (repo: Lumi30-Index) |
-| 🏛️ **Entrance Arch ｜ 入口凱旋門** | Start with the One-Question Pilot. ｜ まず1問だけ試す場所。 | (repo: Lumi30-Index / one-question-pilot) |
+| 🛩️ **Pilot Airfield ｜ パイロット飛行場** | Try the one-question pilot here. ｜ 最初の1案件で、一問だけ試す場所。 | (repo: Lumi30-Index / one-question-pilot) |
 | 🏢 **Practical Hall ｜ 実務棟** | Add the question to existing review workflows. ｜ 既存レビューに差し込む場所。 | (repo: Lumi30-Index / adoption-review / procurement-vendor-risk) |
 | 🚨 **Incident Review Tower ｜ 事故レビュー塔** | Use this after incidents, failures, or public-source events. ｜ 事件・障害・事故後に確認する場所。 | (repo: lumina30-incident-review) |
 | 🛑 **Stop-Authority Gate ｜ 停止権限ゲート** | Check whether a responsible human can still stop, refuse, pause, or roll back. ｜ 人間が止められるか確認する場所。 | (repo: stop-authority-reference) |
