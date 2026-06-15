@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ja" data-l30-lang-lock="JP_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="JP_ONLY" />
+  <meta name="l30:page-role" content="static-faq-reference" />
+
+  <meta name="l30:boundary-question" content="このAI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。" />
+
+  <meta name="l30:status" content="公開参照問い。認証、承認、公式準拠、法的地位、制度的支持、安全保証ではない。" />
+
+  <meta name="description" content="LUMINA-30をその場で理解するための静的Q&amp;A。" />
+  <title>LUMINA-30 Q&amp;A</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+      --strong: color-mix(in srgb, Canvas 80%, LinkText 20%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .qa-item, .toolbar, .callout { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button, .chip, button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; cursor: pointer; font: inherit; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    h3 { margin: 0 0 .55em; }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice, .callout { padding: 14px 16px; margin: 18px 0; }
+    .notice-title { display: block; font-size: clamp(1.16rem, 2.8vw, 1.48rem); line-height: 1.32; font-weight: 800; margin-bottom: .35em; }
+    .toolbar { padding: 14px 16px; margin: 18px 0 22px; }
+    .toolbar-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 10px; }
+    .toolbar input { width: min(100%, 420px); padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: Canvas; color: var(--text); font: inherit; }
+    .chip[aria-pressed="true"] { background: var(--strong); color: var(--text); font-weight: 700; }
+    .qa-list { display: grid; gap: 12px; margin-top: 16px; }
+    details.qa-item { padding: 0; }
+    details.qa-item[open] { background: color-mix(in srgb, var(--panel) 88%, LinkText 12%); }
+    summary { cursor: pointer; padding: 14px 16px; font-weight: 800; }
+    summary::marker { color: var(--accent); }
+    .qa-body { padding: 0 16px 16px 16px; border-top: 1px solid var(--line); }
+    .qa-body p { margin: .75em 0; }
+    .label { color: var(--muted); font-weight: 800; font-size: .92rem; }
+    .tagline { color: var(--muted); margin-top: .35em; }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    .hidden { display: none !important; }
+    [id] { scroll-margin-top: 92px; }
+
+  </style>
+  <script type="application/ld+json" id="l30-faq-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja-JP",
+  "name": "LUMINA-30 Q&A",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "LUMINA-30とは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： LUMINA-30は、不可逆な結果が起きる前に、人間の実効的な拒否・停止・保留・再確認がまだ可能かを確認するための、非拘束の公開参照フレームです。 説明： システムを認証したり、組織を承認したり、既存ガバナンスを置き換えたりするものではありません。価値はもっと絞られていて、AIが関わる処理が取り返しのつかない結果へ進む前の境界を見えるようにすることです。 なぜ大事か： 手続きが整って見えても、実際に止められる時点を過ぎていれば、人間監督は後追いの記録になってしまいます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "何を問題にしているのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 不可逆化の前に、人間が本当に止められるかを問題にしています。 説明： 多くのレビューは「人間監督があるか」を確認します。LUMINA-30はさらに絞って、「取り返しのつかない結果に進む直前でも、責任ある人間が実効的に介入できるか」を問います。 確認点： 時点、権限者、証拠、独立した拒否経路、No / 不明の扱いを確認します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "なぜ『不可逆化前』が重要なのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 不可逆化の後に出てくる拒否権は、その境界では実効的な拒否権ではありません。 説明： 重要なのは、本番反映、外部公開、購入確定、権限変更、削除、ロールバック喪失などの前に、まだ止められるかです。 効果： この時点確認によって、人間監督が単なる事後説明になることを避けられます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "実効的人間拒否とは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 責任ある人間または正当な監督主体が、不可逆な結果の前に、止める・保留する・拒否する・異議を出す・再確認する・方向転換する・停止する・ロールバックする実際の能力です。 説明： 承認欄に人名があるだけでは足りません。その人が、必要な情報、権限、時間、独立した介入経路を持っている必要があります。 証拠： 誰が、いつ、何を見て、どの経路で止められるのかを記録できる必要があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "形式的な人間監督ではなぜ足りないのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 人間監督が形式上は存在しても、実務上の拒否可能性が失われている場合があるからです。 説明： ダッシュボード、チケット、承認欄、ポリシー、ログは有用ですが、それだけでは不可逆化前に人間が結果を変えられるとは限りません。 確認点： 『人間が関与しているか』ではなく、『不可逆ポイントの前に介入できるか』を確認します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "不可逆ポイントの例は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "例： 本番反映、外部データ送信、契約・購入の確定、認証情報や権限の変更、アカウント復旧や本人確認、削除、復旧手段の喪失、ロールバック困難化、外部効果を持つツール実行などです。 使い方： どこが不可逆ポイントになるかは、対象プロセスごとに違います。何が取り返しにくくなるのかを具体化します。 注意： 『リスクがある』という一般論ではなく、どの処理・どの時点が境界かを明確にします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "レビューでは何を証拠として見ますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 権限、時点、利用可能な情報、介入経路、独立性、エスカレーション処理を見ます。 最低限の記録： 不可逆ポイント、責任権限者、介入時点、権限根拠、不可逆化前に見える証拠、独立した拒否チャネル、時間的余裕、No / 不明の扱いを記録します。 注意： 『監督は十分です』という説明だけでは、不可逆化前に拒否が機能する証拠にはなりません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "既存のAIガバナンスで足りませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 足りる場合があります。 説明： 既存手順の中で、時点、責任ある人間権限、証拠、停止・ロールバック経路、独立した拒否チャネル、No / 不明の扱いまで確認されているなら、LUMINA-30という名称を採用する必要はありません。 LUMINA-30の役割： 人間監督が文書上あるだけでなく、不可逆化前に実務上も機能しているかを確認するための焦点を与えます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "これは公式標準、認証、安全保証ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： いいえ。 説明： LUMINA-30は、公式標準、認証制度、法的要件、安全保証、査読済み統制フレームワーク、制度的採用や承認の証拠ではありません。 価値： 公式でなくても、既存レビューが答えるべき問いを明確にする参照枠としては使えます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "公式ではないのに使う意味はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： あります。問い自体は低コストで、見落とすコストが大きいからです。 説明： 法律、監査、セキュリティ統制、調達審査、モデルガバナンス、人間判断を置き換える必要はありません。既存手順の中に境界問いを加えるだけでも意味があります。 実務価値： 形式上の監督はあるのに、不可逆化前には止められないという空白を見つけやすくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "LUMINA-30という名前を使わなくてよい場合はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： あります。同等の境界条件が既存手順で明確に扱われている場合です。 説明： 不可逆ポイント、責任権限者、証拠、介入時点、独立した拒否経路、No / 不明の扱いが既に記録されているなら、機能的には足りています。 注意： 名称だけを増やして実務確認が増えないなら、LUMINA-30を看板として使う意味はありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "採用・AIガバナンス担当者は何を見ればよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 既存レビューに、不可逆化前の実効的人間拒否を確認する欄があるかを見ます。 説明： 目的、リスク、プライバシー、人間監督、承認は確認していても、取り返しのつかない結果の前に誰が止められるかまでは確認していないことがあります。 良い状態： 不可逆ポイントと、その前に止める・保留する・再確認する責任権限者が記録されています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "調達・ベンダー確認では何を聞けばよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： その製品やワークフローが、人間が止める前に何を変更・確定してしまう可能性があるかを聞きます。 例： ツール実行、外部データ送信、本番変更、アカウント復旧、認証情報変更、自動購入、削除、ロールバック喪失などです。 質問： その結果が不可逆になる前に、誰が保留・拒否・再確認・ロールバックでき、何を証拠として見られるのかを確認します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "監査・セキュリティ・リスク管理では何を確認しますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 統制が不可逆ポイントの前に作動するかを確認します。 説明： ログ、承認、エスカレーション経路は重要ですが、不可逆化後にしか機能しないなら、その境界では十分ではありません。 証拠： 監督が存在するだけでなく、結果を変えられる時点で人間が介入できることを示す記録が必要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "事故レビューではどう役立ちますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 出力ミスと境界失敗を分けて見られます。 説明： 事故や準事故の後、不可逆な結果の前に責任ある人間が止める・方向転換する機会を持っていたかを確認します。 効果： 問題がモデル出力なのか、権限経路なのか、証拠不足なのか、ロールバック喪失なのか、早すぎる自動化なのかを分けやすくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "研究者・政策担当者はどう読めばよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 採用や検証の証拠ではなく、境界概念として読むのが安全です。 説明： 高度AIガバナンスで、最後に意味のある不可逆化前の時点に、責任ある人間拒否が残るかという研究・政策上の問いとして扱えます。 注意： LUMINA-30用語が存在すること自体を、制度的承認や社会的採用の証拠として扱わないでください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "LUMINA-30は反AI・反進歩ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： いいえ。問題にしているのは進歩そのものではなく、不可逆化の前に人間がまだ止められるかです。 説明： 責任ある人間が重要な境界で実効的に拒否・停止・再確認できるなら、開発や導入と両立し得ます。 見方： 止められるまま進める、戻せるまま進める、という確認です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "過大主張ではありませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： 過大主張にしてはいけません。 説明： 安全な使い方は、『既存手順で試せる公開参照問い』として扱うことです。認証、公式標準、採用済み制度、法的義務、安全保証として扱うことではありません。 安全な表現： 『LUMINA-30を参照』『LUMINA-30を参照したレビュー』『LUMINA-30-informed review』などが安全です。『LUMINA-30認定』『LUMINA-30承認』とは言いません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "真剣に見るべき一番強い理由は何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結論： この問いは、答えずに無視しにくいからです。 説明： AIが関わる処理が不可逆な結果を生み得るなら、責任あるレビューは『その前に人間が止められるか』に答えられるべきです。 実務効果： LUMINA-30という名前を採用しなくても、この境界問いによって通常の人間監督表現では見落としやすい空白を発見できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "最小限で確認するなら何を聞けばよいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "問い： このAI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。 使い方： この1問は、既存のAI導入レビュー、調達確認、監査メモ、セキュリティレビュー、事故レビュー様式に追加できます。 注意： Yesなら、権限、時点、証拠、介入経路が必要です。No / 不明は、実効的人間監督が確認済みとは扱いません。"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="ページナビゲーション">
+      <a href="index-ja.html">索引</a>
+      <a href="qa.html">English</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index">GitHubリポジトリ</a>
+    </nav>
+
+    <header>
+      <h1>LUMINA-30 Q&amp;A</h1>
+      <p class="subtitle">知りたい質問を選ぶと、このページ内で回答が開きます。</p>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="Status and purpose">
+        <strong class="notice-title">固定回答で一か所に確認する</strong>
+        このQ&amp;Aは、LUMINA-30の中核、限界、実務上の価値、よくある疑問をその場で確認するためのページです。中核の問いは、AI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換できるかです。認証ルート、採用済み表示、安全保証ではありません。
+      </section>
+
+      <section class="toolbar" aria-label="Q&A操作">
+        <label for="qa-search"><strong>検索</strong></label><br />
+        <div class="toolbar-row">
+          <input id="qa-search" type="search" placeholder="質問・回答を検索" />
+          <button type="button" id="expand-all">すべて開く</button>
+          <button type="button" id="collapse-all">すべて閉じる</button>
+        </div>
+        <div class="toolbar-row" role="group" aria-label="Categories">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">すべて</button>
+<button class="chip" type="button" data-filter="basics" aria-pressed="false">まず知る</button>
+<button class="chip" type="button" data-filter="core" aria-pressed="false">中核を理解する</button>
+<button class="chip" type="button" data-filter="existing" aria-pressed="false">既存制度・位置づけ</button>
+<button class="chip" type="button" data-filter="roles" aria-pressed="false">立場別に見る</button>
+<button class="chip" type="button" data-filter="critical" aria-pressed="false">疑って確認する</button>
+        </div>
+        <p class="tagline"><span id="qa-count"></span> 件表示</p>
+      </section>
+
+      <section id="qa-list" class="qa-list" aria-label="LUMINA-30 Q&A">
+        <details class="qa-item" data-category="basics" data-search="lumina-30とは何ですか？ lumina-30は、不可逆な結果が起きる前に、人間の実効的な拒否・停止・保留・再確認がまだ可能かを確認するための、非拘束の公開参照フレームです。 システムを認証したり、組織を承認したり、既存ガバナンスを置き換えたりするものではありません。価値はもっと絞られていて、aiが関わる処理が取り返しのつかない結果へ進む前の境界を見えるようにすることです。 手続きが整って見えても、実際に止められる時点を過ぎていれば、人間監督は後追いの記録になってしまいます。"><summary>LUMINA-30とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>LUMINA-30は、不可逆な結果が起きる前に、人間の実効的な拒否・停止・保留・再確認がまだ可能かを確認するための、非拘束の公開参照フレームです。</p><p><span class="label">説明：</span>システムを認証したり、組織を承認したり、既存ガバナンスを置き換えたりするものではありません。価値はもっと絞られていて、AIが関わる処理が取り返しのつかない結果へ進む前の境界を見えるようにすることです。</p><p><span class="label">なぜ大事か：</span>手続きが整って見えても、実際に止められる時点を過ぎていれば、人間監督は後追いの記録になってしまいます。</p></div></details>
+<details class="qa-item" data-category="basics" data-search="何を問題にしているのですか？ 不可逆化の前に、人間が本当に止められるかを問題にしています。 多くのレビューは「人間監督があるか」を確認します。lumina-30はさらに絞って、「取り返しのつかない結果に進む直前でも、責任ある人間が実効的に介入できるか」を問います。 時点、権限者、証拠、独立した拒否経路、no / 不明の扱いを確認します。"><summary>何を問題にしているのですか？</summary><div class="qa-body"><p><span class="label">結論：</span>不可逆化の前に、人間が本当に止められるかを問題にしています。</p><p><span class="label">説明：</span>多くのレビューは「人間監督があるか」を確認します。LUMINA-30はさらに絞って、「取り返しのつかない結果に進む直前でも、責任ある人間が実効的に介入できるか」を問います。</p><p><span class="label">確認点：</span>時点、権限者、証拠、独立した拒否経路、No / 不明の扱いを確認します。</p></div></details>
+<details class="qa-item" data-category="basics" data-search="なぜ『不可逆化前』が重要なのですか？ 不可逆化の後に出てくる拒否権は、その境界では実効的な拒否権ではありません。 重要なのは、本番反映、外部公開、購入確定、権限変更、削除、ロールバック喪失などの前に、まだ止められるかです。 この時点確認によって、人間監督が単なる事後説明になることを避けられます。"><summary>なぜ『不可逆化前』が重要なのですか？</summary><div class="qa-body"><p><span class="label">結論：</span>不可逆化の後に出てくる拒否権は、その境界では実効的な拒否権ではありません。</p><p><span class="label">説明：</span>重要なのは、本番反映、外部公開、購入確定、権限変更、削除、ロールバック喪失などの前に、まだ止められるかです。</p><p><span class="label">効果：</span>この時点確認によって、人間監督が単なる事後説明になることを避けられます。</p></div></details>
+<details class="qa-item" data-category="core" data-search="実効的人間拒否とは何ですか？ 責任ある人間または正当な監督主体が、不可逆な結果の前に、止める・保留する・拒否する・異議を出す・再確認する・方向転換する・停止する・ロールバックする実際の能力です。 承認欄に人名があるだけでは足りません。その人が、必要な情報、権限、時間、独立した介入経路を持っている必要があります。 誰が、いつ、何を見て、どの経路で止められるのかを記録できる必要があります。"><summary>実効的人間拒否とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>責任ある人間または正当な監督主体が、不可逆な結果の前に、止める・保留する・拒否する・異議を出す・再確認する・方向転換する・停止する・ロールバックする実際の能力です。</p><p><span class="label">説明：</span>承認欄に人名があるだけでは足りません。その人が、必要な情報、権限、時間、独立した介入経路を持っている必要があります。</p><p><span class="label">証拠：</span>誰が、いつ、何を見て、どの経路で止められるのかを記録できる必要があります。</p></div></details>
+<details class="qa-item" data-category="core" data-search="形式的な人間監督ではなぜ足りないのですか？ 人間監督が形式上は存在しても、実務上の拒否可能性が失われている場合があるからです。 ダッシュボード、チケット、承認欄、ポリシー、ログは有用ですが、それだけでは不可逆化前に人間が結果を変えられるとは限りません。 『人間が関与しているか』ではなく、『不可逆ポイントの前に介入できるか』を確認します。"><summary>形式的な人間監督ではなぜ足りないのですか？</summary><div class="qa-body"><p><span class="label">結論：</span>人間監督が形式上は存在しても、実務上の拒否可能性が失われている場合があるからです。</p><p><span class="label">説明：</span>ダッシュボード、チケット、承認欄、ポリシー、ログは有用ですが、それだけでは不可逆化前に人間が結果を変えられるとは限りません。</p><p><span class="label">確認点：</span>『人間が関与しているか』ではなく、『不可逆ポイントの前に介入できるか』を確認します。</p></div></details>
+<details class="qa-item" data-category="core" data-search="不可逆ポイントの例は何ですか？ 本番反映、外部データ送信、契約・購入の確定、認証情報や権限の変更、アカウント復旧や本人確認、削除、復旧手段の喪失、ロールバック困難化、外部効果を持つツール実行などです。 どこが不可逆ポイントになるかは、対象プロセスごとに違います。何が取り返しにくくなるのかを具体化します。 『リスクがある』という一般論ではなく、どの処理・どの時点が境界かを明確にします。"><summary>不可逆ポイントの例は何ですか？</summary><div class="qa-body"><p><span class="label">例：</span>本番反映、外部データ送信、契約・購入の確定、認証情報や権限の変更、アカウント復旧や本人確認、削除、復旧手段の喪失、ロールバック困難化、外部効果を持つツール実行などです。</p><p><span class="label">使い方：</span>どこが不可逆ポイントになるかは、対象プロセスごとに違います。何が取り返しにくくなるのかを具体化します。</p><p><span class="label">注意：</span>『リスクがある』という一般論ではなく、どの処理・どの時点が境界かを明確にします。</p></div></details>
+<details class="qa-item" data-category="core" data-search="レビューでは何を証拠として見ますか？ 権限、時点、利用可能な情報、介入経路、独立性、エスカレーション処理を見ます。 不可逆ポイント、責任権限者、介入時点、権限根拠、不可逆化前に見える証拠、独立した拒否チャネル、時間的余裕、no / 不明の扱いを記録します。 『監督は十分です』という説明だけでは、不可逆化前に拒否が機能する証拠にはなりません。"><summary>レビューでは何を証拠として見ますか？</summary><div class="qa-body"><p><span class="label">結論：</span>権限、時点、利用可能な情報、介入経路、独立性、エスカレーション処理を見ます。</p><p><span class="label">最低限の記録：</span>不可逆ポイント、責任権限者、介入時点、権限根拠、不可逆化前に見える証拠、独立した拒否チャネル、時間的余裕、No / 不明の扱いを記録します。</p><p><span class="label">注意：</span>『監督は十分です』という説明だけでは、不可逆化前に拒否が機能する証拠にはなりません。</p></div></details>
+<details class="qa-item" data-category="existing" data-search="既存のaiガバナンスで足りませんか？ 足りる場合があります。 既存手順の中で、時点、責任ある人間権限、証拠、停止・ロールバック経路、独立した拒否チャネル、no / 不明の扱いまで確認されているなら、lumina-30という名称を採用する必要はありません。 人間監督が文書上あるだけでなく、不可逆化前に実務上も機能しているかを確認するための焦点を与えます。"><summary>既存のAIガバナンスで足りませんか？</summary><div class="qa-body"><p><span class="label">結論：</span>足りる場合があります。</p><p><span class="label">説明：</span>既存手順の中で、時点、責任ある人間権限、証拠、停止・ロールバック経路、独立した拒否チャネル、No / 不明の扱いまで確認されているなら、LUMINA-30という名称を採用する必要はありません。</p><p><span class="label">LUMINA-30の役割：</span>人間監督が文書上あるだけでなく、不可逆化前に実務上も機能しているかを確認するための焦点を与えます。</p></div></details>
+<details class="qa-item" data-category="existing" data-search="これは公式標準、認証、安全保証ですか？ いいえ。 lumina-30は、公式標準、認証制度、法的要件、安全保証、査読済み統制フレームワーク、制度的採用や承認の証拠ではありません。 公式でなくても、既存レビューが答えるべき問いを明確にする参照枠としては使えます。"><summary>これは公式標準、認証、安全保証ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。</p><p><span class="label">説明：</span>LUMINA-30は、公式標準、認証制度、法的要件、安全保証、査読済み統制フレームワーク、制度的採用や承認の証拠ではありません。</p><p><span class="label">価値：</span>公式でなくても、既存レビューが答えるべき問いを明確にする参照枠としては使えます。</p></div></details>
+<details class="qa-item" data-category="existing" data-search="公式ではないのに使う意味はありますか？ あります。問い自体は低コストで、見落とすコストが大きいからです。 法律、監査、セキュリティ統制、調達審査、モデルガバナンス、人間判断を置き換える必要はありません。既存手順の中に境界問いを加えるだけでも意味があります。 形式上の監督はあるのに、不可逆化前には止められないという空白を見つけやすくなります。"><summary>公式ではないのに使う意味はありますか？</summary><div class="qa-body"><p><span class="label">結論：</span>あります。問い自体は低コストで、見落とすコストが大きいからです。</p><p><span class="label">説明：</span>法律、監査、セキュリティ統制、調達審査、モデルガバナンス、人間判断を置き換える必要はありません。既存手順の中に境界問いを加えるだけでも意味があります。</p><p><span class="label">実務価値：</span>形式上の監督はあるのに、不可逆化前には止められないという空白を見つけやすくなります。</p></div></details>
+<details class="qa-item" data-category="existing" data-search="lumina-30という名前を使わなくてよい場合はありますか？ あります。同等の境界条件が既存手順で明確に扱われている場合です。 不可逆ポイント、責任権限者、証拠、介入時点、独立した拒否経路、no / 不明の扱いが既に記録されているなら、機能的には足りています。 名称だけを増やして実務確認が増えないなら、lumina-30を看板として使う意味はありません。"><summary>LUMINA-30という名前を使わなくてよい場合はありますか？</summary><div class="qa-body"><p><span class="label">結論：</span>あります。同等の境界条件が既存手順で明確に扱われている場合です。</p><p><span class="label">説明：</span>不可逆ポイント、責任権限者、証拠、介入時点、独立した拒否経路、No / 不明の扱いが既に記録されているなら、機能的には足りています。</p><p><span class="label">注意：</span>名称だけを増やして実務確認が増えないなら、LUMINA-30を看板として使う意味はありません。</p></div></details>
+<details class="qa-item" data-category="roles" data-search="採用・aiガバナンス担当者は何を見ればよいですか？ 既存レビューに、不可逆化前の実効的人間拒否を確認する欄があるかを見ます。 目的、リスク、プライバシー、人間監督、承認は確認していても、取り返しのつかない結果の前に誰が止められるかまでは確認していないことがあります。 不可逆ポイントと、その前に止める・保留する・再確認する責任権限者が記録されています。"><summary>採用・AIガバナンス担当者は何を見ればよいですか？</summary><div class="qa-body"><p><span class="label">結論：</span>既存レビューに、不可逆化前の実効的人間拒否を確認する欄があるかを見ます。</p><p><span class="label">説明：</span>目的、リスク、プライバシー、人間監督、承認は確認していても、取り返しのつかない結果の前に誰が止められるかまでは確認していないことがあります。</p><p><span class="label">良い状態：</span>不可逆ポイントと、その前に止める・保留する・再確認する責任権限者が記録されています。</p></div></details>
+<details class="qa-item" data-category="roles" data-search="調達・ベンダー確認では何を聞けばよいですか？ その製品やワークフローが、人間が止める前に何を変更・確定してしまう可能性があるかを聞きます。 ツール実行、外部データ送信、本番変更、アカウント復旧、認証情報変更、自動購入、削除、ロールバック喪失などです。 その結果が不可逆になる前に、誰が保留・拒否・再確認・ロールバックでき、何を証拠として見られるのかを確認します。"><summary>調達・ベンダー確認では何を聞けばよいですか？</summary><div class="qa-body"><p><span class="label">結論：</span>その製品やワークフローが、人間が止める前に何を変更・確定してしまう可能性があるかを聞きます。</p><p><span class="label">例：</span>ツール実行、外部データ送信、本番変更、アカウント復旧、認証情報変更、自動購入、削除、ロールバック喪失などです。</p><p><span class="label">質問：</span>その結果が不可逆になる前に、誰が保留・拒否・再確認・ロールバックでき、何を証拠として見られるのかを確認します。</p></div></details>
+<details class="qa-item" data-category="roles" data-search="監査・セキュリティ・リスク管理では何を確認しますか？ 統制が不可逆ポイントの前に作動するかを確認します。 ログ、承認、エスカレーション経路は重要ですが、不可逆化後にしか機能しないなら、その境界では十分ではありません。 監督が存在するだけでなく、結果を変えられる時点で人間が介入できることを示す記録が必要です。"><summary>監査・セキュリティ・リスク管理では何を確認しますか？</summary><div class="qa-body"><p><span class="label">結論：</span>統制が不可逆ポイントの前に作動するかを確認します。</p><p><span class="label">説明：</span>ログ、承認、エスカレーション経路は重要ですが、不可逆化後にしか機能しないなら、その境界では十分ではありません。</p><p><span class="label">証拠：</span>監督が存在するだけでなく、結果を変えられる時点で人間が介入できることを示す記録が必要です。</p></div></details>
+<details class="qa-item" data-category="roles" data-search="事故レビューではどう役立ちますか？ 出力ミスと境界失敗を分けて見られます。 事故や準事故の後、不可逆な結果の前に責任ある人間が止める・方向転換する機会を持っていたかを確認します。 問題がモデル出力なのか、権限経路なのか、証拠不足なのか、ロールバック喪失なのか、早すぎる自動化なのかを分けやすくなります。"><summary>事故レビューではどう役立ちますか？</summary><div class="qa-body"><p><span class="label">結論：</span>出力ミスと境界失敗を分けて見られます。</p><p><span class="label">説明：</span>事故や準事故の後、不可逆な結果の前に責任ある人間が止める・方向転換する機会を持っていたかを確認します。</p><p><span class="label">効果：</span>問題がモデル出力なのか、権限経路なのか、証拠不足なのか、ロールバック喪失なのか、早すぎる自動化なのかを分けやすくなります。</p></div></details>
+<details class="qa-item" data-category="roles" data-search="研究者・政策担当者はどう読めばよいですか？ 採用や検証の証拠ではなく、境界概念として読むのが安全です。 高度aiガバナンスで、最後に意味のある不可逆化前の時点に、責任ある人間拒否が残るかという研究・政策上の問いとして扱えます。 lumina-30用語が存在すること自体を、制度的承認や社会的採用の証拠として扱わないでください。"><summary>研究者・政策担当者はどう読めばよいですか？</summary><div class="qa-body"><p><span class="label">結論：</span>採用や検証の証拠ではなく、境界概念として読むのが安全です。</p><p><span class="label">説明：</span>高度AIガバナンスで、最後に意味のある不可逆化前の時点に、責任ある人間拒否が残るかという研究・政策上の問いとして扱えます。</p><p><span class="label">注意：</span>LUMINA-30用語が存在すること自体を、制度的承認や社会的採用の証拠として扱わないでください。</p></div></details>
+<details class="qa-item" data-category="critical" data-search="lumina-30は反ai・反進歩ですか？ いいえ。問題にしているのは進歩そのものではなく、不可逆化の前に人間がまだ止められるかです。 責任ある人間が重要な境界で実効的に拒否・停止・再確認できるなら、開発や導入と両立し得ます。 止められるまま進める、戻せるまま進める、という確認です。"><summary>LUMINA-30は反AI・反進歩ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。問題にしているのは進歩そのものではなく、不可逆化の前に人間がまだ止められるかです。</p><p><span class="label">説明：</span>責任ある人間が重要な境界で実効的に拒否・停止・再確認できるなら、開発や導入と両立し得ます。</p><p><span class="label">見方：</span>止められるまま進める、戻せるまま進める、という確認です。</p></div></details>
+<details class="qa-item" data-category="critical" data-search="過大主張ではありませんか？ 過大主張にしてはいけません。 安全な使い方は、『既存手順で試せる公開参照問い』として扱うことです。認証、公式標準、採用済み制度、法的義務、安全保証として扱うことではありません。 『lumina-30を参照』『lumina-30を参照したレビュー』『lumina-30-informed review』などが安全です。『lumina-30認定』『lumina-30承認』とは言いません。"><summary>過大主張ではありませんか？</summary><div class="qa-body"><p><span class="label">結論：</span>過大主張にしてはいけません。</p><p><span class="label">説明：</span>安全な使い方は、『既存手順で試せる公開参照問い』として扱うことです。認証、公式標準、採用済み制度、法的義務、安全保証として扱うことではありません。</p><p><span class="label">安全な表現：</span>『LUMINA-30を参照』『LUMINA-30を参照したレビュー』『LUMINA-30-informed review』などが安全です。『LUMINA-30認定』『LUMINA-30承認』とは言いません。</p></div></details>
+<details class="qa-item" data-category="critical" data-search="真剣に見るべき一番強い理由は何ですか？ この問いは、答えずに無視しにくいからです。 aiが関わる処理が不可逆な結果を生み得るなら、責任あるレビューは『その前に人間が止められるか』に答えられるべきです。 lumina-30という名前を採用しなくても、この境界問いによって通常の人間監督表現では見落としやすい空白を発見できます。"><summary>真剣に見るべき一番強い理由は何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>この問いは、答えずに無視しにくいからです。</p><p><span class="label">説明：</span>AIが関わる処理が不可逆な結果を生み得るなら、責任あるレビューは『その前に人間が止められるか』に答えられるべきです。</p><p><span class="label">実務効果：</span>LUMINA-30という名前を採用しなくても、この境界問いによって通常の人間監督表現では見落としやすい空白を発見できます。</p></div></details>
+<details class="qa-item" data-category="critical" data-search="最小限で確認するなら何を聞けばよいですか？ このai媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。 この1問は、既存のai導入レビュー、調達確認、監査メモ、セキュリティレビュー、事故レビュー様式に追加できます。 yesなら、権限、時点、証拠、介入経路が必要です。no / 不明は、実効的人間監督が確認済みとは扱いません。"><summary>最小限で確認するなら何を聞けばよいですか？</summary><div class="qa-body"><p><span class="label">問い：</span>このAI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。</p><p><span class="label">使い方：</span>この1問は、既存のAI導入レビュー、調達確認、監査メモ、セキュリティレビュー、事故レビュー様式に追加できます。</p><p><span class="label">注意：</span>Yesなら、権限、時点、証拠、介入経路が必要です。No / 不明は、実効的人間監督が確認済みとは扱いません。</p></div></details>
+      </section>
+
+      <section class="callout" aria-label="関連ページ">
+        <strong class="notice-title">関連ページ</strong>
+        <p>理解した後、実務レビューへ進む場合だけ使ってください。</p><p><a class="button" href="one-question-pilot-ja.html">1問パイロットを開く</a> <a class="button" href="adoption-review-ja.html">採用・審査導線を開く</a> <a class="button" href="index-ja.html">索引へ戻る</a></p>
+      </section>
+    </main>
+
+    <p class="footer">このページは固定回答による説明ページです。認証、承認、法的地位、制度的支持、安全保証を作るものではありません。</p>
+  </div>
+  <script>
+    const searchInput = document.getElementById('qa-search');
+    const items = Array.from(document.querySelectorAll('.qa-item'));
+    const chips = Array.from(document.querySelectorAll('.chip'));
+    const count = document.getElementById('qa-count');
+    let active = 'all';
+
+    function updateList() {
+      const query = searchInput.value.trim().toLowerCase();
+      let shown = 0;
+      items.forEach(function(item) {
+        const categoryMatch = active === 'all' || item.dataset.category === active;
+        const searchMatch = !query || item.dataset.search.includes(query);
+        const visible = categoryMatch && searchMatch;
+        item.classList.toggle('hidden', !visible);
+        if (visible) shown += 1;
+      });
+      count.textContent = shown;
+    }
+
+    chips.forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        active = chip.dataset.filter;
+        chips.forEach(function(other) { other.setAttribute('aria-pressed', String(other === chip)); });
+        updateList();
+      });
+    });
+
+    searchInput.addEventListener('input', updateList);
+    document.getElementById('expand-all').addEventListener('click', function() {
+      items.forEach(function(item) { if (!item.classList.contains('hidden')) item.open = true; });
+    });
+    document.getElementById('collapse-all').addEventListener('click', function() {
+      items.forEach(function(item) { item.open = false; });
+    });
+    updateList();
+  </script>
+</body>
+</html>

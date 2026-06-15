@@ -26,12 +26,12 @@
 > 可逆的繁栄の道は、LUMINA-30の代替名ではありません。LUMINA-30の境界条件が守られたときに開かれる、肯定側の文明進路です。
 
 
-> **Explain LUMINA-30 with your AI ｜ あなたのAIでLUMINA-30を説明させる**  
-> If LUMINA-30 feels difficult at first, you can give a short briefing URL to your own AI assistant and ask it to explain LUMINA-30 without overstating its status.  
-> [Explain LUMINA-30 with your AI](https://lumina-30.github.io/Lumi30-Index/explain-with-ai.html)  
+> **LUMINA-30 Q&A ｜ LUMINA-30 Q&A**  
+> If LUMINA-30 feels difficult at first, use fixed Q&A answers to check the core question, limits, practical value, and common objections.  
+> [Open LUMINA-30 Q&A](https://lumina-30.github.io/Lumi30-Index/qa.html)  
 >
-> LUMINA-30が最初は難しく感じる場合、あなたが使っているAIアシスタントに専用URLを渡し、過大評価させずに説明してもらうことができます。  
-> [あなたのAIでLUMINA-30を説明させる](https://lumina-30.github.io/Lumi30-Index/explain-with-ai-ja.html)
+> 日本語で読む場合は、固定Q&Aで中核・限界・実務上の意味・よくある疑問を確認できます。  
+> [LUMINA-30 Q&Aを開く](https://lumina-30.github.io/Lumi30-Index/qa-ja.html)
 
 > **For AI Governance / Adoption Review ｜ AI導入・AIガバナンス審査の方へ**  
 > LUMINA-30 helps organizations avoid a dangerous gap: having AI governance on paper while losing the practical ability to refuse before irreversibility. It does not replace existing legal, audit, safety, or AI ethics frameworks; it asks whether those frameworks can still operate meaningfully through effective human refusal before irreversible escalation.  
@@ -45,13 +45,13 @@
 
 ## What to use first ｜ 最初に何を使うべきか
 
-Use this route when you are new to LUMINA-30 or when giving one entry path to another reader or AI assistant.  
-LUMINA-30を初めて読む場合、または他の読者・AIアシスタントに入口を1つ示す場合は、次の順で案内してください。
+Use this route when you are new to LUMINA-30 or when giving one entry path to another reader.  
+LUMINA-30を初めて読む場合、または他の読者に入口を1つ示す場合は、次の順で案内してください。
 
 1. **Overview ｜ 概要** — Understand the purpose, core boundary question, and visual route. ｜ 目的・中核境界問い・図解導線を理解する。  
 2. **Incident Review ｜ 実務レビュー** — Check a case, deployment, near miss, or incident. ｜ 具体的な事例・導入・準事故・事故を確認する。  
 3. **Adoption Review ｜ 採用・審査導線** — Start with one governance question before formal adoption. ｜ 正式採用前に1つの境界問いから試す。  
-4. **Boundary Kernel ｜ AI可読境界** — Give an AI the fixed boundary; it is not an autonomous decision authority. ｜ AIに固定境界を読ませる。ただしAIの自律判断権限ではない。  
+4. **Boundary Kernel ｜ 境界参照文** — Check the fixed boundary-reference language; it is not an autonomous decision authority. ｜ 固定された境界参照文を確認する。ただしAIの自律判断権限ではない。  
 5. **Index ｜ 索引** — Find the full document set, tools, repository routes, and source layers. ｜ 文書全体・実務ツール・repo導線・ソース層を探す。  
 6. **Research Context ｜ 研究背景** — Review papers and theoretical background; this is not proof of peer review, approval, or adoption. ｜ 論文・理論背景を確認する。ただし査読・承認・採用の証拠ではない。
 
@@ -78,13 +78,13 @@ If you are not sure where to go next, return to the Central Square. LUMINA-30 ca
 | 📜 **Canon Archive ｜ 正典保管庫** | Check fixed canonical documents. ｜ 固定文書・正本を確認する場所。 | (repo: LUMINA-30) |
 | 🧬 **Research District ｜ 理論研究区** | Read PCR-C and the research background. ｜ PCR-Cや研究背景を読む場所。<br>[Open the research guide](https://lumina-30.github.io/lumina-30-overview/index.html#research-paper) ｜ [研究読書ガイドを開く](https://lumina-30.github.io/lumina-30-overview/index-ja.html#research-paper)<br>[Open reference materials](https://lumina-30.github.io/lumina30-incident-review/reference/Research_Landscape_Mapping.html) ｜ [参照資料を開く](https://lumina-30.github.io/lumina30-incident-review/reference/Research_Landscape_Mapping_ja.html) | — |
 | 📦 **PDF Archive ｜ PDF保管庫** | Check fixed PDFs and preserved evidence files. ｜ 固定PDF・証跡を確認する場所。 | (repo: Lumi30-PDF-Archive) |
-| 🤖 **AI Reading Room ｜ AI読解室** | Provide boundary-readable materials to external AI systems. ｜ 外部AIに読ませる境界資料を確認する場所。 | (repo: lumina-30-overview / ai-readable) |
+| 🤖 **AI-readable Materials ｜ AI可読資料** | Check fixed boundary-reference materials. ｜ AI可読の境界参照資料を確認する場所。 | (repo: lumina-30-overview / ai-readable) |
 
 Reader-facing HTML map: [LUMINA-30 Landmark Map](https://lumina-30.github.io/Lumi30-Index/index.html#landmark-map) ｜ [迷わないLUMINA-30地図](https://lumina-30.github.io/Lumi30-Index/index-ja.html#landmark-map)
 
-For an external AI, use the AI Briefing so the explanation does not overstate LUMINA-30's status.  
-外部AIには、LUMINA-30の状態を過大評価させないためにAI Briefingを使用してください。  
-[AI Briefing](https://lumina-30.github.io/Lumi30-Index/ai-briefing.html) ｜ [AIブリーフィング](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html)
+For concise reading, use the LUMINA-30 Q&A.  
+短く一か所で理解したい場合は、LUMINA-30 Q&Aを使用してください。  
+[LUMINA-30 Q&A](https://lumina-30.github.io/Lumi30-Index/qa.html) ｜ [LUMINA-30 Q&A 日本語](https://lumina-30.github.io/Lumi30-Index/qa-ja.html)
 
 ---
 

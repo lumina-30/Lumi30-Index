@@ -89,11 +89,11 @@ AI関連事案が公開報道や第三者要約だけで知られている場合
 
 Formal institutional adoption may reasonably require review, evidence, and organizational decision-making.
 But LUMINA-30 does not need to wait for formal adoption before it can be referenced.
-It can be used at low risk as a reference question, pre-incident review aid, procurement prompt, audit supplement, incident-review lens, or AI explanation aid.
+It can be used at low risk as a reference question, pre-incident review aid, procurement prompt, audit supplement, incident-review lens, or Q&A reference.
 
 正式な制度採用には、追加の検証、証拠、組織判断が必要であってよいです。
 しかし、LUMINA-30は正式採用まで参照できないものではありません。
-参照問い、事故前レビュー、調達時の確認、監査補助、事故レビューの視点、AI説明用資料として低リスクに使えます。
+参照問い、事故前レビュー、調達時の確認、監査補助、事故レビューの視点、Q&A参照として低リスクに使えます。
 
 ## Common adoption objections ｜ 採用審査でよくある反論
 
@@ -119,8 +119,7 @@ No. A checklist can carry the question, but the point is the boundary condition:
 
 - [One-Question Pilot for AI Adoption Review](./one-question-pilot.md) ｜ [1問パイロットHTML](https://lumina-30.github.io/Lumi30-Index/one-question-pilot-ja.html)
 - [Procurement and Vendor-Risk Prompt](./procurement-vendor-risk.md) ｜ [調達・ベンダーリスク確認HTML](https://lumina-30.github.io/Lumi30-Index/procurement-vendor-risk-ja.html)
-- [AI Briefing](./ai-briefing.md) ｜ [AIブリーフィングHTML](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html)
-- [Explain LUMINA-30 with your AI](./explain-with-ai.md) ｜ [あなたのAIでLUMINA-30を説明させる](https://lumina-30.github.io/Lumi30-Index/explain-with-ai-ja.html)
+- [LUMINA-30 Q&A](./qa.md) ｜ [LUMINA-30 Q&A HTML](https://lumina-30.github.io/Lumi30-Index/qa-ja.html)
 - [Public-Source Review and Actor-Authority-Evidence Mapping](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping.md) ｜ [公開情報レビューHTML](https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_and_Actor_Authority_Evidence_Mapping_ja.html)
 - [Public-Source Review Template](https://github.com/lumina-30/lumina30-incident-review/blob/main/reference/Public_Source_Review_Template.md) ｜ [公開情報レビュー・テンプレートHTML](https://lumina-30.github.io/lumina30-incident-review/reference/Public_Source_Review_Template_ja.html)
 - [Incident Review Floor](https://github.com/lumina-30/lumina30-incident-review/blob/main/README.md) ｜ [インシデントレビュー・フロア](https://lumina-30.github.io/lumina30-incident-review/index-ja.html)
