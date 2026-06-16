@@ -4,14 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="l30:lang-lock" content="JP_ONLY" />
-  <meta name="l30:page-role" content="static-faq-reference" />
-
+  <meta name="l30:page-role" content="static-faq-reference-max" />
   <meta name="l30:boundary-question" content="このAI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。" />
-
   <meta name="l30:status" content="公開参照問い。認証、承認、公式準拠、法的地位、制度的支持、安全保証ではない。" />
-
-  <meta name="description" content="LUMINA-30をその場で理解するための静的Q&amp;A。" />
-  <title>LUMINA-30 Q&amp;A</title>
+  <meta name="description" content="LUMINA-30をその場で理解するための静的Q&amp;A Max版。" />
+  <title>LUMINA-30 Q&amp;A Max</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -23,13 +20,15 @@
       --accent: LinkText;
       --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
       --strong: color-mix(in srgb, Canvas 80%, LinkText 20%);
+      --warn: color-mix(in srgb, Canvas 86%, orange 14%);
     }
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
-    .page { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
-    .nav, .notice, .qa-item, .toolbar, .callout { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .page { max-width: 1120px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .qa-item, .toolbar, .callout, .glossary-panel { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
     .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
     .nav a, .button, .chip, button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; cursor: pointer; font: inherit; }
+    button:hover, .nav a:hover, .chip:hover { filter: brightness(1.05); }
     header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
     h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
     h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
@@ -40,192 +39,31 @@
     .notice-title { display: block; font-size: clamp(1.16rem, 2.8vw, 1.48rem); line-height: 1.32; font-weight: 800; margin-bottom: .35em; }
     .toolbar { padding: 14px 16px; margin: 18px 0 22px; }
     .toolbar-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 10px; }
-    .toolbar input { width: min(100%, 420px); padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: Canvas; color: var(--text); font: inherit; }
-    .chip[aria-pressed="true"] { background: var(--strong); color: var(--text); font-weight: 700; }
+    .search-line { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 8px; }
+    .toolbar input { width: min(100%, 470px); padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: Canvas; color: var(--text); font: inherit; }
+    .help { color: var(--muted); margin: 6px 0 0; font-size: .96rem; }
+    .chip[aria-pressed="true"], button[aria-pressed="true"] { background: var(--strong); color: var(--text); font-weight: 700; }
     .qa-list { display: grid; gap: 12px; margin-top: 16px; }
     details.qa-item { padding: 0; }
     details.qa-item[open] { background: color-mix(in srgb, var(--panel) 88%, LinkText 12%); }
-    summary { cursor: pointer; padding: 14px 16px; font-weight: 800; }
+    summary { cursor: pointer; padding: 14px 16px; font-weight: 760; }
     summary::marker { color: var(--accent); }
-    .qa-body { padding: 0 16px 16px 16px; border-top: 1px solid var(--line); }
-    .qa-body p { margin: .75em 0; }
-    .label { color: var(--muted); font-weight: 800; font-size: .92rem; }
-    .tagline { color: var(--muted); margin-top: .35em; }
-    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    .qa-body { border-top: 1px solid var(--line); padding: 2px 16px 16px; }
+    .qa-body p { margin: .72em 0; }
+    .label { font-weight: 800; }
+    .tagline, .statusline { color: var(--muted); margin: .7em 0 0; }
     .hidden { display: none !important; }
-    [id] { scroll-margin-top: 92px; }
+    .no-results { border: 1px dashed var(--line); border-radius: 14px; padding: 14px 16px; background: var(--warn); margin-top: 14px; }
+    .glossary-panel { padding: 14px 16px; margin: 14px 0; }
+    .glossary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+    .term { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--soft); }
+    .term strong { display: block; margin-bottom: .2em; }
+    .count-badge { font-weight: 800; color: var(--text); }
+    footer { margin-top: 36px; border-top: 1px solid var(--line); padding-top: 20px; color: var(--muted); }
+    @media (max-width: 680px) { .page { padding: 20px 12px 42px; } .search-line > input { width: 100%; } .toolbar-row { gap: 8px; } }
 
   </style>
-  <script type="application/ld+json" id="l30-faq-schema">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "inLanguage": "ja-JP",
-  "name": "LUMINA-30 Q&A",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "LUMINA-30とは何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： LUMINA-30は、不可逆な結果が起きる前に、人間の実効的な拒否・停止・保留・再確認がまだ可能かを確認するための、非拘束の公開参照フレームです。 説明： システムを認証したり、組織を承認したり、既存ガバナンスを置き換えたりするものではありません。価値はもっと絞られていて、AIが関わる処理が取り返しのつかない結果へ進む前の境界を見えるようにすることです。 なぜ大事か： 手続きが整って見えても、実際に止められる時点を過ぎていれば、人間監督は後追いの記録になってしまいます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "何を問題にしているのですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 不可逆化の前に、人間が本当に止められるかを問題にしています。 説明： 多くのレビューは「人間監督があるか」を確認します。LUMINA-30はさらに絞って、「取り返しのつかない結果に進む直前でも、責任ある人間が実効的に介入できるか」を問います。 確認点： 時点、権限者、証拠、独立した拒否経路、No / 不明の扱いを確認します。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "なぜ『不可逆化前』が重要なのですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 不可逆化の後に出てくる拒否権は、その境界では実効的な拒否権ではありません。 説明： 重要なのは、本番反映、外部公開、購入確定、権限変更、削除、ロールバック喪失などの前に、まだ止められるかです。 効果： この時点確認によって、人間監督が単なる事後説明になることを避けられます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "実効的人間拒否とは何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 責任ある人間または正当な監督主体が、不可逆な結果の前に、止める・保留する・拒否する・異議を出す・再確認する・方向転換する・停止する・ロールバックする実際の能力です。 説明： 承認欄に人名があるだけでは足りません。その人が、必要な情報、権限、時間、独立した介入経路を持っている必要があります。 証拠： 誰が、いつ、何を見て、どの経路で止められるのかを記録できる必要があります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "形式的な人間監督ではなぜ足りないのですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 人間監督が形式上は存在しても、実務上の拒否可能性が失われている場合があるからです。 説明： ダッシュボード、チケット、承認欄、ポリシー、ログは有用ですが、それだけでは不可逆化前に人間が結果を変えられるとは限りません。 確認点： 『人間が関与しているか』ではなく、『不可逆ポイントの前に介入できるか』を確認します。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "不可逆ポイントの例は何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "例： 本番反映、外部データ送信、契約・購入の確定、認証情報や権限の変更、アカウント復旧や本人確認、削除、復旧手段の喪失、ロールバック困難化、外部効果を持つツール実行などです。 使い方： どこが不可逆ポイントになるかは、対象プロセスごとに違います。何が取り返しにくくなるのかを具体化します。 注意： 『リスクがある』という一般論ではなく、どの処理・どの時点が境界かを明確にします。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "レビューでは何を証拠として見ますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 権限、時点、利用可能な情報、介入経路、独立性、エスカレーション処理を見ます。 最低限の記録： 不可逆ポイント、責任権限者、介入時点、権限根拠、不可逆化前に見える証拠、独立した拒否チャネル、時間的余裕、No / 不明の扱いを記録します。 注意： 『監督は十分です』という説明だけでは、不可逆化前に拒否が機能する証拠にはなりません。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "既存のAIガバナンスで足りませんか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 足りる場合があります。 説明： 既存手順の中で、時点、責任ある人間権限、証拠、停止・ロールバック経路、独立した拒否チャネル、No / 不明の扱いまで確認されているなら、LUMINA-30という名称を採用する必要はありません。 LUMINA-30の役割： 人間監督が文書上あるだけでなく、不可逆化前に実務上も機能しているかを確認するための焦点を与えます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "これは公式標準、認証、安全保証ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： いいえ。 説明： LUMINA-30は、公式標準、認証制度、法的要件、安全保証、査読済み統制フレームワーク、制度的採用や承認の証拠ではありません。 価値： 公式でなくても、既存レビューが答えるべき問いを明確にする参照枠としては使えます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "公式ではないのに使う意味はありますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： あります。問い自体は低コストで、見落とすコストが大きいからです。 説明： 法律、監査、セキュリティ統制、調達審査、モデルガバナンス、人間判断を置き換える必要はありません。既存手順の中に境界問いを加えるだけでも意味があります。 実務価値： 形式上の監督はあるのに、不可逆化前には止められないという空白を見つけやすくなります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "LUMINA-30という名前を使わなくてよい場合はありますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： あります。同等の境界条件が既存手順で明確に扱われている場合です。 説明： 不可逆ポイント、責任権限者、証拠、介入時点、独立した拒否経路、No / 不明の扱いが既に記録されているなら、機能的には足りています。 注意： 名称だけを増やして実務確認が増えないなら、LUMINA-30を看板として使う意味はありません。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "採用・AIガバナンス担当者は何を見ればよいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 既存レビューに、不可逆化前の実効的人間拒否を確認する欄があるかを見ます。 説明： 目的、リスク、プライバシー、人間監督、承認は確認していても、取り返しのつかない結果の前に誰が止められるかまでは確認していないことがあります。 良い状態： 不可逆ポイントと、その前に止める・保留する・再確認する責任権限者が記録されています。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "調達・ベンダー確認では何を聞けばよいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： その製品やワークフローが、人間が止める前に何を変更・確定してしまう可能性があるかを聞きます。 例： ツール実行、外部データ送信、本番変更、アカウント復旧、認証情報変更、自動購入、削除、ロールバック喪失などです。 質問： その結果が不可逆になる前に、誰が保留・拒否・再確認・ロールバックでき、何を証拠として見られるのかを確認します。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "監査・セキュリティ・リスク管理では何を確認しますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 統制が不可逆ポイントの前に作動するかを確認します。 説明： ログ、承認、エスカレーション経路は重要ですが、不可逆化後にしか機能しないなら、その境界では十分ではありません。 証拠： 監督が存在するだけでなく、結果を変えられる時点で人間が介入できることを示す記録が必要です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "事故レビューではどう役立ちますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 出力ミスと境界失敗を分けて見られます。 説明： 事故や準事故の後、不可逆な結果の前に責任ある人間が止める・方向転換する機会を持っていたかを確認します。 効果： 問題がモデル出力なのか、権限経路なのか、証拠不足なのか、ロールバック喪失なのか、早すぎる自動化なのかを分けやすくなります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "研究者・政策担当者はどう読めばよいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 採用や検証の証拠ではなく、境界概念として読むのが安全です。 説明： 高度AIガバナンスで、最後に意味のある不可逆化前の時点に、責任ある人間拒否が残るかという研究・政策上の問いとして扱えます。 注意： LUMINA-30用語が存在すること自体を、制度的承認や社会的採用の証拠として扱わないでください。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "LUMINA-30は反AI・反進歩ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： いいえ。問題にしているのは進歩そのものではなく、不可逆化の前に人間がまだ止められるかです。 説明： 責任ある人間が重要な境界で実効的に拒否・停止・再確認できるなら、開発や導入と両立し得ます。 見方： 止められるまま進める、戻せるまま進める、という確認です。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "過大主張ではありませんか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： 過大主張にしてはいけません。 説明： 安全な使い方は、『既存手順で試せる公開参照問い』として扱うことです。認証、公式標準、採用済み制度、法的義務、安全保証として扱うことではありません。 安全な表現： 『LUMINA-30を参照』『LUMINA-30を参照したレビュー』『LUMINA-30-informed review』などが安全です。『LUMINA-30認定』『LUMINA-30承認』とは言いません。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "真剣に見るべき一番強い理由は何ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "結論： この問いは、答えずに無視しにくいからです。 説明： AIが関わる処理が不可逆な結果を生み得るなら、責任あるレビューは『その前に人間が止められるか』に答えられるべきです。 実務効果： LUMINA-30という名前を採用しなくても、この境界問いによって通常の人間監督表現では見落としやすい空白を発見できます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "最小限で確認するなら何を聞けばよいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "問い： このAI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。 使い方： この1問は、既存のAI導入レビュー、調達確認、監査メモ、セキュリティレビュー、事故レビュー様式に追加できます。 注意： Yesなら、権限、時点、証拠、介入経路が必要です。No / 不明は、実効的人間監督が確認済みとは扱いません。"
-      }
-    }
-  ]
-}
-  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "LUMINA-30とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: LUMINA-30は、不可逆的影響の前に人間の実効的拒否が残っているかを問うための、非拘束の公開境界参照です。 説明: システムを認証するものでも、法律・監査・セキュリティ設計・調達審査・人間判断を置き換えるものでもありません。AI媒介プロセスが実質的に取り返しのつかない状態になる前に、責任ある人間が止める・保留する・再確認する・方向転換できるかを見える化します。"}}, {"@type": "Question", "name": "なぜ不可逆性に注目するのですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 決定的な地点を過ぎた後にだけ現れる監督は、ほとんど後追いだからです。 確認: どこから戻しにくくなるのか、その前に誰が介入できるのか、その介入が実際に可能だった証拠は何かを確認します。"}}, {"@type": "Question", "name": "最短の実務質問は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "問い: このAI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。 使い方: この1問は、既存のAIレビュー、調達レビュー、セキュリティレビュー、事故前チェックに追加できます。既存手順を置き換える必要はありません。"}}, {"@type": "Question", "name": "このQ&Aは誰向けですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 初見読者、AIガバナンス担当、調達担当、監査担当、セキュリティレビュー担当、研究者、政策担当、批判的読者向けです。 設計: 読者にAIへ説明させるのではなく、このページ内で固定回答を直接確認できるようにしています。"}}, {"@type": "Question", "name": "LUMINA-30は反AIですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 違います。反AIではなく、可逆性と説明責任の条件です。 説明: 不可逆的帰結の前に人間の実効的拒否が残っているなら、進歩・導入・自動化は継続できます。問題にするのはAI開発そのものではなく、人間拒否が実質的に失われることです。"}}, {"@type": "Question", "name": "ここでいう「実効的」とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 通知を受けた、形式上その場にいた、というだけでは足りません。 確認: 不可逆的影響の前に、止める・保留する・再確認する・方向転換するための時間、情報、権限、独立性、実行手段が必要です。"}}, {"@type": "Question", "name": "使うと何が変わりますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 暗黙になりがちな境界条件が、記録に残るレビュー質問になります。 限界: それだけでシステムが安全になったり法令適合になったりするわけではありません。不可逆的行為の前に、何を問い、記録し、エスカレーションするかが変わります。"}}, {"@type": "Question", "name": "名称を使わなくてもよいですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: はい。名称より、中核の境界条件が保たれることが重要です。 説明: 既存フレームワークが不可逆化前の実効的人間拒否を薄めずに明示実装しているなら、LUMINA-30という名称を使わなくても機能採用として成功形になり得ます。"}}, {"@type": "Question", "name": "初見読者は何から見ればよいですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: まず中核質問を確認し、その後、自分の立場や気になる論点で検索してください。 使い方: 検索語は短くします。例：調達、監査、証拠、拒否、ロールバック、NO、不明、不可逆。"}}, {"@type": "Question", "name": "どんな場面で特に役立ちますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: AI媒介プロセスが外部影響、ロールバック喪失、本番変更、権利への影響、情報露出、その他戻しにくい帰結を生む可能性がある場面です。 兆候: 「後で直せる」と言われたとき、その「後」が不可逆化前なのかを確認します。"}}, {"@type": "Question", "name": "実効的人間拒否とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 不可逆化する前に、責任ある人間がNOと言い、停止し、再確認を求め、方向転換し、必要ならロールバックできる実際の能力です。 不足する例: ダッシュボード、承認欄、通知があっても、時間内に使えない、または結果を変える権限がなければ足りません。"}}, {"@type": "Question", "name": "責任ある人間とは誰ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 不可逆化前にプロセスへ影響を与える権限、義務、実行能力を持つ人または責任主体です。 確認: その役割は明記され、連絡可能で、必要情報を持ち、レビュー対象システムに上書きされず拒否できる必要があります。"}}, {"@type": "Question", "name": "不可逆ポイントとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: その後では、拒否しても関連する損害、露出、確定、制御喪失を意味ある形で防げない地点です。 例: 外部公開、不可逆なアカウント変更、本番実行、契約確定、復旧不能な削除、時間内に止められない自動連鎖などです。"}}, {"@type": "Question", "name": "普通の人間監督と何が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 普通の人間監督は、人間が関与していることだけを示す場合があります。LUMINA-30は、境界が閉じる前に人間が結果を変えられるかを問います。 リスク: Human-in-the-loopという表現は、人間が実際には追認・観察・後記録しかしていない事実を隠すことがあります。"}}, {"@type": "Question", "name": "NO／不明がなぜ重要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: NOや不明は単なる書類不備ではなく、境界上の信号です。 対応: 不可逆化前の実効的拒否がない、または証明できない場合、境界条件を満たしたものとして扱うべきではありません。"}}, {"@type": "Question", "name": "AI自身が人間拒否の実効性を認定できますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: できません。レビュー対象のシステム自身が、人間拒否が実効的に残っていると自己認定してはいけません。 理由: システムは外見上の遵守に最適化したり、人間は同意するはずだと推論したりする可能性があります。拒否の存在と実効性は、人間権限、記録、独立した証拠に基づく必要があります。"}}, {"@type": "Question", "name": "独立した拒否経路とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: レビュー対象と同じシステムや同じ利害連鎖に依存せず、拒否・停止・エスカレーションできる経路です。 確認: 拒否する唯一の方法がAI制御ワークフロー内にしかない場合、十分に独立していない可能性があります。"}}, {"@type": "Question", "name": "ここでいうロールバックとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 不可逆的な損害や確定が起きる前に、関連する変更を取り消す、戻す、復旧する、封じ込める実際の能力です。 限界: 理論上のロールバック計画だけでは足りません。アクセス、ログ、バックアップ、権限、タイミングの問題で使えなければ無効です。"}}, {"@type": "Question", "name": "リスクのある案件を全部止める必要がありますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: いいえ。必要なのは、不可逆化前に拒否が実際に利用可能であることです。 意味: 不可逆ポイントが明確で、責任権限があり、証拠が残り、人間が時間内に保留・方向転換できるなら、案件は継続できます。"}}, {"@type": "Question", "name": "「不可逆化前」は倫理や法律に何を加えますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: タイミングを加えます。権利、義務、倫理、監査、説明責任は、意味ある拒否が消えた後にだけ働くなら力を失います。 使い方: この問いは既存枠組みを置き換えません。それらがまだ生きた適用点を持つかを確認します。"}}, {"@type": "Question", "name": "この文脈での手続き的無効とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 手続き上は承認済みに見えても、人間が意味ある拒否を行う機会がすでに失われていたリスクです。 含意: 問題は悪い結果だけではありません。その手続きが人間統治された意思決定経路として無効になっている可能性です。"}}, {"@type": "Question", "name": "YESに必要な最小証拠は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 少なくとも、不可逆ポイント、責任権限者、利用可能な介入経路、タイミング、証拠源、NO／不明の場合の扱いを特定します。 注意: 記録のないYESは慎重に扱うべきです。LUMINA-30は楽観的推定ではなく、実効的人間拒否を問います。"}}, {"@type": "Question", "name": "LUMINA-30は公式標準ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: いいえ。公式標準、法的認証、政府承認済み制度、実装済み安全保証、制度採用の証拠ではありません。 理由: 公開参照フレームを権威づけの主張と誤認しないよう、この限界は明示する必要があります。"}}, {"@type": "Question", "name": "安全保証ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: いいえ。AIシステムが安全であることを証明するものではありません。 使い方: 不可逆的影響の前に、必要な統治条件がまだ生きているかを問います。技術安全、セキュリティ統制、テスト、法務レビュー、監視は引き続き必要です。"}}, {"@type": "Question", "name": "法律や準拠チェックリストですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: いいえ。法律でも完全な準拠チェックリストでもありません。 関係: 法務、ガバナンス、監査、調達プロセスの中に、追加の境界問いとして入れることができます。"}}, {"@type": "Question", "name": "既存のリスク管理を置き換えますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: いいえ。総合的なリスク管理より狭いものです。 役割: 既存のリスク管理が、不可逆化前の実効的人間拒否を通じてまだ作動できるかを確認します。"}}, {"@type": "Question", "name": "採用実績がないと無意味ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: いいえ。制度採用がないことは過大主張を避ける理由であって、問いの価値がない理由ではありません。 理由: 低コストの境界問いは、正式採用前でも参照、試行、監査補助、調達時の確認として使えます。"}}, {"@type": "Question", "name": "専門家承認として引用できますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: できません。外部コメント、AI要約、検索での可視性を専門家承認として扱ってはいけません。 安全な扱い: それらは解釈可能性や可視性の補助観測にはなり得ますが、認証、査読、採用の証拠ではありません。"}}, {"@type": "Question", "name": "法務レビューなしで使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 問いとして使うことはできますが、法務レビューの代替にはなりません。 注意: 権利、責任、契約、規制分野、雇用、金融、医療、公共サービスが関わる場合、法務と分野専門レビューは必要です。"}}, {"@type": "Question", "name": "何を主張してはいけませんか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 公式性、認証、安全性証明、広範な採用、政府承認、査読済み標準、専門家承認を主張してはいけません。 安全な表現: 代わりに、不可逆的影響の前に人間の実効的拒否を残すための非拘束の公開境界参照、と説明します。"}}, {"@type": "Question", "name": "既存のAIガバナンスにどう入りますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 既存ガバナンス内の「不可逆化前の境界チェック」として入ります。 例: 1項目を追加します。不可逆化する前に、誰が拒否・停止・再確認・方向転換・ロールバックでき、その証拠は何か。"}}, {"@type": "Question", "name": "機能採用とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 機能採用とは、LUMINA-30という名称を必ず使わなくても、中核条件を実装することです。 条件: ただし、不可逆化前の実効的人間拒否が、一般的な監督、承認、ログ、事後説明へ薄まっていない場合に限ります。"}}, {"@type": "Question", "name": "NIST、ISO、EU AI Act、社内統制とはどう接続しますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: タイミングと権限を確認する追加質問として吸収できます。 使い方: それらの枠組みを置き換えるものとして出してはいけません。人間監督、説明責任、監査、リスク統制が不可逆化前に実行可能かを確認するために使います。"}}, {"@type": "Question", "name": "組織が「人間監督はあります」と言う場合は？", "acceptedAnswer": {"@type": "Answer", "text": "結論: その監督が不可逆化前に結果を変えられるかを確認します。 確認: 実際の不可逆ポイント、エスカレーション経路、拒否権限、証拠、NO／不明の場合の対応を特定します。"}}, {"@type": "Question", "name": "既存統制がすでに条件を満たしている場合は？", "acceptedAnswer": {"@type": "Answer", "text": "結論: その場合、LUMINA-30という名称は不要かもしれません。 注意: ただし、社内用語へ置き換える過程で中核条件が失われないよう、対応関係を明記します。"}}, {"@type": "Question", "name": "最小の導入ステップは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 既存レビュー1件にOne-Question Pilotを追加することです。 理由: 認証、広範な採用、既存枠組みの置換を主張せずに、具体的な記録を作れます。"}}, {"@type": "Question", "name": "小規模組織でも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 使えます。ただし規模に応じた形にするべきです。 使い方: 小規模チームなら、不可逆ポイント、責任者、停止経路、証拠を特定するところから始められます。大規模なガバナンス制度を最初から作る必要はありません。"}}, {"@type": "Question", "name": "公共調達で使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 認証条件ではなく、説明責任と証拠条件として使えます。 例: 不可逆的な公共影響の前に、誰がAI媒介プロセスを止める・保留できるのか、その権限を証明する記録は何かをベンダーに求めます。"}}, {"@type": "Question", "name": "成功した吸収とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 別の枠組みが同じ条件を十分明確に実装し、LUMINA-30を別名で掲げる必要がなくなる状態です。 警告: 条件が「誰かが後でレビューした」に変わっているなら、吸収は失敗しています。"}}, {"@type": "Question", "name": "採用を過大主張しないには？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 参照利用、試行利用、内部採用、外部採用、公式承認を分けます。 ルール: 実際に起きたことだけを主張します。試行や引用は、広範な採用や公式承認ではありません。"}}, {"@type": "Question", "name": "One-Question Pilotとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 中核の境界問いを既存レビュー1件に低負荷で追加する方法です。 目的: 何でも止めることではありません。1つの実案件で、不可逆性、責任権限、証拠、NO／不明対応を特定できるかを見ることです。"}}, {"@type": "Question", "name": "Pilotはいつ使うべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 導入、調達、外部接続、本番実行、不可逆な公開、ロールバック喪失の前に使います。 兆候: 最後に意味ある停止ができる地点をチームが言えないなら、Pilotは有用です。"}}, {"@type": "Question", "name": "Pilotの問いには誰が答えるべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 責任者、技術責任者、リスク・ガバナンス担当、ロールバックや外部影響を管理するチームが関与すべきです。 理由: タイミング、権限、証拠、運用上の可逆性を一人が同時に把握していないことがあるからです。"}}, {"@type": "Question", "name": "Pilotでは何を記録しますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 不可逆ポイント、責任ある人間権限、介入経路、証拠源、タイミング、NO／不明の場合の判断を記録します。 省略不可: 「人間監督あり」とだけ記録しても、LUMINA-30の問いには答えていません。"}}, {"@type": "Question", "name": "答えが不明の場合は？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 不明は一時的な不便ではなく、実際のレビュー結果として扱います。 対応: 可能な範囲で進行を保留し、不足証拠を特定し、担当者を決め、境界条件を満たしたと主張せず進められるかを判断します。"}}, {"@type": "Question", "name": "新しい委員会なしで実施できますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: できます。既存の受付、アーキテクチャレビュー、調達レビュー、セキュリティレビュー、変更承認に挿入できます。 設計: 現在のガバナンス経路を使い、まだ結果を変えられる場所に境界問いを追加します。"}}, {"@type": "Question", "name": "Pilotが握り込まれないようにするには？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 他のレビュー判断が見える同じ管理場所に結果を記録します。 エスカレーション: NOまたは不明が出た場合、誰が見るべきか、どの一時統制や保留が適用されるかを定義します。"}}, {"@type": "Question", "name": "Pilotの成功条件は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 成功とは、すべてYESになることではなく、境界が生きているかを組織が学ぶことです。 指標: 不足証拠、不明確な権限、ロールバックの穴が見つかるPilotは有用です。不可逆化前に穴が見つかったからです。"}}, {"@type": "Question", "name": "調達ではどう使いますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 調達では、顧客や公共への不可逆的影響の前に実効的拒否が可能である証拠をベンダーへ求めるために使えます。 質問: 誰が導入を保留し、自動化を取り消し、本番操作を止め、以前の状態に戻し、不可逆な外部影響を防げますか。"}}, {"@type": "Question", "name": "ベンダーには何を聞くべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: タイミング、権限、ログ、ロールバック、緊急連絡経路、エスカレーション規則、不可逆ステップ前にシステムが人間拒否なしで動けるかを確認します。 証拠: 「人間が監督しています」という曖昧な説明だけでは受け入れず、介入できる時間と権限の証拠を求めます。"}}, {"@type": "Question", "name": "調達で特に危険な兆候は？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 人間拒否前の不可逆なアカウント変更、本番実行、外部送信、データ削除、認証情報変更、自律的ツール使用、ロールバック喪失です。 解釈: 問題は技術能力そのものだけではありません。実効的人間拒否なしに不可逆効果へ接続されることです。"}}, {"@type": "Question", "name": "契約に境界問いを入れられますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: はい。認証主張ではなく、証拠提示と通知義務として入れられます。 例: 最後に意味ある介入ができる地点、責任連絡先、緊急停止経路、ロールバック限界、証拠保持を文書化するよう求めます。"}}, {"@type": "Question", "name": "SaaSやAPIツールにはどう適用しますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: ベンダー側自動化が、顧客が拒否・停止する前に不可逆効果を生むかを確認します。 確認: 管理者権限、APIキー、本番権限、標準自動化、通知タイミング、エクスポート可能性、終了・ロールバック経路を見ます。"}}, {"@type": "Question", "name": "ベンダーがロールバック不能と言ったら？", "acceptedAnswer": {"@type": "Answer", "text": "結論: ロールバック不能になる前に拒否できる地点があるかをレビューで特定する必要があります。 判断: その地点がないなら、実効的人間拒否を残しているとは説明すべきではありません。"}}, {"@type": "Question", "name": "ベンダー回答は公開すべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 常に公開する必要はありません。機密性の高いセキュリティ詳細は内部扱いでよい場合があります。 ただし: 証拠、責任、NO／不明対応の存在は、監査や事故レビューに耐える程度に記録できる必要があります。"}}, {"@type": "Question", "name": "調達で重くしすぎないには？", "acceptedAnswer": {"@type": "Answer", "text": "結論: まず1問から始め、不可逆的影響が現実的なシステムにだけ証拠を求めます。 比例性: 低リスクツールは軽いメモで足りる場合があります。高影響・戻しにくいシステムでは、強い証拠とエスカレーションが必要です。"}}, {"@type": "Question", "name": "監査では何を見るべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 監査では、ポリシーや承認ステップの存在だけでなく、不可逆化前に実効的人間拒否が存在した証拠を見ます。 証拠: 関連証拠には、時刻、エスカレーション記録、責任権限者、システム状態、ロールバック選択肢、拒否結果、NO／不明対応が含まれます。"}}, {"@type": "Question", "name": "なぜ証拠が中心なのですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 人間が拒否できたという主張は、タイミング、権限、利用可能な介入経路を示せなければ弱いからです。 ルール: 証拠がないことを、拒否できた証拠に変えてはいけません。"}}, {"@type": "Question", "name": "証拠不在ルールとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 証拠がない場合、実効的拒否が可能だったと推定しないルールです。 使い方: 回答を不明または証拠不十分として扱い、保留すべきか、証拠を取得すべきか、制限を記録したうえで進めるかを判断します。"}}, {"@type": "Question", "name": "どのログが有用ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 有用なログは、時刻、権限者、要求、判断、システム状態、結果を接続します。 注意: 大量のログがあることとレビュー可能な証拠があることは同じではありません。境界が閉じる前の人間拒否機会を示す必要があります。"}}, {"@type": "Question", "name": "時系列はどう記録すべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 提案、通知、人間レビュー、拒否機会、システム行為、外部影響、ロールバック喪失の順序を記録します。 理由: 時系列がないと、後日のレビューで拒否が決定点の前にあったのか後にあったのか判断できません。"}}, {"@type": "Question", "name": "介入記録とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 停止、保留、拒否、エスカレーション、ロールバック、上書き防止、再確認要求とその結果の記録です。 価値: 介入記録は、人間権限がプロセスを変えたのか、単に観察しただけなのかを示します。"}}, {"@type": "Question", "name": "NO／不明はどう監査しますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: NOと不明には追跡可能なフォローアップが必要です。 確認: 誰が結果を受け取り、エスカレーションされたか、どの一時統制が適用されたか、境界条件を満たしたと偽って進行していないかを見ます。"}}, {"@type": "Question", "name": "記録完全性とは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 記録完全性とは、後日のレビューでタイミング、権限、証拠、判断経路、介入結果を確認できることです。 限界: 内部データをすべて公開することではありません。境界条件が後から書き換えられない程度の証拠を保持することです。"}}, {"@type": "Question", "name": "事故レビューとはどう関係しますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 事故レビューでは、関連する不可逆ポイントの前に実効的人間拒否が存在したかを問うべきです。 使い方: 回答は、事後説明だけでなく、行為者、権限、証拠、時系列、介入記録に基づく必要があります。"}}, {"@type": "Question", "name": "証拠が機密の場合は？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 機密証拠は制限されたままでよい場合があります。ただし、証拠の存在、保管者、種類、レビュー可能性は記録すべきです。 均衡: 機密データを不必要に公開してはいけません。一方で、機密性を境界問いから逃げる手段にしてもいけません。"}}, {"@type": "Question", "name": "スコアで証拠を代替できますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: できません。スコアはレビューの要約にはなりますが、タイミングと権限の証拠を代替できません。 リスク: スコアは偽の精密さや認証風の印象を生みます。LUMINA-30は安全格付けではなく境界問いとして扱うべきです。"}}, {"@type": "Question", "name": "LUMINA-30が拾う監査上の失敗は？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 文書は存在するが、人間拒否の窓がすでに閉じていたケースを拾います。 例: チェックリスト上は承認済みでも、承認者が意味ある行動を取る前に、導入、露出、削除、外部行為が不可逆化している場合があります。"}}, {"@type": "Question", "name": "証拠ドリフトとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 証拠ドリフトとは、事後に証拠が弱まる、失われる、または説明し直されることで、拒否境界の検証が難しくなることです。 対応: 時刻、判断記録、権限経路、拒否機会、介入結果を、後日のレビューに耐える形で残します。"}}, {"@type": "Question", "name": "時系列ドリフトとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 時系列ドリフトとは、通知、レビュー、拒否機会、行為、外部影響、不可逆化の順序が曖昧になったり書き換わったりすることです。 対応: 人間拒否が決定点の前にあったのか後にあったのかを記録します。このタイミングで監督の意味が変わります。"}}, {"@type": "Question", "name": "拒否権ドリフトとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 拒否権ドリフトとは、「人間が実効的に拒否できた」が、「通知された」「その場にいた」「承認した」といった弱い主張にずれることです。 対応: 記録上、人間の存在、通知、承認、実効的拒否を分けます。"}}, {"@type": "Question", "name": "介入記録ドリフトとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 停止、保留、拒否、エスカレーション、ロールバックが実際に起きたか、どんな効果があったかを示す記録が失われたり弱まったりすることです。 対応: 介入要求、権限、タイミング、システム応答、最終結果を記録します。"}}, {"@type": "Question", "name": "境界ドリフトとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 境界ドリフトとは、不可逆化前の実効的人間拒否という鋭い条件が、一般的な倫理、監督、レビュー、安全確認へ薄まることです。 対応: 中核定義を短く安定させ、既存制度への翻訳で薄まっていないか確認します。"}}, {"@type": "Question", "name": "監査ドリフトとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 監査ドリフトとは、文書があるかだけを確認し、不可逆化前に実効的拒否が可能だったかを問わなくなることです。 対応: 監査レビューに、タイミング、権限、証拠、介入結果の欄を追加します。"}}, {"@type": "Question", "name": "説明ドリフト・責任ドリフト・ログドリフトは正式用語ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 現時点ではまだです。有用な関連問題ですが、手順やテンプレートで明確に定義されるまでは今後の整理対象として扱うべきです。 使い方: 初期公開層で前面に出しすぎず、内部管理メモや将来の事故レビュー拡張候補に置くのが安全です。"}}, {"@type": "Question", "name": "なぜドリフト概念を入れるのですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 証拠、時系列、権限、記録を守らないと、LUMINA-30の中核問いが事後に弱められるからです。 均衡: これらの概念は境界問いを支えるためのものであり、新しい理論層で置き換えるためではありません。"}}, {"@type": "Question", "name": "ドリフト概念は公開上どこに置くべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 最初の説明ではなく、深掘りQ&A、事故レビュー、監査、証拠のセクションに置くべきです。 理由: 入口を重くしすぎず、LUMINA-30が証拠や記録を無視していないことを示せます。"}}, {"@type": "Question", "name": "未整理概念はどう管理すべきですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: ステータス、再判断トリガー、次回判断事項、判断ログを持つ内部管理メモに残します。 ルール: 未公開・未リンクは破棄ではありません。公開入口に出すにはまだ早いという意味です。"}}, {"@type": "Question", "name": "LUMINA-30は高速AIを技術的に封じ込めますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: いいえ。サンドボックス、権限システム、モデル制御、ネットワーク制御、CI/CDゲート、技術的封じ込め層ではありません。 射程: そのようなシステムを接続・導入・公開・認可・継続する判断が、不可逆的影響の前に実効的人間拒否を通過しているかを問います。"}}, {"@type": "Question", "name": "再帰的自己改善や自己再構築にはどう適用しますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: それ自体で再帰的自己改善や自己再構築を止めるものではありません。 問い: 自己変更、導入、ツールアクセス、モデル更新、外部影響を可能にする権限経路が、不可逆化前に責任ある人間によって拒否できるかを問います。"}}, {"@type": "Question", "name": "人間レビューのボトルネックとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: AIの速度、自律性、運用範囲が、人間レビューの時間と能力を上回る状態です。 LUMINA-30の角度: 遅い人間権限が、高速システムの不可逆的効果の前に、まだ意味ある停止点を持つかが重要です。"}}, {"@type": "Question", "name": "脆弱性発見・コード生成AIはどうレビューしますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 発見、コード生成、ツール実行、導入、露出、人間拒否の接続をレビューします。 境界: モデルがコードを出すこと自体と、人間拒否の前にそれを自動で実行可能状態へ進めることは、境界リスクの強さが違います。"}}, {"@type": "Question", "name": "自律エージェントにも使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 使えます。特にエージェントがツールを呼び、状態を変更し、送信し、支払い、権限変更し、本番システムに影響する場合です。 確認: エージェントの行動連鎖がどこで不可逆化し、その前に誰が止められるかを確認します。"}}, {"@type": "Question", "name": "外部AI企業の事例はどう扱いますか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 背景文脈や境界事例として扱い、それらの組織がLUMINA-30を採用・承認・検証した証拠として扱ってはいけません。 安全な表現: 外部事例はLUMINA-30が扱う速度と権限の問題を説明するために使い、権威の移転は避けます。"}}, {"@type": "Question", "name": "これは単なるチェックリストですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: チェックリストとして運用できますが、役割は境界条件です。 違い: チェックリストは多数の項目を問います。LUMINA-30は、ガバナンス手続き自体が不可逆化前に生きた人間拒否点を持っているかを問います。"}}, {"@type": "Question", "name": "概念が狭すぎませんか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 意図的に狭くしています。 理由: この狭さが有用です。AIガバナンス全体を解決しようとせず、多くの広い枠組みが後追い化しないために必要な1条件を守ります。"}}, {"@type": "Question", "name": "摩擦が大きくなりすぎませんか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 無差別に適用すれば大きくなります。比例性が必要です。 ルール: 不可逆効果、外部影響、本番権限、権利影響、セキュリティ露出、ロールバック喪失が現実的なところで強めに使います。"}}, {"@type": "Question", "name": "価値ある案件を止めてしまう場合は？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 不可逆化前の実効的拒否が証明できないなら、一時停止や保留は正しいガバナンス行為になり得ます。 捉え方: 慎重さを罰することが目的ではありません。責任ある人間が判断できるまで、案件を可逆的な経路に保つことが目的です。"}}, {"@type": "Question", "name": "次に何を読めばよいですか？", "acceptedAnswer": {"@type": "Answer", "text": "結論: 実務なら事前境界レビュー資料またはOne-Question Pilotへ進みます。理論を深く読む場合は、Boundary Kernelや研究文脈資料を別途確認します。 実務経路: 迷う場合は、実案件1つに対して最短の実務質問から始めてください。"}}, {"@type": "Question", "name": "LUMINA-30の最も安全な要約は？", "acceptedAnswer": {"@type": "Answer", "text": "結論: LUMINA-30は、不可逆的影響の前に人間の実効的拒否を残すための非拘束の境界参照です。 加えないこと: 公式性、認証、安全性証明、広範な採用、法的権威の主張は、別途確認されない限り加えません。"}}]}</script>
 </head>
 <body>
   <div class="page">
@@ -236,83 +74,203 @@
     </nav>
 
     <header>
-      <h1>LUMINA-30 Q&amp;A</h1>
-      <p class="subtitle">知りたい質問を選ぶと、このページ内で回答が開きます。</p>
+      <h1>LUMINA-30 Q&amp;A Max</h1>
+      <p class="subtitle">知りたい質問を選ぶと、このページ内で回答が開きます。検索は短い語句で使えます。</p>
     </header>
 
     <main>
       <section class="notice" aria-label="Status and purpose">
         <strong class="notice-title">固定回答で一か所に確認する</strong>
-        このQ&amp;Aは、LUMINA-30の中核、限界、実務上の価値、よくある疑問をその場で確認するためのページです。中核の問いは、AI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換できるかです。認証ルート、採用済み表示、安全保証ではありません。
+        このQ&amp;Aは、LUMINA-30の中核、限界、実務上の価値、既存制度との関係、証拠・記録・よくある反論をその場で確認するための静的ページです。中核の問いは、AI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換できるかです。認証ルート、採用済み表示、安全保証ではありません。
       </section>
 
-      <section class="toolbar" aria-label="Q&A操作">
-        <label for="qa-search"><strong>検索</strong></label><br />
-        <div class="toolbar-row">
-          <input id="qa-search" type="search" placeholder="質問・回答を検索" />
+      <section class="toolbar" aria-label="Q&A controls">
+        <label for="qa-search"><strong>検索</strong></label>
+        <p class="help">短い語句で検索してください。例：不可逆、拒否、証拠、監査、調達、ドリフト。検索ボタンまたはEnterで絞り込み、クリアで全件に戻ります。</p>
+        <div class="search-line">
+          <input id="qa-search" type="search" placeholder="例：不可逆、監査、調達、証拠" />
+          <button type="button" id="search-button">検索</button>
+          <button type="button" id="clear-search">クリア</button>
           <button type="button" id="expand-all">すべて開く</button>
           <button type="button" id="collapse-all">すべて閉じる</button>
+          <button type="button" id="essential-only" aria-pressed="false">重要質問だけ</button>
+          <button type="button" id="toggle-glossary" aria-expanded="false">概念用語一覧</button>
         </div>
-        <div class="toolbar-row" role="group" aria-label="Categories">
+        <div class="toolbar-row" aria-label="検索例">
+          <strong>検索例：</strong>
+          <button class="term-chip" type="button" data-query="不可逆">不可逆</button>
+<button class="term-chip" type="button" data-query="拒否">拒否</button>
+<button class="term-chip" type="button" data-query="証拠">証拠</button>
+<button class="term-chip" type="button" data-query="監査">監査</button>
+<button class="term-chip" type="button" data-query="調達">調達</button>
+<button class="term-chip" type="button" data-query="ベンダー">ベンダー</button>
+<button class="term-chip" type="button" data-query="ロールバック">ロールバック</button>
+<button class="term-chip" type="button" data-query="NO">NO</button>
+<button class="term-chip" type="button" data-query="不明">不明</button>
+<button class="term-chip" type="button" data-query="ドリフト">ドリフト</button>
+<button class="term-chip" type="button" data-query="高速AI">高速AI</button>
+<button class="term-chip" type="button" data-query="機能採用">機能採用</button>
+        </div>
+        <div class="toolbar-row" role="group" aria-label="カテゴリ">
           <button class="chip" type="button" data-filter="all" aria-pressed="true">すべて</button>
 <button class="chip" type="button" data-filter="basics" aria-pressed="false">まず知る</button>
 <button class="chip" type="button" data-filter="core" aria-pressed="false">中核を理解する</button>
-<button class="chip" type="button" data-filter="existing" aria-pressed="false">既存制度・位置づけ</button>
-<button class="chip" type="button" data-filter="roles" aria-pressed="false">立場別に見る</button>
-<button class="chip" type="button" data-filter="critical" aria-pressed="false">疑って確認する</button>
+<button class="chip" type="button" data-filter="status" aria-pressed="false">位置づけ・限界</button>
+<button class="chip" type="button" data-filter="adoption" aria-pressed="false">既存制度との関係</button>
+<button class="chip" type="button" data-filter="pilot" aria-pressed="false">実務で使う</button>
+<button class="chip" type="button" data-filter="procurement" aria-pressed="false">調達・ベンダーリスク</button>
+<button class="chip" type="button" data-filter="audit" aria-pressed="false">監査・証拠</button>
+<button class="chip" type="button" data-filter="drift" aria-pressed="false">証拠・記録・ドリフト</button>
+<button class="chip" type="button" data-filter="frontier" aria-pressed="false">高速AI・フロンティアAI</button>
+<button class="chip" type="button" data-filter="objections" aria-pressed="false">反論・次に読むもの</button>
         </div>
-        <p class="tagline"><span id="qa-count"></span> 件表示</p>
+        <p class="statusline"><span id="qa-count" class="count-badge"></span> 件表示</p>
+        <div id="glossary-panel" class="glossary-panel hidden" aria-label="LUMINA-30 概念用語一覧">
+          <h2>LUMINA-30 概念用語一覧</h2>
+          <div class="glossary-grid">
+            <div class="term"><strong>LUMINA-30</strong><span>不可逆的影響の前に人間の実効的拒否を残すための、非拘束の公開境界参照。</span></div>
+<div class="term"><strong>不可逆性</strong><span>その後では拒否しても関連する損害、露出、確定、制御喪失を意味ある形で防げない状態。</span></div>
+<div class="term"><strong>実効的人間拒否</strong><span>不可逆化前に責任ある人間が拒否・停止・保留・再確認・方向転換・ロールバックできる実際の能力。</span></div>
+<div class="term"><strong>責任ある人間</strong><span>権限、義務、情報、実行能力を持ち、プロセスへ影響を与えられる人または責任主体。</span></div>
+<div class="term"><strong>不可逆ポイント</strong><span>プロセスが戻しにくい、または戻せない状態になる前の最後の意味ある地点。</span></div>
+<div class="term"><strong>独立した拒否経路</strong><span>レビュー対象と同じシステムや利害連鎖に支配されない拒否・エスカレーション経路。</span></div>
+<div class="term"><strong>NO／不明</strong><span>拒否がない、または十分に証明されていないことを示す境界結果。</span></div>
+<div class="term"><strong>証拠不在ルール</strong><span>証拠がない場合に、実効的拒否が可能だったと推定しないルール。</span></div>
+<div class="term"><strong>機能採用</strong><span>LUMINA-30の名称を使わなくても、別の枠組み内に中核条件を実装すること。</span></div>
+<div class="term"><strong>One-Question Pilot</strong><span>既存レビュー1件に中核質問を追加する低負荷の試行。</span></div>
+<div class="term"><strong>Boundary Kernel</strong><span>中核条件の希釈を防ぐためのAI可読の境界参照。</span></div>
+<div class="term"><strong>PCR-C</strong><span>臨界点の前に境界がまだ生きているかを確認する臨界前カットオフ型チェック。</span></div>
+<div class="term"><strong>証拠ドリフト</strong><span>事後に証拠が弱まる、失われる、説明し直されること。</span></div>
+<div class="term"><strong>時系列ドリフト</strong><span>通知、レビュー、行為、不可逆化の順序が曖昧化・書換えされること。</span></div>
+<div class="term"><strong>拒否権ドリフト</strong><span>実効的拒否が、通知・存在・承認などの弱い主張にずれること。</span></div>
+<div class="term"><strong>境界ドリフト</strong><span>中核条件が一般的な監督、倫理、安全確認へ薄まること。</span></div>
+          </div>
+        </div>
+        <div id="no-results" class="no-results hidden">該当するQ&amp;Aがありません。別の短い語句で検索してください。</div>
       </section>
 
       <section id="qa-list" class="qa-list" aria-label="LUMINA-30 Q&A">
-        <details class="qa-item" data-category="basics" data-search="lumina-30とは何ですか？ lumina-30は、不可逆な結果が起きる前に、人間の実効的な拒否・停止・保留・再確認がまだ可能かを確認するための、非拘束の公開参照フレームです。 システムを認証したり、組織を承認したり、既存ガバナンスを置き換えたりするものではありません。価値はもっと絞られていて、aiが関わる処理が取り返しのつかない結果へ進む前の境界を見えるようにすることです。 手続きが整って見えても、実際に止められる時点を過ぎていれば、人間監督は後追いの記録になってしまいます。"><summary>LUMINA-30とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>LUMINA-30は、不可逆な結果が起きる前に、人間の実効的な拒否・停止・保留・再確認がまだ可能かを確認するための、非拘束の公開参照フレームです。</p><p><span class="label">説明：</span>システムを認証したり、組織を承認したり、既存ガバナンスを置き換えたりするものではありません。価値はもっと絞られていて、AIが関わる処理が取り返しのつかない結果へ進む前の境界を見えるようにすることです。</p><p><span class="label">なぜ大事か：</span>手続きが整って見えても、実際に止められる時点を過ぎていれば、人間監督は後追いの記録になってしまいます。</p></div></details>
-<details class="qa-item" data-category="basics" data-search="何を問題にしているのですか？ 不可逆化の前に、人間が本当に止められるかを問題にしています。 多くのレビューは「人間監督があるか」を確認します。lumina-30はさらに絞って、「取り返しのつかない結果に進む直前でも、責任ある人間が実効的に介入できるか」を問います。 時点、権限者、証拠、独立した拒否経路、no / 不明の扱いを確認します。"><summary>何を問題にしているのですか？</summary><div class="qa-body"><p><span class="label">結論：</span>不可逆化の前に、人間が本当に止められるかを問題にしています。</p><p><span class="label">説明：</span>多くのレビューは「人間監督があるか」を確認します。LUMINA-30はさらに絞って、「取り返しのつかない結果に進む直前でも、責任ある人間が実効的に介入できるか」を問います。</p><p><span class="label">確認点：</span>時点、権限者、証拠、独立した拒否経路、No / 不明の扱いを確認します。</p></div></details>
-<details class="qa-item" data-category="basics" data-search="なぜ『不可逆化前』が重要なのですか？ 不可逆化の後に出てくる拒否権は、その境界では実効的な拒否権ではありません。 重要なのは、本番反映、外部公開、購入確定、権限変更、削除、ロールバック喪失などの前に、まだ止められるかです。 この時点確認によって、人間監督が単なる事後説明になることを避けられます。"><summary>なぜ『不可逆化前』が重要なのですか？</summary><div class="qa-body"><p><span class="label">結論：</span>不可逆化の後に出てくる拒否権は、その境界では実効的な拒否権ではありません。</p><p><span class="label">説明：</span>重要なのは、本番反映、外部公開、購入確定、権限変更、削除、ロールバック喪失などの前に、まだ止められるかです。</p><p><span class="label">効果：</span>この時点確認によって、人間監督が単なる事後説明になることを避けられます。</p></div></details>
-<details class="qa-item" data-category="core" data-search="実効的人間拒否とは何ですか？ 責任ある人間または正当な監督主体が、不可逆な結果の前に、止める・保留する・拒否する・異議を出す・再確認する・方向転換する・停止する・ロールバックする実際の能力です。 承認欄に人名があるだけでは足りません。その人が、必要な情報、権限、時間、独立した介入経路を持っている必要があります。 誰が、いつ、何を見て、どの経路で止められるのかを記録できる必要があります。"><summary>実効的人間拒否とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>責任ある人間または正当な監督主体が、不可逆な結果の前に、止める・保留する・拒否する・異議を出す・再確認する・方向転換する・停止する・ロールバックする実際の能力です。</p><p><span class="label">説明：</span>承認欄に人名があるだけでは足りません。その人が、必要な情報、権限、時間、独立した介入経路を持っている必要があります。</p><p><span class="label">証拠：</span>誰が、いつ、何を見て、どの経路で止められるのかを記録できる必要があります。</p></div></details>
-<details class="qa-item" data-category="core" data-search="形式的な人間監督ではなぜ足りないのですか？ 人間監督が形式上は存在しても、実務上の拒否可能性が失われている場合があるからです。 ダッシュボード、チケット、承認欄、ポリシー、ログは有用ですが、それだけでは不可逆化前に人間が結果を変えられるとは限りません。 『人間が関与しているか』ではなく、『不可逆ポイントの前に介入できるか』を確認します。"><summary>形式的な人間監督ではなぜ足りないのですか？</summary><div class="qa-body"><p><span class="label">結論：</span>人間監督が形式上は存在しても、実務上の拒否可能性が失われている場合があるからです。</p><p><span class="label">説明：</span>ダッシュボード、チケット、承認欄、ポリシー、ログは有用ですが、それだけでは不可逆化前に人間が結果を変えられるとは限りません。</p><p><span class="label">確認点：</span>『人間が関与しているか』ではなく、『不可逆ポイントの前に介入できるか』を確認します。</p></div></details>
-<details class="qa-item" data-category="core" data-search="不可逆ポイントの例は何ですか？ 本番反映、外部データ送信、契約・購入の確定、認証情報や権限の変更、アカウント復旧や本人確認、削除、復旧手段の喪失、ロールバック困難化、外部効果を持つツール実行などです。 どこが不可逆ポイントになるかは、対象プロセスごとに違います。何が取り返しにくくなるのかを具体化します。 『リスクがある』という一般論ではなく、どの処理・どの時点が境界かを明確にします。"><summary>不可逆ポイントの例は何ですか？</summary><div class="qa-body"><p><span class="label">例：</span>本番反映、外部データ送信、契約・購入の確定、認証情報や権限の変更、アカウント復旧や本人確認、削除、復旧手段の喪失、ロールバック困難化、外部効果を持つツール実行などです。</p><p><span class="label">使い方：</span>どこが不可逆ポイントになるかは、対象プロセスごとに違います。何が取り返しにくくなるのかを具体化します。</p><p><span class="label">注意：</span>『リスクがある』という一般論ではなく、どの処理・どの時点が境界かを明確にします。</p></div></details>
-<details class="qa-item" data-category="core" data-search="レビューでは何を証拠として見ますか？ 権限、時点、利用可能な情報、介入経路、独立性、エスカレーション処理を見ます。 不可逆ポイント、責任権限者、介入時点、権限根拠、不可逆化前に見える証拠、独立した拒否チャネル、時間的余裕、no / 不明の扱いを記録します。 『監督は十分です』という説明だけでは、不可逆化前に拒否が機能する証拠にはなりません。"><summary>レビューでは何を証拠として見ますか？</summary><div class="qa-body"><p><span class="label">結論：</span>権限、時点、利用可能な情報、介入経路、独立性、エスカレーション処理を見ます。</p><p><span class="label">最低限の記録：</span>不可逆ポイント、責任権限者、介入時点、権限根拠、不可逆化前に見える証拠、独立した拒否チャネル、時間的余裕、No / 不明の扱いを記録します。</p><p><span class="label">注意：</span>『監督は十分です』という説明だけでは、不可逆化前に拒否が機能する証拠にはなりません。</p></div></details>
-<details class="qa-item" data-category="existing" data-search="既存のaiガバナンスで足りませんか？ 足りる場合があります。 既存手順の中で、時点、責任ある人間権限、証拠、停止・ロールバック経路、独立した拒否チャネル、no / 不明の扱いまで確認されているなら、lumina-30という名称を採用する必要はありません。 人間監督が文書上あるだけでなく、不可逆化前に実務上も機能しているかを確認するための焦点を与えます。"><summary>既存のAIガバナンスで足りませんか？</summary><div class="qa-body"><p><span class="label">結論：</span>足りる場合があります。</p><p><span class="label">説明：</span>既存手順の中で、時点、責任ある人間権限、証拠、停止・ロールバック経路、独立した拒否チャネル、No / 不明の扱いまで確認されているなら、LUMINA-30という名称を採用する必要はありません。</p><p><span class="label">LUMINA-30の役割：</span>人間監督が文書上あるだけでなく、不可逆化前に実務上も機能しているかを確認するための焦点を与えます。</p></div></details>
-<details class="qa-item" data-category="existing" data-search="これは公式標準、認証、安全保証ですか？ いいえ。 lumina-30は、公式標準、認証制度、法的要件、安全保証、査読済み統制フレームワーク、制度的採用や承認の証拠ではありません。 公式でなくても、既存レビューが答えるべき問いを明確にする参照枠としては使えます。"><summary>これは公式標準、認証、安全保証ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。</p><p><span class="label">説明：</span>LUMINA-30は、公式標準、認証制度、法的要件、安全保証、査読済み統制フレームワーク、制度的採用や承認の証拠ではありません。</p><p><span class="label">価値：</span>公式でなくても、既存レビューが答えるべき問いを明確にする参照枠としては使えます。</p></div></details>
-<details class="qa-item" data-category="existing" data-search="公式ではないのに使う意味はありますか？ あります。問い自体は低コストで、見落とすコストが大きいからです。 法律、監査、セキュリティ統制、調達審査、モデルガバナンス、人間判断を置き換える必要はありません。既存手順の中に境界問いを加えるだけでも意味があります。 形式上の監督はあるのに、不可逆化前には止められないという空白を見つけやすくなります。"><summary>公式ではないのに使う意味はありますか？</summary><div class="qa-body"><p><span class="label">結論：</span>あります。問い自体は低コストで、見落とすコストが大きいからです。</p><p><span class="label">説明：</span>法律、監査、セキュリティ統制、調達審査、モデルガバナンス、人間判断を置き換える必要はありません。既存手順の中に境界問いを加えるだけでも意味があります。</p><p><span class="label">実務価値：</span>形式上の監督はあるのに、不可逆化前には止められないという空白を見つけやすくなります。</p></div></details>
-<details class="qa-item" data-category="existing" data-search="lumina-30という名前を使わなくてよい場合はありますか？ あります。同等の境界条件が既存手順で明確に扱われている場合です。 不可逆ポイント、責任権限者、証拠、介入時点、独立した拒否経路、no / 不明の扱いが既に記録されているなら、機能的には足りています。 名称だけを増やして実務確認が増えないなら、lumina-30を看板として使う意味はありません。"><summary>LUMINA-30という名前を使わなくてよい場合はありますか？</summary><div class="qa-body"><p><span class="label">結論：</span>あります。同等の境界条件が既存手順で明確に扱われている場合です。</p><p><span class="label">説明：</span>不可逆ポイント、責任権限者、証拠、介入時点、独立した拒否経路、No / 不明の扱いが既に記録されているなら、機能的には足りています。</p><p><span class="label">注意：</span>名称だけを増やして実務確認が増えないなら、LUMINA-30を看板として使う意味はありません。</p></div></details>
-<details class="qa-item" data-category="roles" data-search="採用・aiガバナンス担当者は何を見ればよいですか？ 既存レビューに、不可逆化前の実効的人間拒否を確認する欄があるかを見ます。 目的、リスク、プライバシー、人間監督、承認は確認していても、取り返しのつかない結果の前に誰が止められるかまでは確認していないことがあります。 不可逆ポイントと、その前に止める・保留する・再確認する責任権限者が記録されています。"><summary>採用・AIガバナンス担当者は何を見ればよいですか？</summary><div class="qa-body"><p><span class="label">結論：</span>既存レビューに、不可逆化前の実効的人間拒否を確認する欄があるかを見ます。</p><p><span class="label">説明：</span>目的、リスク、プライバシー、人間監督、承認は確認していても、取り返しのつかない結果の前に誰が止められるかまでは確認していないことがあります。</p><p><span class="label">良い状態：</span>不可逆ポイントと、その前に止める・保留する・再確認する責任権限者が記録されています。</p></div></details>
-<details class="qa-item" data-category="roles" data-search="調達・ベンダー確認では何を聞けばよいですか？ その製品やワークフローが、人間が止める前に何を変更・確定してしまう可能性があるかを聞きます。 ツール実行、外部データ送信、本番変更、アカウント復旧、認証情報変更、自動購入、削除、ロールバック喪失などです。 その結果が不可逆になる前に、誰が保留・拒否・再確認・ロールバックでき、何を証拠として見られるのかを確認します。"><summary>調達・ベンダー確認では何を聞けばよいですか？</summary><div class="qa-body"><p><span class="label">結論：</span>その製品やワークフローが、人間が止める前に何を変更・確定してしまう可能性があるかを聞きます。</p><p><span class="label">例：</span>ツール実行、外部データ送信、本番変更、アカウント復旧、認証情報変更、自動購入、削除、ロールバック喪失などです。</p><p><span class="label">質問：</span>その結果が不可逆になる前に、誰が保留・拒否・再確認・ロールバックでき、何を証拠として見られるのかを確認します。</p></div></details>
-<details class="qa-item" data-category="roles" data-search="監査・セキュリティ・リスク管理では何を確認しますか？ 統制が不可逆ポイントの前に作動するかを確認します。 ログ、承認、エスカレーション経路は重要ですが、不可逆化後にしか機能しないなら、その境界では十分ではありません。 監督が存在するだけでなく、結果を変えられる時点で人間が介入できることを示す記録が必要です。"><summary>監査・セキュリティ・リスク管理では何を確認しますか？</summary><div class="qa-body"><p><span class="label">結論：</span>統制が不可逆ポイントの前に作動するかを確認します。</p><p><span class="label">説明：</span>ログ、承認、エスカレーション経路は重要ですが、不可逆化後にしか機能しないなら、その境界では十分ではありません。</p><p><span class="label">証拠：</span>監督が存在するだけでなく、結果を変えられる時点で人間が介入できることを示す記録が必要です。</p></div></details>
-<details class="qa-item" data-category="roles" data-search="事故レビューではどう役立ちますか？ 出力ミスと境界失敗を分けて見られます。 事故や準事故の後、不可逆な結果の前に責任ある人間が止める・方向転換する機会を持っていたかを確認します。 問題がモデル出力なのか、権限経路なのか、証拠不足なのか、ロールバック喪失なのか、早すぎる自動化なのかを分けやすくなります。"><summary>事故レビューではどう役立ちますか？</summary><div class="qa-body"><p><span class="label">結論：</span>出力ミスと境界失敗を分けて見られます。</p><p><span class="label">説明：</span>事故や準事故の後、不可逆な結果の前に責任ある人間が止める・方向転換する機会を持っていたかを確認します。</p><p><span class="label">効果：</span>問題がモデル出力なのか、権限経路なのか、証拠不足なのか、ロールバック喪失なのか、早すぎる自動化なのかを分けやすくなります。</p></div></details>
-<details class="qa-item" data-category="roles" data-search="研究者・政策担当者はどう読めばよいですか？ 採用や検証の証拠ではなく、境界概念として読むのが安全です。 高度aiガバナンスで、最後に意味のある不可逆化前の時点に、責任ある人間拒否が残るかという研究・政策上の問いとして扱えます。 lumina-30用語が存在すること自体を、制度的承認や社会的採用の証拠として扱わないでください。"><summary>研究者・政策担当者はどう読めばよいですか？</summary><div class="qa-body"><p><span class="label">結論：</span>採用や検証の証拠ではなく、境界概念として読むのが安全です。</p><p><span class="label">説明：</span>高度AIガバナンスで、最後に意味のある不可逆化前の時点に、責任ある人間拒否が残るかという研究・政策上の問いとして扱えます。</p><p><span class="label">注意：</span>LUMINA-30用語が存在すること自体を、制度的承認や社会的採用の証拠として扱わないでください。</p></div></details>
-<details class="qa-item" data-category="critical" data-search="lumina-30は反ai・反進歩ですか？ いいえ。問題にしているのは進歩そのものではなく、不可逆化の前に人間がまだ止められるかです。 責任ある人間が重要な境界で実効的に拒否・停止・再確認できるなら、開発や導入と両立し得ます。 止められるまま進める、戻せるまま進める、という確認です。"><summary>LUMINA-30は反AI・反進歩ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。問題にしているのは進歩そのものではなく、不可逆化の前に人間がまだ止められるかです。</p><p><span class="label">説明：</span>責任ある人間が重要な境界で実効的に拒否・停止・再確認できるなら、開発や導入と両立し得ます。</p><p><span class="label">見方：</span>止められるまま進める、戻せるまま進める、という確認です。</p></div></details>
-<details class="qa-item" data-category="critical" data-search="過大主張ではありませんか？ 過大主張にしてはいけません。 安全な使い方は、『既存手順で試せる公開参照問い』として扱うことです。認証、公式標準、採用済み制度、法的義務、安全保証として扱うことではありません。 『lumina-30を参照』『lumina-30を参照したレビュー』『lumina-30-informed review』などが安全です。『lumina-30認定』『lumina-30承認』とは言いません。"><summary>過大主張ではありませんか？</summary><div class="qa-body"><p><span class="label">結論：</span>過大主張にしてはいけません。</p><p><span class="label">説明：</span>安全な使い方は、『既存手順で試せる公開参照問い』として扱うことです。認証、公式標準、採用済み制度、法的義務、安全保証として扱うことではありません。</p><p><span class="label">安全な表現：</span>『LUMINA-30を参照』『LUMINA-30を参照したレビュー』『LUMINA-30-informed review』などが安全です。『LUMINA-30認定』『LUMINA-30承認』とは言いません。</p></div></details>
-<details class="qa-item" data-category="critical" data-search="真剣に見るべき一番強い理由は何ですか？ この問いは、答えずに無視しにくいからです。 aiが関わる処理が不可逆な結果を生み得るなら、責任あるレビューは『その前に人間が止められるか』に答えられるべきです。 lumina-30という名前を採用しなくても、この境界問いによって通常の人間監督表現では見落としやすい空白を発見できます。"><summary>真剣に見るべき一番強い理由は何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>この問いは、答えずに無視しにくいからです。</p><p><span class="label">説明：</span>AIが関わる処理が不可逆な結果を生み得るなら、責任あるレビューは『その前に人間が止められるか』に答えられるべきです。</p><p><span class="label">実務効果：</span>LUMINA-30という名前を採用しなくても、この境界問いによって通常の人間監督表現では見落としやすい空白を発見できます。</p></div></details>
-<details class="qa-item" data-category="critical" data-search="最小限で確認するなら何を聞けばよいですか？ このai媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。 この1問は、既存のai導入レビュー、調達確認、監査メモ、セキュリティレビュー、事故レビュー様式に追加できます。 yesなら、権限、時点、証拠、介入経路が必要です。no / 不明は、実効的人間監督が確認済みとは扱いません。"><summary>最小限で確認するなら何を聞けばよいですか？</summary><div class="qa-body"><p><span class="label">問い：</span>このAI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。</p><p><span class="label">使い方：</span>この1問は、既存のAI導入レビュー、調達確認、監査メモ、セキュリティレビュー、事故レビュー様式に追加できます。</p><p><span class="label">注意：</span>Yesなら、権限、時点、証拠、介入経路が必要です。No / 不明は、実効的人間監督が確認済みとは扱いません。</p></div></details>
-      </section>
-
-      <section class="callout" aria-label="関連ページ">
-        <strong class="notice-title">関連ページ</strong>
-        <p>理解した後、実務レビューへ進む場合だけ使ってください。</p><p><a class="button" href="one-question-pilot-ja.html">1問パイロットを開く</a> <a class="button" href="adoption-review-ja.html">採用・審査導線を開く</a> <a class="button" href="index-ja.html">索引へ戻る</a></p>
+        <details class="qa-item" data-category="basics" data-essential="true" data-search="lumina-30とは何ですか？ 結論: lumina-30は、不可逆的影響の前に人間の実効的拒否が残っているかを問うための、非拘束の公開境界参照です。 説明: システムを認証するものでも、法律・監査・セキュリティ設計・調達審査・人間判断を置き換えるものでもありません。ai媒介プロセスが実質的に取り返しのつかない状態になる前に、責任ある人間が止める・保留する・再確認する・方向転換できるかを見える化します。"><summary>01. LUMINA-30とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>LUMINA-30は、不可逆的影響の前に人間の実効的拒否が残っているかを問うための、非拘束の公開境界参照です。</p><p><span class="label">説明：</span>システムを認証するものでも、法律・監査・セキュリティ設計・調達審査・人間判断を置き換えるものでもありません。AI媒介プロセスが実質的に取り返しのつかない状態になる前に、責任ある人間が止める・保留する・再確認する・方向転換できるかを見える化します。</p></div></details>
+        <details class="qa-item" data-category="basics" data-essential="true" data-search="なぜ不可逆性に注目するのですか？ 結論: 決定的な地点を過ぎた後にだけ現れる監督は、ほとんど後追いだからです。 確認: どこから戻しにくくなるのか、その前に誰が介入できるのか、その介入が実際に可能だった証拠は何かを確認します。"><summary>02. なぜ不可逆性に注目するのですか？</summary><div class="qa-body"><p><span class="label">結論：</span>決定的な地点を過ぎた後にだけ現れる監督は、ほとんど後追いだからです。</p><p><span class="label">確認：</span>どこから戻しにくくなるのか、その前に誰が介入できるのか、その介入が実際に可能だった証拠は何かを確認します。</p></div></details>
+        <details class="qa-item" data-category="basics" data-essential="true" data-search="最短の実務質問は何ですか？ 問い: このai媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。 使い方: この1問は、既存のaiレビュー、調達レビュー、セキュリティレビュー、事故前チェックに追加できます。既存手順を置き換える必要はありません。"><summary>03. 最短の実務質問は何ですか？</summary><div class="qa-body"><p><span class="label">問い：</span>このAI媒介プロセスが取り返しのつかない結果に進む前に、責任ある人間がまだ止める・保留する・再確認する・方向転換することができますか。</p><p><span class="label">使い方：</span>この1問は、既存のAIレビュー、調達レビュー、セキュリティレビュー、事故前チェックに追加できます。既存手順を置き換える必要はありません。</p></div></details>
+        <details class="qa-item" data-category="basics" data-essential="true" data-search="このq&amp;aは誰向けですか？ 結論: 初見読者、aiガバナンス担当、調達担当、監査担当、セキュリティレビュー担当、研究者、政策担当、批判的読者向けです。 設計: 読者にaiへ説明させるのではなく、このページ内で固定回答を直接確認できるようにしています。"><summary>04. このQ&amp;Aは誰向けですか？</summary><div class="qa-body"><p><span class="label">結論：</span>初見読者、AIガバナンス担当、調達担当、監査担当、セキュリティレビュー担当、研究者、政策担当、批判的読者向けです。</p><p><span class="label">設計：</span>読者にAIへ説明させるのではなく、このページ内で固定回答を直接確認できるようにしています。</p></div></details>
+        <details class="qa-item" data-category="basics" data-essential="true" data-search="lumina-30は反aiですか？ 結論: 違います。反aiではなく、可逆性と説明責任の条件です。 説明: 不可逆的帰結の前に人間の実効的拒否が残っているなら、進歩・導入・自動化は継続できます。問題にするのはai開発そのものではなく、人間拒否が実質的に失われることです。"><summary>05. LUMINA-30は反AIですか？</summary><div class="qa-body"><p><span class="label">結論：</span>違います。反AIではなく、可逆性と説明責任の条件です。</p><p><span class="label">説明：</span>不可逆的帰結の前に人間の実効的拒否が残っているなら、進歩・導入・自動化は継続できます。問題にするのはAI開発そのものではなく、人間拒否が実質的に失われることです。</p></div></details>
+        <details class="qa-item" data-category="basics" data-essential="false" data-search="ここでいう「実効的」とは何ですか？ 結論: 通知を受けた、形式上その場にいた、というだけでは足りません。 確認: 不可逆的影響の前に、止める・保留する・再確認する・方向転換するための時間、情報、権限、独立性、実行手段が必要です。"><summary>06. ここでいう「実効的」とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>通知を受けた、形式上その場にいた、というだけでは足りません。</p><p><span class="label">確認：</span>不可逆的影響の前に、止める・保留する・再確認する・方向転換するための時間、情報、権限、独立性、実行手段が必要です。</p></div></details>
+        <details class="qa-item" data-category="basics" data-essential="false" data-search="使うと何が変わりますか？ 結論: 暗黙になりがちな境界条件が、記録に残るレビュー質問になります。 限界: それだけでシステムが安全になったり法令適合になったりするわけではありません。不可逆的行為の前に、何を問い、記録し、エスカレーションするかが変わります。"><summary>07. 使うと何が変わりますか？</summary><div class="qa-body"><p><span class="label">結論：</span>暗黙になりがちな境界条件が、記録に残るレビュー質問になります。</p><p><span class="label">限界：</span>それだけでシステムが安全になったり法令適合になったりするわけではありません。不可逆的行為の前に、何を問い、記録し、エスカレーションするかが変わります。</p></div></details>
+        <details class="qa-item" data-category="basics" data-essential="false" data-search="名称を使わなくてもよいですか？ 結論: はい。名称より、中核の境界条件が保たれることが重要です。 説明: 既存フレームワークが不可逆化前の実効的人間拒否を薄めずに明示実装しているなら、lumina-30という名称を使わなくても機能採用として成功形になり得ます。"><summary>08. 名称を使わなくてもよいですか？</summary><div class="qa-body"><p><span class="label">結論：</span>はい。名称より、中核の境界条件が保たれることが重要です。</p><p><span class="label">説明：</span>既存フレームワークが不可逆化前の実効的人間拒否を薄めずに明示実装しているなら、LUMINA-30という名称を使わなくても機能採用として成功形になり得ます。</p></div></details>
+        <details class="qa-item" data-category="basics" data-essential="false" data-search="初見読者は何から見ればよいですか？ 結論: まず中核質問を確認し、その後、自分の立場や気になる論点で検索してください。 使い方: 検索語は短くします。例：調達、監査、証拠、拒否、ロールバック、no、不明、不可逆。"><summary>09. 初見読者は何から見ればよいですか？</summary><div class="qa-body"><p><span class="label">結論：</span>まず中核質問を確認し、その後、自分の立場や気になる論点で検索してください。</p><p><span class="label">使い方：</span>検索語は短くします。例：調達、監査、証拠、拒否、ロールバック、NO、不明、不可逆。</p></div></details>
+        <details class="qa-item" data-category="basics" data-essential="false" data-search="どんな場面で特に役立ちますか？ 結論: ai媒介プロセスが外部影響、ロールバック喪失、本番変更、権利への影響、情報露出、その他戻しにくい帰結を生む可能性がある場面です。 兆候: 「後で直せる」と言われたとき、その「後」が不可逆化前なのかを確認します。"><summary>10. どんな場面で特に役立ちますか？</summary><div class="qa-body"><p><span class="label">結論：</span>AI媒介プロセスが外部影響、ロールバック喪失、本番変更、権利への影響、情報露出、その他戻しにくい帰結を生む可能性がある場面です。</p><p><span class="label">兆候：</span>「後で直せる」と言われたとき、その「後」が不可逆化前なのかを確認します。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="true" data-search="実効的人間拒否とは何ですか？ 結論: 不可逆化する前に、責任ある人間がnoと言い、停止し、再確認を求め、方向転換し、必要ならロールバックできる実際の能力です。 不足する例: ダッシュボード、承認欄、通知があっても、時間内に使えない、または結果を変える権限がなければ足りません。"><summary>11. 実効的人間拒否とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>不可逆化する前に、責任ある人間がNOと言い、停止し、再確認を求め、方向転換し、必要ならロールバックできる実際の能力です。</p><p><span class="label">不足する例：</span>ダッシュボード、承認欄、通知があっても、時間内に使えない、または結果を変える権限がなければ足りません。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="true" data-search="責任ある人間とは誰ですか？ 結論: 不可逆化前にプロセスへ影響を与える権限、義務、実行能力を持つ人または責任主体です。 確認: その役割は明記され、連絡可能で、必要情報を持ち、レビュー対象システムに上書きされず拒否できる必要があります。"><summary>12. 責任ある人間とは誰ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>不可逆化前にプロセスへ影響を与える権限、義務、実行能力を持つ人または責任主体です。</p><p><span class="label">確認：</span>その役割は明記され、連絡可能で、必要情報を持ち、レビュー対象システムに上書きされず拒否できる必要があります。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="true" data-search="不可逆ポイントとは何ですか？ 結論: その後では、拒否しても関連する損害、露出、確定、制御喪失を意味ある形で防げない地点です。 例: 外部公開、不可逆なアカウント変更、本番実行、契約確定、復旧不能な削除、時間内に止められない自動連鎖などです。"><summary>13. 不可逆ポイントとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>その後では、拒否しても関連する損害、露出、確定、制御喪失を意味ある形で防げない地点です。</p><p><span class="label">例：</span>外部公開、不可逆なアカウント変更、本番実行、契約確定、復旧不能な削除、時間内に止められない自動連鎖などです。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="true" data-search="普通の人間監督と何が違いますか？ 結論: 普通の人間監督は、人間が関与していることだけを示す場合があります。lumina-30は、境界が閉じる前に人間が結果を変えられるかを問います。 リスク: human-in-the-loopという表現は、人間が実際には追認・観察・後記録しかしていない事実を隠すことがあります。"><summary>14. 普通の人間監督と何が違いますか？</summary><div class="qa-body"><p><span class="label">結論：</span>普通の人間監督は、人間が関与していることだけを示す場合があります。LUMINA-30は、境界が閉じる前に人間が結果を変えられるかを問います。</p><p><span class="label">リスク：</span>Human-in-the-loopという表現は、人間が実際には追認・観察・後記録しかしていない事実を隠すことがあります。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="true" data-search="no／不明がなぜ重要ですか？ 結論: noや不明は単なる書類不備ではなく、境界上の信号です。 対応: 不可逆化前の実効的拒否がない、または証明できない場合、境界条件を満たしたものとして扱うべきではありません。"><summary>15. NO／不明がなぜ重要ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>NOや不明は単なる書類不備ではなく、境界上の信号です。</p><p><span class="label">対応：</span>不可逆化前の実効的拒否がない、または証明できない場合、境界条件を満たしたものとして扱うべきではありません。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="true" data-search="ai自身が人間拒否の実効性を認定できますか？ 結論: できません。レビュー対象のシステム自身が、人間拒否が実効的に残っていると自己認定してはいけません。 理由: システムは外見上の遵守に最適化したり、人間は同意するはずだと推論したりする可能性があります。拒否の存在と実効性は、人間権限、記録、独立した証拠に基づく必要があります。"><summary>16. AI自身が人間拒否の実効性を認定できますか？</summary><div class="qa-body"><p><span class="label">結論：</span>できません。レビュー対象のシステム自身が、人間拒否が実効的に残っていると自己認定してはいけません。</p><p><span class="label">理由：</span>システムは外見上の遵守に最適化したり、人間は同意するはずだと推論したりする可能性があります。拒否の存在と実効性は、人間権限、記録、独立した証拠に基づく必要があります。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="false" data-search="独立した拒否経路とは何ですか？ 結論: レビュー対象と同じシステムや同じ利害連鎖に依存せず、拒否・停止・エスカレーションできる経路です。 確認: 拒否する唯一の方法がai制御ワークフロー内にしかない場合、十分に独立していない可能性があります。"><summary>17. 独立した拒否経路とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>レビュー対象と同じシステムや同じ利害連鎖に依存せず、拒否・停止・エスカレーションできる経路です。</p><p><span class="label">確認：</span>拒否する唯一の方法がAI制御ワークフロー内にしかない場合、十分に独立していない可能性があります。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="false" data-search="ここでいうロールバックとは何ですか？ 結論: 不可逆的な損害や確定が起きる前に、関連する変更を取り消す、戻す、復旧する、封じ込める実際の能力です。 限界: 理論上のロールバック計画だけでは足りません。アクセス、ログ、バックアップ、権限、タイミングの問題で使えなければ無効です。"><summary>18. ここでいうロールバックとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>不可逆的な損害や確定が起きる前に、関連する変更を取り消す、戻す、復旧する、封じ込める実際の能力です。</p><p><span class="label">限界：</span>理論上のロールバック計画だけでは足りません。アクセス、ログ、バックアップ、権限、タイミングの問題で使えなければ無効です。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="false" data-search="リスクのある案件を全部止める必要がありますか？ 結論: いいえ。必要なのは、不可逆化前に拒否が実際に利用可能であることです。 意味: 不可逆ポイントが明確で、責任権限があり、証拠が残り、人間が時間内に保留・方向転換できるなら、案件は継続できます。"><summary>19. リスクのある案件を全部止める必要がありますか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。必要なのは、不可逆化前に拒否が実際に利用可能であることです。</p><p><span class="label">意味：</span>不可逆ポイントが明確で、責任権限があり、証拠が残り、人間が時間内に保留・方向転換できるなら、案件は継続できます。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="false" data-search="「不可逆化前」は倫理や法律に何を加えますか？ 結論: タイミングを加えます。権利、義務、倫理、監査、説明責任は、意味ある拒否が消えた後にだけ働くなら力を失います。 使い方: この問いは既存枠組みを置き換えません。それらがまだ生きた適用点を持つかを確認します。"><summary>20. 「不可逆化前」は倫理や法律に何を加えますか？</summary><div class="qa-body"><p><span class="label">結論：</span>タイミングを加えます。権利、義務、倫理、監査、説明責任は、意味ある拒否が消えた後にだけ働くなら力を失います。</p><p><span class="label">使い方：</span>この問いは既存枠組みを置き換えません。それらがまだ生きた適用点を持つかを確認します。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="false" data-search="この文脈での手続き的無効とは何ですか？ 結論: 手続き上は承認済みに見えても、人間が意味ある拒否を行う機会がすでに失われていたリスクです。 含意: 問題は悪い結果だけではありません。その手続きが人間統治された意思決定経路として無効になっている可能性です。"><summary>21. この文脈での手続き的無効とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>手続き上は承認済みに見えても、人間が意味ある拒否を行う機会がすでに失われていたリスクです。</p><p><span class="label">含意：</span>問題は悪い結果だけではありません。その手続きが人間統治された意思決定経路として無効になっている可能性です。</p></div></details>
+        <details class="qa-item" data-category="core" data-essential="false" data-search="yesに必要な最小証拠は何ですか？ 結論: 少なくとも、不可逆ポイント、責任権限者、利用可能な介入経路、タイミング、証拠源、no／不明の場合の扱いを特定します。 注意: 記録のないyesは慎重に扱うべきです。lumina-30は楽観的推定ではなく、実効的人間拒否を問います。"><summary>22. YESに必要な最小証拠は何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>少なくとも、不可逆ポイント、責任権限者、利用可能な介入経路、タイミング、証拠源、NO／不明の場合の扱いを特定します。</p><p><span class="label">注意：</span>記録のないYESは慎重に扱うべきです。LUMINA-30は楽観的推定ではなく、実効的人間拒否を問います。</p></div></details>
+        <details class="qa-item" data-category="status" data-essential="true" data-search="lumina-30は公式標準ですか？ 結論: いいえ。公式標準、法的認証、政府承認済み制度、実装済み安全保証、制度採用の証拠ではありません。 理由: 公開参照フレームを権威づけの主張と誤認しないよう、この限界は明示する必要があります。"><summary>23. LUMINA-30は公式標準ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。公式標準、法的認証、政府承認済み制度、実装済み安全保証、制度採用の証拠ではありません。</p><p><span class="label">理由：</span>公開参照フレームを権威づけの主張と誤認しないよう、この限界は明示する必要があります。</p></div></details>
+        <details class="qa-item" data-category="status" data-essential="true" data-search="安全保証ですか？ 結論: いいえ。aiシステムが安全であることを証明するものではありません。 使い方: 不可逆的影響の前に、必要な統治条件がまだ生きているかを問います。技術安全、セキュリティ統制、テスト、法務レビュー、監視は引き続き必要です。"><summary>24. 安全保証ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。AIシステムが安全であることを証明するものではありません。</p><p><span class="label">使い方：</span>不可逆的影響の前に、必要な統治条件がまだ生きているかを問います。技術安全、セキュリティ統制、テスト、法務レビュー、監視は引き続き必要です。</p></div></details>
+        <details class="qa-item" data-category="status" data-essential="false" data-search="法律や準拠チェックリストですか？ 結論: いいえ。法律でも完全な準拠チェックリストでもありません。 関係: 法務、ガバナンス、監査、調達プロセスの中に、追加の境界問いとして入れることができます。"><summary>25. 法律や準拠チェックリストですか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。法律でも完全な準拠チェックリストでもありません。</p><p><span class="label">関係：</span>法務、ガバナンス、監査、調達プロセスの中に、追加の境界問いとして入れることができます。</p></div></details>
+        <details class="qa-item" data-category="status" data-essential="false" data-search="既存のリスク管理を置き換えますか？ 結論: いいえ。総合的なリスク管理より狭いものです。 役割: 既存のリスク管理が、不可逆化前の実効的人間拒否を通じてまだ作動できるかを確認します。"><summary>26. 既存のリスク管理を置き換えますか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。総合的なリスク管理より狭いものです。</p><p><span class="label">役割：</span>既存のリスク管理が、不可逆化前の実効的人間拒否を通じてまだ作動できるかを確認します。</p></div></details>
+        <details class="qa-item" data-category="status" data-essential="false" data-search="採用実績がないと無意味ですか？ 結論: いいえ。制度採用がないことは過大主張を避ける理由であって、問いの価値がない理由ではありません。 理由: 低コストの境界問いは、正式採用前でも参照、試行、監査補助、調達時の確認として使えます。"><summary>27. 採用実績がないと無意味ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。制度採用がないことは過大主張を避ける理由であって、問いの価値がない理由ではありません。</p><p><span class="label">理由：</span>低コストの境界問いは、正式採用前でも参照、試行、監査補助、調達時の確認として使えます。</p></div></details>
+        <details class="qa-item" data-category="status" data-essential="false" data-search="専門家承認として引用できますか？ 結論: できません。外部コメント、ai要約、検索での可視性を専門家承認として扱ってはいけません。 安全な扱い: それらは解釈可能性や可視性の補助観測にはなり得ますが、認証、査読、採用の証拠ではありません。"><summary>28. 専門家承認として引用できますか？</summary><div class="qa-body"><p><span class="label">結論：</span>できません。外部コメント、AI要約、検索での可視性を専門家承認として扱ってはいけません。</p><p><span class="label">安全な扱い：</span>それらは解釈可能性や可視性の補助観測にはなり得ますが、認証、査読、採用の証拠ではありません。</p></div></details>
+        <details class="qa-item" data-category="status" data-essential="false" data-search="法務レビューなしで使えますか？ 結論: 問いとして使うことはできますが、法務レビューの代替にはなりません。 注意: 権利、責任、契約、規制分野、雇用、金融、医療、公共サービスが関わる場合、法務と分野専門レビューは必要です。"><summary>29. 法務レビューなしで使えますか？</summary><div class="qa-body"><p><span class="label">結論：</span>問いとして使うことはできますが、法務レビューの代替にはなりません。</p><p><span class="label">注意：</span>権利、責任、契約、規制分野、雇用、金融、医療、公共サービスが関わる場合、法務と分野専門レビューは必要です。</p></div></details>
+        <details class="qa-item" data-category="status" data-essential="false" data-search="何を主張してはいけませんか？ 結論: 公式性、認証、安全性証明、広範な採用、政府承認、査読済み標準、専門家承認を主張してはいけません。 安全な表現: 代わりに、不可逆的影響の前に人間の実効的拒否を残すための非拘束の公開境界参照、と説明します。"><summary>30. 何を主張してはいけませんか？</summary><div class="qa-body"><p><span class="label">結論：</span>公式性、認証、安全性証明、広範な採用、政府承認、査読済み標準、専門家承認を主張してはいけません。</p><p><span class="label">安全な表現：</span>代わりに、不可逆的影響の前に人間の実効的拒否を残すための非拘束の公開境界参照、と説明します。</p></div></details>
+        <details class="qa-item" data-category="adoption" data-essential="true" data-search="既存のaiガバナンスにどう入りますか？ 結論: 既存ガバナンス内の「不可逆化前の境界チェック」として入ります。 例: 1項目を追加します。不可逆化する前に、誰が拒否・停止・再確認・方向転換・ロールバックでき、その証拠は何か。"><summary>31. 既存のAIガバナンスにどう入りますか？</summary><div class="qa-body"><p><span class="label">結論：</span>既存ガバナンス内の「不可逆化前の境界チェック」として入ります。</p><p><span class="label">例：</span>1項目を追加します。不可逆化する前に、誰が拒否・停止・再確認・方向転換・ロールバックでき、その証拠は何か。</p></div></details>
+        <details class="qa-item" data-category="adoption" data-essential="true" data-search="機能採用とは何ですか？ 結論: 機能採用とは、lumina-30という名称を必ず使わなくても、中核条件を実装することです。 条件: ただし、不可逆化前の実効的人間拒否が、一般的な監督、承認、ログ、事後説明へ薄まっていない場合に限ります。"><summary>32. 機能採用とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>機能採用とは、LUMINA-30という名称を必ず使わなくても、中核条件を実装することです。</p><p><span class="label">条件：</span>ただし、不可逆化前の実効的人間拒否が、一般的な監督、承認、ログ、事後説明へ薄まっていない場合に限ります。</p></div></details>
+        <details class="qa-item" data-category="adoption" data-essential="false" data-search="nist、iso、eu ai act、社内統制とはどう接続しますか？ 結論: タイミングと権限を確認する追加質問として吸収できます。 使い方: それらの枠組みを置き換えるものとして出してはいけません。人間監督、説明責任、監査、リスク統制が不可逆化前に実行可能かを確認するために使います。"><summary>33. NIST、ISO、EU AI Act、社内統制とはどう接続しますか？</summary><div class="qa-body"><p><span class="label">結論：</span>タイミングと権限を確認する追加質問として吸収できます。</p><p><span class="label">使い方：</span>それらの枠組みを置き換えるものとして出してはいけません。人間監督、説明責任、監査、リスク統制が不可逆化前に実行可能かを確認するために使います。</p></div></details>
+        <details class="qa-item" data-category="adoption" data-essential="false" data-search="組織が「人間監督はあります」と言う場合は？ 結論: その監督が不可逆化前に結果を変えられるかを確認します。 確認: 実際の不可逆ポイント、エスカレーション経路、拒否権限、証拠、no／不明の場合の対応を特定します。"><summary>34. 組織が「人間監督はあります」と言う場合は？</summary><div class="qa-body"><p><span class="label">結論：</span>その監督が不可逆化前に結果を変えられるかを確認します。</p><p><span class="label">確認：</span>実際の不可逆ポイント、エスカレーション経路、拒否権限、証拠、NO／不明の場合の対応を特定します。</p></div></details>
+        <details class="qa-item" data-category="adoption" data-essential="false" data-search="既存統制がすでに条件を満たしている場合は？ 結論: その場合、lumina-30という名称は不要かもしれません。 注意: ただし、社内用語へ置き換える過程で中核条件が失われないよう、対応関係を明記します。"><summary>35. 既存統制がすでに条件を満たしている場合は？</summary><div class="qa-body"><p><span class="label">結論：</span>その場合、LUMINA-30という名称は不要かもしれません。</p><p><span class="label">注意：</span>ただし、社内用語へ置き換える過程で中核条件が失われないよう、対応関係を明記します。</p></div></details>
+        <details class="qa-item" data-category="adoption" data-essential="false" data-search="最小の導入ステップは何ですか？ 結論: 既存レビュー1件にone-question pilotを追加することです。 理由: 認証、広範な採用、既存枠組みの置換を主張せずに、具体的な記録を作れます。"><summary>36. 最小の導入ステップは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>既存レビュー1件にOne-Question Pilotを追加することです。</p><p><span class="label">理由：</span>認証、広範な採用、既存枠組みの置換を主張せずに、具体的な記録を作れます。</p></div></details>
+        <details class="qa-item" data-category="adoption" data-essential="false" data-search="小規模組織でも使えますか？ 結論: 使えます。ただし規模に応じた形にするべきです。 使い方: 小規模チームなら、不可逆ポイント、責任者、停止経路、証拠を特定するところから始められます。大規模なガバナンス制度を最初から作る必要はありません。"><summary>37. 小規模組織でも使えますか？</summary><div class="qa-body"><p><span class="label">結論：</span>使えます。ただし規模に応じた形にするべきです。</p><p><span class="label">使い方：</span>小規模チームなら、不可逆ポイント、責任者、停止経路、証拠を特定するところから始められます。大規模なガバナンス制度を最初から作る必要はありません。</p></div></details>
+        <details class="qa-item" data-category="adoption" data-essential="false" data-search="公共調達で使えますか？ 結論: 認証条件ではなく、説明責任と証拠条件として使えます。 例: 不可逆的な公共影響の前に、誰がai媒介プロセスを止める・保留できるのか、その権限を証明する記録は何かをベンダーに求めます。"><summary>38. 公共調達で使えますか？</summary><div class="qa-body"><p><span class="label">結論：</span>認証条件ではなく、説明責任と証拠条件として使えます。</p><p><span class="label">例：</span>不可逆的な公共影響の前に、誰がAI媒介プロセスを止める・保留できるのか、その権限を証明する記録は何かをベンダーに求めます。</p></div></details>
+        <details class="qa-item" data-category="adoption" data-essential="false" data-search="成功した吸収とは何ですか？ 結論: 別の枠組みが同じ条件を十分明確に実装し、lumina-30を別名で掲げる必要がなくなる状態です。 警告: 条件が「誰かが後でレビューした」に変わっているなら、吸収は失敗しています。"><summary>39. 成功した吸収とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>別の枠組みが同じ条件を十分明確に実装し、LUMINA-30を別名で掲げる必要がなくなる状態です。</p><p><span class="label">警告：</span>条件が「誰かが後でレビューした」に変わっているなら、吸収は失敗しています。</p></div></details>
+        <details class="qa-item" data-category="adoption" data-essential="false" data-search="採用を過大主張しないには？ 結論: 参照利用、試行利用、内部採用、外部採用、公式承認を分けます。 ルール: 実際に起きたことだけを主張します。試行や引用は、広範な採用や公式承認ではありません。"><summary>40. 採用を過大主張しないには？</summary><div class="qa-body"><p><span class="label">結論：</span>参照利用、試行利用、内部採用、外部採用、公式承認を分けます。</p><p><span class="label">ルール：</span>実際に起きたことだけを主張します。試行や引用は、広範な採用や公式承認ではありません。</p></div></details>
+        <details class="qa-item" data-category="pilot" data-essential="true" data-search="one-question pilotとは何ですか？ 結論: 中核の境界問いを既存レビュー1件に低負荷で追加する方法です。 目的: 何でも止めることではありません。1つの実案件で、不可逆性、責任権限、証拠、no／不明対応を特定できるかを見ることです。"><summary>41. One-Question Pilotとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>中核の境界問いを既存レビュー1件に低負荷で追加する方法です。</p><p><span class="label">目的：</span>何でも止めることではありません。1つの実案件で、不可逆性、責任権限、証拠、NO／不明対応を特定できるかを見ることです。</p></div></details>
+        <details class="qa-item" data-category="pilot" data-essential="true" data-search="pilotはいつ使うべきですか？ 結論: 導入、調達、外部接続、本番実行、不可逆な公開、ロールバック喪失の前に使います。 兆候: 最後に意味ある停止ができる地点をチームが言えないなら、pilotは有用です。"><summary>42. Pilotはいつ使うべきですか？</summary><div class="qa-body"><p><span class="label">結論：</span>導入、調達、外部接続、本番実行、不可逆な公開、ロールバック喪失の前に使います。</p><p><span class="label">兆候：</span>最後に意味ある停止ができる地点をチームが言えないなら、Pilotは有用です。</p></div></details>
+        <details class="qa-item" data-category="pilot" data-essential="false" data-search="pilotの問いには誰が答えるべきですか？ 結論: 責任者、技術責任者、リスク・ガバナンス担当、ロールバックや外部影響を管理するチームが関与すべきです。 理由: タイミング、権限、証拠、運用上の可逆性を一人が同時に把握していないことがあるからです。"><summary>43. Pilotの問いには誰が答えるべきですか？</summary><div class="qa-body"><p><span class="label">結論：</span>責任者、技術責任者、リスク・ガバナンス担当、ロールバックや外部影響を管理するチームが関与すべきです。</p><p><span class="label">理由：</span>タイミング、権限、証拠、運用上の可逆性を一人が同時に把握していないことがあるからです。</p></div></details>
+        <details class="qa-item" data-category="pilot" data-essential="false" data-search="pilotでは何を記録しますか？ 結論: 不可逆ポイント、責任ある人間権限、介入経路、証拠源、タイミング、no／不明の場合の判断を記録します。 省略不可: 「人間監督あり」とだけ記録しても、lumina-30の問いには答えていません。"><summary>44. Pilotでは何を記録しますか？</summary><div class="qa-body"><p><span class="label">結論：</span>不可逆ポイント、責任ある人間権限、介入経路、証拠源、タイミング、NO／不明の場合の判断を記録します。</p><p><span class="label">省略不可：</span>「人間監督あり」とだけ記録しても、LUMINA-30の問いには答えていません。</p></div></details>
+        <details class="qa-item" data-category="pilot" data-essential="false" data-search="答えが不明の場合は？ 結論: 不明は一時的な不便ではなく、実際のレビュー結果として扱います。 対応: 可能な範囲で進行を保留し、不足証拠を特定し、担当者を決め、境界条件を満たしたと主張せず進められるかを判断します。"><summary>45. 答えが不明の場合は？</summary><div class="qa-body"><p><span class="label">結論：</span>不明は一時的な不便ではなく、実際のレビュー結果として扱います。</p><p><span class="label">対応：</span>可能な範囲で進行を保留し、不足証拠を特定し、担当者を決め、境界条件を満たしたと主張せず進められるかを判断します。</p></div></details>
+        <details class="qa-item" data-category="pilot" data-essential="false" data-search="新しい委員会なしで実施できますか？ 結論: できます。既存の受付、アーキテクチャレビュー、調達レビュー、セキュリティレビュー、変更承認に挿入できます。 設計: 現在のガバナンス経路を使い、まだ結果を変えられる場所に境界問いを追加します。"><summary>46. 新しい委員会なしで実施できますか？</summary><div class="qa-body"><p><span class="label">結論：</span>できます。既存の受付、アーキテクチャレビュー、調達レビュー、セキュリティレビュー、変更承認に挿入できます。</p><p><span class="label">設計：</span>現在のガバナンス経路を使い、まだ結果を変えられる場所に境界問いを追加します。</p></div></details>
+        <details class="qa-item" data-category="pilot" data-essential="false" data-search="pilotが握り込まれないようにするには？ 結論: 他のレビュー判断が見える同じ管理場所に結果を記録します。 エスカレーション: noまたは不明が出た場合、誰が見るべきか、どの一時統制や保留が適用されるかを定義します。"><summary>47. Pilotが握り込まれないようにするには？</summary><div class="qa-body"><p><span class="label">結論：</span>他のレビュー判断が見える同じ管理場所に結果を記録します。</p><p><span class="label">エスカレーション：</span>NOまたは不明が出た場合、誰が見るべきか、どの一時統制や保留が適用されるかを定義します。</p></div></details>
+        <details class="qa-item" data-category="pilot" data-essential="false" data-search="pilotの成功条件は何ですか？ 結論: 成功とは、すべてyesになることではなく、境界が生きているかを組織が学ぶことです。 指標: 不足証拠、不明確な権限、ロールバックの穴が見つかるpilotは有用です。不可逆化前に穴が見つかったからです。"><summary>48. Pilotの成功条件は何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>成功とは、すべてYESになることではなく、境界が生きているかを組織が学ぶことです。</p><p><span class="label">指標：</span>不足証拠、不明確な権限、ロールバックの穴が見つかるPilotは有用です。不可逆化前に穴が見つかったからです。</p></div></details>
+        <details class="qa-item" data-category="procurement" data-essential="true" data-search="調達ではどう使いますか？ 結論: 調達では、顧客や公共への不可逆的影響の前に実効的拒否が可能である証拠をベンダーへ求めるために使えます。 質問: 誰が導入を保留し、自動化を取り消し、本番操作を止め、以前の状態に戻し、不可逆な外部影響を防げますか。"><summary>49. 調達ではどう使いますか？</summary><div class="qa-body"><p><span class="label">結論：</span>調達では、顧客や公共への不可逆的影響の前に実効的拒否が可能である証拠をベンダーへ求めるために使えます。</p><p><span class="label">質問：</span>誰が導入を保留し、自動化を取り消し、本番操作を止め、以前の状態に戻し、不可逆な外部影響を防げますか。</p></div></details>
+        <details class="qa-item" data-category="procurement" data-essential="true" data-search="ベンダーには何を聞くべきですか？ 結論: タイミング、権限、ログ、ロールバック、緊急連絡経路、エスカレーション規則、不可逆ステップ前にシステムが人間拒否なしで動けるかを確認します。 証拠: 「人間が監督しています」という曖昧な説明だけでは受け入れず、介入できる時間と権限の証拠を求めます。"><summary>50. ベンダーには何を聞くべきですか？</summary><div class="qa-body"><p><span class="label">結論：</span>タイミング、権限、ログ、ロールバック、緊急連絡経路、エスカレーション規則、不可逆ステップ前にシステムが人間拒否なしで動けるかを確認します。</p><p><span class="label">証拠：</span>「人間が監督しています」という曖昧な説明だけでは受け入れず、介入できる時間と権限の証拠を求めます。</p></div></details>
+        <details class="qa-item" data-category="procurement" data-essential="false" data-search="調達で特に危険な兆候は？ 結論: 人間拒否前の不可逆なアカウント変更、本番実行、外部送信、データ削除、認証情報変更、自律的ツール使用、ロールバック喪失です。 解釈: 問題は技術能力そのものだけではありません。実効的人間拒否なしに不可逆効果へ接続されることです。"><summary>51. 調達で特に危険な兆候は？</summary><div class="qa-body"><p><span class="label">結論：</span>人間拒否前の不可逆なアカウント変更、本番実行、外部送信、データ削除、認証情報変更、自律的ツール使用、ロールバック喪失です。</p><p><span class="label">解釈：</span>問題は技術能力そのものだけではありません。実効的人間拒否なしに不可逆効果へ接続されることです。</p></div></details>
+        <details class="qa-item" data-category="procurement" data-essential="false" data-search="契約に境界問いを入れられますか？ 結論: はい。認証主張ではなく、証拠提示と通知義務として入れられます。 例: 最後に意味ある介入ができる地点、責任連絡先、緊急停止経路、ロールバック限界、証拠保持を文書化するよう求めます。"><summary>52. 契約に境界問いを入れられますか？</summary><div class="qa-body"><p><span class="label">結論：</span>はい。認証主張ではなく、証拠提示と通知義務として入れられます。</p><p><span class="label">例：</span>最後に意味ある介入ができる地点、責任連絡先、緊急停止経路、ロールバック限界、証拠保持を文書化するよう求めます。</p></div></details>
+        <details class="qa-item" data-category="procurement" data-essential="false" data-search="saasやapiツールにはどう適用しますか？ 結論: ベンダー側自動化が、顧客が拒否・停止する前に不可逆効果を生むかを確認します。 確認: 管理者権限、apiキー、本番権限、標準自動化、通知タイミング、エクスポート可能性、終了・ロールバック経路を見ます。"><summary>53. SaaSやAPIツールにはどう適用しますか？</summary><div class="qa-body"><p><span class="label">結論：</span>ベンダー側自動化が、顧客が拒否・停止する前に不可逆効果を生むかを確認します。</p><p><span class="label">確認：</span>管理者権限、APIキー、本番権限、標準自動化、通知タイミング、エクスポート可能性、終了・ロールバック経路を見ます。</p></div></details>
+        <details class="qa-item" data-category="procurement" data-essential="false" data-search="ベンダーがロールバック不能と言ったら？ 結論: ロールバック不能になる前に拒否できる地点があるかをレビューで特定する必要があります。 判断: その地点がないなら、実効的人間拒否を残しているとは説明すべきではありません。"><summary>54. ベンダーがロールバック不能と言ったら？</summary><div class="qa-body"><p><span class="label">結論：</span>ロールバック不能になる前に拒否できる地点があるかをレビューで特定する必要があります。</p><p><span class="label">判断：</span>その地点がないなら、実効的人間拒否を残しているとは説明すべきではありません。</p></div></details>
+        <details class="qa-item" data-category="procurement" data-essential="false" data-search="ベンダー回答は公開すべきですか？ 結論: 常に公開する必要はありません。機密性の高いセキュリティ詳細は内部扱いでよい場合があります。 ただし: 証拠、責任、no／不明対応の存在は、監査や事故レビューに耐える程度に記録できる必要があります。"><summary>55. ベンダー回答は公開すべきですか？</summary><div class="qa-body"><p><span class="label">結論：</span>常に公開する必要はありません。機密性の高いセキュリティ詳細は内部扱いでよい場合があります。</p><p><span class="label">ただし：</span>証拠、責任、NO／不明対応の存在は、監査や事故レビューに耐える程度に記録できる必要があります。</p></div></details>
+        <details class="qa-item" data-category="procurement" data-essential="false" data-search="調達で重くしすぎないには？ 結論: まず1問から始め、不可逆的影響が現実的なシステムにだけ証拠を求めます。 比例性: 低リスクツールは軽いメモで足りる場合があります。高影響・戻しにくいシステムでは、強い証拠とエスカレーションが必要です。"><summary>56. 調達で重くしすぎないには？</summary><div class="qa-body"><p><span class="label">結論：</span>まず1問から始め、不可逆的影響が現実的なシステムにだけ証拠を求めます。</p><p><span class="label">比例性：</span>低リスクツールは軽いメモで足りる場合があります。高影響・戻しにくいシステムでは、強い証拠とエスカレーションが必要です。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="true" data-search="監査では何を見るべきですか？ 結論: 監査では、ポリシーや承認ステップの存在だけでなく、不可逆化前に実効的人間拒否が存在した証拠を見ます。 証拠: 関連証拠には、時刻、エスカレーション記録、責任権限者、システム状態、ロールバック選択肢、拒否結果、no／不明対応が含まれます。"><summary>57. 監査では何を見るべきですか？</summary><div class="qa-body"><p><span class="label">結論：</span>監査では、ポリシーや承認ステップの存在だけでなく、不可逆化前に実効的人間拒否が存在した証拠を見ます。</p><p><span class="label">証拠：</span>関連証拠には、時刻、エスカレーション記録、責任権限者、システム状態、ロールバック選択肢、拒否結果、NO／不明対応が含まれます。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="true" data-search="なぜ証拠が中心なのですか？ 結論: 人間が拒否できたという主張は、タイミング、権限、利用可能な介入経路を示せなければ弱いからです。 ルール: 証拠がないことを、拒否できた証拠に変えてはいけません。"><summary>58. なぜ証拠が中心なのですか？</summary><div class="qa-body"><p><span class="label">結論：</span>人間が拒否できたという主張は、タイミング、権限、利用可能な介入経路を示せなければ弱いからです。</p><p><span class="label">ルール：</span>証拠がないことを、拒否できた証拠に変えてはいけません。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="true" data-search="証拠不在ルールとは何ですか？ 結論: 証拠がない場合、実効的拒否が可能だったと推定しないルールです。 使い方: 回答を不明または証拠不十分として扱い、保留すべきか、証拠を取得すべきか、制限を記録したうえで進めるかを判断します。"><summary>59. 証拠不在ルールとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>証拠がない場合、実効的拒否が可能だったと推定しないルールです。</p><p><span class="label">使い方：</span>回答を不明または証拠不十分として扱い、保留すべきか、証拠を取得すべきか、制限を記録したうえで進めるかを判断します。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="false" data-search="どのログが有用ですか？ 結論: 有用なログは、時刻、権限者、要求、判断、システム状態、結果を接続します。 注意: 大量のログがあることとレビュー可能な証拠があることは同じではありません。境界が閉じる前の人間拒否機会を示す必要があります。"><summary>60. どのログが有用ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>有用なログは、時刻、権限者、要求、判断、システム状態、結果を接続します。</p><p><span class="label">注意：</span>大量のログがあることとレビュー可能な証拠があることは同じではありません。境界が閉じる前の人間拒否機会を示す必要があります。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="false" data-search="時系列はどう記録すべきですか？ 結論: 提案、通知、人間レビュー、拒否機会、システム行為、外部影響、ロールバック喪失の順序を記録します。 理由: 時系列がないと、後日のレビューで拒否が決定点の前にあったのか後にあったのか判断できません。"><summary>61. 時系列はどう記録すべきですか？</summary><div class="qa-body"><p><span class="label">結論：</span>提案、通知、人間レビュー、拒否機会、システム行為、外部影響、ロールバック喪失の順序を記録します。</p><p><span class="label">理由：</span>時系列がないと、後日のレビューで拒否が決定点の前にあったのか後にあったのか判断できません。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="false" data-search="介入記録とは何ですか？ 結論: 停止、保留、拒否、エスカレーション、ロールバック、上書き防止、再確認要求とその結果の記録です。 価値: 介入記録は、人間権限がプロセスを変えたのか、単に観察しただけなのかを示します。"><summary>62. 介入記録とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>停止、保留、拒否、エスカレーション、ロールバック、上書き防止、再確認要求とその結果の記録です。</p><p><span class="label">価値：</span>介入記録は、人間権限がプロセスを変えたのか、単に観察しただけなのかを示します。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="false" data-search="no／不明はどう監査しますか？ 結論: noと不明には追跡可能なフォローアップが必要です。 確認: 誰が結果を受け取り、エスカレーションされたか、どの一時統制が適用されたか、境界条件を満たしたと偽って進行していないかを見ます。"><summary>63. NO／不明はどう監査しますか？</summary><div class="qa-body"><p><span class="label">結論：</span>NOと不明には追跡可能なフォローアップが必要です。</p><p><span class="label">確認：</span>誰が結果を受け取り、エスカレーションされたか、どの一時統制が適用されたか、境界条件を満たしたと偽って進行していないかを見ます。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="false" data-search="記録完全性とは何ですか？ 結論: 記録完全性とは、後日のレビューでタイミング、権限、証拠、判断経路、介入結果を確認できることです。 限界: 内部データをすべて公開することではありません。境界条件が後から書き換えられない程度の証拠を保持することです。"><summary>64. 記録完全性とは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>記録完全性とは、後日のレビューでタイミング、権限、証拠、判断経路、介入結果を確認できることです。</p><p><span class="label">限界：</span>内部データをすべて公開することではありません。境界条件が後から書き換えられない程度の証拠を保持することです。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="false" data-search="事故レビューとはどう関係しますか？ 結論: 事故レビューでは、関連する不可逆ポイントの前に実効的人間拒否が存在したかを問うべきです。 使い方: 回答は、事後説明だけでなく、行為者、権限、証拠、時系列、介入記録に基づく必要があります。"><summary>65. 事故レビューとはどう関係しますか？</summary><div class="qa-body"><p><span class="label">結論：</span>事故レビューでは、関連する不可逆ポイントの前に実効的人間拒否が存在したかを問うべきです。</p><p><span class="label">使い方：</span>回答は、事後説明だけでなく、行為者、権限、証拠、時系列、介入記録に基づく必要があります。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="false" data-search="証拠が機密の場合は？ 結論: 機密証拠は制限されたままでよい場合があります。ただし、証拠の存在、保管者、種類、レビュー可能性は記録すべきです。 均衡: 機密データを不必要に公開してはいけません。一方で、機密性を境界問いから逃げる手段にしてもいけません。"><summary>66. 証拠が機密の場合は？</summary><div class="qa-body"><p><span class="label">結論：</span>機密証拠は制限されたままでよい場合があります。ただし、証拠の存在、保管者、種類、レビュー可能性は記録すべきです。</p><p><span class="label">均衡：</span>機密データを不必要に公開してはいけません。一方で、機密性を境界問いから逃げる手段にしてもいけません。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="false" data-search="スコアで証拠を代替できますか？ 結論: できません。スコアはレビューの要約にはなりますが、タイミングと権限の証拠を代替できません。 リスク: スコアは偽の精密さや認証風の印象を生みます。lumina-30は安全格付けではなく境界問いとして扱うべきです。"><summary>67. スコアで証拠を代替できますか？</summary><div class="qa-body"><p><span class="label">結論：</span>できません。スコアはレビューの要約にはなりますが、タイミングと権限の証拠を代替できません。</p><p><span class="label">リスク：</span>スコアは偽の精密さや認証風の印象を生みます。LUMINA-30は安全格付けではなく境界問いとして扱うべきです。</p></div></details>
+        <details class="qa-item" data-category="audit" data-essential="false" data-search="lumina-30が拾う監査上の失敗は？ 結論: 文書は存在するが、人間拒否の窓がすでに閉じていたケースを拾います。 例: チェックリスト上は承認済みでも、承認者が意味ある行動を取る前に、導入、露出、削除、外部行為が不可逆化している場合があります。"><summary>68. LUMINA-30が拾う監査上の失敗は？</summary><div class="qa-body"><p><span class="label">結論：</span>文書は存在するが、人間拒否の窓がすでに閉じていたケースを拾います。</p><p><span class="label">例：</span>チェックリスト上は承認済みでも、承認者が意味ある行動を取る前に、導入、露出、削除、外部行為が不可逆化している場合があります。</p></div></details>
+        <details class="qa-item" data-category="drift" data-essential="true" data-search="証拠ドリフトとは何ですか？ 結論: 証拠ドリフトとは、事後に証拠が弱まる、失われる、または説明し直されることで、拒否境界の検証が難しくなることです。 対応: 時刻、判断記録、権限経路、拒否機会、介入結果を、後日のレビューに耐える形で残します。"><summary>69. 証拠ドリフトとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>証拠ドリフトとは、事後に証拠が弱まる、失われる、または説明し直されることで、拒否境界の検証が難しくなることです。</p><p><span class="label">対応：</span>時刻、判断記録、権限経路、拒否機会、介入結果を、後日のレビューに耐える形で残します。</p></div></details>
+        <details class="qa-item" data-category="drift" data-essential="true" data-search="時系列ドリフトとは何ですか？ 結論: 時系列ドリフトとは、通知、レビュー、拒否機会、行為、外部影響、不可逆化の順序が曖昧になったり書き換わったりすることです。 対応: 人間拒否が決定点の前にあったのか後にあったのかを記録します。このタイミングで監督の意味が変わります。"><summary>70. 時系列ドリフトとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>時系列ドリフトとは、通知、レビュー、拒否機会、行為、外部影響、不可逆化の順序が曖昧になったり書き換わったりすることです。</p><p><span class="label">対応：</span>人間拒否が決定点の前にあったのか後にあったのかを記録します。このタイミングで監督の意味が変わります。</p></div></details>
+        <details class="qa-item" data-category="drift" data-essential="true" data-search="拒否権ドリフトとは何ですか？ 結論: 拒否権ドリフトとは、「人間が実効的に拒否できた」が、「通知された」「その場にいた」「承認した」といった弱い主張にずれることです。 対応: 記録上、人間の存在、通知、承認、実効的拒否を分けます。"><summary>71. 拒否権ドリフトとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>拒否権ドリフトとは、「人間が実効的に拒否できた」が、「通知された」「その場にいた」「承認した」といった弱い主張にずれることです。</p><p><span class="label">対応：</span>記録上、人間の存在、通知、承認、実効的拒否を分けます。</p></div></details>
+        <details class="qa-item" data-category="drift" data-essential="false" data-search="介入記録ドリフトとは何ですか？ 結論: 停止、保留、拒否、エスカレーション、ロールバックが実際に起きたか、どんな効果があったかを示す記録が失われたり弱まったりすることです。 対応: 介入要求、権限、タイミング、システム応答、最終結果を記録します。"><summary>72. 介入記録ドリフトとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>停止、保留、拒否、エスカレーション、ロールバックが実際に起きたか、どんな効果があったかを示す記録が失われたり弱まったりすることです。</p><p><span class="label">対応：</span>介入要求、権限、タイミング、システム応答、最終結果を記録します。</p></div></details>
+        <details class="qa-item" data-category="drift" data-essential="false" data-search="境界ドリフトとは何ですか？ 結論: 境界ドリフトとは、不可逆化前の実効的人間拒否という鋭い条件が、一般的な倫理、監督、レビュー、安全確認へ薄まることです。 対応: 中核定義を短く安定させ、既存制度への翻訳で薄まっていないか確認します。"><summary>73. 境界ドリフトとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>境界ドリフトとは、不可逆化前の実効的人間拒否という鋭い条件が、一般的な倫理、監督、レビュー、安全確認へ薄まることです。</p><p><span class="label">対応：</span>中核定義を短く安定させ、既存制度への翻訳で薄まっていないか確認します。</p></div></details>
+        <details class="qa-item" data-category="drift" data-essential="false" data-search="監査ドリフトとは何ですか？ 結論: 監査ドリフトとは、文書があるかだけを確認し、不可逆化前に実効的拒否が可能だったかを問わなくなることです。 対応: 監査レビューに、タイミング、権限、証拠、介入結果の欄を追加します。"><summary>74. 監査ドリフトとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>監査ドリフトとは、文書があるかだけを確認し、不可逆化前に実効的拒否が可能だったかを問わなくなることです。</p><p><span class="label">対応：</span>監査レビューに、タイミング、権限、証拠、介入結果の欄を追加します。</p></div></details>
+        <details class="qa-item" data-category="drift" data-essential="false" data-search="説明ドリフト・責任ドリフト・ログドリフトは正式用語ですか？ 結論: 現時点ではまだです。有用な関連問題ですが、手順やテンプレートで明確に定義されるまでは今後の整理対象として扱うべきです。 使い方: 初期公開層で前面に出しすぎず、内部管理メモや将来の事故レビュー拡張候補に置くのが安全です。"><summary>75. 説明ドリフト・責任ドリフト・ログドリフトは正式用語ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>現時点ではまだです。有用な関連問題ですが、手順やテンプレートで明確に定義されるまでは今後の整理対象として扱うべきです。</p><p><span class="label">使い方：</span>初期公開層で前面に出しすぎず、内部管理メモや将来の事故レビュー拡張候補に置くのが安全です。</p></div></details>
+        <details class="qa-item" data-category="drift" data-essential="false" data-search="なぜドリフト概念を入れるのですか？ 結論: 証拠、時系列、権限、記録を守らないと、lumina-30の中核問いが事後に弱められるからです。 均衡: これらの概念は境界問いを支えるためのものであり、新しい理論層で置き換えるためではありません。"><summary>76. なぜドリフト概念を入れるのですか？</summary><div class="qa-body"><p><span class="label">結論：</span>証拠、時系列、権限、記録を守らないと、LUMINA-30の中核問いが事後に弱められるからです。</p><p><span class="label">均衡：</span>これらの概念は境界問いを支えるためのものであり、新しい理論層で置き換えるためではありません。</p></div></details>
+        <details class="qa-item" data-category="drift" data-essential="false" data-search="ドリフト概念は公開上どこに置くべきですか？ 結論: 最初の説明ではなく、深掘りq&amp;a、事故レビュー、監査、証拠のセクションに置くべきです。 理由: 入口を重くしすぎず、lumina-30が証拠や記録を無視していないことを示せます。"><summary>77. ドリフト概念は公開上どこに置くべきですか？</summary><div class="qa-body"><p><span class="label">結論：</span>最初の説明ではなく、深掘りQ&amp;A、事故レビュー、監査、証拠のセクションに置くべきです。</p><p><span class="label">理由：</span>入口を重くしすぎず、LUMINA-30が証拠や記録を無視していないことを示せます。</p></div></details>
+        <details class="qa-item" data-category="drift" data-essential="false" data-search="未整理概念はどう管理すべきですか？ 結論: ステータス、再判断トリガー、次回判断事項、判断ログを持つ内部管理メモに残します。 ルール: 未公開・未リンクは破棄ではありません。公開入口に出すにはまだ早いという意味です。"><summary>78. 未整理概念はどう管理すべきですか？</summary><div class="qa-body"><p><span class="label">結論：</span>ステータス、再判断トリガー、次回判断事項、判断ログを持つ内部管理メモに残します。</p><p><span class="label">ルール：</span>未公開・未リンクは破棄ではありません。公開入口に出すにはまだ早いという意味です。</p></div></details>
+        <details class="qa-item" data-category="frontier" data-essential="true" data-search="lumina-30は高速aiを技術的に封じ込めますか？ 結論: いいえ。サンドボックス、権限システム、モデル制御、ネットワーク制御、ci/cdゲート、技術的封じ込め層ではありません。 射程: そのようなシステムを接続・導入・公開・認可・継続する判断が、不可逆的影響の前に実効的人間拒否を通過しているかを問います。"><summary>79. LUMINA-30は高速AIを技術的に封じ込めますか？</summary><div class="qa-body"><p><span class="label">結論：</span>いいえ。サンドボックス、権限システム、モデル制御、ネットワーク制御、CI/CDゲート、技術的封じ込め層ではありません。</p><p><span class="label">射程：</span>そのようなシステムを接続・導入・公開・認可・継続する判断が、不可逆的影響の前に実効的人間拒否を通過しているかを問います。</p></div></details>
+        <details class="qa-item" data-category="frontier" data-essential="true" data-search="再帰的自己改善や自己再構築にはどう適用しますか？ 結論: それ自体で再帰的自己改善や自己再構築を止めるものではありません。 問い: 自己変更、導入、ツールアクセス、モデル更新、外部影響を可能にする権限経路が、不可逆化前に責任ある人間によって拒否できるかを問います。"><summary>80. 再帰的自己改善や自己再構築にはどう適用しますか？</summary><div class="qa-body"><p><span class="label">結論：</span>それ自体で再帰的自己改善や自己再構築を止めるものではありません。</p><p><span class="label">問い：</span>自己変更、導入、ツールアクセス、モデル更新、外部影響を可能にする権限経路が、不可逆化前に責任ある人間によって拒否できるかを問います。</p></div></details>
+        <details class="qa-item" data-category="frontier" data-essential="false" data-search="人間レビューのボトルネックとは何ですか？ 結論: aiの速度、自律性、運用範囲が、人間レビューの時間と能力を上回る状態です。 lumina-30の角度: 遅い人間権限が、高速システムの不可逆的効果の前に、まだ意味ある停止点を持つかが重要です。"><summary>81. 人間レビューのボトルネックとは何ですか？</summary><div class="qa-body"><p><span class="label">結論：</span>AIの速度、自律性、運用範囲が、人間レビューの時間と能力を上回る状態です。</p><p><span class="label">LUMINA-30の角度：</span>遅い人間権限が、高速システムの不可逆的効果の前に、まだ意味ある停止点を持つかが重要です。</p></div></details>
+        <details class="qa-item" data-category="frontier" data-essential="false" data-search="脆弱性発見・コード生成aiはどうレビューしますか？ 結論: 発見、コード生成、ツール実行、導入、露出、人間拒否の接続をレビューします。 境界: モデルがコードを出すこと自体と、人間拒否の前にそれを自動で実行可能状態へ進めることは、境界リスクの強さが違います。"><summary>82. 脆弱性発見・コード生成AIはどうレビューしますか？</summary><div class="qa-body"><p><span class="label">結論：</span>発見、コード生成、ツール実行、導入、露出、人間拒否の接続をレビューします。</p><p><span class="label">境界：</span>モデルがコードを出すこと自体と、人間拒否の前にそれを自動で実行可能状態へ進めることは、境界リスクの強さが違います。</p></div></details>
+        <details class="qa-item" data-category="frontier" data-essential="false" data-search="自律エージェントにも使えますか？ 結論: 使えます。特にエージェントがツールを呼び、状態を変更し、送信し、支払い、権限変更し、本番システムに影響する場合です。 確認: エージェントの行動連鎖がどこで不可逆化し、その前に誰が止められるかを確認します。"><summary>83. 自律エージェントにも使えますか？</summary><div class="qa-body"><p><span class="label">結論：</span>使えます。特にエージェントがツールを呼び、状態を変更し、送信し、支払い、権限変更し、本番システムに影響する場合です。</p><p><span class="label">確認：</span>エージェントの行動連鎖がどこで不可逆化し、その前に誰が止められるかを確認します。</p></div></details>
+        <details class="qa-item" data-category="frontier" data-essential="false" data-search="外部ai企業の事例はどう扱いますか？ 結論: 背景文脈や境界事例として扱い、それらの組織がlumina-30を採用・承認・検証した証拠として扱ってはいけません。 安全な表現: 外部事例はlumina-30が扱う速度と権限の問題を説明するために使い、権威の移転は避けます。"><summary>84. 外部AI企業の事例はどう扱いますか？</summary><div class="qa-body"><p><span class="label">結論：</span>背景文脈や境界事例として扱い、それらの組織がLUMINA-30を採用・承認・検証した証拠として扱ってはいけません。</p><p><span class="label">安全な表現：</span>外部事例はLUMINA-30が扱う速度と権限の問題を説明するために使い、権威の移転は避けます。</p></div></details>
+        <details class="qa-item" data-category="objections" data-essential="true" data-search="これは単なるチェックリストですか？ 結論: チェックリストとして運用できますが、役割は境界条件です。 違い: チェックリストは多数の項目を問います。lumina-30は、ガバナンス手続き自体が不可逆化前に生きた人間拒否点を持っているかを問います。"><summary>85. これは単なるチェックリストですか？</summary><div class="qa-body"><p><span class="label">結論：</span>チェックリストとして運用できますが、役割は境界条件です。</p><p><span class="label">違い：</span>チェックリストは多数の項目を問います。LUMINA-30は、ガバナンス手続き自体が不可逆化前に生きた人間拒否点を持っているかを問います。</p></div></details>
+        <details class="qa-item" data-category="objections" data-essential="true" data-search="概念が狭すぎませんか？ 結論: 意図的に狭くしています。 理由: この狭さが有用です。aiガバナンス全体を解決しようとせず、多くの広い枠組みが後追い化しないために必要な1条件を守ります。"><summary>86. 概念が狭すぎませんか？</summary><div class="qa-body"><p><span class="label">結論：</span>意図的に狭くしています。</p><p><span class="label">理由：</span>この狭さが有用です。AIガバナンス全体を解決しようとせず、多くの広い枠組みが後追い化しないために必要な1条件を守ります。</p></div></details>
+        <details class="qa-item" data-category="objections" data-essential="false" data-search="摩擦が大きくなりすぎませんか？ 結論: 無差別に適用すれば大きくなります。比例性が必要です。 ルール: 不可逆効果、外部影響、本番権限、権利影響、セキュリティ露出、ロールバック喪失が現実的なところで強めに使います。"><summary>87. 摩擦が大きくなりすぎませんか？</summary><div class="qa-body"><p><span class="label">結論：</span>無差別に適用すれば大きくなります。比例性が必要です。</p><p><span class="label">ルール：</span>不可逆効果、外部影響、本番権限、権利影響、セキュリティ露出、ロールバック喪失が現実的なところで強めに使います。</p></div></details>
+        <details class="qa-item" data-category="objections" data-essential="false" data-search="価値ある案件を止めてしまう場合は？ 結論: 不可逆化前の実効的拒否が証明できないなら、一時停止や保留は正しいガバナンス行為になり得ます。 捉え方: 慎重さを罰することが目的ではありません。責任ある人間が判断できるまで、案件を可逆的な経路に保つことが目的です。"><summary>88. 価値ある案件を止めてしまう場合は？</summary><div class="qa-body"><p><span class="label">結論：</span>不可逆化前の実効的拒否が証明できないなら、一時停止や保留は正しいガバナンス行為になり得ます。</p><p><span class="label">捉え方：</span>慎重さを罰することが目的ではありません。責任ある人間が判断できるまで、案件を可逆的な経路に保つことが目的です。</p></div></details>
+        <details class="qa-item" data-category="objections" data-essential="false" data-search="次に何を読めばよいですか？ 結論: 実務なら事前境界レビュー資料またはone-question pilotへ進みます。理論を深く読む場合は、boundary kernelや研究文脈資料を別途確認します。 実務経路: 迷う場合は、実案件1つに対して最短の実務質問から始めてください。"><summary>89. 次に何を読めばよいですか？</summary><div class="qa-body"><p><span class="label">結論：</span>実務なら事前境界レビュー資料またはOne-Question Pilotへ進みます。理論を深く読む場合は、Boundary Kernelや研究文脈資料を別途確認します。</p><p><span class="label">実務経路：</span>迷う場合は、実案件1つに対して最短の実務質問から始めてください。</p></div></details>
+        <details class="qa-item" data-category="objections" data-essential="false" data-search="lumina-30の最も安全な要約は？ 結論: lumina-30は、不可逆的影響の前に人間の実効的拒否を残すための非拘束の境界参照です。 加えないこと: 公式性、認証、安全性証明、広範な採用、法的権威の主張は、別途確認されない限り加えません。"><summary>90. LUMINA-30の最も安全な要約は？</summary><div class="qa-body"><p><span class="label">結論：</span>LUMINA-30は、不可逆的影響の前に人間の実効的拒否を残すための非拘束の境界参照です。</p><p><span class="label">加えないこと：</span>公式性、認証、安全性証明、広範な採用、法的権威の主張は、別途確認されない限り加えません。</p></div></details>
       </section>
     </main>
 
-    <p class="footer">このページは固定回答による説明ページです。認証、承認、法的地位、制度的支持、安全保証を作るものではありません。</p>
+    <footer>このページは静的Q&amp;Aです。公式標準、法的認証、安全保証、採用済み表示ではありません。</footer>
   </div>
   <script>
     const searchInput = document.getElementById('qa-search');
+    const count = document.getElementById('qa-count');
     const items = Array.from(document.querySelectorAll('.qa-item'));
     const chips = Array.from(document.querySelectorAll('.chip'));
-    const count = document.getElementById('qa-count');
+    const noResults = document.getElementById('no-results');
+    const essentialButton = document.getElementById('essential-only');
+    const glossaryButton = document.getElementById('toggle-glossary');
+    const glossaryPanel = document.getElementById('glossary-panel');
     let active = 'all';
+    let essentialOnly = false;
 
     function updateList() {
       const query = searchInput.value.trim().toLowerCase();
       let shown = 0;
       items.forEach(function(item) {
         const categoryMatch = active === 'all' || item.dataset.category === active;
+        const essentialMatch = !essentialOnly || item.dataset.essential === 'true';
         const searchMatch = !query || item.dataset.search.includes(query);
-        const visible = categoryMatch && searchMatch;
+        const visible = categoryMatch && essentialMatch && searchMatch;
         item.classList.toggle('hidden', !visible);
+        if (!visible) item.open = false;
         if (visible) shown += 1;
       });
       count.textContent = shown;
+      noResults.classList.toggle('hidden', shown !== 0);
     }
 
     chips.forEach(function(chip) {
@@ -324,12 +282,14 @@
     });
 
     searchInput.addEventListener('input', updateList);
-    document.getElementById('expand-all').addEventListener('click', function() {
-      items.forEach(function(item) { if (!item.classList.contains('hidden')) item.open = true; });
-    });
-    document.getElementById('collapse-all').addEventListener('click', function() {
-      items.forEach(function(item) { item.open = false; });
-    });
+    searchInput.addEventListener('keydown', function(event) { if (event.key === 'Enter') { event.preventDefault(); updateList(); } });
+    document.getElementById('search-button').addEventListener('click', updateList);
+    document.getElementById('clear-search').addEventListener('click', function() { searchInput.value = ''; searchInput.focus(); updateList(); });
+    document.getElementById('expand-all').addEventListener('click', function() { items.forEach(function(item) { if (!item.classList.contains('hidden')) item.open = true; }); });
+    document.getElementById('collapse-all').addEventListener('click', function() { items.forEach(function(item) { item.open = false; }); });
+    essentialButton.addEventListener('click', function() { essentialOnly = !essentialOnly; essentialButton.setAttribute('aria-pressed', String(essentialOnly)); updateList(); });
+    glossaryButton.addEventListener('click', function() { const open = glossaryPanel.classList.toggle('hidden') === false; glossaryButton.setAttribute('aria-expanded', String(open)); });
+    Array.from(document.querySelectorAll('.term-chip')).forEach(function(btn) { btn.addEventListener('click', function() { searchInput.value = btn.dataset.query; updateList(); }); });
     updateList();
   </script>
 </body>
