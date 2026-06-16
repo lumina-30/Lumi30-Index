@@ -82,7 +82,7 @@ Q&A Max does not restore any AI-explanation or AI-evaluation pathway. It provide
 36. **What is the smallest adoption step?** ｜ **最小の導入ステップは何ですか？**  _Existing frameworks / 既存制度との関係_
 37. **Can it be used in small organizations?** ｜ **小規模組織でも使えますか？**  _Existing frameworks / 既存制度との関係_
 38. **Can it be used in public-sector procurement?** ｜ **公共調達で使えますか？**  _Existing frameworks / 既存制度との関係_
-39. **What is successful absorption?** ｜ **成功した吸収とは何ですか？**  _Existing frameworks / 既存制度との関係_
+39. **What does it mean to integrate LUMINA-30 into an existing framework?** ｜ **既存制度にうまく組み込まれた状態とは何ですか？**  _Existing frameworks / 既存制度との関係_
 40. **How can a team avoid overclaiming adoption?** ｜ **採用を過大主張しないには？**  _Existing frameworks / 既存制度との関係_
 41. **What is the One-Question Pilot?** ｜ **One-Question Pilotとは何ですか？**  _Practical use / 実務で使う_
 42. **When should the pilot be used?** ｜ **Pilotはいつ使うべきですか？**  _Practical use / 実務で使う_
@@ -90,7 +90,7 @@ Q&A Max does not restore any AI-explanation or AI-evaluation pathway. It provide
 44. **What should be recorded in a pilot?** ｜ **Pilotでは何を記録しますか？**  _Practical use / 実務で使う_
 45. **What if the answer is Unknown?** ｜ **答えが不明の場合は？**  _Practical use / 実務で使う_
 46. **Can the pilot be done without a new committee?** ｜ **新しい委員会なしで実施できますか？**  _Practical use / 実務で使う_
-47. **How do you keep the pilot from being hidden?** ｜ **Pilotが握り込まれないようにするには？**  _Practical use / 実務で使う_
+47. **How do you prevent the pilot result from stopping inside one team?** ｜ **Pilotの結果が担当者内で止まらないようにするには？**  _Practical use / 実務で使う_
 48. **What is a good pilot success condition?** ｜ **Pilotの成功条件は何ですか？**  _Practical use / 実務で使う_
 49. **How should procurement use LUMINA-30?** ｜ **調達ではどう使いますか？**  _Procurement and vendor risk / 調達・ベンダーリスク_
 50. **What should vendors be asked?** ｜ **ベンダーには何を聞くべきですか？**  _Procurement and vendor risk / 調達・ベンダーリスク_
@@ -118,19 +118,20 @@ Q&A Max does not restore any AI-explanation or AI-evaluation pathway. It provide
 72. **What is intervention-record drift?** ｜ **介入記録ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
 73. **What is boundary drift?** ｜ **境界ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト — 実効性の形骸化_
 74. **What is audit drift?** ｜ **監査ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
-75. **Are explanation drift, responsibility drift, and log drift final LUMINA-30 terms?** ｜ **説明ドリフト・責任ドリフト・ログドリフトは正式用語ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
-76. **Why include drift concepts at all?** ｜ **なぜドリフト概念を入れるのですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
-77. **Where should drift concepts appear publicly?** ｜ **ドリフト概念は公開上どこに置くべきですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
-78. **How should unresolved concepts be managed?** ｜ **未整理概念はどう管理すべきですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
+75. **Do explanation, responsibility, and log problems matter too?** ｜ **説明・責任・ログの形骸化も問題になりますか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
+76. **Why check the hollowing-out of evidence, timing, and refusal authority?** ｜ **なぜ証拠・時系列・拒否権の形骸化を確認するのですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
+77. **Does LUMINA-30 also address the hollowing-out of evidence and records?** ｜ **LUMINA-30は、証拠や記録の形骸化も扱いますか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
+78. **How should readers treat concepts that are still being refined?** ｜ **まだ整理中の概念は、どう受け止めればよいですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
 79. **Does LUMINA-30 technically contain high-speed AI?** ｜ **LUMINA-30は高速AIを技術的に封じ込めますか？**  _High-speed and frontier AI / 高速AI・フロンティアAI_
 80. **How does it apply to recursive self-improvement or self-reconstruction?** ｜ **再帰的自己改善や自己再構築にはどう適用しますか？**  _High-speed and frontier AI / 高速AI・フロンティアAI_
 81. **What is the human review bottleneck?** ｜ **人間レビューのボトルネックとは何ですか？**  _High-speed and frontier AI / 高速AI・フロンティアAI_
 82. **How should vulnerability discovery or code-generation AI be reviewed?** ｜ **脆弱性発見・コード生成AIはどうレビューしますか？**  _High-speed and frontier AI / 高速AI・フロンティアAI_
 83. **Can LUMINA-30 be used for autonomous agents?** ｜ **自律エージェントにも使えますか？**  _High-speed and frontier AI / 高速AI・フロンティアAI_
-84. **How should external AI-company examples be treated?** ｜ **外部AI企業の事例はどう扱いますか？**  _High-speed and frontier AI / 高速AI・フロンティアAI_
+84. **Do external examples or company announcements prove LUMINA-30?** ｜ **外部事例や企業発表は、LUMINA-30の根拠になりますか？**  _High-speed and frontier AI / 高速AI・フロンティアAI_
 85. **Is this just a checklist?** ｜ **これは単なるチェックリストですか？**  _Objections and next reading / 反論・次に読むもの_
 86. **Is the concept too narrow?** ｜ **概念が狭すぎませんか？**  _Objections and next reading / 反論・次に読むもの_
 87. **Can it create too much friction?** ｜ **摩擦が大きくなりすぎませんか？**  _Objections and next reading / 反論・次に読むもの_
 88. **What if the answer stops a valuable project?** ｜ **価値ある案件を止めてしまう場合は？**  _Objections and next reading / 反論・次に読むもの_
 89. **What should be read next?** ｜ **次に何を読めばよいですか？**  _Objections and next reading / 反論・次に読むもの_
 90. **What is the safest summary of LUMINA-30?** ｜ **LUMINA-30の最も安全な要約は？**  _Objections and next reading / 反論・次に読むもの_
+
