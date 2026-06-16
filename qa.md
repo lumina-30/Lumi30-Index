@@ -1,7 +1,7 @@
 <!-- L30_MD_SOURCE: synchronized with qa.html and qa-ja.html -->
 # LUMINA-30 Q&A Max
 
-LUMINA-30 Q&A Max is a static reader-facing page. It provides fixed answers for understanding the core boundary, limits, practical use, existing-framework relationship, procurement and audit use, evidence and record issues, drift risks, frontier-AI contexts, and critical objections around LUMINA-30.
+LUMINA-30 Q&A Max is a static reader-facing page. It provides fixed answers for understanding the core boundary, limits, practical use, existing-framework relationship, procurement and audit use, evidence and record issues, drift risks as hollowing-out of effective safeguards, frontier-AI contexts, and critical objections around LUMINA-30.
 
 It is not a certification route, not an adoption claim, not a safety guarantee, and not a replacement for law, audit, engineering safety, procurement review, security controls, or human judgment.
 
@@ -38,7 +38,7 @@ Before this AI-mediated process reaches an irreversible outcome, can a responsib
 
 ## Important treatment
 
-The Q&A includes evidence, records, and drift-related questions in deeper sections because LUMINA-30 should not appear to ignore auditability and incident-review evidence. These concepts support the core boundary question; they do not replace it with a new theory layer.
+The Q&A includes evidence, records, and drift-related questions in deeper sections because LUMINA-30 should not appear to ignore auditability and incident-review evidence. In this context, drift means the hollowing-out of effective safeguards / 実効性の形骸化: evidence, timing, authority, records, or boundary conditions can become merely formal after the fact. These concepts support the core boundary question; they do not replace it with a new theory layer.
 
 Q&A Max does not restore any AI-explanation or AI-evaluation pathway. It provides fixed reader-facing answers directly on the page.
 
@@ -112,11 +112,11 @@ Q&A Max does not restore any AI-explanation or AI-evaluation pathway. It provide
 66. **What if evidence is confidential?** ｜ **証拠が機密の場合は？**  _Audit and evidence / 監査・証拠_
 67. **Can a score replace evidence?** ｜ **スコアで証拠を代替できますか？**  _Audit and evidence / 監査・証拠_
 68. **What is the audit failure mode LUMINA-30 catches?** ｜ **LUMINA-30が拾う監査上の失敗は？**  _Audit and evidence / 監査・証拠_
-69. **What is evidence drift?** ｜ **証拠ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
-70. **What is timeline drift?** ｜ **時系列ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
-71. **What is refusal-right drift?** ｜ **拒否権ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
+69. **What is evidence drift?** ｜ **証拠ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト — 実効性の形骸化_
+70. **What is timeline drift?** ｜ **時系列ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト — 実効性の形骸化_
+71. **What is refusal-right drift?** ｜ **拒否権ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト — 実効性の形骸化_
 72. **What is intervention-record drift?** ｜ **介入記録ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
-73. **What is boundary drift?** ｜ **境界ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
+73. **What is boundary drift?** ｜ **境界ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト — 実効性の形骸化_
 74. **What is audit drift?** ｜ **監査ドリフトとは何ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
 75. **Are explanation drift, responsibility drift, and log drift final LUMINA-30 terms?** ｜ **説明ドリフト・責任ドリフト・ログドリフトは正式用語ですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
 76. **Why include drift concepts at all?** ｜ **なぜドリフト概念を入れるのですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
