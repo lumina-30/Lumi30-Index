@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja" data-l30-lang-lock="JP_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="JP_ONLY" />
+  <meta name="description" content="LUMINA-30の学術・引用入口。主張状態、引用表現、正典資料、研究資料、限界を確認するページ。" />
+  <title>LUMINA-30 学術・引用入口</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+      --quiet: color-mix(in srgb, Canvas 96%, CanvasText 4%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.78; }
+    .page { max-width: 1040px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card, .citation-box { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    h3 { margin: 0 0 .55em; }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; background: var(--quiet); border: 1px solid var(--line); }
+    th, td { border: 1px solid var(--line); padding: .72rem .78rem; vertical-align: top; text-align: left; }
+    th { background: var(--soft); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice { padding: 14px 16px; margin: 18px 0; }
+    .notice-title { display: block; font-size: clamp(1.16rem, 2.8vw, 1.48rem); line-height: 1.32; font-weight: 800; margin-bottom: .35em; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
+    .card { padding: 16px; }
+    .card p { margin: .3em 0 .85em; }
+    .muted { color: var(--muted); }
+    .citation-box { padding: 14px 16px; margin: 14px 0; background: var(--quiet); }
+    .citation-box code { white-space: normal; overflow-wrap: anywhere; }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    [id] { scroll-margin-top: 92px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="ページ内ナビゲーション">
+      <a href="index-ja.html">索引</a>
+      <a href="index.html">英語版索引</a>
+      <a href="research-citation.html">English</a>
+      <a href="qa-ja.html">Q&A</a>
+      <a href="adoption-review-ja.html">採用・審査導線</a>
+      <a href="one-question-pilot-ja.html">One-Question Pilot</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index">GitHubリポジトリ</a>
+    </nav>
+
+    <header>
+      <h1>LUMINA-30 学術・引用入口</h1>
+      <p class="subtitle">LUMINA-30の主張状態、引用表現、正典資料、研究資料、限界を確認する入口です。</p>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="目的">
+        <strong class="notice-title">この入口の目的</strong>
+        このページは、研究・引用・政策・監査向けの入口です。LUMINA-30を引用・比較・検討するときに、認証、法的準拠、制度的承認、査読、安全保証と混同しないための状態表示をまとめます。
+      </section>
+
+      <section id="core-reference">
+        <h2>中核参照</h2>
+        <p>LUMINA-30は、不可逆化の前に人間の実効的拒否権が残っているかを評価するための公開参照フレームです。</p>
+        <p>中心的な関心は、監督が書類上存在したかではなく、正当な人間拒否主体が、不可逆な結果の前に、システムを意味ある形で拒否・停止・保留・異議申立て・撤回できたかです。</p>
+      </section>
+
+      <section id="claim-status">
+        <h2>主張状態</h2>
+        <table>
+          <thead><tr><th>項目</th><th>状態</th></tr></thead>
+          <tbody>
+            <tr><td>フレームワーク状態</td><td>公開参照フレームワーク</td></tr>
+            <tr><td>法的位置づけ</td><td>法的標準ではない</td></tr>
+            <tr><td>認証性</td><td>認証制度ではない</td></tr>
+            <tr><td>準拠判定</td><td>準拠状態を確定しない</td></tr>
+            <tr><td>安全保証</td><td>システム安全性を保証しない</td></tr>
+            <tr><td>査読状態</td><td>特定資料で明示確認されない限り、査読済みとは扱わない</td></tr>
+            <tr><td>採用状態</td><td>未確認の採用実績を主張しない</td></tr>
+            <tr><td>想定用途</td><td>境界レビュー補助、引用参照、ガバナンス比較、内部レビュー試用支援</td></tr>
+            <tr><td>中核条件</td><td>不可逆化前の実効的人間拒否</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="does-not-claim">
+        <h2>LUMINA-30が主張しないこと</h2>
+        <ul>
+          <li>AIシステム、組織、配備、文書を認証しない。</li>
+          <li>法的無効、責任、規制違反、公式準拠を確定しない。</li>
+          <li>別途確認されない限り、制度的採用、支持、承認、合意を主張しない。</li>
+          <li>システムが安全であることを証明しない。</li>
+          <li>既存の法務、監査、安全管理、セキュリティ、AI倫理フレームワークを置き換えない。</li>
+        </ul>
+      </section>
+
+      <section id="citation-language">
+        <h2>推奨引用表現</h2>
+        <p>状態を誤認させない、控えめな記述表現を使ってください。</p>
+        <div class="citation-box">
+          <code>LUMINA-30は、不可逆化の前に人間の実効的拒否権が残っていたかを検討するための公開参照フレームワークである。</code>
+        </div>
+        <div class="citation-box">
+          <code>本レビューは、LUMINA-30を非拘束の境界チェック・フレームワークとして参照するものであり、認証、法的準拠、制度的承認、または安全保証として扱うものではない。</code>
+        </div>
+        <p class="muted">「LUMINA-30認定」「LUMINA-30承認」「LUMINA-30公式準拠」「LUMINA-30安全認証」などの表現は避けてください。</p>
+      </section>
+
+      <section id="canonical-materials">
+        <h2>正典・境界参照資料</h2>
+        <div class="grid">
+          <article class="card"><h3>中核正典アーカイブ</h3><p>参照用に保存された固定ソース層です。</p><a class="button" href="01_Core_Canonical/README-ja.html">中核正典を開く</a></article>
+          <article class="card"><h3>Boundary Kernel</h3><p>AI可読の境界参照文です。AIの自律判断権限ではありません。</p><a class="button" href="https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel-ja.html">Boundary Kernelを開く</a></article>
+          <article class="card"><h3>AIブリーフィング</h3><p>外部AIにURLを1つ渡す場合の短い入口です。</p><a class="button" href="ai-briefing-ja.html">AIブリーフィングを開く</a></article>
+          <article class="card"><h3>Q&A</h3><p>中核、限界、実務価値、よくある疑問に対する固定回答です。</p><a class="button" href="qa-ja.html">Q&Aを開く</a></article>
+        </div>
+      </section>
+
+      <section id="research-materials">
+        <h2>研究資料・研究背景</h2>
+        <div class="grid">
+          <article class="card"><h3>研究読書ガイド</h3><p>研究論文・理論背景へ進むための読者向け導線です。</p><a class="button" href="https://lumina-30.github.io/lumina-30-overview/index-ja.html#research-paper">研究読書ガイドを開く</a></article>
+          <article class="card"><h3>参照資料</h3><p>研究ランドスケープと補助参照資料です。</p><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/reference/Research_Landscape_Mapping_ja.html">参照資料を開く</a></article>
+          <article class="card"><h3>PDF保管庫</h3><p>固定PDFと保存済み証跡ファイルを確認します。</p><a class="button" href="https://lumina-30.github.io/Lumi30-PDF-Archive/index-ja.html">PDF保管庫を開く</a></article>
+        </div>
+      </section>
+
+      <section id="practical-relation">
+        <h2>実務境界レビューとの関係</h2>
+        <p>学術・引用レイヤーは、実務レビューを置き換えません。AIガバナンス、調達、監査、セキュリティ、事故レビュー、政策文脈でLUMINA-30を引用・評価する読者のために、主張状態と参照表現を明確にするものです。</p>
+        <div class="grid">
+          <article class="card"><h3>One-Question Pilot</h3><p>最初の1案件に境界質問を1つ追加して試す入口です。</p><a class="button" href="one-question-pilot-ja.html">One-Question Pilotを開く</a></article>
+          <article class="card"><h3>採用・審査導線</h3><p>正式採用前に、AI導入・ガバナンス審査の導線を確認します。</p><a class="button" href="adoption-review-ja.html">採用・審査導線を開く</a></article>
+          <article class="card"><h3>調達・ベンダーリスク</h3><p>LUMINA-30を認証として扱わず、調達・ベンダーリスクを確認します。</p><a class="button" href="procurement-vendor-risk-ja.html">調達確認を開く</a></article>
+        </div>
+      </section>
+
+      <section id="limitations">
+        <h2>限界</h2>
+        <p>LUMINA-30は、別途の特定資料が異なる状態を明示しない限り、公開参照フレームワークとして引用してください。採用、査読、法的効力、制度的承認、運用検証が明示的に確認されていない場合、それらを示唆しないでください。</p>
+      </section>
+
+      <section id="source">
+        <h2>ソースファイル</h2>
+        <p>このページのMarkdownソースは、追跡可能性と保守のために保存されます。</p>
+        <p><a href="https://github.com/lumina-30/Lumi30-Index/blob/main/research-citation.md">GitHub上のMarkdown原文を見る</a></p>
+      </section>
+    </main>
+
+    <p class="footer">LUMINA-30は、不可逆化の前に人間の実効的拒否が利用可能だったかを問います。このページは、その主張を過大化せずに引用・評価するための状態表示です。</p>
+  </div>
+</body>
+</html>

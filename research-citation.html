@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" data-l30-lang-lock="EN_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="EN_ONLY" />
+  <meta name="description" content="Research and citation hub for LUMINA-30: claim status, citation language, canonical materials, research materials, and limitations." />
+  <title>LUMINA-30 Research & Citation Hub</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+      --quiet: color-mix(in srgb, Canvas 96%, CanvasText 4%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1040px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card, .citation-box { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    h3 { margin: 0 0 .55em; }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; background: var(--quiet); border: 1px solid var(--line); }
+    th, td { border: 1px solid var(--line); padding: .72rem .78rem; vertical-align: top; text-align: left; }
+    th { background: var(--soft); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice { padding: 14px 16px; margin: 18px 0; }
+    .notice-title { display: block; font-size: clamp(1.16rem, 2.8vw, 1.48rem); line-height: 1.32; font-weight: 800; margin-bottom: .35em; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin: 18px 0; }
+    .card { padding: 16px; }
+    .card p { margin: .3em 0 .85em; }
+    .muted { color: var(--muted); }
+    .citation-box { padding: 14px 16px; margin: 14px 0; background: var(--quiet); }
+    .citation-box code { white-space: normal; overflow-wrap: anywhere; }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    [id] { scroll-margin-top: 92px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Page navigation">
+      <a href="index.html">Index</a>
+      <a href="index-ja.html">Japanese Index</a>
+      <a href="research-citation-ja.html">Japanese</a>
+      <a href="qa.html">Q&A</a>
+      <a href="adoption-review.html">Adoption Review</a>
+      <a href="one-question-pilot.html">One-Question Pilot</a>
+      <a href="https://github.com/lumina-30/Lumi30-Index">GitHub Repository</a>
+    </nav>
+
+    <header>
+      <h1>LUMINA-30 Research & Citation Hub</h1>
+      <p class="subtitle">Claim status, citation wording, canonical materials, research materials, and limitations for LUMINA-30.</p>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="Purpose">
+        <strong class="notice-title">Purpose of this hub</strong>
+        This page is a research-facing and citation-facing entry point. It helps readers cite, compare, and review LUMINA-30 without confusing it with certification, legal compliance, institutional approval, peer review, or a safety guarantee.
+      </section>
+
+      <section id="core-reference">
+        <h2>Core reference</h2>
+        <p>LUMINA-30 is a public reference framework for evaluating whether effective human refusal remains possible before irreversible escalation.</p>
+        <p>Its central concern is not whether oversight existed on paper, but whether a legitimate human refusal authority could still meaningfully withhold, stop, suspend, challenge, or roll back a system before irreversible consequences occurred.</p>
+      </section>
+
+      <section id="claim-status">
+        <h2>Claim Status</h2>
+        <table>
+          <thead><tr><th>Item</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Framework status</td><td>Public reference framework</td></tr>
+            <tr><td>Legal status</td><td>Not a legal standard</td></tr>
+            <tr><td>Certification status</td><td>Not a certification scheme</td></tr>
+            <tr><td>Compliance status</td><td>Does not determine compliance</td></tr>
+            <tr><td>Safety guarantee</td><td>Does not certify system safety</td></tr>
+            <tr><td>Peer review status</td><td>Not presented as peer-reviewed unless explicitly confirmed in a specific source</td></tr>
+            <tr><td>Adoption status</td><td>No unverified adoption claims</td></tr>
+            <tr><td>Intended use</td><td>Boundary review aid, citation reference, governance comparison, and experimental internal review support</td></tr>
+            <tr><td>Core condition</td><td>Effective human refusal before irreversibility</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="does-not-claim">
+        <h2>What LUMINA-30 does not claim</h2>
+        <ul>
+          <li>It does not certify AI systems, organizations, deployments, or documents.</li>
+          <li>It does not establish legal invalidity, liability, regulatory non-compliance, or official compliance.</li>
+          <li>It does not claim institutional adoption, endorsement, approval, or consensus unless separately verified.</li>
+          <li>It does not prove that a system is safe.</li>
+          <li>It does not replace existing legal, audit, safety, security, or AI ethics frameworks.</li>
+        </ul>
+      </section>
+
+      <section id="citation-language">
+        <h2>Suggested citation language</h2>
+        <p>Use cautious descriptive language that makes the status clear.</p>
+        <div class="citation-box">
+          <code>LUMINA-30 is a public reference framework for examining whether effective human refusal remained possible before irreversible escalation.</code>
+        </div>
+        <div class="citation-box">
+          <code>This review refers to LUMINA-30 as a non-binding boundary-check framework; it does not treat LUMINA-30 as certification, legal compliance, institutional approval, or a safety guarantee.</code>
+        </div>
+        <p class="muted">Avoid phrases such as “LUMINA-30 certified,” “LUMINA-30 approved,” “officially LUMINA-30 compliant,” or “LUMINA-30 safety certified.”</p>
+      </section>
+
+      <section id="canonical-materials">
+        <h2>Canonical and boundary-reference materials</h2>
+        <div class="grid">
+          <article class="card"><h3>Core Canon Archive</h3><p>Fixed source-layer materials preserved for reference.</p><a class="button" href="01_Core_Canonical/README.html">Open Core Canon</a></article>
+          <article class="card"><h3>Boundary Kernel</h3><p>AI-readable boundary-reference language. It is not an autonomous decision authority.</p><a class="button" href="https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel.html">Open Boundary Kernel</a></article>
+          <article class="card"><h3>AI Briefing</h3><p>A concise entry point when giving one URL to an external AI.</p><a class="button" href="ai-briefing.html">Open AI Briefing</a></article>
+          <article class="card"><h3>Q&A</h3><p>Fixed answers for core questions, limitations, practical value, and common objections.</p><a class="button" href="qa.html">Open Q&A</a></article>
+        </div>
+      </section>
+
+      <section id="research-materials">
+        <h2>Research materials and context</h2>
+        <div class="grid">
+          <article class="card"><h3>Research Reading Guide</h3><p>Reader-facing route to the research-paper context and theoretical background.</p><a class="button" href="https://lumina-30.github.io/lumina-30-overview/index.html#research-paper">Open Research Reading Guide</a></article>
+          <article class="card"><h3>Reference Materials</h3><p>Research landscape and supporting reference materials.</p><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/reference/Research_Landscape_Mapping.html">Open Reference Materials</a></article>
+          <article class="card"><h3>PDF Archive</h3><p>Fixed PDFs and preserved evidence files.</p><a class="button" href="https://lumina-30.github.io/Lumi30-PDF-Archive/index.html">Open PDF Archive</a></article>
+        </div>
+      </section>
+
+      <section id="practical-relation">
+        <h2>Relation to practical boundary review</h2>
+        <p>The research and citation layer does not replace practical review. It provides claim-status clarity and reference wording for readers who need to cite or evaluate LUMINA-30 in AI governance, procurement, audit, security, incident-review, or policy contexts.</p>
+        <div class="grid">
+          <article class="card"><h3>One-Question Pilot</h3><p>Start by adding one boundary question to the first case.</p><a class="button" href="one-question-pilot.html">Open One-Question Pilot</a></article>
+          <article class="card"><h3>Adoption Review</h3><p>Use the adoption and governance review route before formal adoption.</p><a class="button" href="adoption-review.html">Open Adoption Review</a></article>
+          <article class="card"><h3>Procurement / Vendor Risk</h3><p>Check vendor and procurement risks without treating LUMINA-30 as certification.</p><a class="button" href="procurement-vendor-risk.html">Open Procurement Check</a></article>
+        </div>
+      </section>
+
+      <section id="limitations">
+        <h2>Limitations</h2>
+        <p>LUMINA-30 should be cited as a public reference framework unless a separate, specific source establishes a different status. Where adoption, peer review, legal effect, institutional approval, or operational validation is not explicitly verified, it should not be implied.</p>
+      </section>
+
+      <section id="source">
+        <h2>Source file</h2>
+        <p>The Markdown source for this page is preserved for traceability and maintenance.</p>
+        <p><a href="https://github.com/lumina-30/Lumi30-Index/blob/main/research-citation.md">View Markdown source on GitHub</a></p>
+      </section>
+    </main>
+
+    <p class="footer">LUMINA-30 asks whether effective human refusal remained possible before irreversible escalation. This page clarifies how to cite and evaluate that claim without overstatement.</p>
+  </div>
+</body>
+</html>
