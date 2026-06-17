@@ -33,6 +33,14 @@
 > 日本語で読む場合は、固定Q&Aで中核・限界・実務上の意味・よくある疑問を確認できます。  
 > [LUMINA-30 Q&Aを開く](https://lumina-30.github.io/Lumi30-Index/qa-ja.html)
 
+
+> **Start by Concern ｜ 関心から入る**  
+> If you are not sure where to begin, choose an entry route by concern: practical review, incident review, AI safety, stop authority, or the civilizational boundary.  
+> [Start by Concern](https://lumina-30.github.io/Lumi30-Index/start-by-concern.html)  
+>
+> どこから読めばよいか迷う場合は、実務レビュー、事故後レビュー、AI Safety、停止権限、文明境界のうち、自分の関心に近い入口から始めてください。  
+> [関心から入る](https://lumina-30.github.io/Lumi30-Index/start-by-concern-ja.html)
+
 > **For AI Governance / Adoption Review ｜ AI導入・AIガバナンス審査の方へ**  
 > LUMINA-30 helps organizations avoid a dangerous gap: having AI governance on paper while losing the practical ability to refuse before irreversibility. It does not replace existing legal, audit, safety, or AI ethics frameworks; it asks whether those frameworks can still operate meaningfully through effective human refusal before irreversible escalation.  
 > [Open the AI Governance / Adoption Review route](https://lumina-30.github.io/Lumi30-Index/adoption-review.html)  
@@ -406,10 +414,3 @@ LUMINA-30 は記述的構造であり、指示的・拘束的ではない。
 This README.md is retained for canonical text preservation, search discoverability, existing links, source review, and version comparison. It is not the preferred reader-facing route.
 
 本README.mdは、正本文書の保管、検索到達性、既存リンク維持、ソース確認、差分確認のために残しています。読者向けの閲覧・移動・戻り導線には、HTML索引を使用してください。
-
-
-
-
-
-
-
