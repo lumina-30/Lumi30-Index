@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" data-l30-lang-lock="EN_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="EN_ONLY" />
+  <meta name="description" content="A one-question decision-record card for AI review meetings, procurement checks, audits, governance meetings, and incident reviews." />
+  <title>Decision Record Question | LUMINA-30</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
+      --text: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
+      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
+      --accent: LinkText;
+      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 980px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.1em; padding-top: .4em; border-top: 1px solid var(--line); }
+    h3 { margin: 0 0 .55em; }
+    a { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice { padding: 14px 16px; margin: 18px 0; }
+    .card { padding: 18px; margin: 18px 0; }
+    .question { font-weight: 800; font-size: 1.1rem; }
+    .muted { color: var(--muted); }
+    .notice-title { display: block; font-size: clamp(1.16rem, 2.8vw, 1.48rem); line-height: 1.32; font-weight: 800; margin-bottom: .35em; }
+    .answer-line { font-weight: 700; }
+    ul { padding-left: 1.35em; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    [id] { scroll-margin-top: 92px; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Page navigation">
+      <a href="index.html">Index</a>
+      <a href="decision-record-question-ja.html">Japanese</a>
+      <a href="start-by-concern.html">Start by Concern</a>
+      <a href="one-question-pilot.html">One-Question Pilot</a>
+      <a href="ai-briefing.html">AI Briefing</a>
+    </nav>
+
+    <header>
+      <h1>Decision Record Question</h1>
+      <p class="subtitle">A one-question card for AI review meetings</p>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="Status and scope">
+        <strong class="notice-title">Status and scope</strong>
+        <p>This is not a demand to stop AI deployment. This is not a certification, legal finding, or safety guarantee.</p>
+        <p>It is one decision-record question to add to an existing AI review, audit, procurement check, governance meeting, or incident review.</p>
+        <p class="muted">LUMINA-30 does not replace existing AI ethics, AI safety, audit, procurement, security, regulatory, or legal review.</p>
+      </section>
+
+      <section id="question" class="card" aria-label="Decision-record question card">
+        <h2>Decision-record question</h2>
+        <p class="question">Before this AI deployment, escalation, or dependency becomes irreversible, can accountable humans effectively refuse, stop, verify, or redirect it?</p>
+        <p class="answer-line">Answer: [ ] YES&nbsp;&nbsp;[ ] NO&nbsp;&nbsp;[ ] UNKNOWN&nbsp;&nbsp;[ ] NOT RECORDED</p>
+        <p><strong>If NO or UNKNOWN:</strong> What must be resolved before proceeding?</p>
+      </section>
+
+      <section class="notice" aria-label="Suggested meeting note">
+        <strong class="notice-title">Suggested meeting note</strong>
+        <p>This question does not require the organization to stop. It requires the organization to record whether stopping remains possible before the decision becomes irreversible.</p>
+      </section>
+
+      <section class="notice" aria-label="Use cases">
+        <strong class="notice-title">Use this card when reviewing</strong>
+        <ul>
+          <li>AI deployment</li>
+          <li>AI model upgrade</li>
+          <li>autonomous or agentic AI use</li>
+          <li>procurement of AI systems</li>
+          <li>security or risk review</li>
+          <li>incident review</li>
+          <li>policy or stop-authority review</li>
+          <li>dependency on external AI services</li>
+        </ul>
+      </section>
+
+      <section class="notice" aria-label="Caution">
+        <strong class="notice-title">Caution</strong>
+        <p>Do not ask an AI system to decide whether this condition is satisfied. The decision must remain with accountable humans.</p>
+      </section>
+
+      <div class="button-row">
+        <a class="button" href="start-by-concern.html#decision-record-question">Back to Start by Concern</a>
+        <a class="button" href="decision-record-question-ja.html">日本語版</a>
+      </div>
+    </main>
+
+    <p class="footer">LUMINA-30 is a non-binding public boundary reference. It does not certify, approve, guarantee, or replace existing governance.</p>
+  </div>
+</body>
+</html>
