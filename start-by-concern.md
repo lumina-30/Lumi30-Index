@@ -1,3 +1,4 @@
+
 <!-- L30_LANG_LOCK: EN_JP_PAIRED -->
 # Start LUMINA-30 by Your Concern ｜ 関心から入る LUMINA-30
 
@@ -139,3 +140,47 @@ AI Ethics / Responsible AI、著作権・学習データ・同意、AI companion
 
 These topics are not made primary entry routes in this first version. Source Collection and Obsidian notes are reference material, not public canonical LUMINA-30 documents.  
 これらは初回実装では主入口化しません。Source CollectionおよびObsidian資料は参考史料であり、LUMINA-30の公開正本ではありません。
+
+---
+
+## What to do after reading this page ｜ 読んだ後にすること
+
+**If you work on review, audit, procurement, or governance:** add the One-Question Pilot to one existing review, approval, procurement, security, or audit process. Do not create a new framework first.  
+**実務・監査・調達の人：**既存のAI導入レビュー、稟議、調達確認、セキュリティレビュー、内部監査のどれか1つに、One-Question Pilotを1問だけ追加してください。最初から新しい制度を作る必要はありません。
+
+**If you are reviewing an incident:** record whether humans could still refuse, stop, or withdraw before the case became irreversible.  
+**事故後レビューの人：**事故説明や記事を書く前に、「不可逆化する前に、人間は実効的に拒否・停止・撤退できたのか」を1項目として残してください。
+
+**If you follow AI safety or self-improvement:** identify one point in the AI development or improvement loop where human refusal could become too late.  
+**AI Safety・自己改善に関心がある人：**AI開発工程・自動改善工程の中で、人間の拒否が遅すぎる地点を1つ特定してください。
+
+**If you work on policy or stop authority:** ask not only who can stop the system, but whether the stopping authority has evidence, time, independence, and real effect.  
+**政府・停止権限に関心がある人：**「誰が止めるのか」だけでなく、その停止が証拠・時間・独立性・実効性を伴うかを確認してください。
+
+**If you came for the whole picture:** open either the One-Question Pilot or the AI Briefing, then restate the boundary question in your own context.  
+**全体像から来た人：**まずOne-Question PilotまたはAIブリーフィングを1つだけ開き、自分の文脈で境界質問を言い換えてください。
+
+---
+
+## Decision-record question ｜ 意思決定記録用の一問
+
+Copy this single question into a meeting note, approval memo, review checklist, or audit record.  
+会議録、稟議、レビュー票、監査記録に、そのまま次の一問を入れてください。
+
+> Before this AI system, workflow, model, deployment, or dependency becomes difficult to reverse, have humans retained a documented and effective ability to refuse, stop, or withdraw?
+>
+> このAIシステム、業務フロー、モデル、導入、依存関係が撤回困難になる前に、人間は文書化された実効的な拒否・停止・撤退能力を保持していますか。
+
+This is a record question, not a certification result. It helps preserve who considered refusal, what evidence was available, and what stopping path remained.  
+これは認証結果ではなく、記録用の問いです。誰が拒否可能性を検討し、どの証拠があり、どの停止経路が残っていたかを残すために使います。
+
+---
+
+## Boundary Answerability Test ｜ 境界回答可能性テスト
+
+For past incidents or public cases, do not force an immediate YES / NO answer. First ask whether the LUMINA-30 boundary question is answerable from public information or verifiable records.  
+過去の事故・公開事例を扱う時は、いきなりYES / NOで判定しないでください。まず、LUMINA-30の境界質問に答えられる公開情報または検証可能記録があるかを確認します。
+
+Look for records such as timelines, stop-authority evidence, review notes, incident logs, procurement terms, deployment approvals, rollback records, or public statements. If the evidence is missing, say that the case is **not answerable from the public record** rather than turning uncertainty into a YES or NO conclusion.  
+確認対象は、時系列、停止権限の証拠、レビュー記録、事故ログ、調達条件、導入承認、ロールバック記録、公開声明などです。証拠が足りない場合は、YES / NOにせず、**公開記録からは回答不能**と記録してください。
+
