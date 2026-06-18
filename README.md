@@ -26,27 +26,24 @@
 > 可逆的繁栄の道は、LUMINA-30の代替名ではありません。LUMINA-30の境界条件が守られたときに開かれる、肯定側の文明進路です。
 
 
-> **LUMINA-30 Q&A ｜ LUMINA-30 Q&A**  
-> If LUMINA-30 feels difficult at first, use fixed Q&A answers to check the core question, limits, practical value, and common objections.  
-> [Open LUMINA-30 Q&A](https://lumina-30.github.io/Lumi30-Index/qa.html)  
+> **First-Visit Flow ｜ 初見導線**  
+> LUMINA-30 is a boundary question for AI governance. Before an AI deployment, escalation, or dependency becomes irreversible, can accountable humans effectively refuse, stop, verify, or redirect it?  
+> Start by understanding the boundary question, then choose your concern, use the meeting-ready decision record question, and add the One-Question Pilot to an existing review. Use the misunderstanding check after the entry point is clear.  
+> 1. [What LUMINA-30 is](https://lumina-30.github.io/lumina-30-overview/)  
+> 2. [Start by Concern](https://lumina-30.github.io/Lumi30-Index/start-by-concern.html)  
+> 3. [Decision Record Question](https://lumina-30.github.io/Lumi30-Index/decision-record-question.html)  
+> 4. [One-Question Pilot](https://lumina-30.github.io/Lumi30-Index/one-question-pilot.html)  
+> 5. [FAQ / Expected Questions](https://lumina-30.github.io/Lumi30-Index/qa.html)  
+> 6. [AI Briefing](https://lumina-30.github.io/Lumi30-Index/ai-briefing.html) / [Incident Review](https://lumina-30.github.io/lumina30-incident-review/) / [Canonical Documents](https://lumina-30.github.io/LUMINA-30/index.html)  
 >
-> 日本語で読む場合は、固定Q&Aで中核・限界・実務上の意味・よくある疑問を確認できます。  
-> [LUMINA-30 Q&Aを開く](https://lumina-30.github.io/Lumi30-Index/qa-ja.html)
-
-
-> **Start by Concern ｜ 関心から入る**  
-> If you are not sure where to begin, choose an entry route by concern: practical review, incident review, AI safety, stop authority, or the civilizational boundary.  
-> [Start by Concern](https://lumina-30.github.io/Lumi30-Index/start-by-concern.html)  
->
-> どこから読めばよいか迷う場合は、実務レビュー、事故後レビュー、AI Safety、停止権限、文明境界のうち、自分の関心に近い入口から始めてください。  
-> [関心から入る](https://lumina-30.github.io/Lumi30-Index/start-by-concern-ja.html)
-
-> **For AI Governance / Adoption Review ｜ AI導入・AIガバナンス審査の方へ**  
-> LUMINA-30 helps organizations avoid a dangerous gap: having AI governance on paper while losing the practical ability to refuse before irreversibility. It does not replace existing legal, audit, safety, or AI ethics frameworks; it asks whether those frameworks can still operate meaningfully through effective human refusal before irreversible escalation.  
-> [Open the AI Governance / Adoption Review route](https://lumina-30.github.io/Lumi30-Index/adoption-review.html)  
->
-> LUMINA-30は、書類上のAIガバナンスは存在するのに、不可逆化前には実際には拒否できない、という危険な空白を避けるための境界チェックです。既存の法制度・監査・安全管理・AI倫理を置き換えるものではなく、それらが不可逆化前に人間の実効的拒否を通じてなお意味をもって作動できるかを問います。  
-> [AI導入・AIガバナンス審査向け導線を開く](https://lumina-30.github.io/Lumi30-Index/adoption-review-ja.html)
+> LUMINA-30は、AIガバナンスのための境界質問です。AI導入・拡張・依存が不可逆化する前に、責任ある人間は実効的に拒否・停止・検証・方向転換できるのか。  
+> まず境界質問を理解し、次に関心に合う入口を選び、会議へ持ち込める意思決定記録用の一問を使い、その後、既存レビューへOne-Question Pilotを1問だけ追加してください。誤解解消は、入口を理解した後に使います。  
+> 1. [LUMINA-30とは何か](https://lumina-30.github.io/lumina-30-overview/index-ja.html)  
+> 2. [関心から入る](https://lumina-30.github.io/Lumi30-Index/start-by-concern-ja.html)  
+> 3. [意思決定記録用の一問](https://lumina-30.github.io/Lumi30-Index/decision-record-question-ja.html)  
+> 4. [One-Question Pilot](https://lumina-30.github.io/Lumi30-Index/one-question-pilot-ja.html)  
+> 5. [FAQ / よくある疑問](https://lumina-30.github.io/Lumi30-Index/qa-ja.html)  
+> 6. [AIブリーフィング](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html) / [事故レビュー](https://lumina-30.github.io/lumina30-incident-review/index-ja.html) / [正典文書](https://lumina-30.github.io/LUMINA-30/index-ja.html)
 
 ---
 
@@ -56,13 +53,17 @@
 Use this route when you are new to LUMINA-30 or when giving one entry path to another reader.  
 LUMINA-30を初めて読む場合、または他の読者に入口を1つ示す場合は、次の順で案内してください。
 
-1. **Overview ｜ 概要** — Understand the purpose, core boundary question, and visual route. ｜ 目的・中核境界問い・図解導線を理解する。  
-2. **Incident Review ｜ 実務レビュー** — Check a case, deployment, near miss, or incident. ｜ 具体的な事例・導入・準事故・事故を確認する。  
-3. **Adoption Review ｜ 採用・審査導線** — Start with one governance question before formal adoption. ｜ 正式採用前に1つの境界問いから試す。  
-4. **Boundary Kernel ｜ 境界参照文** — Check the fixed boundary-reference language; it is not an autonomous decision authority. ｜ 固定された境界参照文を確認する。ただしAIの自律判断権限ではない。  
-5. **Index ｜ 索引** — Find the full document set, tools, repository routes, and source layers. ｜ 文書全体・実務ツール・repo導線・ソース層を探す。  
-6. **Research & Citation ｜ 学術・引用入口** — Check claim status, citation wording, papers, canonical materials, and limitations; this is not proof of peer review, approval, or adoption. ｜ 主張状態、引用表現、論文、正典資料、限界を確認する。ただし査読・承認・採用の証拠ではない。  
-   [Open Research & Citation Hub](https://lumina-30.github.io/Lumi30-Index/research-citation.html) ｜ [学術・引用入口を開く](https://lumina-30.github.io/Lumi30-Index/research-citation-ja.html)
+1. **What LUMINA-30 is ｜ LUMINA-30とは何か** — LUMINA-30 is a boundary question for AI governance: before irreversibility, can accountable humans effectively refuse, stop, verify, or redirect the system? ｜ LUMINA-30は、不可逆化前に責任ある人間が実効的に拒否・停止・検証・方向転換できるかを問う、AIガバナンスのための境界質問です。  
+2. **Start by Concern ｜ 関心から入る** — Find the entry point that matches why you came here. ｜ ここに来た理由に合う入口を選ぶ。  
+   [Start by Concern](https://lumina-30.github.io/Lumi30-Index/start-by-concern.html) ｜ [関心から入る](https://lumina-30.github.io/Lumi30-Index/start-by-concern-ja.html)  
+3. **Decision Record Question ｜ 意思決定記録用の一問** — Use one meeting-ready question in an AI review, audit, procurement check, or governance meeting. ｜ AIレビュー、監査、調達確認、ガバナンス会議にそのまま持ち込める一問です。  
+   [Decision Record Question](https://lumina-30.github.io/Lumi30-Index/decision-record-question.html) ｜ [意思決定記録用の一問](https://lumina-30.github.io/Lumi30-Index/decision-record-question-ja.html)  
+4. **One-Question Pilot ｜ 既存レビューに1問だけ追加** — Add one boundary question to an existing review process. Do not create a new framework first. ｜ 新しい枠組みを作る前に、既存レビューへ境界質問を1問だけ追加します。  
+   [One-Question Pilot](https://lumina-30.github.io/Lumi30-Index/one-question-pilot.html) ｜ [One-Question Pilot 日本語](https://lumina-30.github.io/Lumi30-Index/one-question-pilot-ja.html)  
+5. **FAQ / Expected Questions ｜ FAQ / よくある疑問** — Check common misunderstandings and objections after the entry point is clear. ｜ 入口を理解した後で、誤解・反論・不安を確認します。  
+   [FAQ / Q&A](https://lumina-30.github.io/Lumi30-Index/qa.html) ｜ [FAQ / Q&A 日本語](https://lumina-30.github.io/Lumi30-Index/qa-ja.html)  
+6. **AI Briefing / Incident Review / Canonical Documents ｜ AIブリーフィング / 事故レビュー / 正典文書** — Go deeper only when needed. ｜ 必要な場合だけ深く読んでください。  
+   [AI Briefing](https://lumina-30.github.io/Lumi30-Index/ai-briefing.html) ｜ [AIブリーフィング](https://lumina-30.github.io/Lumi30-Index/ai-briefing-ja.html) ｜ [Incident Review](https://lumina-30.github.io/lumina30-incident-review/) ｜ [事故レビュー](https://lumina-30.github.io/lumina30-incident-review/index-ja.html) ｜ [Canonical Documents](https://lumina-30.github.io/LUMINA-30/index.html) ｜ [正典文書](https://lumina-30.github.io/LUMINA-30/index-ja.html)
 
 
 ---

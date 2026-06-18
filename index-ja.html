@@ -72,13 +72,14 @@
   <div class="page">
     <nav class="nav" aria-label="ページ内ナビゲーション">
       <a href="index-ja.html">索引</a>
-      <a href="#landmark-map">地図</a>
+      <a href="#first-visit-flow">初見導線</a>
       <a href="start-by-concern-ja.html">関心から入る</a>
+      <a href="decision-record-question-ja.html">意思決定記録用の一問</a>
+      <a href="one-question-pilot-ja.html">One-Question Pilot</a>
+      <a href="qa-ja.html">FAQ / Q&A</a>
       <a href="index.html">英語版</a>
-      <a href="adoption-review-ja.html">採用・審査導線</a>
-      <a href="research-citation-ja.html">学術・引用</a>
-      <a href="https://lumina-30.github.io/lumina-30-overview/index-ja.html">メインフロア</a>
-      <a href="https://lumina-30.github.io/lumina30-incident-review/index-ja.html">インシデントレビュー</a>
+      <a href="#landmark-map">地図</a>
+      <a href="ai-briefing-ja.html">AIブリーフィング</a>
       <a href="https://github.com/lumina-30/Lumi30-Index">GitHubリポジトリ</a>
     </nav>
 
@@ -96,25 +97,16 @@
         現時点での役割は、第三者による検討・議論・試用のために、構造化された概念、レビュー様式、AI可読の境界記述を提供することです。
       </section>
 
-      <section class="notice" aria-label="LUMINA-30 Q&A">
-        <strong class="notice-title">LUMINA-30 Q&A</strong> LUMINA-30が最初は難しく感じる場合、よくある疑問への固定回答で、中核・限界・使う理由・使わなくてよい場合をその場で確認できます。
-        <br />
-        <a class="button" href="./qa-ja.html">LUMINA-30 Q&Aを開く</a>
-      </section>
-
-
-
-      <section class="notice" aria-label="関心から入る">
-        <strong class="notice-title">関心から入る</strong>
-        どこから読めばよいか迷う場合は、実務レビュー、事故後レビュー、AI Safety、停止権限、文明境界のうち、自分の関心に近い入口から始めてください。
-        <br />
-        <a class="button" href="./start-by-concern-ja.html">関心から入る</a>
-      </section>
-
-      <section class="notice" aria-label="AI導入・AIガバナンス審査の方へ">
-        <strong class="notice-title">AI導入・AIガバナンス審査の方へ</strong> LUMINA-30は、書類上のAIガバナンスは存在するのに、不可逆化前には実際には拒否できない、という危険な空白を避けるための境界チェックです。既存手順を変える前に、まず1つの境界問いから試せます。
-        <br />
-        <a class="button" href="./adoption-review-ja.html">採用・審査導線を開く</a>
+      <section id="first-visit-flow" class="notice" aria-label="初見導線">
+        <strong class="notice-title">初見導線</strong>
+        <div class="grid">
+          <article class="card"><h3>1. LUMINA-30とは何か</h3><p>LUMINA-30は、AIガバナンスのための境界質問です。AI導入・拡張・依存が不可逆化する前に、責任ある人間は実効的に拒否・停止・検証・方向転換できるのか。</p><a class="button" href="https://lumina-30.github.io/lumina-30-overview/index-ja.html">概要を開く</a></article>
+          <article class="card"><h3>2. 関心から入る</h3><p>あなたがここに来た理由に合う入口を選んでください。</p><a class="button" href="./start-by-concern-ja.html">関心から入る</a></article>
+          <article class="card"><h3>3. 意思決定記録用の一問</h3><p>AIレビュー、監査、調達確認、ガバナンス会議にそのまま持ち込める一問です。</p><a class="button" href="./decision-record-question-ja.html">一問カードを開く</a></article>
+          <article class="card"><h3>4. One-Question Pilot</h3><p>新しい枠組みを作る前に、既存レビューへ境界質問を1問だけ追加します。</p><a class="button" href="./one-question-pilot-ja.html">Pilotを開く</a></article>
+          <article class="card"><h3>5. FAQ / よくある疑問</h3><p>入口を理解した後で、誤解・反論・不安を確認します。</p><a class="button" href="./qa-ja.html">FAQ / Q&Aを開く</a></article>
+          <article class="card"><h3>6. 深く読む</h3><p>入口を理解した後、必要に応じてAIブリーフィング、事故レビュー、正典文書へ進んでください。</p><a class="button" href="./ai-briefing-ja.html">AIブリーフィング</a> <a class="button" href="https://lumina-30.github.io/lumina30-incident-review/index-ja.html">事故レビュー</a> <a class="button" href="https://lumina-30.github.io/LUMINA-30/index-ja.html">正典文書</a></article>
+        </div>
       </section>
 
       <section id="landmark-map">
@@ -140,12 +132,12 @@
         <h2>最初に何を使うべきか</h2>
         <p>LUMINA-30を初めて読む場合、または外部読者に入口を示す場合は、次の順で案内してください。</p>
         <div class="grid">
-          <article class="card"><h3>1. LUMINA-30の全体像を確認する</h3><p>まず全体像を俯瞰して、どこから読むべきかを確認します。</p><p class="repo-name">(repo: lumina-30-overview)</p><a class="button" href="https://lumina-30.github.io/lumina-30-overview/index-ja.html">🔭 展望台を開く</a></article>
-          <article class="card"><h3>2. 具体例・事故レビューから確認する</h3><p>事例、準事故、事故後レビューの形で、LUMINA-30の使い方を確認します。</p><p class="repo-name">(repo: lumina30-incident-review)</p><a class="button" href="https://lumina-30.github.io/lumina30-incident-review/index-ja.html">🚨 事故レビュー塔を開く</a></article>
-          <article class="card"><h3>3. 実務レビューに差し込む</h3><p>AI導入、調達、監査、セキュリティ、ガバナンス審査に使います。</p><p class="repo-name">(repo: Lumi30-Index / adoption-review)</p><a class="button" href="./adoption-review-ja.html">🏢 採用審査室を開く</a></article>
-          <article class="card"><h3>4. LUMINA-30 Q&Aで疑問を確認する</h3><p>中核・限界・既存制度との関係・使わなくてよい場合を、その場で確認します。</p><p class="repo-name">(repo: Lumi30-Index / Q&A)</p><a class="button" href="./qa-ja.html">LUMINA-30 Q&Aを開く</a></article>
-          <article class="card"><h3>5. 迷ったら戻る</h3><p>文書全体、実務ツール、repo導線、ソース層を探す入口です。</p><p class="repo-name">(repo: Lumi30-Index)</p><a class="button" href="https://lumina-30.github.io/Lumi30-Index/index-ja.html">🧭 中央広場へ戻る</a></article>
-          <article class="card"><h3>6. 学術・引用状態を確認する</h3><p>主張状態、引用表現、論文、正典資料、限界を確認します。査読・承認・採用の証拠ではありません。</p><p class="repo-name">(repo: Lumi30-Index / research-citation)</p><a class="button" href="research-citation-ja.html">🧬 学術・引用入口を開く</a></article>
+          <article class="card"><h3>1. LUMINA-30とは何か</h3><p>LUMINA-30は、AI導入・拡張・依存が不可逆化する前に、責任ある人間が実効的に拒否・停止・検証・方向転換できるかを問う境界質問です。</p><p class="repo-name">(repo: lumina-30-overview)</p><a class="button" href="https://lumina-30.github.io/lumina-30-overview/index-ja.html">🔭 メインフロアを開く</a></article>
+          <article class="card"><h3>2. 関心から入る</h3><p>あなたがここに来た理由に合う入口を選んでください。</p><p class="repo-name">(repo: Lumi30-Index / start-by-concern)</p><a class="button" href="./start-by-concern-ja.html">関心から入る</a></article>
+          <article class="card"><h3>3. 意思決定記録用の一問</h3><p>AIレビュー、監査、調達確認、ガバナンス会議にそのまま持ち込める一問です。</p><p class="repo-name">(repo: Lumi30-Index / decision-record-question)</p><a class="button" href="./decision-record-question-ja.html">一問カードを開く</a></article>
+          <article class="card"><h3>4. One-Question Pilot</h3><p>新しい枠組みを作る前に、既存レビューへ境界質問を1問だけ追加します。</p><p class="repo-name">(repo: Lumi30-Index / one-question-pilot)</p><a class="button" href="./one-question-pilot-ja.html">Pilotを開く</a></article>
+          <article class="card"><h3>5. FAQ / よくある疑問</h3><p>誤解・反論・不安を確認します。入口を理解した後に使います。</p><p class="repo-name">(repo: Lumi30-Index / Q&A)</p><a class="button" href="./qa-ja.html">FAQ / Q&Aを開く</a></article>
+          <article class="card"><h3>6. 深く読む</h3><p>必要な場合だけ、AIブリーフィング、事故レビュー、正典文書へ進みます。</p><p class="repo-name">(repo: Lumi30-Index / Incident Review / Canon)</p><a class="button" href="./ai-briefing-ja.html">AIブリーフィング</a> <a class="button" href="https://lumina-30.github.io/lumina30-incident-review/index-ja.html">事故レビュー</a> <a class="button" href="https://lumina-30.github.io/LUMINA-30/index-ja.html">正典文書</a></article>
         </div>
       </section>
 
