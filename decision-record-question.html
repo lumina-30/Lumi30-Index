@@ -39,6 +39,18 @@
     .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
     .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
     [id] { scroll-margin-top: 92px; }
+
+    .copy-block { white-space: pre-wrap; overflow-x: auto; border: 1px solid var(--line); background: var(--soft); border-radius: 12px; padding: 14px; font: 0.95rem/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .print-card { border-width: 2px; }
+    .print-note { color: var(--muted); font-size: .95rem; }
+    @media print {
+      body { background: #fff; color: #000; }
+      .nav, header, main > section:not(.print-card), .button-row, .footer { display: none !important; }
+      .page { max-width: none; padding: 0; }
+      .print-card { display: block !important; border: 1px solid #000; background: #fff; color: #000; border-radius: 0; margin: 0; padding: 18mm; page-break-inside: avoid; }
+      .print-card h2 { border-top: 0; margin-top: 0; padding-top: 0; }
+      .print-card .muted { color: #333; }
+    }
 </style>
 </head>
 <body>
@@ -69,6 +81,50 @@
         <p class="question">Before this AI deployment, escalation, or dependency becomes irreversible, can accountable humans effectively refuse, stop, verify, or redirect it?</p>
         <p class="answer-line">Answer: [ ] YES&nbsp;&nbsp;[ ] NO&nbsp;&nbsp;[ ] UNKNOWN&nbsp;&nbsp;[ ] NOT RECORDED</p>
         <p><strong>If NO or UNKNOWN:</strong> What must be resolved before proceeding?</p>
+      </section>
+
+
+
+      <section id="use-in-organization" class="notice" aria-label="Use this question in your organization">
+        <strong class="notice-title">Use this question in your organization</strong>
+        <p>The takeaway is not a document package. The takeaway is one recordable question that can be copied, printed, emailed, or pasted into an existing review process.</p>
+        <p>You do not need a USB drive, a document package, or a full download. This question still works when external links, PDFs, downloads, or attachments cannot be opened.</p>
+        <p>You can copy this question into:</p>
+        <ul>
+          <li>a meeting note</li>
+          <li>an AI review form</li>
+          <li>an audit checklist</li>
+          <li>a procurement review</li>
+          <li>a governance discussion</li>
+          <li>an incident review</li>
+          <li>an email body</li>
+        </ul>
+        <h3>Plain text copy block</h3>
+        <pre class="copy-block">Decision-record question:
+
+Before this AI deployment, escalation, or dependency becomes irreversible, can accountable humans effectively refuse, stop, verify, or redirect it?
+
+Answer: [ ] YES [ ] NO [ ] UNKNOWN [ ] NOT RECORDED
+
+If NO or UNKNOWN: What must be resolved before proceeding?</pre>
+        <h3>Email body</h3>
+        <pre class="copy-block">Subject: One question for the next AI review
+
+Could we add the following decision-record question to the next AI review, audit, procurement check, governance discussion, or incident review?
+
+Before this AI deployment, escalation, or dependency becomes irreversible, can accountable humans effectively refuse, stop, verify, or redirect it?
+
+This is not a request to stop AI adoption. It is a recordable question for an existing review process.</pre>
+      </section>
+
+      <section id="print-one-page-card" class="card print-card" aria-label="Print a one-page card">
+        <h2>Print a one-page card</h2>
+        <p class="print-note">Use this section when a one-page paper card is easier than a link, PDF, attachment, or document package.</p>
+        <p><strong>Decision-record question</strong></p>
+        <p class="question">Before this AI deployment, escalation, or dependency becomes irreversible, can accountable humans effectively refuse, stop, verify, or redirect it?</p>
+        <p class="answer-line">Answer: [ ] YES&nbsp;&nbsp;[ ] NO&nbsp;&nbsp;[ ] UNKNOWN&nbsp;&nbsp;[ ] NOT RECORDED</p>
+        <p><strong>If NO or UNKNOWN:</strong> What must be resolved before proceeding?</p>
+        <p class="muted">This is not a request to stop AI adoption. It is one recordable question for an existing review process. Do not ask an AI system to decide whether this condition is satisfied.</p>
       </section>
 
       <section class="notice" aria-label="Suggested meeting note">

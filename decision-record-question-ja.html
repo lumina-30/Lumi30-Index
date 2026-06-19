@@ -39,6 +39,18 @@
     .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
     .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
     [id] { scroll-margin-top: 92px; }
+
+    .copy-block { white-space: pre-wrap; overflow-x: auto; border: 1px solid var(--line); background: var(--soft); border-radius: 12px; padding: 14px; font: 0.95rem/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .print-card { border-width: 2px; }
+    .print-note { color: var(--muted); font-size: .95rem; }
+    @media print {
+      body { background: #fff; color: #000; }
+      .nav, header, main > section:not(.print-card), .button-row, .footer { display: none !important; }
+      .page { max-width: none; padding: 0; }
+      .print-card { display: block !important; border: 1px solid #000; background: #fff; color: #000; border-radius: 0; margin: 0; padding: 18mm; page-break-inside: avoid; }
+      .print-card h2 { border-top: 0; margin-top: 0; padding-top: 0; }
+      .print-card .muted { color: #333; }
+    }
 </style>
 </head>
 <body>
@@ -69,6 +81,50 @@
         <p class="question">このAI導入・拡張・依存が不可逆化する前に、責任ある人間は実効的に拒否・停止・検証・方向転換できますか？</p>
         <p class="answer-line">回答： [ ] YES / 可能&nbsp;&nbsp;[ ] NO / 不可能&nbsp;&nbsp;[ ] UNKNOWN / 未確認&nbsp;&nbsp;[ ] NOT RECORDED / 記録しない</p>
         <p><strong>NO または UNKNOWN の場合：</strong>続行前に何を解消する必要がありますか？</p>
+      </section>
+
+
+
+      <section id="use-in-organization" class="notice" aria-label="組織でこの一問を使う">
+        <strong class="notice-title">組織でこの一問を使う</strong>
+        <p>持ち帰るものは、資料一式ではありません。持ち帰るものは、コピー・印刷・メール本文・既存レビューへの貼り付けで使える、記録可能な一問です。</p>
+        <p>USB、資料一式、zip、添付ファイルは必須ではありません。外部リンク、PDF、ダウンロード、添付ファイルを開けない環境でも、この一問だけで使えます。</p>
+        <p>この一問は、以下にそのまま貼り付けて使えます。</p>
+        <ul>
+          <li>会議メモ</li>
+          <li>AIレビュー票</li>
+          <li>監査チェックリスト</li>
+          <li>調達確認</li>
+          <li>ガバナンス議論</li>
+          <li>事故後レビュー</li>
+          <li>メール本文</li>
+        </ul>
+        <h3>プレーンテキスト</h3>
+        <pre class="copy-block">意思決定記録用の一問：
+
+このAI導入・拡張・依存が不可逆化する前に、責任ある人間は実効的に拒否・停止・検証・方向転換できますか？
+
+回答： [ ] YES [ ] NO [ ] UNKNOWN [ ] NOT RECORDED
+
+NO / UNKNOWN の場合： 続行前に何を解消する必要がありますか？</pre>
+        <h3>メール本文</h3>
+        <pre class="copy-block">件名：次回AIレビューに追加したい一問
+
+次回のAIレビュー、監査、調達確認、ガバナンス議論、事故後レビューに、以下の意思決定記録用の一問を追加できないでしょうか。
+
+このAI導入・拡張・依存が不可逆化する前に、責任ある人間は実効的に拒否・停止・検証・方向転換できますか？
+
+これはAI導入を止める要求ではありません。既存レビューに追加できる、記録可能な一問です。</pre>
+      </section>
+
+      <section id="print-one-page-card" class="card print-card" aria-label="一枚カードとして印刷する">
+        <h2>一枚カードとして印刷する</h2>
+        <p class="print-note">リンク、PDF、添付ファイル、資料一式より、紙1枚のカードが使いやすい場合は、この欄を印刷してください。</p>
+        <p><strong>意思決定記録用の一問</strong></p>
+        <p class="question">このAI導入・拡張・依存が不可逆化する前に、責任ある人間は実効的に拒否・停止・検証・方向転換できますか？</p>
+        <p class="answer-line">回答： [ ] YES / 可能&nbsp;&nbsp;[ ] NO / 不可能&nbsp;&nbsp;[ ] UNKNOWN / 未確認&nbsp;&nbsp;[ ] NOT RECORDED / 記録しない</p>
+        <p><strong>NO または UNKNOWN の場合：</strong>続行前に何を解消する必要がありますか？</p>
+        <p class="muted">これはAI導入を止める要求ではありません。既存レビューに追加できる、記録可能な一問です。この条件が満たされたかどうかをAI自身に判定させないでください。</p>
       </section>
 
       <section class="notice" aria-label="会議導入文">

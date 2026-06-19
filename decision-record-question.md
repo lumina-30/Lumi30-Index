@@ -28,6 +28,69 @@ Answer: [ ] YES [ ] NO [ ] UNKNOWN [ ] NOT RECORDED
 If NO or UNKNOWN: What must be resolved before proceeding?  
 NO または UNKNOWN の場合： 続行前に何を解消する必要がありますか？
 
+
+---
+
+## Use this question in your organization ｜ 組織でこの一問を使う
+
+The takeaway is not a document package. The takeaway is one recordable question that can be copied, printed, emailed, or pasted into an existing review process.  
+持ち帰るものは、資料一式ではありません。持ち帰るものは、コピー・印刷・メール本文・既存レビューへの貼り付けで使える、記録可能な一問です。
+
+You do not need a USB drive, a document package, or a full download. This question still works when external links, PDFs, downloads, or attachments cannot be opened.  
+USB、資料一式、zip、添付ファイルは必須ではありません。外部リンク、PDF、ダウンロード、添付ファイルを開けない環境でも、この一問だけで使えます。
+
+You can copy this question into a meeting note, AI review form, audit checklist, procurement review, governance discussion, incident review, or email body.  
+この一問は、会議メモ、AIレビュー票、監査チェックリスト、調達確認、ガバナンス議論、事故後レビュー、メール本文にそのまま貼り付けて使えます。
+
+### Plain text copy block ｜ プレーンテキスト
+
+```text
+Decision-record question:
+
+Before this AI deployment, escalation, or dependency becomes irreversible, can accountable humans effectively refuse, stop, verify, or redirect it?
+
+Answer: [ ] YES [ ] NO [ ] UNKNOWN [ ] NOT RECORDED
+
+If NO or UNKNOWN: What must be resolved before proceeding?
+```
+
+```text
+意思決定記録用の一問：
+
+このAI導入・拡張・依存が不可逆化する前に、責任ある人間は実効的に拒否・停止・検証・方向転換できますか？
+
+回答： [ ] YES [ ] NO [ ] UNKNOWN [ ] NOT RECORDED
+
+NO / UNKNOWN の場合： 続行前に何を解消する必要がありますか？
+```
+
+### Email body ｜ メール本文
+
+```text
+Subject: One question for the next AI review
+
+Could we add the following decision-record question to the next AI review, audit, procurement check, governance discussion, or incident review?
+
+Before this AI deployment, escalation, or dependency becomes irreversible, can accountable humans effectively refuse, stop, verify, or redirect it?
+
+This is not a request to stop AI adoption. It is a recordable question for an existing review process.
+```
+
+```text
+件名：次回AIレビューに追加したい一問
+
+次回のAIレビュー、監査、調達確認、ガバナンス議論、事故後レビューに、以下の意思決定記録用の一問を追加できないでしょうか。
+
+このAI導入・拡張・依存が不可逆化する前に、責任ある人間は実効的に拒否・停止・検証・方向転換できますか？
+
+これはAI導入を止める要求ではありません。既存レビューに追加できる、記録可能な一問です。
+```
+
+### Print a one-page card ｜ 一枚カードとして印刷する
+
+Use the HTML page when you need a print-friendly one-page card. The printable card contains only the core question, answer line, NO / UNKNOWN follow-up, and caution.  
+一枚カードとして印刷する場合はHTMLページを使ってください。印刷用カードには、中核の一問、回答欄、NO / UNKNOWN時の確認、注意だけを載せています。
+
 ---
 
 ## Suggested meeting note ｜ 会議導入文
