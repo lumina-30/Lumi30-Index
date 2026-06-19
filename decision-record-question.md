@@ -86,6 +86,56 @@ This is not a request to stop AI adoption. It is a recordable question for an ex
 これはAI導入を止める要求ではありません。既存レビューに追加できる、記録可能な一問です。
 ```
 
+
+---
+
+## For internal proposers ｜ 組織内で提案する人へ
+
+You do not need to present LUMINA-30 as a new framework. You can present this as one decision-record question added to an existing AI review, audit, procurement check, governance discussion, or incident review.  
+LUMINA-30を新しい枠組みとして提案する必要はありません。既存のAIレビュー、監査、調達確認、ガバナンス議論、事故後レビューに追加する、意思決定記録用の一問として提示できます。
+
+This is not a demand to stop AI adoption. It does not replace legal, security, safety, audit, or governance processes. It records whether accountable humans can still refuse, stop, verify, or redirect before escalation or dependency becomes irreversible.  
+これはAI導入を止める要求ではありません。既存の法務、セキュリティ、安全確認、監査、ガバナンス手続きを置き換えるものでもありません。目的は、拡張や依存が不可逆化する前に、責任ある人間が実効的に拒否・停止・検証・方向転換できるかを記録することです。
+
+A YES, NO, UNKNOWN, or NOT RECORDED answer is not an automatic pass/fail result. If the answer is NO or UNKNOWN, record what must be clarified or resolved before proceeding.  
+YES、NO、UNKNOWN、NOT RECORDED は、ただちに合格・不合格を意味しません。NO または UNKNOWN の場合は、続行前に何を明確化・解消する必要があるかを記録してください。
+
+### Suggested wording ｜ 提案例
+
+```text
+Could we add this as one decision-record question to the existing review?
+
+Before this AI deployment, escalation, or dependency becomes irreversible, can accountable humans effectively refuse, stop, verify, or redirect it?
+
+This is not a request to block the project. It is a way to make the decision record reviewable later.
+```
+
+```text
+既存レビューに、意思決定記録用の一問としてこれを追加できないでしょうか。
+
+このAI導入・拡張・依存が不可逆化する前に、責任ある人間は実効的に拒否・停止・検証・方向転換できますか？
+
+これはプロジェクトを止める要求ではありません。後から検証可能な意思決定記録を残すための確認です。
+```
+
+### If challenged ｜ 反論された場合
+
+- If someone says “we already have human oversight,” ask whether humans can effectively refuse, stop, verify, or redirect before irreversibility.  
+  「人間監督はすでにある」と言われたら、不可逆化前に実効的に拒否・停止・検証・方向転換できるかを確認してください。
+- If someone says “this will block innovation,” clarify that the question records reversibility before dependency becomes hard to unwind.  
+  「イノベーションを止めるのか」と言われたら、これは停止要求ではなく、依存が戻しにくくなる前に可逆性を記録する確認だと説明してください。
+- If someone says “legal or security review already covers this,” clarify that this question does not replace those reviews; it adds a record of effective human refusal before irreversible escalation.  
+  「法務・セキュリティレビューで足りる」と言われたら、それらを置き換えるものではなく、不可逆化前の実効的人間拒否を記録する一問だと説明してください。
+- If the answer is UNKNOWN, the next step is not blame. The next step is to identify what must be clarified before proceeding.  
+  答えが UNKNOWN の場合、次に必要なのは非難ではありません。続行前に何を明確にする必要があるかを確認することです。
+
+You do not need to explain the full LUMINA-30 structure to use this question. If the proposal leads to discussion, return to the FAQ, One-Question Pilot, and Full Overview for deeper context.  
+この一問を使うために、LUMINA-30の全体構造を説明する必要はありません。提案が議論につながった場合は、FAQ、One-Question Pilot、Full Overviewに戻って背景を確認してください。
+
+- [FAQ / Expected Questions](https://lumina-30.github.io/Lumi30-Index/qa.html) ｜ [FAQ / よくある疑問](https://lumina-30.github.io/Lumi30-Index/qa-ja.html)
+- [One-Question Pilot](https://lumina-30.github.io/Lumi30-Index/one-question-pilot.html) ｜ [One-Question Pilot 日本語](https://lumina-30.github.io/Lumi30-Index/one-question-pilot-ja.html)
+- [Read the Full Overview](https://lumina-30.github.io/lumina-30-overview/) ｜ [全体像を深く読む](https://lumina-30.github.io/lumina-30-overview/index-ja.html)
+
 ### Print a one-page card ｜ 一枚カードとして印刷する
 
 Use the HTML page when you need a print-friendly one-page card. The printable card contains only the core question, answer line, NO / UNKNOWN follow-up, and caution.  
