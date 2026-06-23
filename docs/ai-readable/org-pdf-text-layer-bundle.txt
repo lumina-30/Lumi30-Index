@@ -984,7 +984,7 @@ https://peppermint-sprint-2d5.notion.site/LUMINA-30-
 2f91e0720ec880d2b562d8ce6a98edaf
 External reference (GitHub):
 LUMINA-30 public reference repository
-https://github.com/gsx750ss-dev/LUMINA-30
+https://github.com/lumina-30/LUMINA-30
 This document preserves, in language, the ethical preconditions required to
 ensure that
 as artificial intelligence systems become increasingly autonomous and capable,
@@ -1757,7 +1757,7 @@ A conceptual map of the LUMINA-30 framework.
 LUMINA-30 思想体系の概念地図 
  
 Related materials: 
-https://github.com/gsx750ss-dev/lumina-30-overview 
+https://github.com/lumina-30/lumina-30-overview
 PCR-C Paper DOI: 10.5281/zenodo.18824181
 
 [Page 002]
@@ -2010,8 +2010,8 @@ LUMINA-30 は、AI 文明において人類の意思決定主体が制度的に�
  
 Related Materials ／ 関連資料 
  
-LUMINA-30 Overview (GitHub):  https://github.com/gsx750ss-dev/lumina-30-overview 
-LUMINA-30 Index (GitHub):  https://github.com/gsx750ss-dev/Lumi30-Index 
+LUMINA-30 Overview (GitHub):  https://github.com/lumina-30/lumina-30-overview
+LUMINA-30 Index (GitHub):  https://github.com/lumina-30/Lumi30-Index
 PCR-C Technical Paper (Zenodo):  https://doi.org/10.5281/zenodo.18824181 
  
 — Non-binding. Non-prescriptive. Referential. — 
