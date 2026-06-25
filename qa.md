@@ -40,7 +40,7 @@ Before this AI-mediated process reaches an irreversible outcome, can a responsib
 
 The Q&A includes evidence, records, and drift-related questions in deeper sections because LUMINA-30 should not appear to ignore auditability and incident-review evidence. In this context, drift means the hollowing-out of effective safeguards / 実効性の形骸化: evidence, timing, authority, records, or boundary conditions can become merely formal after the fact. These concepts support the core boundary question; they do not replace it with a new theory layer.
 
-Q&A Max does not restore any AI-explanation or AI-evaluation pathway. It provides fixed reader-facing answers directly on the page.
+Q&A Max provides fixed reader-facing answers directly on the page rather than delegating explanation or evaluation to an AI.
 
 ## Question inventory
 
@@ -121,7 +121,7 @@ Q&A Max does not restore any AI-explanation or AI-evaluation pathway. It provide
 75. **Do explanation, responsibility, and log problems matter too?** ｜ **説明・責任・ログの形骸化も問題になりますか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
 76. **Why check the hollowing-out of evidence, timing, and refusal authority?** ｜ **なぜ証拠・時系列・拒否権の形骸化を確認するのですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
 77. **Does LUMINA-30 also address the hollowing-out of evidence and records?** ｜ **LUMINA-30は、証拠や記録の形骸化も扱いますか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
-78. **How should readers treat concepts that are still being refined?** ｜ **まだ整理中の概念は、どう受け止めればよいですか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
+78. **How should readers use supporting concepts?** ｜ **補助概念はどのように扱いますか？**  _Evidence, records, and drift / 証拠・記録・ドリフト_
 79. **Does LUMINA-30 technically contain high-speed AI?** ｜ **LUMINA-30は高速AIを技術的に封じ込めますか？**  _High-speed and frontier AI / 高速AI・フロンティアAI_
 80. **How does it apply to recursive self-improvement or self-reconstruction?** ｜ **再帰的自己改善や自己再構築にはどう適用しますか？**  _High-speed and frontier AI / 高速AI・フロンティアAI_
 81. **What is the human review bottleneck?** ｜ **人間レビューのボトルネックとは何ですか？**  _High-speed and frontier AI / 高速AI・フロンティアAI_
