@@ -4,7 +4,7 @@
 > [Open the Operational / Mathematical Archive HTML](https://lumina-30.github.io/Lumi30-Index/03_Operational_Control/README.html)  
 >
 > ナビゲーション、戻り導線、ソース確認にはHTML版を使用してください：  
-> [運用・数理補足アーカイブ HTML版を開く](https://lumina-30.github.io/Lumi30-Index/03_Operational_Control/README.html)  
+> [運用・数理補足アーカイブ HTML版を開く](https://lumina-30.github.io/Lumi30-Index/03_Operational_Control/README-ja.html)  
 >
 > This Markdown file is retained for text preservation, search discoverability, existing links, and source review.  
 > 本Markdownは、文章保管、検索到達性、既存リンク維持、ソース確認のために残しています。
