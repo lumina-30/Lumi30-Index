@@ -132,16 +132,6 @@ LUMINA-30は、AIを止める運動ではありません。文明が不可逆な
 
 ---
 
-## Related topics for later expansion ｜ 第二段階以降の関連テーマ
-
-AI ethics / responsible AI; copyright, training data, and consent; AI companions and emotional dependence; infrastructure, data centers, and energy; work, education, and public services; deepfakes, fraud, and information operations; cyber and bio misuse; military AI and autonomous weapons; open models and compute governance; Japan and domestic AI governance.  
-AI Ethics / Responsible AI、著作権・学習データ・同意、AI companion、データセンター・電力、雇用・教育・公共サービス、深偽造・詐欺・情報操作、サイバー・バイオ悪用、軍事AI・自律兵器、オープンモデル・計算資源、日本国内AIガバナンス。
-
-These topics are not made primary entry routes in this first version. Source Collection and Obsidian notes are reference material, not public canonical LUMINA-30 documents.  
-これらは初回実装では主入口化しません。Source CollectionおよびObsidian資料は参考史料であり、LUMINA-30の公開正本ではありません。
-
----
-
 ## What to do after reading this page ｜ 読んだ後にすること
 
 **If you work on review, audit, procurement, or governance:** Add the One-Question Pilot to one existing review process. Do not create a new framework first.  
