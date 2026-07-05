@@ -1,8 +1,8 @@
 # OQP Entry Tracking v0.1
 
-Status: PARTIAL GO
+Status: GO CANDIDATE / pending GoatCounter dashboard verification
 
-This document defines tracking preparation for LUMINA-30 One-Question Pilot X-card entry pages.
+This document defines tracking for LUMINA-30 One-Question Pilot X-card entry pages.
 
 ## Principle
 
@@ -14,36 +14,50 @@ UTMは名札、解析は記録装置。
 
 名札だけで終わらせず、最初から記録装置も入れる。
 
-## Current scope
+## Provider
 
-This v0.1 change does the following:
-
-1. Adds UTM parameters to the OQP button/link destinations on existing X-card entry pages.
-2. Adds click-measurement attributes to those links.
-3. Adds a central analytics bridge file at `assets/js/l30-analytics.js`.
-4. Documents that measurement is not possible until a real analytics service is installed.
-5. Avoids placeholder production snippets such as `placeholder service code`.
-
-## Important limitation
-
-UTM parameters alone do not store statistics.
-
-`assets/js/l30-analytics.js` is currently a central insertion point and local event bridge only. It does not send events to any analytics provider.
-
-Therefore, this change must not be judged as final GO.
-
-The correct status is:
+Provider:
 
 ```text
-PARTIAL GO
+GoatCounter
 ```
 
-True GO requires:
+Configured endpoint:
 
 ```text
-- A real analytics provider code is installed.
-- No placeholder code such as placeholder service code remains.
-- At least one test access / click is visible in the selected analytics dashboard.
+https://lumina30.goatcounter.com/count
+```
+
+Provider script:
+
+```text
+https://gc.zgo.at/count.js
+```
+
+The provider code is centralized in:
+
+```text
+assets/js/l30-analytics.js
+```
+
+Do not scatter GoatCounter snippets across entry pages.
+
+## Current status
+
+This change is not final GO by code placement alone.
+
+The correct status immediately after applying the code is:
+
+```text
+GO CANDIDATE
+```
+
+Final GO requires:
+
+```text
+- GoatCounter count.js loads on the live GitHub Pages entry pages.
+- At least one pageview appears in the GoatCounter dashboard.
+- At least one OQP button click event appears in the GoatCounter dashboard.
 ```
 
 ## Entry pages and UTM rules
@@ -63,82 +77,89 @@ data-l30-track="oqp_open"
 data-l30-entry-id="..."
 data-l30-entry-context="..."
 data-l30-target="oqp"
-data-l30-analytics-state="pending_service_selection"
 ```
 
-These attributes are for future analytics instrumentation. They are not sufficient for real measurement by themselves.
+These are already present on the current OQP X-card entry pages.
 
-## Central analytics bridge
+## GoatCounter event shape
 
-File:
+The bridge sends OQP button clicks as GoatCounter events with paths shaped like:
 
 ```text
-assets/js/l30-analytics.js
+/events/oqp_open/<entry_id>/<target>
 ```
 
-Current behavior:
+Examples:
 
 ```text
-- Listens for clicks on [data-l30-track]
-- Builds a structured event object
-- Dispatches a browser CustomEvent named l30:analytics-event
-- Does not send network requests
-- Logs only when L30_ANALYTICS_DEBUG is enabled
+/events/oqp_open/oqp_x_standard_en/oqp
+/events/oqp_open/oqp_x_standard_ja/oqp_ja
+/events/oqp_open/oqp_x_claude_invader_en/oqp
 ```
 
-Debugging in browser console:
+The event title includes the entry ID and entry context.
+
+## Dashboard verification procedure
+
+After deployment:
+
+1. Open one or more live entry pages:
+   - `https://lumina-30.github.io/Lumi30-Index/oqp-x.html`
+   - `https://lumina-30.github.io/Lumi30-Index/oqp-x-ja.html`
+   - `https://lumina-30.github.io/Lumi30-Index/oqp-x-claude.html`
+2. Click `Open One-Question Pilot` on each page.
+3. Open the GoatCounter dashboard:
+   - `https://lumina30.goatcounter.com`
+4. Confirm pageviews appear.
+5. Confirm event paths under `/events/oqp_open/...` appear.
+
+If nothing appears, check whether an ad blocker is blocking either:
+
+```text
+goatcounter.com
+gc.zgo.at
+```
+
+## Debug mode
+
+For local browser sanity checks, run:
 
 ```javascript
 localStorage.setItem("L30_ANALYTICS_DEBUG", "1")
 ```
 
-Then click an instrumented OQP link. The console should show:
+Then click an instrumented OQP link. The console should show either:
 
 ```text
-[L30 analytics bridge: not sent]
+[L30 GoatCounter event sent]
 ```
 
-This debug mode is not analytics. It is only a local sanity check.
-
-## Future provider insertion
-
-When a provider is chosen, update only:
+or:
 
 ```text
-assets/js/l30-analytics.js
+[L30 GoatCounter pending: count.js not ready]
 ```
 
-Do not scatter provider snippets across entry pages.
-
-Candidate providers may include:
-
-```text
-- GoatCounter
-- Plausible
-- Umami
-- Cloudflare Web Analytics
-```
-
-Provider selection is outside this v0.1 scope.
+Debug mode is not the final evidence. Final evidence is the GoatCounter dashboard record.
 
 ## Do not do this
 
-Do not commit placeholder snippets like:
+Do not commit unresolved analytics placeholders to production pages and call the work GO.
 
-```text
-placeholder service code
-placeholder site ID
-placeholder analytics domain
-```
-
-to production pages and call the work GO.
+Do not use a sample analytics domain in production.
 
 ## Completion status
 
-This v0.1 is complete only as preparation:
+Current code status after applying this bundle:
 
 ```text
-PARTIAL GO
+GO CANDIDATE
 ```
 
-Final GO is allowed only after a real provider records a test event.
+Final status becomes:
+
+```text
+GO
+```
+
+only after a real GoatCounter dashboard record is visible.
