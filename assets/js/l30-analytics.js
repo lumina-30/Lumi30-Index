@@ -1,17 +1,18 @@
 /*!
- * LUMINA-30 lightweight analytics bridge v0.1
+ * LUMINA-30 lightweight analytics bridge v0.2
  *
  * GO candidate status:
  * - GoatCounter provider code is configured for https://lumina30.goatcounter.com/count.
  * - Pageviews are handled by GoatCounter count.js.
  * - OQP button clicks are sent as GoatCounter events when goatcounter.count is available.
+ * - Event paths intentionally do not start with "/" because GoatCounter event paths must not start with a slash.
  * - Final GO requires at least one verified pageview or click event in the GoatCounter dashboard.
  */
 (function () {
   "use strict";
 
   var config = {
-    version: "0.1",
+    version: "0.2",
     status: "go_candidate_pending_dashboard_verification",
     provider: "goatcounter",
     endpoint: "https://lumina30.goatcounter.com/count",
@@ -42,7 +43,7 @@
   function encodeEventPath(detail) {
     var entryId = detail.entry_id || "unknown_entry";
     var target = detail.target || "unknown_target";
-    return "/events/oqp_open/" + encodeURIComponent(entryId) + "/" + encodeURIComponent(target);
+    return "events/oqp_open/" + encodeURIComponent(entryId) + "/" + encodeURIComponent(target);
   }
 
   function buildTitle(detail) {
@@ -62,7 +63,7 @@
       event_name: link.getAttribute("data-l30-track") || "click",
       entry_id: link.getAttribute("data-l30-entry-id") || readMeta("l30:entry-id"),
       entry_context: link.getAttribute("data-l30-entry-context") || readMeta("l30:entry-context"),
-      analytics_state: "go_candidate_pending_dashboard_verification",
+      analytics_state: readMeta("l30:analytics-status") || "go_candidate_pending_dashboard_verification",
       target: link.getAttribute("data-l30-target") || "",
       href: href,
       page_path: window.location.pathname,
