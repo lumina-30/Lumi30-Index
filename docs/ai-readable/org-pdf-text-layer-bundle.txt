@@ -1,6 +1,6 @@
 LUMINA-30 Organization PDF Text Layer Bundle
 This file is generated automatically. Do not edit by hand.
-Generated: 2026-07-12T19:40:55Z
+Generated: 2026-07-13T19:59:43Z
 Organization: lumina-30
 
 Authority:
