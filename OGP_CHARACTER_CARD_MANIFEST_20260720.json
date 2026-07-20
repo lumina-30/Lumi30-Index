@@ -1,0 +1,30 @@
+[
+  {
+    "html": "oqp-x-character-chatgpt-red-ja.html",
+    "image": "assets/social/oqp-character-chatgpt-red-ja.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-x-character-chatgpt-red-ja.html",
+    "language": "ja",
+    "title": "AI System: ChatGPT Red | LUMINA-30 One-Question Pilot"
+  },
+  {
+    "html": "oqp-x-character-gemini-blue-ja.html",
+    "image": "assets/social/oqp-character-gemini-blue-ja.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-x-character-gemini-blue-ja.html",
+    "language": "ja",
+    "title": "AI System: Gemini Blue | LUMINA-30 One-Question Pilot"
+  },
+  {
+    "html": "oqp-x-character-claude-orange-en.html",
+    "image": "assets/social/oqp-character-claude-orange-en.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-x-character-claude-orange-en.html",
+    "language": "en",
+    "title": "AI System: Claude Orange | LUMINA-30 One-Question Pilot"
+  },
+  {
+    "html": "oqp-x-character-grok-emerald-en.html",
+    "image": "assets/social/oqp-character-grok-emerald-en.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-x-character-grok-emerald-en.html",
+    "language": "en",
+    "title": "AI System: Grok Emerald | LUMINA-30 One-Question Pilot"
+  }
+]
