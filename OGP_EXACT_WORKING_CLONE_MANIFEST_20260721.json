@@ -1,0 +1,54 @@
+[
+  {
+    "html": "oqp-x-live-chatgpt-red-ja.html",
+    "image": "assets/social/oqp-card-live-chatgpt-red-ja.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-x-live-chatgpt-red-ja.html",
+    "image_url_after_publish": "https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-card-live-chatgpt-red-ja.jpg",
+    "basis": "oqp-x-ja.html",
+    "method": "Exact clone of existing working LUMINA-30 X-card HTML; only URL/title/description/image/entry IDs replaced.",
+    "image_dimensions": [
+      1536,
+      807
+    ],
+    "file_size_bytes": 447984
+  },
+  {
+    "html": "oqp-x-live-gemini-blue-ja.html",
+    "image": "assets/social/oqp-card-live-gemini-blue-ja.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-x-live-gemini-blue-ja.html",
+    "image_url_after_publish": "https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-card-live-gemini-blue-ja.jpg",
+    "basis": "oqp-x-ja.html",
+    "method": "Exact clone of existing working LUMINA-30 X-card HTML; only URL/title/description/image/entry IDs replaced.",
+    "image_dimensions": [
+      1536,
+      807
+    ],
+    "file_size_bytes": 445126
+  },
+  {
+    "html": "oqp-x-live-claude-orange-en.html",
+    "image": "assets/social/oqp-card-live-claude-orange-en.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-x-live-claude-orange-en.html",
+    "image_url_after_publish": "https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-card-live-claude-orange-en.jpg",
+    "basis": "oqp-x.html",
+    "method": "Exact clone of existing working LUMINA-30 X-card HTML; only URL/title/description/image/entry IDs replaced.",
+    "image_dimensions": [
+      1536,
+      807
+    ],
+    "file_size_bytes": 427534
+  },
+  {
+    "html": "oqp-x-live-grok-emerald-en.html",
+    "image": "assets/social/oqp-card-live-grok-emerald-en.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-x-live-grok-emerald-en.html",
+    "image_url_after_publish": "https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-card-live-grok-emerald-en.jpg",
+    "basis": "oqp-x.html",
+    "method": "Exact clone of existing working LUMINA-30 X-card HTML; only URL/title/description/image/entry IDs replaced.",
+    "image_dimensions": [
+      1536,
+      807
+    ],
+    "file_size_bytes": 383331
+  }
+]
