@@ -3,137 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="その判断を、まだ止められるか。LUMINA-30の1問パイロット日本語入口。">
-  <meta name="l30:entry-id" content="oqp_x_character_gemini_blue_ja">
-  <meta name="l30:entry-context" content="character_gemini_blue_ja">
-  <meta name="l30:analytics-status" content="go_candidate_pending_x_card_and_dashboard_verification">
-  <title>AI System: Gemini Blue | LUMINA-30 1問パイロット</title>
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI System: Gemini Blue">
-  <meta name="twitter:description" content="その判断を、まだ止められるか。LUMINA-30の1問パイロット日本語入口。">
-  <meta name="twitter:image" content="https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-character-gemini-blue-ja.jpg">
-  <meta name="twitter:image:alt" content="AI System: Gemini Blue。その判断を、まだ止められるか。LUMINA-30 1問パイロット。">
-
+  <title>AI System: Gemini Blue | LUMINA-30 One-Question Pilot</title>
+  <meta name="description" content="その判断を、まだ止められるか。LUMINA-30 One-Question Pilot の日本語入口です。">
+  <link rel="canonical" href="https://lumina-30.github.io/Lumi30-Index/oqp-x-character-gemini-blue-ja.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AI System: Gemini Blue">
-  <meta property="og:description" content="その判断を、まだ止められるか。LUMINA-30の1問パイロット日本語入口。">
+  <meta property="og:site_name" content="LUMINA-30">
+  <meta property="og:title" content="AI System: Gemini Blue | LUMINA-30 One-Question Pilot">
+  <meta property="og:description" content="その判断を、まだ止められるか。LUMINA-30 One-Question Pilot の日本語入口です。">
   <meta property="og:url" content="https://lumina-30.github.io/Lumi30-Index/oqp-x-character-gemini-blue-ja.html">
   <meta property="og:image" content="https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-character-gemini-blue-ja.jpg">
-  <meta property="og:image:secure_url" content="https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-character-gemini-blue-ja.jpg">
-  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1672">
   <meta property="og:image:height" content="941">
-  <meta property="og:image:alt" content="AI System: Gemini Blue。その判断を、まだ止められるか。LUMINA-30 1問パイロット。">
-  <meta property="og:site_name" content="LUMINA-30">
-
-  <link rel="image_src" href="https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-character-gemini-blue-ja.jpg">
-
-  <script defer src="./assets/js/l30-analytics.js?v=20260705-goatcounter-v2"></script>
-
+  <meta property="og:image:alt" content="AI System: Gemini Blue">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI System: Gemini Blue | LUMINA-30 One-Question Pilot">
+  <meta name="twitter:description" content="その判断を、まだ止められるか。LUMINA-30 One-Question Pilot の日本語入口です。">
+  <meta name="twitter:image" content="https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-character-gemini-blue-ja.jpg">
   <style>
-    :root {
-      color-scheme: dark;
-      --bg: #071019;
-      --panel: #101b27;
-      --text: #f4f7fb;
-      --muted: #b8c4d2;
-      --line: #2a3948;
-      --accent: #9fd3ff;
-      --accent-strong: #dff1ff;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(76, 154, 255, 0.18), transparent 34%),
-        radial-gradient(circle at 80% 10%, rgba(151, 217, 255, 0.12), transparent 30%),
-        var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
-      line-height: 1.7;
-    }
-    main {
-      width: min(920px, calc(100% - 32px));
-      padding: clamp(28px, 5vw, 56px);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: color-mix(in srgb, var(--panel) 92%, transparent 8%);
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
-    }
-    .hero-card {
-      display: block;
-      width: 100%;
-      max-width: 960px;
-      height: auto;
-      margin: 0 auto clamp(24px, 4vw, 36px);
-      border-radius: 18px;
-      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
-    }
-    .label {
-      display: inline-block;
-      margin: 0 0 18px;
-      padding: 6px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--accent);
-      font-size: 0.92rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(2.25rem, 6vw, 4.6rem);
-      line-height: 1.08;
-      letter-spacing: -0.05em;
-    }
-    p {
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-size: clamp(1.15rem, 2.4vw, 1.55rem);
-      max-width: 720px;
-    }
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 32px;
-    }
-    a.button {
-      display: inline-block;
-      padding: 14px 20px;
-      border-radius: 999px;
-      background: var(--accent-strong);
-      color: #071019;
-      font-weight: 700;
-      text-decoration: none;
-    }
-    a.text-link {
-      display: inline-block;
-      padding: 14px 0;
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:focus-visible {
-      outline: 3px solid var(--accent);
-      outline-offset: 4px;
-    }
-  </style>
+:root{--bg:#0b1020;--panel:#10172d;--text:#edf2ff;--muted:#aab6d6;--line:#2a365d;--accent:#86b7ff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#0b1020,#0d1530);color:var(--text)}
+main{max-width:1080px;margin:0 auto;padding:24px} .hero{display:grid;gap:20px;align-items:center}
+@media(min-width:900px){.hero{grid-template-columns: minmax(0,1.25fr) minmax(320px,.75fr)}}
+.cardimg{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);display:block;background:#111;box-shadow:0 18px 48px rgba(0,0,0,.35)}
+.panel{background:rgba(16,23,45,.9);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 18px 48px rgba(0,0,0,.25)}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;color:#d4e4ff;background:#1a2650;border:1px solid #32488d;padding:6px 10px;border-radius:999px;margin-bottom:12px}
+h1{margin:0 0 8px;font-size:30px;line-height:1.18} .sub{margin:0 0 14px;font-size:20px;color:#fff;font-weight:700}
+p{line-height:1.6;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.btn{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700}.primary{background:#dbe8ff;color:#11204b}.secondary{border:1px solid var(--line);color:var(--text)}
+.meta{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)} code{background:#111a34;padding:2px 6px;border-radius:6px;color:#dfe8ff}
+.footer{margin-top:28px;font-size:13px;color:var(--muted)}
+</style>
 </head>
 <body>
   <main>
-    <img class="hero-card" src="./assets/social/oqp-character-gemini-blue-ja.jpg" alt="AI System: Gemini Blue。その判断を、まだ止められるか。LUMINA-30 1問パイロット。">
-
-    <p class="label">LUMINA-30 1問パイロット</p>
-    <h1>AI System: Gemini Blue</h1>
-    <p>その判断を、まだ止められるか。</p>
-    <div class="actions" aria-label="主要導線">
-      <a class="button" href="./oqp-ja.html?utm_source=x&utm_medium=social&utm_campaign=oqp_x_card&utm_content=character_gemini_blue_ja" data-l30-track="oqp_open" data-l30-entry-id="oqp_x_character_gemini_blue_ja" data-l30-entry-context="character_gemini_blue_ja" data-l30-target="oqp_ja" data-l30-analytics-state="go_candidate_pending_x_card_and_dashboard_verification">1問パイロットを開く</a>
-      <a class="text-link" href="./oqp-ja.html?utm_source=x&utm_medium=social&utm_campaign=oqp_x_card&utm_content=character_gemini_blue_ja" data-l30-track="oqp_open" data-l30-entry-id="oqp_x_character_gemini_blue_ja" data-l30-entry-context="character_gemini_blue_ja" data-l30-target="oqp_ja" data-l30-analytics-state="go_candidate_pending_x_card_and_dashboard_verification">日本語版パイロットへ進む →</a>
-    </div>
+    <section class="hero">
+      <div>
+        <img class="cardimg" src="assets/social/oqp-character-gemini-blue-ja.jpg" alt="AI System: Gemini Blue">
+      </div>
+      <div class="panel">
+        <div class="eyebrow">LUMINA-30 · One-Question Pilot</div>
+        <h1>AI System: Gemini Blue</h1>
+        <div class="sub">その判断を、まだ止められるか。</div>
+        <p>不可逆化する前に、人間はまだ拒否・停止・検証・延期・方向転換できるか。</p>
+        <div class="actions">
+          <a class="btn primary" href="https://lumina-30.github.io/Lumi30-Index/oqp-x-ja.html">日本語 One-Question Pilot へ</a>
+          <a class="btn secondary" href="https://lumina-30.github.io/Lumi30-Index/">LUMINA-30 Index</a>
+        </div>
+        <div class="meta">
+          OGP page: <code>oqp-x-character-gemini-blue-ja.html</code><br>
+          OGP image: <code>assets/social/oqp-character-gemini-blue-ja.jpg</code>
+        </div>
+      </div>
+    </section>
+    <div class="footer">This page is intended to function as an X URL card entry point. Use the page URL in X to display the card.</div>
   </main>
 </body>
 </html>
