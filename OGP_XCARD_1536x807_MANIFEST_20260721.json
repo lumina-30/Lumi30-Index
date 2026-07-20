@@ -1,0 +1,30 @@
+[
+  {
+    "html": "oqp-xc-chatgpt-red-ja.html",
+    "image": "assets/social/oqp-xc-chatgpt-red-ja.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-xc-chatgpt-red-ja.html",
+    "image_dimensions": "1536 x 807",
+    "reason": "Match proven LUMINA-30 OQP X-card image dimensions."
+  },
+  {
+    "html": "oqp-xc-gemini-blue-ja.html",
+    "image": "assets/social/oqp-xc-gemini-blue-ja.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-xc-gemini-blue-ja.html",
+    "image_dimensions": "1536 x 807",
+    "reason": "Match proven LUMINA-30 OQP X-card image dimensions."
+  },
+  {
+    "html": "oqp-xc-claude-orange-en.html",
+    "image": "assets/social/oqp-xc-claude-orange-en.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-xc-claude-orange-en.html",
+    "image_dimensions": "1536 x 807",
+    "reason": "Match proven LUMINA-30 OQP X-card image dimensions."
+  },
+  {
+    "html": "oqp-xc-grok-emerald-en.html",
+    "image": "assets/social/oqp-xc-grok-emerald-en.jpg",
+    "url_after_publish": "https://lumina-30.github.io/Lumi30-Index/oqp-xc-grok-emerald-en.html",
+    "image_dimensions": "1536 x 807",
+    "reason": "Match proven LUMINA-30 OQP X-card image dimensions."
+  }
+]
