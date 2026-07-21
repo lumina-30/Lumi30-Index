@@ -1,0 +1,62 @@
+{
+  "created": "2026-07-21",
+  "package": "LUMINA30_AI_character_cards_wave1_add4_OGP_ready_20260721",
+  "status": "ready-to-apply package; not deployed to GitHub by this package",
+  "image_size": "1536x807",
+  "cards": [
+    {
+      "id": "CHATGPT_RED_EN",
+      "html": "oqp-x-live-chatgpt-red-en.html",
+      "image": "assets/social/oqp-card-live-chatgpt-red-en.jpg",
+      "expected_page_url": "https://lumina-30.github.io/Lumi30-Index/oqp-x-live-chatgpt-red-en.html",
+      "expected_image_url": "https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-card-live-chatgpt-red-en.jpg",
+      "primary_url": "https://lumina-30.github.io/Lumi30-Index/oqp-x.html",
+      "secondary_url": "https://lumina-30.github.io/Lumi30-Index/",
+      "image_bytes": 383225,
+      "jpeg_quality": 90
+    },
+    {
+      "id": "CLAUDE_ORANGE_JP",
+      "html": "oqp-x-live-claude-orange-ja.html",
+      "image": "assets/social/oqp-card-live-claude-orange-ja.jpg",
+      "expected_page_url": "https://lumina-30.github.io/Lumi30-Index/oqp-x-live-claude-orange-ja.html",
+      "expected_image_url": "https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-card-live-claude-orange-ja.jpg",
+      "primary_url": "https://lumina-30.github.io/Lumi30-Index/oqp-x-ja.html",
+      "secondary_url": "https://lumina-30.github.io/Lumi30-Index/index-ja.html",
+      "image_bytes": 410852,
+      "jpeg_quality": 90
+    },
+    {
+      "id": "GROK_EMERALD_JP",
+      "html": "oqp-x-live-grok-emerald-ja.html",
+      "image": "assets/social/oqp-card-live-grok-emerald-ja.jpg",
+      "expected_page_url": "https://lumina-30.github.io/Lumi30-Index/oqp-x-live-grok-emerald-ja.html",
+      "expected_image_url": "https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-card-live-grok-emerald-ja.jpg",
+      "primary_url": "https://lumina-30.github.io/Lumi30-Index/oqp-x-ja.html",
+      "secondary_url": "https://lumina-30.github.io/lumina30-incident-review/",
+      "image_bytes": 394498,
+      "jpeg_quality": 90
+    },
+    {
+      "id": "GEMINI_BLUE_EN",
+      "html": "oqp-x-live-gemini-blue-en.html",
+      "image": "assets/social/oqp-card-live-gemini-blue-en.jpg",
+      "expected_page_url": "https://lumina-30.github.io/Lumi30-Index/oqp-x-live-gemini-blue-en.html",
+      "expected_image_url": "https://lumina-30.github.io/Lumi30-Index/assets/social/oqp-card-live-gemini-blue-en.jpg",
+      "primary_url": "https://lumina-30.github.io/Lumi30-Index/",
+      "secondary_url": "https://lumina-30.github.io/Lumi30-Index/oqp-x.html",
+      "image_bytes": 410760,
+      "jpeg_quality": 90
+    }
+  ],
+  "x_validation_steps": [
+    "Apply the Lumi30-Index folder contents to the Lumi30-Index repo root.",
+    "Wait for GitHub Pages/CDN propagation.",
+    "Open each HTML URL in a browser.",
+    "Open each direct image URL in a browser.",
+    "Run cards-dev.x.com/validator for each URL if possible.",
+    "Paste each URL into the X post composer.",
+    "If the image does not appear, test ?v=20260721 on the page URL, then retry the bare URL.",
+    "Only mark as LIVE after X composer preview shows the image."
+  ]
+}
