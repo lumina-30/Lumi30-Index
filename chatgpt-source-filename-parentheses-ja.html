@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ja" data-l30-lang-lock="JP_ONLY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="l30:lang-lock" content="JP_ONLY" />
+  <meta name="l30:page-role" content="public-utility-entry" />
+  <meta name="description" content="ChatGPTの情報源ファイル名に(2)(3)などが付く問題を、Web版ライブラリ整理と新規プロジェクト切り分けで解消した実地手順。" />
+  <meta name="robots" content="index,follow,max-snippet:-1" />
+  <link rel="canonical" href="https://lumina-30.github.io/Lumi30-Index/chatgpt-source-filename-parentheses-ja.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://lumina-30.github.io/Lumi30-Index/chatgpt-source-filename-parentheses-ja.html" />
+  <meta property="og:title" content="ChatGPTの情報源ファイル名に(2)(3)が付くときの直し方" />
+  <meta property="og:description" content="除外→再追加で番号が増える場合の、ライブラリ整理からプロジェクト分離までの実地手順。" />
+  <meta name="twitter:card" content="summary" />
+  <title>ChatGPTの情報源ファイル名に(2)(3)が付くときの直し方</title>
+  <style>
+    :root { color-scheme: light dark; --bg: Canvas; --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%); --text: CanvasText; --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%); --line: color-mix(in srgb, CanvasText 28%, Canvas 72%); --accent: LinkText; --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%); --ok: color-mix(in srgb, Canvas 84%, seagreen 16%); --warn: color-mix(in srgb, Canvas 84%, orange 16%); }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
+    .page { max-width: 1040px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav, .notice, .card, .steps, .case { border: 1px solid var(--line); background: var(--panel); border-radius: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; padding: 12px; }
+    .nav a, .button { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: var(--soft); display: inline-block; }
+    header { border-bottom: 1px solid var(--line); margin-bottom: 28px; padding-bottom: 18px; }
+    h1 { font-size: clamp(2rem, 5vw, 3.35rem); line-height: 1.12; margin: 0 0 12px; }
+    h2 { margin-top: 2.2em; padding-top: .4em; border-top: 1px solid var(--line); }
+    h3 { margin-top: 1.4em; }
+    a { color: var(--accent); }
+    code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; background: var(--soft); padding: .1em .35em; border-radius: .35em; }
+    pre { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; background: var(--soft); }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .notice, .card, .case { padding: 16px; margin: 18px 0; }
+    .notice strong:first-child { display: block; font-size: 1.22rem; margin-bottom: .3em; }
+    .summary { background: var(--ok); }
+    .warning { background: var(--warn); }
+    .steps { padding: 4px 18px 12px; margin: 18px 0; }
+    .steps li { margin: .65em 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px 0; }
+    .muted { color: var(--muted); }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    blockquote { border-left: 4px solid var(--accent); margin: 1.2em 0; padding: .2em 0 .2em 1em; font-weight: 700; }
+    .footer { color: var(--muted); margin-top: 36px; border-top: 1px solid var(--line); padding-top: 18px; font-size: .95rem; }
+    @media (max-width: 680px) { .page { padding: 20px 12px 42px; } }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"ChatGPTの情報源ファイル名に(2)(3)が付くときの直し方","description":"Web版ライブラリの重複整理と新規プロジェクト切り分けによる実地手順。","inLanguage":"ja","url":"https://lumina-30.github.io/Lumi30-Index/chatgpt-source-filename-parentheses-ja.html","step":[{"@type":"HowToStep","name":"ライブラリを検索","text":"ChatGPT Web版ライブラリで対象ファイル名を検索する。"},{"@type":"HowToStep","name":"旧重複を削除","text":"更新日・サイズ・内容を確認し、不要な古い同名ファイルだけを削除する。"},{"@type":"HowToStep","name":"1回だけ再登録","text":"現行ファイルを1回だけ再登録して表示名を確認する。"},{"@type":"HowToStep","name":"新規プロジェクトで切り分け","text":"直らない場合は空の新規プロジェクトへ同じファイルを1つだけ登録して比較する。"},{"@type":"HowToStep","name":"可逆的に移行","text":"新規プロジェクトで正常なら、旧プロジェクトを保持したまま固有名の新プロジェクトへ移行する。"}]}</script>
+</head>
+<body>
+<div class="page">
+  <nav class="nav" aria-label="ページナビゲーション">
+    <a href="index-ja.html">LUMINA-30 索引</a>
+    <a href="start-by-concern-ja.html">関心から入る</a>
+    <a href="one-question-pilot-ja.html">One-Question Pilot</a>
+  </nav>
+  <header>
+    <p class="muted">実地で解消したChatGPT運用ノウハウ</p>
+    <h1>情報源ファイル名に<br><code>(2)</code> <code>(3)</code> が付くときの直し方</h1>
+    <p class="subtitle">除外→再追加で番号が増える場合の、ライブラリ整理からプロジェクト分離まで。</p>
+  </header>
+  <main>
+    <section class="notice summary">
+      <strong>先に結論</strong>
+      <ol>
+        <li>Web版の<strong>ライブラリ</strong>で同名ファイルを検索し、不要な旧重複だけを削除する。</li>
+        <li>現行ファイルを1回だけ再登録する。</li>
+        <li>直らなければ、空の新規プロジェクトで同じファイルを1つだけ試す。</li>
+        <li>新規側だけ正常なら、旧プロジェクトを残したまま固有名の新プロジェクトへ移行する。</li>
+      </ol>
+    </section>
+
+    <h2>症状</h2>
+    <p>元の実ファイル名には括弧番号がないのに、ChatGPTのプロジェクトや情報源で次のように表示されます。</p>
+    <pre>情報源F.md
+→ 情報源F(4).md
+
+ALL_REPOS_BUNDLE.txt
+→ ALL_REPOS_BUNDLE(34).txt</pre>
+    <p>ローカル、Google Drive、Obsidian上の実ファイル名は変わっていないのに、ChatGPT側の表示名だけへ番号が付く場合があります。</p>
+
+    <section class="notice warning">
+      <strong>同じプロジェクトで再登録を連打しない</strong>
+      <p>実地では、情報源から除外して再追加すると、番号がさらに増えました。原因が分かるまで、同じ状態のプロジェクトへ繰り返し登録しない方が安全です。</p>
+    </section>
+
+    <h2>手順1：Web版ライブラリを整理する</h2>
+    <ol class="steps">
+      <li>ChatGPT Web版を開く。</li>
+      <li>左サイドバーから<strong>ライブラリ</strong>を開く。</li>
+      <li>検索欄へ対象名を入力する。例：<code>情報源F</code>。</li>
+      <li>同名、旧版、括弧番号付きのファイルを確認する。</li>
+      <li>更新日・サイズ・内容を確認し、不要な旧ファイルだけを削除する。</li>
+      <li>「最近削除した項目」がある場合は、復元不要なものだけを完全削除する。</li>
+      <li>現行ファイルを1回だけ情報源へ登録し、表示名を確認する。</li>
+    </ol>
+    <p class="muted">OpenAI公式ヘルプでは、アップロードしたファイルはライブラリへ自動保存され、チャットを削除してもライブラリのファイルは削除されないと案内されています。</p>
+
+    <h2>手順2：新規プロジェクトで切り分ける</h2>
+    <ol class="steps">
+      <li>空の新規プロジェクトを作る。</li>
+      <li>問題のファイルを1つだけ登録する。</li>
+      <li>括弧番号が付くか確認する。</li>
+    </ol>
+    <div class="grid">
+      <section class="card"><h3>新規側でも番号が付く</h3><p>ライブラリの重複、同名ファイル、登録操作を再確認します。</p></section>
+      <section class="card"><h3>新規側では正常</h3><p>旧プロジェクト固有の衝突状態である可能性が高いため、旧環境を残したまま新規側へ移行します。</p></section>
+    </div>
+    <p class="muted">OpenAI公式には、プロジェクトで同名ファイルを追加した場合に競合として扱う仕様があります。ただし、表示名へ <code>(n)</code> が付く内部条件は公式には説明されていません。</p>
+
+    <h2>LUMINA-30で実際に解消した方法</h2>
+    <section class="case">
+      <ol>
+        <li>ライブラリ内の旧ファイルを削除。</li>
+        <li>それでも旧プロジェクトでは括弧番号が残ることを確認。</li>
+        <li>別の新規プロジェクトへ同じ <code>情報源F.md</code> を登録し、括弧なしの正常表示を確認。</li>
+        <li>旧プロジェクトを <code>★LUMINA-30【旧】</code> として保持。</li>
+        <li>現行プロジェクトを固有名 <code>★LUMINA-30New</code> として運用。</li>
+        <li>現行側で括弧番号なしの登録へ復帰。</li>
+      </ol>
+      <p><strong>ポイント：</strong>旧プロジェクトを即座に削除せず、履歴を残したまま可逆的に移行しました。</p>
+    </section>
+
+    <h2>原因について、断定すること・しないこと</h2>
+    <div class="grid">
+      <section class="card"><h3>確認できたこと</h3><ul><li>実ファイル名は変わっていない。</li><li>旧プロジェクトで再登録すると番号が増えた。</li><li>ライブラリ整理だけで直る場合がある。</li><li>旧プロジェクトだけで続く場合がある。</li><li>新規プロジェクトでは正常登録できた。</li></ul></section>
+      <section class="card"><h3>断定しないこと</h3><ul><li>ChatGPT内部の採番ロジック。</li><li>すべての利用者で同じ原因になること。</li><li>プロジェクト名変更だけで必ず直ること。</li></ul></section>
+    </div>
+
+    <h2>再発防止</h2>
+    <ul>
+      <li>更新ファイルを登録する前に、ライブラリで同名ファイルを検索する。</li>
+      <li>同じ影響下のプロジェクトで再登録を繰り返さない。</li>
+      <li>現行正本のファイル名、更新日、サイズを確認する。</li>
+      <li>旧プロジェクトは、移行確認が終わるまで削除しない。</li>
+      <li>1ファイルで切り分けてから残りを登録する。</li>
+      <li>表示名だけを見て、ローカル実ファイル名が変更されたと決めつけない。</li>
+    </ul>
+
+    <h2>小さな不具合から、LUMINA-30へ</h2>
+    <p>この事例では、表示名と実ファイルを分けて確認し、再登録を停止し、証拠を確認し、旧環境を残したまま新しい経路へ移行することで解消しました。</p>
+    <blockquote>取り返しのつかない変更へ進む前に、責任ある人間は、まだ停止・検証・延期・方向転換できるか。</blockquote>
+    <p>LUMINA-30のOne-Question Pilotは、この境界問いを既存レビューへ1問だけ追加するための公開資料です。このページの手順が、LUMINA-30への同意・採用・認証を意味するものではありません。</p>
+    <div class="button-row">
+      <a class="button" href="https://lumina-30.github.io/lumina-30-overview/tools/pre-incident-boundary-review/ja/one-question-pilot.html">One-Question Pilotを開く</a>
+      <a class="button" href="https://lumina-30.github.io/Lumi30-Index/start-by-concern-ja.html">関心からLUMINA-30へ入る</a>
+    </div>
+
+    <h2>公式参照</h2>
+    <ul>
+      <li><a href="https://help.openai.com/ja-jp/articles/20001052-file-storage-and-library-in-chatgpt" rel="external">ChatGPT のファイル保存と Library｜OpenAI Help Center</a></li>
+      <li><a href="https://help.openai.com/ja-jp/articles/10169521-projects-in-chatgpt" rel="external">ChatGPT のプロジェクト｜OpenAI Help Center</a></li>
+    </ul>
+    <p class="muted">公式仕様確認日：2026-07-26。UI変更時は公式ヘルプを再確認してください。</p>
+  </main>
+  <p class="footer">このページは、実地で確認した運用ノウハウとOpenAI公式ヘルプを区別して記録しています。LUMINA-30は非拘束の公開境界参照であり、認証・承認・安全保証ではありません。</p>
+</div>
+</body>
+</html>
