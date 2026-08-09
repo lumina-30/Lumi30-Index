@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#03101f">
+  <title>LUMINA-30 | Start</title>
+  <link rel="icon" type="image/png" href="assets/lumina30-icon.png">
+  <link rel="apple-touch-icon" href="assets/lumina30-icon.png">
+  <script>
+  (() => {
+    const p = new URLSearchParams(location.search);
+    const forced = p.get('lang');
+    if (forced === 'ja' || forced === 'en') localStorage.setItem('l30-start-lang', forced);
+    const saved = localStorage.getItem('l30-start-lang');
+    const langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+    const detected = langs.some(v => String(v).toLowerCase().startsWith('ja')) ? 'ja' : 'en';
+    const lang = (forced === 'ja' || forced === 'en') ? forced : ((saved === 'ja' || saved === 'en') ? saved : detected);
+    location.replace(lang === 'ja' ? 'start-ja.html' : 'start-en.html');
+  })();
+  </script>
+  <style>html,body{min-height:100%;margin:0;background:#03101f;color:#fff;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif}main{min-height:100vh;display:grid;place-items:center;text-align:center;padding:24px}a{color:#91dcff}</style>
+</head>
+<body>
+  <main>
+    <noscript>
+      <p>Please choose a language / 言語を選択してください</p>
+      <p><a href="start-en.html">English</a> · <a href="start-ja.html">日本語</a></p>
+    </noscript>
+  </main>
+</body>
+</html>
