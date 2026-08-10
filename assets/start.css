@@ -49,15 +49,8 @@ footer{margin-top:24px;padding:20px 4px 0;border-top:1px solid var(--line-soft);
   .hero{min-height:0;overflow:hidden}
   .hero::before{display:none}
   .hero::after{background:linear-gradient(180deg,#03101f 0%,rgba(3,16,31,.985) 72%,rgba(3,16,31,.96) 100%)}
-  .hero-copy{width:100%;padding:48px 10px 30px 8px}
-  h1{font-size:clamp(2.42rem,12.2vw,4.05rem);max-width:610px}
-  .lead{max-width:540px;font-size:.97rem;line-height:1.65;padding-right:0}
-  .core-question{font-size:.92rem;margin-top:16px;max-width:540px;background:linear-gradient(90deg,rgba(12,42,75,.84),rgba(3,16,31,.12))}
-  .tagline{font-size:.94rem}
+  .hero-copy{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
   .hero-mobile-visual{display:block;position:relative;width:100%;margin:0;overflow:hidden;background:#03101f}
-  .hero-mobile-visual::before,.hero-mobile-visual::after{content:"";position:absolute;left:0;right:0;height:52px;z-index:2;pointer-events:none}
-  .hero-mobile-visual::before{top:0;background:linear-gradient(180deg,#03101f 0%,rgba(3,16,31,.82) 35%,rgba(3,16,31,0) 100%)}
-  .hero-mobile-visual::after{bottom:0;background:linear-gradient(0deg,#03101f 0%,rgba(3,16,31,.72) 38%,rgba(3,16,31,0) 100%)}
   .hero-mobile-visual img{display:block;width:100%;height:auto;margin:0;object-fit:contain;object-position:center top}
   .grid{grid-template-columns:1fr}
   .route.primary{grid-column:auto}
@@ -71,9 +64,6 @@ footer{margin-top:24px;padding:20px 4px 0;border-top:1px solid var(--line-soft);
 @media(max-width:430px){
   .brand-name{font-size:1.2rem}
   .langlink{padding:6px 8px;font-size:.74rem}
-  .hero-copy{padding-top:40px;padding-bottom:26px}
-  .lead{font-size:.93rem}
-  .core-question{font-size:.88rem}
-  .hero-mobile-visual::before,.hero-mobile-visual::after{height:44px}
+  .hero-mobile-visual{margin:0}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
