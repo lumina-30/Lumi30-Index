@@ -91,3 +91,5 @@ footer{margin-top:24px;padding:20px 4px 0;border-top:1px solid var(--line-soft);
 }
 @media(max-width:365px){.share-label-short{display:none}.share-toggle{width:34px;height:34px;padding:0;justify-content:center}.share-star{font-size:1rem}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+.deadline-alert{color:#ff6b6b;font-weight:800}
