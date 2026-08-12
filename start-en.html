@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" href="assets/lumina30-icon.png">
   <link rel="apple-touch-icon" href="assets/lumina30-icon.png">
   <link rel="stylesheet" href="assets/start.css">
+  <script defer src="assets/start-share.js"></script>
 </head>
 <body>
   <div class="shell">
@@ -18,11 +19,71 @@
         <img class="mark" src="assets/lumina30-icon.png" alt="" aria-hidden="true">
         <span class="brand-copy"><span class="brand-name">LUMINA-30</span><span class="brand-sub">Independent public boundary framework</span></span>
       </a>
-      <nav class="langbox" aria-label="Language">
-        <span class="langlink current" aria-current="page">EN</span>
-        <a class="langlink" href="start.html?lang=ja">日本語</a>
-      </nav>
+      <div class="top-actions">
+        <button class="share-toggle" type="button" aria-expanded="false" aria-controls="sharePanel">
+          <span class="share-star" aria-hidden="true">✨</span>
+          <span class="share-label-full">Pass this question on</span>
+          <span class="share-label-short">Pass it on</span>
+          <span class="share-caret" aria-hidden="true">⌄</span>
+        </button>
+        <nav class="langbox" aria-label="Language">
+          <span class="langlink current" aria-current="page">EN</span>
+          <a class="langlink" href="start.html?lang=ja">日本語</a>
+        </nav>
+      </div>
     </header>
+
+    <section class="share-panel" id="sharePanel" hidden aria-labelledby="sharePanelTitle"
+      data-share-title="LUMINA-30 | Can humans still say no before AI becomes irreversible?"
+      data-share-text="Can humans still say no before AI becomes irreversible?\nLUMINA-30 asks whether humans can still effectively refuse, stop, verify, or redirect before irreversible escalation, through an independent public boundary framework."
+      data-share-url="https://lumina-30.github.io/Lumi30-Index/start.html">
+      <div class="share-panel-inner">
+        <div class="share-panel-head">
+          <div>
+            <p class="share-kicker">WHY THIS QUESTION MATTERS</p>
+            <h2 id="sharePanelTitle">Think about it while stopping is still possible.</h2>
+          </div>
+          <button class="share-close" type="button" aria-label="Close sharing panel">×</button>
+        </div>
+
+        <div class="share-explain">
+          <p>As AI systems become more capable, autonomous, and embedded in important parts of society and work, decisions and changes may become harder for people to stop or reverse after they are already in motion.</p>
+          <p>LUMINA-30 is not asking whether society should use AI or reject it. It asks one narrower question: <strong>before escalation becomes irreversible, can human refusal, stopping, verification, and redirection still work in practice?</strong></p>
+          <p class="share-deadline">There is a clear time limit for addressing this problem: before AI reaches a point where humans can no longer effectively stop it.</p>
+        </div>
+
+        <details class="share-more">
+          <summary>A little more detail</summary>
+          <div class="share-more-body">
+            <p><strong>Why now?</strong><br>As AI enters real-world decisions and automated systems, actions can move faster and through more connected processes than human review. A review that happens after the fact is not an effective “no” if people no longer have the authority or time to stop what is happening.</p>
+            <p><strong>What should remain possible?</strong><br>Before an action becomes irreversible, people should still have a real path to refuse, stop, verify, and redirect it. The focus is not formal approval, but whether refusal can still have practical effect.</p>
+            <p><strong>What is LUMINA-30?</strong><br>It is an independent public boundary framework for preserving that possibility while progress continues. It is not a certification system, safety guarantee, adopted standard, or substitute for human judgment.</p>
+          </div>
+        </details>
+
+        <div class="share-invite">
+          <p>If you think this question should reach someone else, pass it on in whatever way feels appropriate. You can review, edit, or cancel before sending.</p>
+        </div>
+
+        <div class="share-actions" aria-label="Sharing options">
+          <button class="share-action primary" type="button" data-action="share"><span aria-hidden="true">✨</span><span>Pass this question on</span></button>
+          <button class="share-action" type="button" data-action="x"><span aria-hidden="true">𝕏</span><span>Post this question on X</span></button>
+          <button class="share-action" type="button" data-action="email"><span aria-hidden="true">✉</span><span>Send by email</span></button>
+          <button class="share-action" type="button" data-action="copy"><span aria-hidden="true">⧉</span><span>Copy intro + URL</span></button>
+          <button class="share-action save" type="button" data-action="save" aria-expanded="false" aria-controls="saveHelp"><span aria-hidden="true">⭐</span><span>Save this page</span></button>
+        </div>
+
+        <div class="save-help" id="saveHelp" hidden>
+          <strong>Come back later</strong>
+          <p>On a computer, use <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>D</kbd> to bookmark this page. On a phone or tablet, use your browser's share/menu controls and choose “Add to Home Screen” or a bookmark option.</p>
+          <button class="text-button" type="button" data-action="copy-url">Copy URL only</button>
+        </div>
+
+        <p class="share-multi-note">You can keep the same introduction and share it to the people or places you choose, one at a time. Nothing is bulk-posted automatically.</p>
+        <div class="share-status" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
     <main>
       <section class="hero" aria-labelledby="mainQuestion">
         <span class="boundary-glow" aria-hidden="true"></span>

@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" href="assets/lumina30-icon.png">
   <link rel="apple-touch-icon" href="assets/lumina30-icon.png">
   <link rel="stylesheet" href="assets/start.css">
+  <script defer src="assets/start-share.js"></script>
 </head>
 <body>
   <div class="shell">
@@ -18,11 +19,71 @@
         <img class="mark" src="assets/lumina30-icon.png" alt="" aria-hidden="true">
         <span class="brand-copy"><span class="brand-name">LUMINA-30</span><span class="brand-sub">独立した公開境界フレームワーク</span></span>
       </a>
-      <nav class="langbox" aria-label="言語">
-        <span class="langlink current" aria-current="page">日本語</span>
-        <a class="langlink" href="start.html?lang=en">EN</a>
-      </nav>
+      <div class="top-actions">
+        <button class="share-toggle" type="button" aria-expanded="false" aria-controls="sharePanel">
+          <span class="share-star" aria-hidden="true">✨</span>
+          <span class="share-label-full">この問いを届ける</span>
+          <span class="share-label-short">届ける</span>
+          <span class="share-caret" aria-hidden="true">⌄</span>
+        </button>
+        <nav class="langbox" aria-label="言語">
+          <span class="langlink current" aria-current="page">日本語</span>
+          <a class="langlink" href="start.html?lang=en">EN</a>
+        </nav>
+      </div>
     </header>
+
+    <section class="share-panel" id="sharePanel" hidden aria-labelledby="sharePanelTitle"
+      data-share-title="LUMINA-30｜AIが不可逆になる前に、人間はまだ『NO』と言えるか？"
+      data-share-text="AIが不可逆になる前に、人間はまだ『NO』と言えるか？\nLUMINA-30は、不可逆化の前に人間の拒否・停止・検証・方向転換が本当に効くかを問う、独立した公開境界フレームワークです。"
+      data-share-url="https://lumina-30.github.io/Lumi30-Index/start.html">
+      <div class="share-panel-inner">
+        <div class="share-panel-head">
+          <div>
+            <p class="share-kicker">WHY THIS QUESTION MATTERS</p>
+            <h2 id="sharePanelTitle">止められるうちに、考えるために。</h2>
+          </div>
+          <button class="share-close" type="button" aria-label="共有パネルを閉じる">×</button>
+        </div>
+
+        <div class="share-explain">
+          <p>AIがより高度で自律的になり、社会や仕事の重要な仕組みに深く組み込まれるほど、一度進んだ判断や変化を、人間が止めたり元に戻したりすることが難しくなる可能性があります。</p>
+          <p>LUMINA-30が問うのは、「AIを使うか、使わないか」ではありません。不可逆化する前に、人間の拒否・停止・検証・方向転換が、形式だけでなく<strong>実際に効く状態</strong>が残っているか、という一点です。</p>
+          <p class="share-deadline">この問題への対応には、人間がAIを停止できなくなる「不可逆化する前」という明確なタイムリミットがあります。</p>
+        </div>
+
+        <details class="share-more">
+          <summary>もう少し詳しく</summary>
+          <div class="share-more-body">
+            <p><strong>なぜ今？</strong><br>AIが現実の判断や自動化された仕組みに入るほど、判断の速度や連鎖が人間の確認より先に進む場面が増えます。人間が後から確認できても、止める権限や時間がなければ「NO」は実効的ではありません。</p>
+            <p><strong>何を残したい？</strong><br>不可逆になる前に、人間が拒否し、停止し、検証し、必要なら方向転換できる経路です。形式的な承認ではなく、実際に使える拒否可能性を残すことが中心です。</p>
+            <p><strong>LUMINA-30とは？</strong><br>進歩を止めるための制度ではなく、人間が本当に「NO」と言える状態を残したまま進むための、独立した公開境界フレームワークです。認証制度、安全保証、採用済み標準、人間判断の代替ではありません。</p>
+          </div>
+        </details>
+
+        <div class="share-invite">
+          <p>この問いが必要だと思う人へ、無理のない方法で届けていただけると嬉しいです。共有前に内容を確認・編集・キャンセルできます。</p>
+        </div>
+
+        <div class="share-actions" aria-label="共有方法">
+          <button class="share-action primary" type="button" data-action="share"><span aria-hidden="true">✨</span><span>この問いを届ける</span></button>
+          <button class="share-action" type="button" data-action="x"><span aria-hidden="true">𝕏</span><span>この問いをつぶやく</span></button>
+          <button class="share-action" type="button" data-action="email"><span aria-hidden="true">✉</span><span>メールで届ける</span></button>
+          <button class="share-action" type="button" data-action="copy"><span aria-hidden="true">⧉</span><span>紹介文＋URLをコピー</span></button>
+          <button class="share-action save" type="button" data-action="save" aria-expanded="false" aria-controls="saveHelp"><span aria-hidden="true">⭐</span><span>このページを残す</span></button>
+        </div>
+
+        <div class="save-help" id="saveHelp" hidden>
+          <strong>あとで戻るために</strong>
+          <p>PCでは <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>D</kbd> でブックマークできます。スマホ・タブレットでは、ブラウザの共有／メニューから「ホーム画面に追加」または「ブックマーク」を選んでください。</p>
+          <button class="text-button" type="button" data-action="copy-url">URLだけコピー</button>
+        </div>
+
+        <p class="share-multi-note">同じ紹介文を保持したまま、必要な相手や場所へ順番に届けられます。自動で複数先へ一括送信することはありません。</p>
+        <div class="share-status" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
     <main>
       <section class="hero" aria-labelledby="mainQuestion">
         <span class="boundary-glow" aria-hidden="true"></span>
