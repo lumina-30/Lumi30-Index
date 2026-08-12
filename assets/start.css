@@ -89,7 +89,14 @@ footer{margin-top:24px;padding:20px 4px 0;border-top:1px solid var(--line-soft);
   .share-caret{display:none}
   .hero-mobile-visual{margin:0}
 }
-@media(max-width:365px){.share-label-short{display:none}.share-toggle{width:34px;height:34px;padding:0;justify-content:center}.share-star{font-size:1rem}}
+@media(max-width:365px){.share-label-short{display:inline}.share-toggle{width:auto;height:auto;padding:7px 8px;justify-content:center}.share-star{font-size:.95rem}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 .deadline-alert{color:#ff6b6b;font-weight:800}
+
+/* JA/EN START: make the top sharing CTA unmistakable without changing the panel actions. */
+.share-toggle .share-label-full,
+.share-toggle .share-label-short{
+  color:#ff6b6b;
+  font-weight:900;
+}
