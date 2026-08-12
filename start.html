@@ -16,7 +16,18 @@
     const langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
     const detected = langs.some(v => String(v).toLowerCase().startsWith('ja')) ? 'ja' : 'en';
     const lang = (forced === 'ja' || forced === 'en') ? forced : ((saved === 'ja' || saved === 'en') ? saved : detected);
-    location.replace(lang === 'ja' ? 'start-ja.html' : 'start-en.html');
+
+    // Preserve the external referrer across this same-origin language redirect so
+    // START analytics can still distinguish arrivals from X and other sources.
+    try {
+      if (document.referrer) sessionStorage.setItem('l30-start-referrer', document.referrer);
+    } catch (_) {}
+
+    // Preserve campaign/source query parameters (utm_*, ref, src, etc.).
+    p.delete('lang');
+    const query = p.toString();
+    const target = lang === 'ja' ? 'start-ja.html' : 'start-en.html';
+    location.replace(target + (query ? '?' + query : ''));
   })();
   </script>
   <style>html,body{min-height:100%;margin:0;background:#03101f;color:#fff;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif}main{min-height:100vh;display:grid;place-items:center;text-align:center;padding:24px}a{color:#91dcff}</style>
