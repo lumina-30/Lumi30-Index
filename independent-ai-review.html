@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Independent AI Review | LUMINA-30</title>
+  <meta name="description" content="A simple public entry for asking your own AI to review LUMINA-30 materials, including both strengths and concerns.">
+  <meta name="theme-color" content="#03101f">
+  <style>
+    :root{--bg:#020817;--panel:#07162b;--text:#f5fbff;--muted:#b9c8db;--line:rgba(117,193,255,.28);--blue:#86d5ff;--max:760px;color-scheme:dark}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 70% 8%,rgba(50,150,255,.16),transparent 28%),linear-gradient(180deg,#020713,#03101f);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans JP",sans-serif;line-height:1.7;min-height:100vh}
+    .shell{width:min(var(--max),calc(100% - 28px));margin:auto;padding:22px 0 48px}
+    .top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:34px} .brand{font-weight:850;letter-spacing:.08em} .top a{color:var(--blue)}
+    main{border:1px solid var(--line);border-radius:24px;background:rgba(7,22,43,.9);padding:clamp(22px,5vw,40px);box-shadow:0 24px 70px rgba(0,0,0,.32)}
+    .eyebrow{color:var(--blue);font-size:.8rem;font-weight:850;letter-spacing:.12em;margin:0 0 10px} h1{font-size:clamp(2rem,7vw,3.4rem);line-height:1.12;margin:0 0 18px} .lead{font-size:1.08rem;color:#dbe8f5;margin:0 0 24px}
+    button{appearance:none;border:0;border-radius:999px;background:linear-gradient(180deg,#d1f2ff,#7fd2ff);color:#03101f;font:inherit;font-weight:850;padding:13px 20px;cursor:pointer} button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+    .status{min-height:1.5em;margin:10px 0;color:var(--blue);font-size:.93rem} .note{color:var(--muted);font-size:.92rem;margin:18px 0 0}
+    details{margin-top:24px;border-top:1px solid var(--line);padding-top:18px} summary{cursor:pointer;color:var(--blue);font-weight:750} pre{white-space:pre-wrap;word-break:break-word;background:#020b18;border:1px solid var(--line);border-radius:14px;padding:16px;font:inherit;font-size:.9rem;color:#e7f5ff}
+    .links{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px} .links a{color:var(--blue);text-decoration:none} .disclaimer{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+    @media(max-width:560px){.shell{width:min(100% - 18px,var(--max));padding-top:12px}.top{margin-bottom:18px}main{border-radius:18px;padding:21px 18px}button{width:100%}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header class="top"><span class="brand">LUMINA-30</span><a href="independent-ai-review-ja.html">日本語</a></header>
+  <main>
+    <p class="eyebrow">INDEPENDENT AI REVIEW</p>
+    <h1>Want to check LUMINA-30 for yourself?</h1>
+    <p class="lead">Ask the AI you normally use to independently evaluate LUMINA-30. It can examine both strengths and concerns.</p>
+    <button id="copyPrompt" type="button">Copy review prompt</button>
+    <div class="status" id="copyStatus" role="status" aria-live="polite"></div>
+    <p class="note">AI responses depend on the materials each AI can access, its model, and its own reasoning. Check the source materials when needed.</p>
+    <details><summary>View review prompt</summary><pre id="reviewPrompt">Please independently evaluate LUMINA-30 using the public materials below.
+
+Include both strengths and concerns, distinguish documented facts from your own inferences, and list the pages you actually reviewed. If you could not access any material, state that limitation.
+
+Respond in English.
+
+https://lumina-30.github.io/Lumi30-Index/lumi-menu-en.html
+https://lumina-30.github.io/lumina-30-overview/
+https://lumina-30.github.io/lumina-30-overview/tools/pre-incident-boundary-review/en/one-question-pilot.html
+https://lumina-30.github.io/lumina30-incident-review/
+https://lumina-30.github.io/Lumi30-Index/qa.html</pre></details>
+    <nav class="links" aria-label="Related pages"><a href="lumi-menu-en.html">Back to LUMI MENU</a><a href="index.html">Index</a></nav>
+    <p class="disclaimer">This AI-assisted review is not certification, approval, or a safety guarantee.</p>
+  </main>
+</div>
+<script>
+(() => {
+  const button=document.getElementById('copyPrompt');
+  const status=document.getElementById('copyStatus');
+  const prompt=document.getElementById('reviewPrompt').textContent;
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); return; }
+    const ta=document.createElement('textarea'); ta.value=text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select();
+    const ok=document.execCommand('copy'); ta.remove(); if(!ok) throw new Error('copy failed');
+  }
+  button.addEventListener('click', async () => { try { await copyText(prompt); status.textContent='Review prompt copied. Paste it into the AI you use.'; } catch (_) { status.textContent='Copy failed. Open the prompt below and copy it manually.'; } });
+})();
+</script>
+</body>
+</html>
