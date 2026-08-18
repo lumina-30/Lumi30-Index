@@ -23,9 +23,22 @@
   <link rel="image_src" href="https://lumina-30.github.io/Lumi30-Index/assets/social/lumi-menu-card-bilingual.jpg">
   <script>
   (() => {
-    const target='lumi-menu.html?utm_source=x&utm_medium=paid_social&utm_campaign=lumi_menu_20260813&utm_content=hero_bilingual';
+    const p = new URLSearchParams(location.search);
+    const forced = p.get('lang');
+    if (forced === 'ja' || forced === 'en') localStorage.setItem('l30-lumi-menu-lang', forced);
+    const saved = localStorage.getItem('l30-lumi-menu-lang');
+    const langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+    const detected = langs.some(v => String(v).toLowerCase().startsWith('ja')) ? 'ja' : 'en';
+    const lang = (forced === 'ja' || forced === 'en') ? forced : ((saved === 'ja' || saved === 'en') ? saved : detected);
     try { if (document.referrer) sessionStorage.setItem('l30-lumi-menu-referrer', document.referrer); } catch (_) {}
-    window.addEventListener('DOMContentLoaded',()=>setTimeout(()=>location.replace(target),450));
+    p.delete('lang');
+    p.set('utm_source', 'x');
+    p.set('utm_medium', 'paid_social');
+    p.set('utm_campaign', 'lumi_menu_20260813');
+    p.set('utm_content', 'hero_bilingual');
+    const query = p.toString();
+    const target = lang === 'ja' ? 'lumi-menu-ja.html' : 'lumi-menu-en.html';
+    window.addEventListener('DOMContentLoaded',()=>setTimeout(()=>location.replace(target + (query ? '?' + query : '')),450));
   })();
   </script>
   <style>html,body{height:100%;margin:0;background:#020817;color:white;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}main{height:100%;display:grid;place-items:center;padding:0;overflow:hidden;background:#020817}.bridge-card{width:100%;height:100%;object-fit:cover;object-position:center}.bridge-note{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);padding:8px 13px;border:1px solid rgba(150,220,255,.28);border-radius:999px;background:rgba(1,8,20,.72);backdrop-filter:blur(8px);font-size:.82rem;color:#dff5ff;white-space:nowrap}a{color:#9edcff}</style>
