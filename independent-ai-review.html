@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Independent AI Review | LUMINA-30</title>
-  <meta name="description" content="A simple public entry for asking your own AI to review LUMINA-30 materials, including both strengths and concerns.">
+  <meta name="description" content="A simple public entry for asking your own AI to review LUMINA-30 materials, including its value, distinctive features, possibilities, and areas for improvement.">
   <meta name="theme-color" content="#03101f">
   <style>
     :root{--bg:#020817;--panel:#07162b;--text:#f5fbff;--muted:#b9c8db;--line:rgba(117,193,255,.28);--blue:#86d5ff;--max:760px;color-scheme:dark}
@@ -26,13 +26,19 @@
   <main>
     <p class="eyebrow">INDEPENDENT AI REVIEW</p>
     <h1>Want to check LUMINA-30 for yourself?</h1>
-    <p class="lead">Ask the AI you normally use to independently evaluate LUMINA-30. It can examine both strengths and concerns.</p>
-    <button id="copyPrompt" type="button">Copy review prompt</button>
+    <p class="lead">Ask the AI you normally use to read LUMINA-30 and explore what it is trying to do, where its value or distinctive features may lie, and what it finds worth examining. Your AI can freely identify both what it finds strong and what it finds questionable.</p>
+    <button id="copyPrompt" type="button">Copy prompt for your AI</button>
     <div class="status" id="copyStatus" role="status" aria-live="polite"></div>
     <p class="note">AI responses depend on the materials each AI can access, its model, and its own reasoning. Check the source materials when needed.</p>
-    <details><summary>View review prompt</summary><pre id="reviewPrompt">Please independently evaluate LUMINA-30 using the public materials below.
+    <details><summary>View prompt for your AI</summary><pre id="reviewPrompt">Please actually review the public materials below and evaluate LUMINA-30 after trying to understand it as fully as the available materials allow.
 
-Include both strengths and concerns, distinguish documented facts from your own inferences, and list the pages you actually reviewed. If you could not access any material, state that limitation.
+First, explain what problem LUMINA-30 is addressing and what ideas, mechanisms, or practical possibilities it presents.
+
+Then identify the aspects you consider especially valuable, interesting, or distinctive, and explain why.
+
+If you find areas for improvement, questions, weaknesses, or points that remain unverified or unproven, identify those candidly as well.
+
+The goal is neither to praise nor to criticize LUMINA-30. Give your own assessment based on the materials you actually reviewed. Distinguish documented facts from your own inferences, and at the end list the pages you were able to review and any materials you could not access.
 
 Respond in English.
 
@@ -55,7 +61,7 @@ https://lumina-30.github.io/Lumi30-Index/qa.html</pre></details>
     const ta=document.createElement('textarea'); ta.value=text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select();
     const ok=document.execCommand('copy'); ta.remove(); if(!ok) throw new Error('copy failed');
   }
-  button.addEventListener('click', async () => { try { await copyText(prompt); status.textContent='Review prompt copied. Paste it into the AI you use.'; } catch (_) { status.textContent='Copy failed. Open the prompt below and copy it manually.'; } });
+  button.addEventListener('click', async () => { try { await copyText(prompt); status.textContent='Prompt copied. Paste it into the AI you use.'; } catch (_) { status.textContent='Copy failed. Open the prompt below and copy it manually.'; } });
 })();
 </script>
 </body>

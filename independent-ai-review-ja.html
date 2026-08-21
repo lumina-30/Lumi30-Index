@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>自分のAIでLUMINA-30を評価する | LUMINA-30</title>
-  <meta name="description" content="普段使うAIにLUMINA-30の公開資料を読ませ、長所と懸念点を独立評価するための共通入口です。">
+  <meta name="description" content="普段使うAIにLUMINA-30の公開資料を読ませ、その価値・特徴・可能性と改善点を自分のAIの視点から確かめるための共通入口です。">
   <meta name="theme-color" content="#03101f">
   <style>
     :root{--bg:#020817;--panel:#07162b;--text:#f5fbff;--muted:#b9c8db;--line:rgba(117,193,255,.28);--blue:#86d5ff;--max:760px;color-scheme:dark}
@@ -26,13 +26,19 @@
   <main>
     <p class="eyebrow">INDEPENDENT AI REVIEW</p>
     <h1>LUMINA-30を自分で確かめたい方へ</h1>
-    <p class="lead">普段お使いのAIに、LUMINA-30を独立して評価させてみてください。長所だけでなく、懸念点や弱点も含めて確認できます。</p>
-    <button id="copyPrompt" type="button">評価文をコピー</button>
+    <p class="lead">普段お使いのAIにLUMINA-30を読ませて、どんな考え方なのか、どこに価値や特徴があるのかを確かめてみてください。良いところも、気になるところも、AI自身の視点から自由に評価できます。</p>
+    <button id="copyPrompt" type="button">AIに聞く文をコピー</button>
     <div class="status" id="copyStatus" role="status" aria-live="polite"></div>
     <p class="note">AIの回答は、そのAIが実際に取得できた資料・モデル・推論に依存します。必要に応じて元資料も確認してください。</p>
-    <details><summary>評価文を見る</summary><pre id="reviewPrompt">以下の公開資料を確認して、LUMINA-30を独立して評価してください。
+    <details><summary>AIに聞く文を見る</summary><pre id="reviewPrompt">以下の公開資料を実際に確認し、LUMINA-30をできるだけ十分に理解したうえで評価してください。
 
-長所・懸念点の両方を挙げ、事実と推論を区別してください。最後に、実際に確認できたページと、確認できなかった資料があれば明記してください。
+まず、LUMINA-30が何を問題としていて、どのような考え方・仕組み・実用上の可能性を持つのか説明してください。
+
+そのうえで、特に価値がある、興味深い、特徴的だと考える点を理由とともに評価してください。
+
+改善できる点、疑問、弱点、まだ確認・実証されていない点があれば、それらも率直に指摘してください。
+
+LUMINA-30を褒めることも批判することも目的にせず、実際に確認した資料に基づいてあなた自身の評価を示してください。事実と推論を区別し、最後に実際に確認できたページと、確認できなかった資料があれば明記してください。
 
 日本語で回答してください。
 
@@ -55,7 +61,7 @@ https://lumina-30.github.io/Lumi30-Index/qa-ja.html</pre></details>
     const ta=document.createElement('textarea'); ta.value=text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select();
     const ok=document.execCommand('copy'); ta.remove(); if(!ok) throw new Error('copy failed');
   }
-  button.addEventListener('click', async () => { try { await copyText(prompt); status.textContent='評価文をコピーしました。普段お使いのAIへ貼り付けてください。'; } catch (_) { status.textContent='コピーできませんでした。下の評価文を開いて手動でコピーしてください。'; } });
+  button.addEventListener('click', async () => { try { await copyText(prompt); status.textContent='AIに聞く文をコピーしました。普段お使いのAIへ貼り付けてください。'; } catch (_) { status.textContent='コピーできませんでした。下のAIに聞く文を開いて手動でコピーしてください。'; } });
 })();
 </script>
 </body>
