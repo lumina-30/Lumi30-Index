@@ -8,14 +8,26 @@
   <title>LUMINA-30 索引 | 導入前・事故後レビューの中央入口</title>
   <style>
     :root {
-      color-scheme: light dark;
-      --bg: Canvas;
-      --panel: color-mix(in srgb, Canvas 92%, CanvasText 8%);
-      --text: CanvasText;
-      --muted: color-mix(in srgb, CanvasText 68%, Canvas 32%);
-      --line: color-mix(in srgb, CanvasText 28%, Canvas 72%);
-      --accent: LinkText;
-      --soft: color-mix(in srgb, Canvas 86%, CanvasText 14%);
+      color-scheme: light;
+      --bg: #F7F9FC;
+      --panel: #FFFFFF;
+      --text: #1E2732;
+      --muted: #5D6B78;
+      --line: #D8E2EC;
+      --accent: #2F6FA3;
+      --soft: #E8EEF5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #0F1720;
+        --panel: #182330;
+        --text: #EAF2F9;
+        --muted: #AFC0D2;
+        --line: #294153;
+        --accent: #8FC9FF;
+        --soft: #1B2E3D;
+      }
     }
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.72; }
@@ -63,7 +75,7 @@
       border: 0;
       border-radius: 0;
       background: transparent;
-      color: var(--text, CanvasText);
+      color: var(--text);
       font-weight: 800;
       font-size: .98rem;
       box-shadow: none;
@@ -255,6 +267,3 @@
   </div>
 </body>
 </html>
-
-
-
