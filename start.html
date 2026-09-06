@@ -27,10 +27,31 @@
     p.delete('lang');
     const query = p.toString();
     const target = lang === 'ja' ? 'start-ja.html' : 'start-en.html';
-    location.replace(target + (query ? '?' + query : ''));
+    const targetUrl = target + (query ? '?' + query : '');
+
+    // Only X for Android pauses here. Normal browsers keep the existing redirect.
+    const isXAndroid = /TwitterAndroid\//i.test(navigator.userAgent || '');
+    if (isXAndroid) {
+      window.__L30_X_BROWSER_GATE__ = { lang, targetUrl };
+      return;
+    }
+
+    location.replace(targetUrl);
   })();
   </script>
-  <style>html,body{min-height:100%;margin:0;background:#03101f;color:#fff;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif}main{min-height:100vh;display:grid;place-items:center;text-align:center;padding:24px}a{color:#91dcff}</style>
+  <style>
+    html,body{min-height:100%;margin:0;background:#03101f;color:#fff;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif}
+    main{min-height:100vh;display:grid;place-items:center;text-align:center;padding:24px;box-sizing:border-box}
+    a{color:#91dcff}
+    .x-gate{width:min(560px,100%);padding:28px 22px;border:1px solid #33506d;border-radius:18px;background:#071a2e;box-shadow:0 18px 60px rgba(0,0,0,.28)}
+    .x-gate h1{margin:0 0 12px;font-size:clamp(1.5rem,5vw,2rem);line-height:1.25}
+    .x-gate p{margin:0 0 18px;color:#d7e7f6;line-height:1.7}
+    .x-actions{display:grid;gap:10px}
+    .x-action{display:block;padding:13px 16px;border-radius:999px;text-decoration:none;font-weight:800;font:inherit}
+    .x-action.primary{background:#fff;color:#03101f}
+    .x-action.secondary{border:1px solid #6b8bad;color:#fff;background:transparent;cursor:pointer}
+    .x-note{display:block;margin-top:14px;color:#9fb7cc;font-size:.82rem;line-height:1.55}
+  </style>
 </head>
 <body>
   <main>
@@ -39,5 +60,38 @@
       <p><a href="start-en.html">English</a> · <a href="start-ja.html">日本語</a></p>
     </noscript>
   </main>
+  <script>
+  (() => {
+    const gate = window.__L30_X_BROWSER_GATE__;
+    if (!gate) return;
+
+    const ja = gate.lang === 'ja';
+    const absolute = new URL(gate.targetUrl, location.href);
+    const intentUrl =
+      'intent://' + absolute.host + absolute.pathname + absolute.search +
+      '#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end';
+
+    const main = document.querySelector('main');
+    main.innerHTML = `
+      <section class="x-gate" aria-labelledby="xGateTitle">
+        <h1 id="xGateTitle">${ja ? '外部ブラウザで開きますか？' : 'Open in your browser?'}</h1>
+        <p>${ja
+          ? 'X内ブラウザでは端末の表示設定が正しく引き継がれない場合があります。通常のブラウザで開くと、端末のLight / Dark設定に従って表示できます。'
+          : 'X’s in-app browser may not pass your device display preference correctly. Opening this page in your regular browser lets the page follow your Light / Dark setting.'}
+        </p>
+        <div class="x-actions">
+          <a class="x-action primary" id="xExternal" href="#">${ja ? '外部ブラウザで開く' : 'Open in external browser'}</a>
+          <button class="x-action secondary" id="xContinue" type="button">${ja ? 'このままX内で見る' : 'Continue inside X'}</button>
+        </div>
+        <small class="x-note">${ja
+          ? '既定ブラウザが設定されている場合はそのブラウザが開きます。未設定の場合はAndroidのブラウザ選択が表示されることがあります。'
+          : 'If you have a default browser, Android may open it directly. Otherwise Android may show a browser chooser.'}
+        </small>
+      </section>`;
+
+    document.getElementById('xExternal').href = intentUrl;
+    document.getElementById('xContinue').addEventListener('click', () => location.replace(gate.targetUrl));
+  })();
+  </script>
 </body>
 </html>
