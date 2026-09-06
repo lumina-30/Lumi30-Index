@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>B: metaあり / CSS color-schemeなし</title>
+<style>
+:root {
+  
+  --probe-media: light;
+  --probe-bg: #ffffff;
+  --probe-fg: #111111;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --probe-media: dark;
+    --probe-bg: #111827;
+    --probe-fg: #f9fafb;
+  }
+}
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--probe-bg);
+  color: var(--probe-fg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+body { padding: 12px; }
+h2 { font-size: 16px; margin: 0 0 8px; }
+p { margin: 4px 0; font-size: 13px; line-height: 1.45; }
+code { word-break: break-all; }
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+<h2>B: metaあり / CSS color-schemeなし</h2>
+<p><span class="badge" id="visual">measuring…</span></p>
+<p id="details"></p>
+<script>
+(function() {
+  function safe(fn, fallback) {
+    try { return fn(); } catch (e) { return fallback || ('ERROR: ' + e.message); }
+  }
+  var cs = getComputedStyle(document.documentElement);
+  var navPref = safe(function() {
+    return navigator.preferences && navigator.preferences.colorScheme
+      ? navigator.preferences.colorScheme.value
+      : 'unsupported';
+  }, 'unsupported');
+
+  var data = {
+    type: 'l30-theme-probe',
+    id: 'B',
+    title: "B: meta\u3042\u308a / CSS color-scheme\u306a\u3057",
+    hasMetaColorScheme: true,
+    hasCssColorScheme: false,
+    matchDark: matchMedia('(prefers-color-scheme: dark)').matches,
+    matchLight: matchMedia('(prefers-color-scheme: light)').matches,
+    matchNoPreference: matchMedia('(prefers-color-scheme: no-preference)').matches,
+    cssMediaResult: cs.getPropertyValue('--probe-media').trim(),
+    computedColorScheme: cs.colorScheme || '(empty)',
+    htmlBackground: cs.backgroundColor,
+    bodyBackground: getComputedStyle(document.body).backgroundColor,
+    navigatorPreferencesColorScheme: navPref,
+    userAgent: navigator.userAgent,
+    platform: navigator.platform || '',
+    referrer: document.referrer || '',
+    href: location.href
+  };
+
+  document.getElementById('visual').textContent =
+    'CSS=' + data.cssMediaResult +
+    ' / matchMedia=' + (data.matchDark ? 'dark' : (data.matchLight ? 'light' : 'other'));
+  document.getElementById('details').innerHTML =
+    '<code>computed color-scheme: ' + String(data.computedColorScheme).replace(/</g,'&lt;') + '</code>';
+
+  function send() {
+    try { parent.postMessage(data, location.origin); } catch (e) {}
+  }
+  send();
+  setTimeout(send, 250);
+})();
+</script>
+</body>
+</html>

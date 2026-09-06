@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>LUMINA-30 X/WebView Theme Diagnostic</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --css-pref: light;
+  --bg: #f6f8fb;
+  --panel: #ffffff;
+  --fg: #17202a;
+  --muted: #5f6b76;
+  --line: #cfd9e3;
+  --ok: #137333;
+  --warn: #9a6700;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --css-pref: dark;
+    --bg: #0f1720;
+    --panel: #182330;
+    --fg: #edf4fa;
+    --muted: #afc0d2;
+    --line: #345064;
+    --ok: #7ee787;
+    --warn: #f2cc60;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
+  line-height: 1.55;
+}
+main { max-width: 1120px; margin: 0 auto; padding: 18px; }
+h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); margin: 0 0 8px; }
+h2 { font-size: 1.15rem; margin: 0 0 12px; }
+p { margin: 6px 0; }
+.note { color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 14px; }
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  padding: 14px;
+}
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { border-bottom: 1px solid var(--line); padding: 7px 5px; text-align: left; vertical-align: top; }
+th { width: 42%; color: var(--muted); font-weight: 650; }
+code, pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+iframe {
+  width: 100%;
+  min-height: 165px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: transparent;
+}
+.status {
+  display: inline-block;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-weight: 750;
+  font-size: 13px;
+}
+.big {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--fg);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font: inherit;
+  font-weight: 700;
+}
+#verdict { border-left: 4px solid var(--warn); }
+.small { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>X / Android WebView Theme Diagnostic</h1>
+  <p class="note">この1ページで、WebViewが実際に何を「ユーザーの配色希望」として公開しているかと、meta / CSS宣言の効果を同時に比較します。</p>
+
+  <section class="card" id="verdict">
+    <h2>自動判定</h2>
+    <p class="big" id="verdictText">測定中…</p>
+    <p id="verdictDetail" class="note"></p>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>親ページの配色情報</h2>
+      <table id="themeTable"></table>
+    </section>
+    <section class="card">
+      <h2>ブラウザ / WebView情報</h2>
+      <table id="envTable"></table>
+    </section>
+  </div>
+
+  <section class="card" style="margin-top:12px">
+    <h2>4条件 同時比較</h2>
+    <p class="note">A→Dの違いは <code>&lt;meta name="color-scheme"&gt;</code> と <code>:root { color-scheme: light dark; }</code> の有無だけです。</p>
+    <table id="matrix">
+      <thead>
+        <tr>
+          <th>条件</th>
+          <th>matchMedia</th>
+          <th>CSS @media</th>
+          <th>computed color-scheme</th>
+          <th>背景</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-id="A"><td>A: meta× / CSS×</td><td colspan="4">測定中…</td></tr>
+        <tr data-id="B"><td>B: meta○ / CSS×</td><td colspan="4">測定中…</td></tr>
+        <tr data-id="C"><td>C: meta× / CSS○</td><td colspan="4">測定中…</td></tr>
+        <tr data-id="D"><td>D: meta○ / CSS○</td><td colspan="4">測定中…</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="grid">
+    <section class="card"><iframe src="x-theme-probe-a.html" title="Probe A"></iframe></section>
+    <section class="card"><iframe src="x-theme-probe-b.html" title="Probe B"></iframe></section>
+    <section class="card"><iframe src="x-theme-probe-c.html" title="Probe C"></iframe></section>
+    <section class="card"><iframe src="x-theme-probe-d.html" title="Probe D"></iframe></section>
+  </div>
+
+  <section class="card" style="margin-top:12px">
+    <h2>結果コピー</h2>
+    <p><button id="copyBtn" type="button">診断結果をコピー</button></p>
+    <pre id="raw"></pre>
+  </section>
+</main>
+
+<script>
+(function () {
+  const results = {};
+  const css = getComputedStyle(document.documentElement);
+
+  function safe(fn, fallback='unsupported') {
+    try { return fn(); } catch (e) { return fallback + ': ' + e.message; }
+  }
+  function yn(v) { return v ? 'YES' : 'NO'; }
+
+  const parentData = {
+    time: new Date().toISOString(),
+    matchDark: matchMedia('(prefers-color-scheme: dark)').matches,
+    matchLight: matchMedia('(prefers-color-scheme: light)').matches,
+    matchNoPreference: matchMedia('(prefers-color-scheme: no-preference)').matches,
+    cssMediaResult: css.getPropertyValue('--css-pref').trim(),
+    computedColorScheme: css.colorScheme || '(empty)',
+    navigatorPreferencesColorScheme: safe(() =>
+      navigator.preferences && navigator.preferences.colorScheme
+        ? navigator.preferences.colorScheme.value
+        : 'unsupported'
+    ),
+    forcedColors: matchMedia('(forced-colors: active)').matches,
+    invertedColors: safe(() => matchMedia('(inverted-colors: inverted)').matches, 'unsupported'),
+    prefersContrastMore: safe(() => matchMedia('(prefers-contrast: more)').matches, 'unsupported'),
+    userAgent: navigator.userAgent,
+    platform: navigator.platform || '',
+    userAgentDataPlatform: safe(() => navigator.userAgentData ? navigator.userAgentData.platform : 'unsupported'),
+    userAgentDataMobile: safe(() => navigator.userAgentData ? navigator.userAgentData.mobile : 'unsupported'),
+    language: navigator.language,
+    languages: Array.from(navigator.languages || []),
+    referrer: document.referrer || '',
+    href: location.href,
+    viewport: `${innerWidth}x${innerHeight}`,
+    screen: `${screen.width}x${screen.height}`,
+    devicePixelRatio: window.devicePixelRatio,
+    colorDepth: screen.colorDepth,
+    pixelDepth: screen.pixelDepth,
+    standalone: matchMedia('(display-mode: standalone)').matches
+  };
+
+  function fillTable(id, rows) {
+    const el = document.getElementById(id);
+    el.innerHTML = rows.map(([k,v]) =>
+      `<tr><th>${k}</th><td><code>${String(v).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</code></td></tr>`
+    ).join('');
+  }
+
+  fillTable('themeTable', [
+    ['matchMedia dark', yn(parentData.matchDark)],
+    ['matchMedia light', yn(parentData.matchLight)],
+    ['matchMedia no-preference', yn(parentData.matchNoPreference)],
+    ['CSS @media result', parentData.cssMediaResult],
+    ['computed color-scheme', parentData.computedColorScheme],
+    ['navigator.preferences.colorScheme', parentData.navigatorPreferencesColorScheme],
+    ['forced-colors', yn(parentData.forcedColors)],
+    ['inverted-colors', parentData.invertedColors],
+    ['prefers-contrast: more', parentData.prefersContrastMore]
+  ]);
+
+  fillTable('envTable', [
+    ['User-Agent', parentData.userAgent],
+    ['platform', parentData.platform],
+    ['UAData platform', parentData.userAgentDataPlatform],
+    ['UAData mobile', parentData.userAgentDataMobile],
+    ['language', parentData.language],
+    ['languages', parentData.languages.join(', ')],
+    ['referrer', parentData.referrer || '(none)'],
+    ['URL', parentData.href],
+    ['viewport', parentData.viewport],
+    ['screen', parentData.screen],
+    ['devicePixelRatio', parentData.devicePixelRatio],
+    ['colorDepth', parentData.colorDepth],
+    ['display-mode: standalone', yn(parentData.standalone)]
+  ]);
+
+  function updateMatrix(id, d) {
+    const row = document.querySelector(`#matrix tbody tr[data-id="${id}"]`);
+    if (!row) return;
+    const media = d.matchDark ? 'dark' : (d.matchLight ? 'light' : 'other');
+    row.innerHTML =
+      `<td>${id}: ${d.hasMetaColorScheme ? 'meta○' : 'meta×'} / ${d.hasCssColorScheme ? 'CSS○' : 'CSS×'}</td>` +
+      `<td><code>${media}</code></td>` +
+      `<td><code>${d.cssMediaResult}</code></td>` +
+      `<td><code>${String(d.computedColorScheme)}</code></td>` +
+      `<td><code>${String(d.bodyBackground)}</code></td>`;
+  }
+
+  function evaluate() {
+    const v = document.getElementById('verdictText');
+    const detail = document.getElementById('verdictDetail');
+    const arr = ['A','B','C','D'].map(k => results[k]).filter(Boolean);
+
+    if (arr.length < 4) {
+      v.textContent = `測定中… (${arr.length}/4)`;
+      return;
+    }
+
+    const medias = arr.map(d => d.matchDark ? 'dark' : (d.matchLight ? 'light' : 'other'));
+    const sameMedia = medias.every(x => x === medias[0]);
+
+    if (sameMedia && medias[0] === 'light') {
+      v.textContent = 'WebViewは4条件すべてで「Light」を公開しています';
+      detail.textContent =
+        'meta / CSS color-scheme の有無では matchMedia の値が変わっていません。Dark端末でこの結果なら、Web側から見える標準 preference 自体がLightです。';
+    } else if (sameMedia && medias[0] === 'dark') {
+      v.textContent = 'WebViewは4条件すべてで「Dark」を公開しています';
+      const visualDiff = arr.some(d => d.cssMediaResult !== 'dark');
+      detail.textContent = visualDiff
+        ? '標準 preference はDarkです。表示差があるなら、meta / color-scheme宣言またはページCSS側が原因候補です。'
+        : '標準 preference もCSS @mediaもDarkです。LUMINA側の個別CSS実装差を確認すべき状態です。';
+    } else {
+      v.textContent = 'meta / CSS宣言によって結果が変化しています';
+      detail.textContent =
+        '4条件でmatchMediaまたはCSS適用結果に差が出ています。WebView互換宣言が表示へ影響しているため、差が出た条件をLUMINAへ採用候補にできます。';
+    }
+
+    document.getElementById('raw').textContent =
+      JSON.stringify({parent: parentData, probes: results}, null, 2);
+  }
+
+  window.addEventListener('message', function (ev) {
+    if (ev.origin !== location.origin) return;
+    const d = ev.data;
+    if (!d || d.type !== 'l30-theme-probe' || !d.id) return;
+    results[d.id] = d;
+    updateMatrix(d.id, d);
+    evaluate();
+  });
+
+  document.getElementById('copyBtn').addEventListener('click', async function () {
+    const text = document.getElementById('raw').textContent ||
+      JSON.stringify({parent: parentData, probes: results}, null, 2);
+    try {
+      await navigator.clipboard.writeText(text);
+      this.textContent = 'コピーしました';
+    } catch (e) {
+      this.textContent = 'コピー失敗（下のJSONを選択）';
+    }
+  });
+
+  document.getElementById('raw').textContent =
+    JSON.stringify({parent: parentData, probes: results}, null, 2);
+})();
+</script>
+</body>
+</html>
