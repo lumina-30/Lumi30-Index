@@ -1,6 +1,22 @@
 <!doctype html>
 <html lang="en" data-l30-lang-lock="EN_ONLY">
 <head>
+<script>
+/* L30_THEME_INHERIT_BOOT_BEGIN */
+(function(){
+  try {
+    var t = localStorage.getItem('l30-color-theme');
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-l30-theme', t);
+  } catch (e) {}
+})();
+/* L30_THEME_INHERIT_BOOT_END */
+</script>
+<style>
+/* L30_THEME_INHERIT_STYLE_BEGIN */
+:root[data-l30-theme="light"] { color-scheme: light; }
+:root[data-l30-theme="dark"] { color-scheme: dark; }
+/* L30_THEME_INHERIT_STYLE_END */
+</style>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="l30:lang-lock" content="EN_ONLY" />
