@@ -9,16 +9,15 @@
 /* Narrow phones */
 @media(max-width:380px){.shell{width:min(var(--max),calc(100% - 12px))}.brand-mark{width:30px;height:30px;flex-basis:30px}.brand-name{font-size:.76rem}.lang a,.lang span{padding:4px 8px;font-size:.74rem}.hero-copy{padding:18px 15px}.hero-copy h1{font-size:clamp(1.9rem,10.7vw,2.65rem)}.hero-copy .lead,.boundary,.section p{font-size:.93rem}.section{padding:18px 15px}.lumi-guide{min-height:255px}.lumi-guide-copy{padding:16px}.route{padding:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.route{transition:none}.button:hover,.route:hover{transform:none}}
-/* Evaluation gateway: prominent prior-art comparison entry */
-.evaluation-gateway{position:relative;overflow:hidden;margin:24px 0;padding:clamp(26px,3.4vw,38px);border:2px solid rgba(246,201,69,.72);border-radius:24px;background:radial-gradient(circle at 92% 8%,rgba(246,201,69,.13),transparent 31%),linear-gradient(145deg,rgba(9,25,48,.98),rgba(3,12,27,.98));box-shadow:0 22px 70px rgba(0,0,0,.30),inset 0 0 0 1px rgba(255,231,139,.08)}
-.evaluation-gateway:before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:linear-gradient(180deg,#ffe88a,#dba829)}
-.evaluation-badge{display:inline-flex;align-items:center;gap:8px;margin:0 0 12px;padding:7px 11px;border:1px solid rgba(255,225,111,.48);border-radius:999px;background:rgba(246,201,69,.11);color:#ffe57d;font-size:.76rem;font-weight:900;letter-spacing:.12em}
-.evaluation-icon{font-size:1rem;line-height:1}
-.evaluation-gateway h2{margin:0;font-size:clamp(1.75rem,3.2vw,2.55rem);line-height:1.16;text-wrap:balance}
-.evaluation-gateway p{max-width:940px;margin:12px 0;color:#d6e0ec}
-.evaluation-gateway .evaluation-note{color:#b9c8db;font-size:.94rem}
-.evaluation-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;margin-top:10px;padding:13px 20px;border:1px solid rgba(255,236,158,.84);border-radius:999px;background:linear-gradient(180deg,#ffeb92,#f2c84d);color:#191404;font-weight:900;text-decoration:none;box-shadow:0 10px 32px rgba(246,201,69,.18);transition:.16s ease;touch-action:manipulation}
-.evaluation-cta:hover{transform:translateY(-1px);filter:brightness(1.05)}
-.evaluation-cta:focus-visible{outline:2px solid #fff1ad;outline-offset:4px}
-@media(max-width:600px){.evaluation-gateway{margin:14px 0;padding:22px 18px;border-radius:18px}.evaluation-gateway h2{font-size:clamp(1.6rem,8vw,2.05rem)}.evaluation-gateway p{font-size:.96rem}.evaluation-cta{width:100%;text-align:center}.evaluation-badge{font-size:.70rem}}
-@media(prefers-reduced-motion:reduce){.evaluation-cta{transition:none}.evaluation-cta:hover{transform:none}}
+/* Evaluation gateway: red-pin eyecatch for prior-art comparison */
+.evaluation-gateway{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;margin:18px 0 24px;padding:18px 20px;border:1px solid rgba(255,122,122,.38);border-radius:18px;background:linear-gradient(135deg,rgba(12,29,54,.96),rgba(5,16,34,.96));color:white;text-decoration:none;box-shadow:0 16px 44px rgba(0,0,0,.24);transition:.16s ease;touch-action:manipulation}
+.evaluation-pin{display:block;font-size:2.8rem;line-height:1;transform:rotate(-8deg);filter:drop-shadow(0 6px 10px rgba(0,0,0,.32))}
+.evaluation-copy{display:block;min-width:0}
+.evaluation-label{display:block;margin:1px 0 4px;color:#ffb1b1;font-size:.76rem;font-weight:900;letter-spacing:.12em}
+.evaluation-gateway h2{margin:0;font-size:clamp(1.18rem,2vw,1.5rem);line-height:1.3;font-family:inherit;font-weight:850;letter-spacing:0;text-wrap:balance}
+.evaluation-desc{display:block;margin-top:6px;color:#cbd8e8;font-size:.94rem;line-height:1.62}
+.evaluation-link{display:inline-flex;align-items:center;gap:8px;margin-top:10px;color:#fff;font-size:.94rem;font-weight:850;text-decoration:underline;text-decoration-color:rgba(255,177,177,.58);text-underline-offset:4px}
+.evaluation-gateway:hover{transform:translateY(-1px);border-color:rgba(255,142,142,.68);filter:brightness(1.04)}
+.evaluation-gateway:focus-visible{outline:2px solid #ffb1b1;outline-offset:4px}
+@media(max-width:600px){.evaluation-gateway{grid-template-columns:42px minmax(0,1fr);gap:10px;margin:12px 0 16px;padding:15px 14px;border-radius:16px}.evaluation-pin{font-size:2.35rem}.evaluation-label{font-size:.69rem}.evaluation-gateway h2{font-size:1.12rem}.evaluation-desc,.evaluation-link{font-size:.9rem}}
+@media(prefers-reduced-motion:reduce){.evaluation-gateway{transition:none}.evaluation-gateway:hover{transform:none}}
