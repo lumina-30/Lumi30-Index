@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T21:24:36Z",
+  "generated_at": "2026-09-27T21:31:23Z",
   "notice": "This file is generated automatically. Do not edit by hand.",
   "organization": "lumina-30",
   "scope": "public repositories visible to this workflow",
@@ -17,13 +17,13 @@
     "reuse_extracted_text_for_renames_when_git_blob_sha_matches": true,
     "extract_only_new_or_changed_pdfs": true
   },
-  "records_count": 58,
+  "records_count": 59,
   "repository_errors_count": 0,
   "stats": {
-    "pdfs_seen": 58,
+    "pdfs_seen": 59,
     "reused_unchanged": 58,
     "reused_renamed_same_blob": 0,
-    "downloaded_or_extracted": 0,
+    "downloaded_or_extracted": 1,
     "skipped_too_large": 0,
     "download_errors": 0
   },
@@ -261,6 +261,24 @@
       "status": "EXTRACTED_TEXT",
       "error": null,
       "cache_action": "REUSED_UNCHANGED"
+    },
+    {
+      "repository": "Lumi30-PDF-Archive",
+      "full_name": "lumina-30/Lumi30-PDF-Archive",
+      "repository_url": "https://github.com/lumina-30/Lumi30-PDF-Archive",
+      "default_branch": "main",
+      "archived": false,
+      "pdf_path": "The_Refusal_Option_Effective_Human_Control_Before_and_Beyond_Irreversible_AI_Transitions.pdf",
+      "pdf_url": "https://github.com/lumina-30/Lumi30-PDF-Archive/blob/main/The_Refusal_Option_Effective_Human_Control_Before_and_Beyond_Irreversible_AI_Transitions.pdf",
+      "raw_url": "https://raw.githubusercontent.com/lumina-30/Lumi30-PDF-Archive/main/The_Refusal_Option_Effective_Human_Control_Before_and_Beyond_Irreversible_AI_Transitions.pdf",
+      "git_blob_sha": "8f44c6b91c3d8ac7a6daa9f428e8b2b7f9b4e06b",
+      "sha256": "25116e81eec96d7f5944504c998dd00856212820ae3cce98d4f8cf65a104e6ac",
+      "size_bytes": 340835,
+      "page_count": 10,
+      "char_count": 25321,
+      "status": "EXTRACTED_TEXT",
+      "error": null,
+      "cache_action": "EXTRACTED_NEW_OR_CHANGED"
     },
     {
       "repository": "lumina-30-overview",
