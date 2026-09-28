@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T21:31:23Z",
+  "generated_at": "2026-09-28T23:26:40Z",
   "notice": "This file is generated automatically. Do not edit by hand.",
   "organization": "lumina-30",
   "scope": "public repositories visible to this workflow",
@@ -21,9 +21,9 @@
   "repository_errors_count": 0,
   "stats": {
     "pdfs_seen": 59,
-    "reused_unchanged": 58,
+    "reused_unchanged": 59,
     "reused_renamed_same_blob": 0,
-    "downloaded_or_extracted": 1,
+    "downloaded_or_extracted": 0,
     "skipped_too_large": 0,
     "download_errors": 0
   },
@@ -278,7 +278,7 @@
       "char_count": 25321,
       "status": "EXTRACTED_TEXT",
       "error": null,
-      "cache_action": "EXTRACTED_NEW_OR_CHANGED"
+      "cache_action": "REUSED_UNCHANGED"
     },
     {
       "repository": "lumina-30-overview",

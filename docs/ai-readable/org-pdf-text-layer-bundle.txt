@@ -1,6 +1,6 @@
 LUMINA-30 Organization PDF Text Layer Bundle
 This file is generated automatically. Do not edit by hand.
-Generated: 2026-09-27T21:31:23Z
+Generated: 2026-09-28T23:26:40Z
 Organization: lumina-30
 
 Authority:
@@ -20,9 +20,9 @@ Unchanged PDFs reuse cached extracted text when possible; only new or changed PD
 
 Run statistics:
 PDFs seen: 59
-Reused unchanged: 58
+Reused unchanged: 59
 Reused renamed same blob: 0
-Downloaded/extracted: 1
+Downloaded/extracted: 0
 Skipped too large: 0
 Download errors: 0
 
@@ -1739,7 +1739,7 @@ PDF URL: https://github.com/lumina-30/Lumi30-PDF-Archive/blob/main/The_Refusal_O
 Git blob SHA: 8f44c6b91c3d8ac7a6daa9f428e8b2b7f9b4e06b
 SHA256: 25116e81eec96d7f5944504c998dd00856212820ae3cce98d4f8cf65a104e6ac
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 340835
 Page count: 10
 Extracted characters: 25321
