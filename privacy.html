@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy Policy for LUMINA-30 MailBus and its use of Google Workspace Gmail data." />
+  <title>Privacy Policy | LUMINA-30 MailBus</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0F1720;
+      --panel: #182330;
+      --text: #EAF2F9;
+      --muted: #AFC0D2;
+      --line: #294153;
+      --accent: #8FC9FF;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #F7F9FC;
+        --panel: #FFFFFF;
+        --text: #1E2732;
+        --muted: #5D6B78;
+        --line: #D8E2EC;
+        --accent: #2F6FA3;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+    main { max-width: 860px; margin: 0 auto; padding: 32px 18px 64px; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    h1 { margin-top: 0; line-height: 1.2; }
+    h2 { margin-top: 2em; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); }
+  </style>
+</head>
+<body>
+<main>
+  <div class="panel">
+    <p><a href="index.html">← LUMINA-30 Index</a></p>
+    <h1>Privacy Policy — LUMINA-30 MailBus</h1>
+    <p class="meta">Effective date: 2026-10-01</p>
+
+    <p>
+      This Privacy Policy describes how the LUMINA-30 MailBus application accesses, uses,
+      stores, and shares Google Workspace Gmail data when the operator authorizes the application
+      through Google OAuth.
+    </p>
+
+    <h2>1. Google data accessed</h2>
+    <p>
+      LUMINA-30 MailBus requests only the Gmail access needed for its current functions:
+      read-only access to Gmail messages and permission to send email.
+      Depending on the operation, the application may process message metadata, sender and recipient
+      addresses, subject lines, message bodies, thread context, timestamps, and Gmail message or thread
+      identifiers.
+    </p>
+
+    <h2>2. How Google data is used</h2>
+    <p>
+      Google Workspace data is used only to provide the MailBus functions authorized by the operator,
+      including reading inbound email, maintaining thread context, preventing duplicate or unsafe sends,
+      preparing or evaluating replies, sending approved MailBus messages, recording delivery outcomes,
+      and operating safety controls such as HOLD, STOP, NO_RESEND, deduplication, and rate limits.
+    </p>
+
+    <h2>3. Local storage and retention</h2>
+    <p>
+      OAuth credentials and operational MailBus data are stored on the operator-controlled local system.
+      Operational records may be retained as needed for continuity, deduplication, safety enforcement,
+      troubleshooting, incident review, and confirmation of sent or uncertain-send states.
+      Gmail content is not published as part of the public LUMINA-30 website.
+    </p>
+
+    <h2>4. AI-assisted processing</h2>
+    <p>
+      Some MailBus functions may use the OpenAI API to classify, evaluate, or draft email-related content.
+      When such a function is invoked, only data needed for that specific MailBus function may be transmitted
+      to OpenAI as a service provider. LUMINA-30 does not sell Google Workspace user data, use it for advertising,
+      or use it to train or improve a generalized artificial-intelligence model.
+    </p>
+
+    <h2>5. Data sharing</h2>
+    <p>
+      Google Workspace user data is not sold or transferred to advertising platforms, data brokers,
+      or information resellers. Data is shared only when necessary to provide the authorized MailBus function,
+      for security or abuse investigation, to comply with applicable law, or with the user's explicit consent
+      where such consent is required.
+    </p>
+
+    <h2>6. Google API Services User Data Policy and Limited Use</h2>
+    <p>
+      LUMINA-30 MailBus's use and transfer of information received from Google Workspace APIs adheres to the
+      Google API Services User Data Policy, including the Limited Use requirements.
+    </p>
+    <p>
+      Reference:
+      <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">
+        Google Workspace user data and developer policy
+      </a>.
+    </p>
+
+    <h2>7. Revoking access</h2>
+    <p>
+      The operator can revoke the application's Google account access at any time through the Google Account
+      security settings for third-party connections. Revocation prevents future authorized Gmail API access.
+      Local operational records are handled separately from Google's authorization state.
+    </p>
+
+    <h2>8. Security</h2>
+    <p>
+      MailBus uses OAuth authorization and local access controls and is designed to fail closed when Gmail
+      authentication is invalid or when a send result is uncertain. Authentication secrets are not intended
+      for publication in the LUMINA-30 public repositories.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+      Privacy or data-use questions about LUMINA-30 MailBus may be sent to
+      <a href="mailto:lumina30.reference@gmail.com">lumina30.reference@gmail.com</a>.
+    </p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>
+      This policy may be updated when the MailBus data flow, OAuth scopes, service providers,
+      or applicable Google API requirements materially change. The effective date above identifies the
+      published version.
+    </p>
+  </div>
+</main>
+</body>
+</html>
