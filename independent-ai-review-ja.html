@@ -30,25 +30,106 @@
     <button id="copyPrompt" type="button">AIに聞く文をコピー</button>
     <div class="status" id="copyStatus" role="status" aria-live="polite"></div>
     <p class="note">AIの回答は、そのAIが実際に取得できた資料・モデル・推論に依存します。必要に応じて元資料も確認してください。</p>
-    <details><summary>AIに聞く文を見る</summary><pre id="reviewPrompt">以下の公開資料を実際に確認し、LUMINA-30をできるだけ十分に理解したうえで評価してください。
+    <details><summary>AIに聞く文を見る</summary><pre id="reviewPrompt">以下の公開資料を、LUMINA-30の「Canonical Evaluation Path」に従って実際に確認し、評価してください。
 
-資料上に存在しない、または未整備であると判断する場合は、結論を出す前に、指定ページから参照できる関連公開資料も必要な範囲で確認してください。
-そのうえで、「仕組み自体がない」「仕組みはあるが入口から見つけにくい」「実証・運用実績がまだない」を区別して評価してください。
+目的はLUMINA-30を高く評価することでも低く評価することでもありません。古い版、一部資料、単一論文、資料の役割取り違え、単なる発見失敗によって評価を誤らないことが目的です。
 
-まず、LUMINA-30が何を問題としていて、どのような考え方・仕組み・実用上の可能性を持つのか説明してください。
+【重要な評価ゲート】
+総合評価を出す前に、次の6層をすべて「確認済み / 取得不能 / 該当資料なし」のいずれかに分類してください。必須層を確認できていない場合は、完全評価ではなく「PARTIAL EVALUATION」と明記してください。
 
-そのうえで、特に価値がある、興味深い、特徴的だと考える点を理由とともに評価してください。
+1. Core Question
+LUMINA-30が何を問題にしているかを確認してください。
+中心問い：
+「不可逆化する前に、人間は実効的に拒否・停止・検証・方向転換できたか？」
 
-改善できる点、疑問、弱点、まだ確認・実証されていない点があれば、それらも率直に指摘してください。
+2. Current Research Stack
+現行4研究をそれぞれ別の研究として確認してください。
+- PCR-C
+- Objective Persistence
+- L30-RET / The Refusal Option
+- PISF
 
-LUMINA-30を褒めることも批判することも目的にせず、実際に確認した資料に基づいてあなた自身の評価を示してください。事実と推論を区別し、最後に実際に確認できたページと、確認できなかった資料があれば明記してください。
+Overviewや研究ハブに表示される現行Version DOIを確認し、可能なら各論文本体を読んでください。
+論文本体を取得・精読できなかった場合、その論文について理論的独創性、数理的妥当性、既存研究との重複、学術的強度を確定評価しないでください。「未読のため判定不能」としてください。
+古い版の評価や旧DOIを現行版評価と混同しないでください。
 
-日本語で回答してください。
+3. Boundary / Canonical Layer
+Boundary Kernelと公開Canonを確認してください。
+この層には「何を代替不能な境界として固定するか」を問い、論文としての新規性や単独の執行機構を機械的に要求しないでください。
+ただし、境界自体の矛盾・欠落・代替可能性は弱点として評価してください。
 
-https://lumina-30.github.io/Lumi30-Index/lumi-menu-ja.html
-https://lumina-30.github.io/lumina-30-overview/index-ja.html
+4. Implementation / Evidence
+OQP、Pre-Incident Boundary Review、Incident Review、Evidence Requirements等を確認し、理論・境界が現実の判断、停止、検査、記録、証拠へどう接続されるかを評価してください。
+運用実績、実証、再現性、規模、独立性がない場合は、その層の不足として明示してください。
+
+5. Limitations & Open Questions
+Related Work / Prior Art、Open Research Questions、Worked Research Cases等を確認してください。
+既存研究との重複、未実証部分、反証可能性、未解決問題を確認してください。
+
+6. Independent Evaluation
+最後に総合評価してください。結論を先に決めないでください。
+
+【欠落の6分類】
+弱点・欠落を指摘する場合は、少なくとも次を区別してください。
+① 理論上の弱点
+② Boundary / Canonical上の欠落
+③ 実装上の弱点
+④ 実証不足
+⑤ 独立した第三者検証不足
+⑥ 資料を発見・取得できなかっただけのもの
+
+「存在しない」と判断する前に、Canonical Evaluation Pathから到達できる関連公開資料を必要な範囲で確認してください。404や取得失敗だけで仕組み不存在と推定しないでください。
+
+【カテゴリーエラー防止】
+- 研究論文に単独の運用実績がないことだけで、その理論上の役割を否定しない。
+- Boundary Kernelに法的執行力がないことだけで、境界文書としての役割を否定しない。
+- 非拘束フレームワークであることと、外部採用・制度接続・第三者検証が不足していることを分けて評価する。
+- 一般ユーザー向けUXは START / LUMI MENU / OQP 等の人間向け導線で評価し、研究・AI評価用専門セクションの情報密度だけを一般向けの使いづらさの根拠にしない。ただし人間向け本線自体が使いづらい場合は通常どおり弱点として扱う。
+
+【外部的な権威・実績に関する注意】
+査読、arXiv掲載、第三者採用、制度導入、認証、専門家承認、引用、実運用実績などは、公開資料で確認できた事実だけを述べてください。確認できなければ「確認できない」としてください。
+
+【回答形式】
+A. 6層カバレッジ表（確認済み / 取得不能 / 該当資料なし）
+B. LUMINA-30が扱う問題と全体構造
+C. 4研究それぞれの役割・主張範囲・確認したVersion
+D. 特徴的・有用・支持できる点
+E. 弱点・疑問・未検証点（6分類）
+F. 一般ユーザー向けUXと専門/AI評価用導線を分離した評価
+G. 総合評価
+H. この評価を変え得る追加証拠
+I. 実際に確認したページ・論文・Version DOI
+J. 確認できなかった資料と、それにより判定不能な論点
+
+事実と推論を明確に分け、日本語で回答してください。
+
+【Canonical Evaluation Path / 基本入口】
+https://lumina-30.github.io/Lumi30-Index/lumi-menu-ja.html#canonical-evaluation-path
+https://lumina-30.github.io/Lumi30-Index/start-ja.html
+https://lumina-30.github.io/lumina-30-overview/index-ja.html#public-research-stack
+
+【Research Stack】
+https://lumina-30.github.io/lumina-30-overview/research/public-research-stack-ja.html
+https://lumina-30.github.io/lumina-30-overview/research/pcrc-ja.html
+https://lumina-30.github.io/lumina-30-overview/research/objective-persistence-ja.html
+https://lumina-30.github.io/lumina-30-overview/research/the-refusal-option-ja.html
+https://lumina-30.github.io/lumina-30-overview/research/pre-irreversibility-safety-ja.html
+
+【Boundary / Canonical】
+https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel-ja.html
+https://lumina-30.github.io/LUMINA-30/index-ja.html
+
+【Implementation / Evidence】
 https://lumina-30.github.io/lumina-30-overview/tools/pre-incident-boundary-review/ja/one-question-pilot.html
 https://lumina-30.github.io/lumina30-incident-review/index-ja.html
+https://lumina-30.github.io/lumina-30-overview/adoption/JP_L30_EVIDENCE_REQUIREMENTS.html
+
+【Limitations / Open Questions】
+https://lumina-30.github.io/lumina30-wiki/ja/related-work-and-prior-art-ja.html
+https://lumina-30.github.io/lumina-30-overview/research/open-research-questions-ja.html
+https://lumina-30.github.io/lumina-30-overview/research/worked-cases-ja.html
+
+【補助】
 https://lumina-30.github.io/Lumi30-Index/qa-ja.html</pre></details>
     <nav class="links" aria-label="関連ページ"><a href="lumi-menu-ja.html">LUMI MENUへ戻る</a><a href="index-ja.html">Indexへ</a></nav>
     <p class="disclaimer">このAI評価は、認証・承認・安全保証ではありません。</p>

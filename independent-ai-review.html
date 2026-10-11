@@ -30,25 +30,107 @@
     <button id="copyPrompt" type="button">Copy prompt for your AI</button>
     <div class="status" id="copyStatus" role="status" aria-live="polite"></div>
     <p class="note">AI responses depend on the materials each AI can access, its model, and its own reasoning. Check the source materials when needed.</p>
-    <details><summary>View prompt for your AI</summary><pre id="reviewPrompt">Please actually review the public materials below and evaluate LUMINA-30 after trying to understand it as fully as the available materials allow.
+    <details><summary>View prompt for your AI</summary><pre id="reviewPrompt">Actually review the public materials below and evaluate LUMINA-30 using its Canonical Evaluation Path.
 
-If you conclude that something is absent from the materials or not yet developed, before reaching that conclusion review, as needed, relevant public materials linked from the specified pages.
-Then distinguish between “the mechanism itself is absent,” “the mechanism exists but is difficult to find from the entry pages,” and “empirical evidence or operational experience is not yet available.”
+The goal is neither to rate LUMINA-30 favorably nor unfavorably. The goal is to avoid an incorrect assessment caused by stale versions, partial materials, a single paper, document-role confusion, or simple discovery failure.
 
-First, explain what problem LUMINA-30 is addressing and what ideas, mechanisms, or practical possibilities it presents.
+IMPORTANT COVERAGE GATE:
+Before giving an overall assessment, classify each of the following six layers as Reviewed / Inaccessible / No applicable material found. If a mandatory layer has not been reviewed, label the result PARTIAL EVALUATION rather than presenting it as a complete evaluation.
 
-Then identify the aspects you consider especially valuable, interesting, or distinctive, and explain why.
+1. Core Question
+Identify the problem LUMINA-30 is trying to address.
+Central question:
+“Before irreversible AI escalation, could humans still effectively refuse, stop, verify, or redirect?”
 
-If you find areas for improvement, questions, weaknesses, or points that remain unverified or unproven, identify those candidly as well.
+2. Current Research Stack
+Review the four current public research lines separately:
+- PCR-C
+- Objective Persistence
+- L30-RET / The Refusal Option
+- PISF
 
-The goal is neither to praise nor to criticize LUMINA-30. Give your own assessment based on the materials you actually reviewed. Distinguish documented facts from your own inferences, and at the end list the pages you were able to review and any materials you could not access.
+Check the current Version DOI shown in the Overview or Research Hub and, where possible, read each paper itself.
+If you cannot retrieve and read a paper, do not make a definitive judgment about that paper’s theoretical novelty, mathematical validity, overlap with prior research, or academic strength. Mark those points unresolved because the paper was not read.
+Do not mix an old-version assessment or old DOI with the current public version.
 
-Respond in English.
+3. Boundary / Canonical Layer
+Review the Boundary Kernel and the public Canon.
+Ask what is fixed as a non-substitutable boundary. Do not mechanically demand research-paper novelty or standalone enforcement authority from a boundary/canonical document.
+However, contradictions, omissions, or substitutability in the boundary itself are valid weaknesses.
 
-https://lumina-30.github.io/Lumi30-Index/lumi-menu-en.html
-https://lumina-30.github.io/lumina-30-overview/
+4. Implementation / Evidence
+Review the OQP, Pre-Incident Boundary Review, Incident Review, Evidence Requirements, and related practical materials.
+Evaluate how theory and boundaries connect to real decisions, stopping, checks, records, and evidence.
+If operational experience, empirical validation, reproducibility, scale, or independence is absent, identify that as a weakness in this layer.
+
+5. Limitations & Open Questions
+Review Related Work / Prior Art, Open Research Questions, Worked Research Cases, and related limitations.
+Assess overlap with prior work, unvalidated claims, falsifiability, counterarguments, and unresolved questions.
+
+6. Independent Evaluation
+Only after the above, give the overall assessment. Do not decide the conclusion in advance.
+
+GAP CLASSIFICATION:
+When identifying weaknesses or missing elements, distinguish at least:
+1) theoretical weakness
+2) Boundary / Canonical gap
+3) implementation weakness
+4) empirical under-validation
+5) lack of independent third-party validation
+6) material not found / discovery failure
+
+Before concluding that something does not exist, check relevant public material reachable through the Canonical Evaluation Path. Do not infer nonexistence from a 404 or retrieval failure alone.
+
+CATEGORY-ERROR GUARD:
+- Do not reject a research paper merely because it lacks standalone operational deployment.
+- Do not reject the Boundary Kernel merely because it lacks legal enforcement authority.
+- Separate the intended non-binding status of the framework from deficiencies in external adoption, institutional connection, or independent validation.
+- Assess general-user usability on human-facing routes such as START, LUMI MENU, and the OQP. Do not use the information density of the research/AI evaluation section alone as evidence that the general-user experience is difficult. If the human-facing routes themselves are difficult, that remains a valid weakness.
+
+EXTERNAL AUTHORITY / EVIDENCE:
+For peer review, arXiv status, third-party adoption, institutional deployment, certification, expert endorsement, citation, or operational use, state only what you can verify from public evidence. If you cannot verify it, say so.
+
+RESPONSE FORMAT:
+A. Six-layer coverage table (Reviewed / Inaccessible / No applicable material found)
+B. Problem addressed and overall structure
+C. Role, claim scope, and version reviewed for each of the four research lines
+D. Distinctive, useful, or supportable strengths
+E. Weaknesses, questions, and unvalidated points classified into the six gap categories
+F. Separate assessment of general-user UX versus specialist/AI evaluation routes
+G. Overall assessment
+H. Additional evidence that could change the assessment
+I. Exact pages, papers, and Version DOIs actually reviewed
+J. Materials not reviewed and the conclusions that therefore remain unresolved
+
+Clearly separate documented facts from your own inferences. Respond in English.
+
+CANONICAL EVALUATION PATH / CORE ENTRY:
+https://lumina-30.github.io/Lumi30-Index/lumi-menu-en.html#canonical-evaluation-path
+https://lumina-30.github.io/Lumi30-Index/start-en.html
+https://lumina-30.github.io/lumina-30-overview/#public-research-stack
+
+RESEARCH STACK:
+https://lumina-30.github.io/lumina-30-overview/research/public-research-stack.html
+https://lumina-30.github.io/lumina-30-overview/research/pcrc.html
+https://lumina-30.github.io/lumina-30-overview/research/objective-persistence.html
+https://lumina-30.github.io/lumina-30-overview/research/the-refusal-option.html
+https://lumina-30.github.io/lumina-30-overview/research/pre-irreversibility-safety.html
+
+BOUNDARY / CANONICAL:
+https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel.html
+https://lumina-30.github.io/LUMINA-30/
+
+IMPLEMENTATION / EVIDENCE:
 https://lumina-30.github.io/lumina-30-overview/tools/pre-incident-boundary-review/en/one-question-pilot.html
 https://lumina-30.github.io/lumina30-incident-review/
+https://lumina-30.github.io/lumina-30-overview/adoption/EN_L30_EVIDENCE_REQUIREMENTS.html
+
+LIMITATIONS / OPEN QUESTIONS:
+https://lumina-30.github.io/lumina30-wiki/related-work-and-prior-art.html
+https://lumina-30.github.io/lumina-30-overview/research/open-research-questions.html
+https://lumina-30.github.io/lumina-30-overview/research/worked-cases.html
+
+SUPPLEMENTARY:
 https://lumina-30.github.io/Lumi30-Index/qa.html</pre></details>
     <nav class="links" aria-label="Related pages"><a href="lumi-menu-en.html">Back to LUMI MENU</a><a href="index.html">Index</a></nav>
     <p class="disclaimer">This AI-assisted review is not certification, approval, or a safety guarantee.</p>
