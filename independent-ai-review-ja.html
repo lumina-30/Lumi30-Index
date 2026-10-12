@@ -49,8 +49,9 @@ LUMINA-30が何を問題にしているかを確認してください。
 - L30-RET / The Refusal Option
 - PISF
 
-Overviewや研究ハブに表示される現行Version DOIを確認し、可能なら各論文本体を読んでください。
-論文本体を取得・精読できなかった場合、その論文について理論的独創性、数理的妥当性、既存研究との重複、学術的強度を確定評価しないでください。「未読のため判定不能」としてください。
+Overviewや研究ハブに表示される現行Version DOIを確認し、各論文本体を読んでください。
+取得経路はcurrent-publication sourcesを使用し、まずGitHub PDFミラーを試し、PDFを取得・解析できない場合は同一VersionのAI-readable全文を読み、Zenodo Version DOIを正式な公開識別の正本として確認してください。GitHub上のPDFと同一版全文の両方を読めない場合のみ未読扱いにしてください。
+どちらのGitHub経路でも論文本体を取得・精読できなかった場合、その論文について理論的独創性、数理的妥当性、既存研究との重複、学術的強度を確定評価しないでください。「未読のため判定不能」としてください。
 古い版の評価や旧DOIを現行版評価と混同しないでください。
 
 3. Boundary / Canonical Layer
@@ -60,6 +61,12 @@ Boundary Kernelと公開Canonを確認してください。
 
 4. Implementation / Evidence
 OQP、Pre-Incident Boundary Review、Incident Review、Evidence Requirements等を確認し、理論・境界が現実の判断、停止、検査、記録、証拠へどう接続されるかを評価してください。
+入口ページだけで確認済みとしないでください。少なくとも下記の必須下位資料まで実際に開き、本文を確認してください。
+- One-Question Pilot Runbook
+- Pre-Incident Boundary Review の現行実務資料と判定ガイド
+- Incident Review の First 3 Files、および結果分類前に必須とされる Irreversibility Decision Criteria
+- Evidence Requirements
+個別下位資料の取得に失敗した場合は、その資料を「取得不能」と明記し、入口ページを読んだことだけで下位資料まで確認済みと扱わないでください。
 運用実績、実証、再現性、規模、独立性がない場合は、その層の不足として明示してください。
 
 5. Limitations & Open Questions
@@ -79,12 +86,21 @@ Related Work / Prior Art、Open Research Questions、Worked Research Cases等を
 ⑥ 資料を発見・取得できなかっただけのもの
 
 「存在しない」と判断する前に、Canonical Evaluation Pathから到達できる関連公開資料を必要な範囲で確認してください。404や取得失敗だけで仕組み不存在と推定しないでください。
+一方、十分に探索しても必要な資料・機能・証拠を公開面から確認できない場合は、「公開資料から確認不能」と明記し、その発見可能性、文書構造、公開証拠の不足自体を弱点として評価して構いません。
 
-【カテゴリーエラー防止】
-- 研究論文に単独の運用実績がないことだけで、その理論上の役割を否定しない。
-- Boundary Kernelに法的執行力がないことだけで、境界文書としての役割を否定しない。
-- 非拘束フレームワークであることと、外部採用・制度接続・第三者検証が不足していることを分けて評価する。
-- 一般ユーザー向けUXは START / LUMI MENU / OQP 等の人間向け導線で評価し、研究・AI評価用専門セクションの情報密度だけを一般向けの使いづらさの根拠にしない。ただし人間向け本線自体が使いづらい場合は通常どおり弱点として扱う。
+【評価軸の分離】
+各資料は、その資料が公開上どの役割を主張しているかを確認したうえで、その役割に対して評価してください。同時に、LUMINA-30全体として必要だが別レイヤーにも確認できない機能・証拠・執行能力がある場合は、全体上の欠落として評価してください。
+理論的妥当性、実装可能性、実装実績、実証、第三者検証、制度的執行力、発見可能性を別の評価軸として扱い、一方の不足を他方の不存在と混同しないでください。
+一般ユーザー向けUXは START / LUMI MENU / OQP 等の人間向け導線で評価してください。研究・AI評価用専門セクションの情報密度は、その対象向けの完全性・厳密性として別に評価してください。ただし、人間向け本線自体が使いづらい場合は通常どおり弱点として扱ってください。
+
+【結論の自由と反証許可】
+Canonical Evaluation Pathは、評価対象を漏れなく確認するための読解経路であり、評価結論を拘束する採点基準ではありません。
+6層を十分に確認した結果、LUMINA-30の主張が既存研究に還元できる、独自性が乏しい、理論的に成立しない、実装上不十分、実証されていない、制度的に弱い、または総合的価値が低いと判断した場合は、その結論をそのまま示してください。反対に、支持できる点がある場合も同じ証拠基準で示してください。
+LUMINA-30自身の自己説明を、その正しさ・独自性・有効性の証拠として循環的に扱わないでください。
+
+【外部研究による独立検証】
+独自性、既存研究との重複、学術的位置づけ、理論的妥当性を評価する際は、LUMINA-30自身のRelated Workだけを根拠にせず、必要に応じて外部の一次研究、査読論文、標準・規制文書、公式資料を独立に確認してください。
+外部資料とLUMINA-30自身の記述が異なる場合は、その相違を明示し、外部資料も独立した証拠として評価してください。
 
 【外部的な権威・実績に関する注意】
 査読、arXiv掲載、第三者採用、制度導入、認証、専門家承認、引用、実運用実績などは、公開資料で確認できた事実だけを述べてください。確認できなければ「確認できない」としてください。
@@ -109,6 +125,7 @@ https://lumina-30.github.io/Lumi30-Index/start-ja.html
 https://lumina-30.github.io/lumina-30-overview/index-ja.html#public-research-stack
 
 【Research Stack】
+https://lumina-30.github.io/lumina-30-overview/research/current-publication-sources-ja.html
 https://lumina-30.github.io/lumina-30-overview/research/public-research-stack-ja.html
 https://lumina-30.github.io/lumina-30-overview/research/pcrc-ja.html
 https://lumina-30.github.io/lumina-30-overview/research/objective-persistence-ja.html
@@ -120,9 +137,19 @@ https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel-ja.ht
 https://lumina-30.github.io/LUMINA-30/index-ja.html
 
 【Implementation / Evidence】
+入口：
 https://lumina-30.github.io/lumina-30-overview/tools/pre-incident-boundary-review/ja/one-question-pilot.html
 https://lumina-30.github.io/lumina30-incident-review/index-ja.html
 https://lumina-30.github.io/lumina-30-overview/adoption/JP_L30_EVIDENCE_REQUIREMENTS.html
+
+必須下位資料：
+https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-incident-boundary-review/ja/current/ONE_QUESTION_PILOT_RUNBOOK_JA.md
+https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-incident-boundary-review/ja/README.md
+https://github.com/lumina-30/lumina30-incident-review/blob/main/FIRST_3_FILES.md
+https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Irreversibility_Decision_Criteria.md
+https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/LUMINA-30_Boundary_Check.md
+https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Incident_Quick_Assessment_Template.md
+https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Boundary_Check_Result_Classification.md
 
 【Limitations / Open Questions】
 https://lumina-30.github.io/lumina30-wiki/ja/related-work-and-prior-art-ja.html

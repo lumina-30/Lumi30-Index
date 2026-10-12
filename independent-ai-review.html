@@ -49,8 +49,9 @@ Review the four current public research lines separately:
 - L30-RET / The Refusal Option
 - PISF
 
-Check the current Version DOI shown in the Overview or Research Hub and, where possible, read each paper itself.
-If you cannot retrieve and read a paper, do not make a definitive judgment about that paper’s theoretical novelty, mathematical validity, overlap with prior research, or academic strength. Mark those points unresolved because the paper was not read.
+Check the current Version DOI shown in the Overview or Research Hub and read each paper itself.
+Use the current-publication sources page as the retrieval route: try the GitHub PDF mirror first; if the PDF cannot be retrieved or parsed, read the same-version AI-readable full text; use the Zenodo Version DOI as the authoritative publication identity. Only mark a paper unread if both GitHub copies cannot be read.
+If you cannot retrieve and read a paper through either GitHub route, do not make a definitive judgment about that paper’s theoretical novelty, mathematical validity, overlap with prior research, or academic strength. Mark those points unresolved because the paper was not read.
 Do not mix an old-version assessment or old DOI with the current public version.
 
 3. Boundary / Canonical Layer
@@ -60,6 +61,12 @@ However, contradictions, omissions, or substitutability in the boundary itself a
 
 4. Implementation / Evidence
 Review the OQP, Pre-Incident Boundary Review, Incident Review, Evidence Requirements, and related practical materials.
+Do not treat an entry page alone as sufficient review. At minimum, open and read the following required subordinate materials:
+- One-Question Pilot Runbook
+- the current Pre-Incident Boundary Review practical materials and decision guide
+- Incident Review First 3 Files, plus the Irreversibility Decision Criteria required before result classification
+- Evidence Requirements
+If an individual subordinate document cannot be retrieved, mark that document Inaccessible; do not count the subordinate material as reviewed merely because its entry page was read.
 Evaluate how theory and boundaries connect to real decisions, stopping, checks, records, and evidence.
 If operational experience, empirical validation, reproducibility, scale, or independence is absent, identify that as a weakness in this layer.
 
@@ -80,12 +87,21 @@ When identifying weaknesses or missing elements, distinguish at least:
 6) material not found / discovery failure
 
 Before concluding that something does not exist, check relevant public material reachable through the Canonical Evaluation Path. Do not infer nonexistence from a 404 or retrieval failure alone.
+Conversely, if adequate searching still does not reveal a needed document, capability, or item of evidence on the public surface, state that it is not verifiable from the public materials and you may treat discoverability, document structure, or lack of public evidence itself as a weakness.
 
-CATEGORY-ERROR GUARD:
-- Do not reject a research paper merely because it lacks standalone operational deployment.
-- Do not reject the Boundary Kernel merely because it lacks legal enforcement authority.
-- Separate the intended non-binding status of the framework from deficiencies in external adoption, institutional connection, or independent validation.
-- Assess general-user usability on human-facing routes such as START, LUMI MENU, and the OQP. Do not use the information density of the research/AI evaluation section alone as evidence that the general-user experience is difficult. If the human-facing routes themselves are difficult, that remains a valid weakness.
+EVALUATION-AXIS SEPARATION:
+Evaluate each material against the role that the material publicly claims for itself. At the same time, if a capability, evidence base, or enforcement function appears necessary for LUMINA-30 as a whole and cannot be found in any other layer, evaluate that as an overall gap.
+Treat theoretical validity, implementability, implementation track record, empirical validation, third-party validation, institutional enforcement, and discoverability as separate evaluation axes. Do not convert a deficiency on one axis into nonexistence on another.
+Assess general-user usability on human-facing routes such as START, LUMI MENU, and the OQP. Assess the information density of the research/AI evaluation section separately for completeness and rigor for its intended audience. If the human-facing routes themselves are difficult to use, that remains a valid weakness.
+
+CONCLUSION FREEDOM AND FALSIFICATION:
+The Canonical Evaluation Path is a completeness protocol for reviewing the relevant evidence, not a scoring protocol that constrains the verdict.
+After adequately reviewing the six layers, if you conclude that LUMINA-30 is reducible to existing work, lacks meaningful novelty, is theoretically unsound, is insufficiently implementable, is empirically unsupported, is institutionally weak, or has low overall value, state that conclusion directly. If you find supportable strengths, apply the same evidentiary standard.
+Do not use LUMINA-30's own self-description circularly as evidence that its claims, novelty, or effectiveness are correct.
+
+INDEPENDENT EXTERNAL RESEARCH:
+When evaluating novelty, overlap with prior work, academic positioning, or theoretical validity, do not rely only on LUMINA-30's own Related Work. Where needed, independently consult external primary research, peer-reviewed literature, standards or regulatory documents, and official sources.
+If external sources conflict with LUMINA-30's own characterization, state the discrepancy and evaluate the external evidence independently.
 
 EXTERNAL AUTHORITY / EVIDENCE:
 For peer review, arXiv status, third-party adoption, institutional deployment, certification, expert endorsement, citation, or operational use, state only what you can verify from public evidence. If you cannot verify it, say so.
@@ -110,6 +126,7 @@ https://lumina-30.github.io/Lumi30-Index/start-en.html
 https://lumina-30.github.io/lumina-30-overview/#public-research-stack
 
 RESEARCH STACK:
+https://lumina-30.github.io/lumina-30-overview/research/current-publication-sources.html
 https://lumina-30.github.io/lumina-30-overview/research/public-research-stack.html
 https://lumina-30.github.io/lumina-30-overview/research/pcrc.html
 https://lumina-30.github.io/lumina-30-overview/research/objective-persistence.html
@@ -121,9 +138,19 @@ https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel.html
 https://lumina-30.github.io/LUMINA-30/
 
 IMPLEMENTATION / EVIDENCE:
+Entry pages:
 https://lumina-30.github.io/lumina-30-overview/tools/pre-incident-boundary-review/en/one-question-pilot.html
 https://lumina-30.github.io/lumina30-incident-review/
 https://lumina-30.github.io/lumina-30-overview/adoption/EN_L30_EVIDENCE_REQUIREMENTS.html
+
+Required subordinate materials:
+https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-incident-boundary-review/en/current/ONE_QUESTION_PILOT_RUNBOOK_EN.md
+https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-incident-boundary-review/en/README.md
+https://github.com/lumina-30/lumina30-incident-review/blob/main/FIRST_3_FILES.md
+https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Irreversibility_Decision_Criteria.md
+https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/LUMINA-30_Boundary_Check.md
+https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Incident_Quick_Assessment_Template.md
+https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Boundary_Check_Result_Classification.md
 
 LIMITATIONS / OPEN QUESTIONS:
 https://lumina-30.github.io/lumina30-wiki/related-work-and-prior-art.html
