@@ -1,6 +1,6 @@
 LUMINA-30 Organization PDF Text Layer Bundle
 This file is generated automatically. Do not edit by hand.
-Generated: 2026-10-13T00:55:12Z
+Generated: 2026-10-13T23:01:28Z
 Organization: lumina-30
 
 Authority:
@@ -20,9 +20,9 @@ Unchanged PDFs reuse cached extracted text when possible; only new or changed PD
 
 Run statistics:
 PDFs seen: 63
-Reused unchanged: 59
+Reused unchanged: 63
 Reused renamed same blob: 0
-Downloaded/extracted: 4
+Downloaded/extracted: 0
 Skipped too large: 0
 Download errors: 0
 
@@ -1739,7 +1739,7 @@ PDF URL: https://github.com/lumina-30/Lumi30-PDF-Archive/blob/main/On_the_Struct
 Git blob SHA: d2af41c55f31021d0d3b986748e6295c336b89a6
 SHA256: 15d6c5386b6fee929a45b16f167d8fe13b222be18252e8ddccede2f61aa972d6
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 371829
 Page count: 11
 Extracted characters: 31168
@@ -2223,7 +2223,7 @@ PDF URL: https://github.com/lumina-30/Lumi30-PDF-Archive/blob/main/Pre-Irreversi
 Git blob SHA: b66ea3fc679eee79999c432889a754fecc4ab065
 SHA256: d170863008062f15368d1aed8e450e3c9ab2e6f0a96e2e8094082773c6af800d
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 372547
 Page count: 15
 Extracted characters: 39725
@@ -2990,7 +2990,7 @@ PDF URL: https://github.com/lumina-30/Lumi30-PDF-Archive/blob/main/Pre_Critical_
 Git blob SHA: 8852c30c1700df21b6c4fd8bd5a03e60c81d2341
 SHA256: 3c7df7af0b3b2ffb59c513093fcdb89e3fc17a3be3d07dad764037acae6ccf07
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 297849
 Page count: 11
 Extracted characters: 31191
@@ -4040,7 +4040,7 @@ PDF URL: https://github.com/lumina-30/Lumi30-PDF-Archive/blob/main/The_Refusal_O
 Git blob SHA: d6a3bf2af4774aa1bc17169eb086d25d97a17959
 SHA256: 3fcfdfa2374b58b027c51223f910a0d384ac2d1b17fea893a8f2117d1ce919fb
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 115323
 Page count: 20
 Extracted characters: 49764
