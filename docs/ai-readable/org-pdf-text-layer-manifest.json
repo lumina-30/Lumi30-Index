@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T21:48:03Z",
+  "generated_at": "2026-10-21T21:55:16Z",
   "notice": "This file is generated automatically. Do not edit by hand.",
   "organization": "lumina-30",
   "scope": "public repositories visible to this workflow",
@@ -17,17 +17,35 @@
     "reuse_extracted_text_for_renames_when_git_blob_sha_matches": true,
     "extract_only_new_or_changed_pdfs": true
   },
-  "records_count": 63,
+  "records_count": 64,
   "repository_errors_count": 0,
   "stats": {
-    "pdfs_seen": 63,
+    "pdfs_seen": 64,
     "reused_unchanged": 63,
     "reused_renamed_same_blob": 0,
-    "downloaded_or_extracted": 0,
+    "downloaded_or_extracted": 1,
     "skipped_too_large": 0,
     "download_errors": 0
   },
   "records": [
+    {
+      "repository": "Lumi30-PDF-Archive",
+      "full_name": "lumina-30/Lumi30-PDF-Archive",
+      "repository_url": "https://github.com/lumina-30/Lumi30-PDF-Archive",
+      "default_branch": "main",
+      "archived": false,
+      "pdf_path": "Human_Anchor_A_Cross_Layer_Authority_Invariant_for_Many_Agent_AI_Systems_v1.0.pdf",
+      "pdf_url": "https://github.com/lumina-30/Lumi30-PDF-Archive/blob/main/Human_Anchor_A_Cross_Layer_Authority_Invariant_for_Many_Agent_AI_Systems_v1.0.pdf",
+      "raw_url": "https://raw.githubusercontent.com/lumina-30/Lumi30-PDF-Archive/main/Human_Anchor_A_Cross_Layer_Authority_Invariant_for_Many_Agent_AI_Systems_v1.0.pdf",
+      "git_blob_sha": "0dda3d2c53a79a4d1a6695e2660e57a9fcad233d",
+      "sha256": "a441529cfe40c26c479540e2fde9134711152527730de5e2218558fd5b59440b",
+      "size_bytes": 341131,
+      "page_count": 11,
+      "char_count": 26231,
+      "status": "EXTRACTED_TEXT",
+      "error": null,
+      "cache_action": "EXTRACTED_NEW_OR_CHANGED"
+    },
     {
       "repository": "Lumi30-PDF-Archive",
       "full_name": "lumina-30/Lumi30-PDF-Archive",
