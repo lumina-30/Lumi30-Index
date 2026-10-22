@@ -1,6 +1,6 @@
 LUMINA-30 Organization PDF Text Layer Bundle
 This file is generated automatically. Do not edit by hand.
-Generated: 2026-10-21T21:55:16Z
+Generated: 2026-10-22T21:51:43Z
 Organization: lumina-30
 
 Authority:
@@ -20,9 +20,9 @@ Unchanged PDFs reuse cached extracted text when possible; only new or changed PD
 
 Run statistics:
 PDFs seen: 64
-Reused unchanged: 63
+Reused unchanged: 64
 Reused renamed same blob: 0
-Downloaded/extracted: 1
+Downloaded/extracted: 0
 Skipped too large: 0
 Download errors: 0
 
@@ -37,7 +37,7 @@ PDF URL: https://github.com/lumina-30/Lumi30-PDF-Archive/blob/main/Human_Anchor_
 Git blob SHA: 0dda3d2c53a79a4d1a6695e2660e57a9fcad233d
 SHA256: a441529cfe40c26c479540e2fde9134711152527730de5e2218558fd5b59440b
 Status: EXTRACTED_TEXT
-Cache action: EXTRACTED_NEW_OR_CHANGED
+Cache action: REUSED_UNCHANGED
 Size bytes: 341131
 Page count: 11
 Extracted characters: 26231
