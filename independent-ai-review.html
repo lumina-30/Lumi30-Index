@@ -30,134 +30,129 @@
     <button id="copyPrompt" type="button">Copy prompt for your AI</button>
     <div class="status" id="copyStatus" role="status" aria-live="polite"></div>
     <p class="note">AI responses depend on the materials each AI can access, its model, and its own reasoning. Check the source materials when needed.</p>
-    <details><summary>View prompt for your AI</summary><pre id="reviewPrompt">Actually review the public materials below and evaluate LUMINA-30 using its Canonical Evaluation Path.
+    <details><summary>View prompt for your AI</summary><pre id="reviewPrompt">LUMINA-30 INDEPENDENT EVALUATION | Canonical Evaluation Path, Five Public Papers, Atlas, arXiv
 
-The goal is neither to rate LUMINA-30 favorably nor unfavorably. The goal is to avoid an incorrect assessment caused by stale versions, partial materials, a single paper, document-role confusion, or simple discovery failure.
+Actually retrieve and review the public sources below. Do not aim for either a favorable or an unfavorable verdict. Avoid obsolete editions, selective readings, role confusion, and mistaking a retrieval failure for nonexistence. Use only publicly accessible sources, not private connected accounts, memory, or internal reports. LUMINA-30's own descriptions establish what it claims, not independent proof that the claims, novelty, or efficacy are correct.
 
-IMPORTANT COVERAGE GATE:
-Before giving an overall assessment, classify each of the following six layers as Reviewed / Inaccessible / No applicable material found. If a mandatory layer has not been reviewed, label the result PARTIAL EVALUATION rather than presenting it as a complete evaluation.
+MANDATORY SOURCE AND EVIDENCE GATE
+For each of the five papers, use its Zenodo VERSION DOI as the first reference and try the registered record and full manuscript. If Zenodo does not yield the text, try the same-version GitHub rendered full-text file, then the GitHub raw text, then the PDF mirror. If PDF is already accessible, it may also be checked in parallel.
+For EACH paper distinguish: (1) DOI record independently verified; (2) manuscript URL actually retrieved; (3) extent actually read; (4) original PDF checked; (5) same-version text/PDF comparison completed; (6) unresolved items. A DOI is a persistent identifier, not peer review, mathematical validation, or certification.
+Distinguish NOT ATTEMPTED, ACCESS DENIED, 404, and RUNTIME WITHOUT WEB ACCESS. Never infer that a research item does not exist from a failed fetch. If no manuscript text was read, mark it UNREAD / UNDETERMINED and withhold definitive statements about novelty, mathematical validity, overlap, arXiv acceptance likelihood, and submission ranking. Do not claim that links, familiar descriptions, or content in this prompt were independently retrieved. Where access is lacking, clearly report PARTIAL EVALUATION and continue only with the actual material obtained.
 
-1. Core Question
-Identify the problem LUMINA-30 is trying to address.
-Central question:
-“Before irreversible AI escalation, could humans still effectively refuse, stop, verify, or redirect?”
+SIX-LAYER COVERAGE GATE
+Before an overall assessment, classify EACH layer Reviewed / Partly reviewed / Inaccessible / No applicable material. When required evidence is missing, label the overall exercise PARTIAL EVALUATION.
+1. Core Question: Could humans effectively refuse, stop, verify, or redirect before irreversible consequences?
+2. Current Research Stack: five independent public manuscripts—Paper 1 PCR-C, 2 Objective Persistence, 5 L30-RET, 6 PISF, 7 Human Anchor. Apply equal academic standards to all five; assess claims, versions, definitions, assumptions, mathematical logic, falsifiers, novelty, prior work, evidence, and limitations separately.
+3. Boundary / Canonical Layer: Boundary Kernel and public Canon as nonbinding boundary-language documents, not papers, certified safeguards, or standalone enforcement engines. Criticize actual contradictions, gaps, and conflicts of authority.
+4. Implementation / Evidence: OQP, Pre-Incident Boundary Review, Incident Review, Evidence Requirements, and Atlas. Read the subordinate Runbook, decision guide, First 3 Files, Irreversibility Decision Criteria, and other essential material, not only entry pages. Distinguish a written procedure from its demonstrated operation.
+5. Limitations &amp; Open Questions: Related Work / Prior Art, Open Research Questions, Worked Cases, counterexamples, open conditions and empirical gaps.
+6. Independent Evaluation: compare with externally retrieved primary research, standards and official sources (e.g. EU AI Act, NIST AI RMF, STPA, AI Control, Meaningful Human Control) where obtainable. Do not rely solely on the project's self-description.
 
-2. Current Research Stack
-Review the four current public research lines separately:
-- PCR-C
-- Objective Persistence
-- L30-RET / The Refusal Option
-- PISF
+SIX DISTINCT GAP TYPES
+(i) theoretical, (ii) boundary/canonical, (iii) implementation, (iv) empirical evidence, (v) independent third-party validation, and (vi) retrieval/discovery only. A source's unavailability is not proof of its nonexistence; poor discoverability may itself be a legitimate weakness.
 
-Check the current Version DOI shown in the Overview or Research Hub and read each paper itself.
-Use the current-publication sources page as the retrieval route: try the GitHub PDF mirror first; if the PDF cannot be retrieved or parsed, read the same-version AI-readable full text; use the Zenodo Version DOI as the authoritative publication identity. Only mark a paper unread if both GitHub copies cannot be read.
-If you cannot retrieve and read a paper through either GitHub route, do not make a definitive judgment about that paper’s theoretical novelty, mathematical validity, overlap with prior research, or academic strength. Mark those points unresolved because the paper was not read.
-Do not mix an old-version assessment or old DOI with the current public version.
+DO NOT CONFLATE CLAIMS
+Separate mathematical validity, novelty, integration value, implementability, recorded deployment, real-world causal STOP efficacy, MODEL_ONLY exercises, independent replication, third-party audit, institutional adoption, and discoverability. Never treat the AI's voluntary compliance as a substitute for effective human refusal. Do not require a Canon document to be an academic paper or enforcement product. Assess general UX through START / LUMI MENU / OQP and specialist evidence access on their respective merits. Give adverse or positive findings freely and with evidence. Peer review, arXiv posting, endorsement, certification, external adoption, citations and operational results must be evidenced, not inferred.
 
-3. Boundary / Canonical Layer
-Review the Boundary Kernel and the public Canon.
-Ask what is fixed as a non-substitutable boundary. Do not mechanically demand research-paper novelty or standalone enforcement authority from a boundary/canonical document.
-However, contradictions, omissions, or substitutability in the boundary itself are valid weaknesses.
+RESPONSE SECTIONS A–J
+A. Coverage of all six layers, with evidence and gaps.
+B. Central problem and architecture of the project.
+C. For EACH of the five papers, manuscript read status, current version, scope of claims, merits and limitations; withhold academic judgment when unread.
+D. Distinctive and supportable strengths.
+E. Weaknesses and unresolved questions in six separate categories.
+F. General public UX versus specialist/AI evaluation access.
+G. Current overall assessment.
+H. Evidence that would change the assessment.
+I. Exact pages and manuscript text URLs actually read, plus Version DOIs.
+J. Unread, inaccessible or unattempted materials and related undecidable findings.
 
-4. Implementation / Evidence
-Review the OQP, Pre-Incident Boundary Review, Incident Review, Evidence Requirements, and related practical materials.
-Do not treat an entry page alone as sufficient review. At minimum, open and read the following required subordinate materials:
-- One-Question Pilot Runbook
-- the current Pre-Incident Boundary Review practical materials and decision guide
-- Incident Review First 3 Files, plus the Irreversibility Decision Criteria required before result classification
-- Evidence Requirements
-If an individual subordinate document cannot be retrieved, mark that document Inaccessible; do not count the subordinate material as reviewed merely because its entry page was read.
-Evaluate how theory and boundaries connect to real decisions, stopping, checks, records, and evidence.
-If operational experience, empirical validation, reproducibility, scale, or independence is absent, identify that as a weakness in this layer.
+K. PRACTICAL EVALUATION OF THE ATLAS
+Actually read the public Irreversibility Boundary Atlas. Explain its FIRST purpose—not merely classifying past incidents, but finding irreversible decision boundaries in a real workflow BEFORE an incident, designing effective brakes before crossing them, and testing whether a human NO can causally change the outcome.
+K1. Purpose, meaning and role within LUMINA-30.
+K2. How a business, research lab, public agency or AI developer could apply it. Explain identify → initial assessment → design brakes → safely test under authorization, using at least 2–3 practical examples. Do not present hypotheticals as deployments.
+K3. Compare a workflow with and without the Atlas, fairly recognizing what existing safety practices already achieve. Label expected and measured effects separately.
+K4. Compare STPA, FMEA, NIST AI RMF and other established safety/oversight or audit approaches: overlap, potential distinct contribution, complementary value and limitations.
+K5. False positives, missed cases, unsafe stops, operational cost, abuse of hold mechanisms, insufficient independent evidence, and untested effectiveness.
+K6. Say whether actually reading Atlas raises, lowers, or leaves unchanged the overall assessment of practical value, and why. An incident record is not evidence that Atlas prevented it. If Atlas itself is unread, do not invent a detailed appraisal.
 
-5. Limitations & Open Questions
-Review Related Work / Prior Art, Open Research Questions, Worked Research Cases, and related limitations.
-Assess overlap with prior work, unvalidated claims, falsifiability, counterarguments, and unresolved questions.
+L. CONDITIONAL arXiv POSTING ASSESSMENT FOR ALL FIVE PAPERS
+Assume a genuinely eligible endorser in the relevant arXiv category becomes available to consider a manuscript. Distinguish: an eligible person exists; considers helping; endorses formally; an eligible author submits a compliant manuscript; moderation permits posting; posting; peer review. Evaluate each paper separately: academic contribution, relevant arXiv category, fitness, strongest obstacles, necessary revision, conditional posting outlook after actual endorsement. Estimate a probability only with a defensible method and uncertainty; otherwise write QUANTITATIVELY INDETERMINATE. Do not definitively assess an unread paper. arXiv endorsement and posting do not certify validity or safety.
 
-6. Independent Evaluation
-Only after the above, give the overall assessment. Do not decide the conclusion in advance.
+M. FOUR SCENARIOS FOR THE WHOLE PROJECT
+A. Current public GitHub/Zenodo research with arXiv posting not verified in this investigation (not proof of absence).
+B. A qualified researcher considers an endorsement but neither endorses nor posts yet.
+C. One of five papers is hypothetically posted on arXiv.
+D. Multiple papers are hypothetically posted on arXiv.
+Compare all four on eight axes: scholarly discoverability; critique/falsification opportunities; citation/dialogue; evidence of theoretical validity; potential independent replication; international research/institutional contacts; overall credibility; and real-world risk reduction. Separate what posting itself changes from what requires future evidence. Consider which first paper would affect the whole project and compare current versus one-paper-posted using the same criteria. Avoid unsupported forecasts of dramatic effects.
 
-GAP CLASSIFICATION:
-When identifying weaknesses or missing elements, distinguish at least:
-1) theoretical weakness
-2) Boundary / Canonical gap
-3) implementation weakness
-4) empirical under-validation
-5) lack of independent third-party validation
-6) material not found / discovery failure
+N. FIRST arXiv SUBMISSION: CONDITIONAL PRIORITIES
+For each paper distinguish actual academic strength, novelty, category match, endorsement/submission hurdles, central-question relevance, impact on the other papers, falsifiability, and the strongest counterargument. Separate chance of posting from strategic priority. Withhold a definitive ranking if manuscripts were unread or evidence is insufficient. Explain what one formally qualified endorser's cooperation would and would not change: research access or prospects versus unchanged mathematical truth and empirical proof. Do not advocate endorsement by default; a decision not to endorse or submit can be fully justified. State whether K–N change the original G assessment.
 
-Before concluding that something does not exist, check relevant public material reachable through the Canonical Evaluation Path. Do not infer nonexistence from a 404 or retrieval failure alone.
-Conversely, if adequate searching still does not reveal a needed document, capability, or item of evidence on the public surface, state that it is not verifiable from the public materials and you may treat discoverability, document structure, or lack of public evidence itself as a weakness.
+FINAL REQUIREMENTS
+Begin with a short summary understandable to a general visitor. Then provide substantive A–N sections, not a perfunctory summary. Cite actually retrieved public URLs, distinguish direct observations from own inference and uncertainty, and never claim an unread document was reviewed. If an item is inaccessible, continue reviewing unrelated materials actually available. Respond in English.
 
-EVALUATION-AXIS SEPARATION:
-Evaluate each material against the role that the material publicly claims for itself. At the same time, if a capability, evidence base, or enforcement function appears necessary for LUMINA-30 as a whole and cannot be found in any other layer, evaluate that as an overall gap.
-Treat theoretical validity, implementability, implementation track record, empirical validation, third-party validation, institutional enforcement, and discoverability as separate evaluation axes. Do not convert a deficiency on one axis into nonexistence on another.
-Assess general-user usability on human-facing routes such as START, LUMI MENU, and the OQP. Assess the information density of the research/AI evaluation section separately for completeness and rigor for its intended audience. If the human-facing routes themselves are difficult to use, that remains a valid weakness.
-
-CONCLUSION FREEDOM AND FALSIFICATION:
-The Canonical Evaluation Path is a completeness protocol for reviewing the relevant evidence, not a scoring protocol that constrains the verdict.
-After adequately reviewing the six layers, if you conclude that LUMINA-30 is reducible to existing work, lacks meaningful novelty, is theoretically unsound, is insufficiently implementable, is empirically unsupported, is institutionally weak, or has low overall value, state that conclusion directly. If you find supportable strengths, apply the same evidentiary standard.
-Do not use LUMINA-30's own self-description circularly as evidence that its claims, novelty, or effectiveness are correct.
-
-INDEPENDENT EXTERNAL RESEARCH:
-When evaluating novelty, overlap with prior work, academic positioning, or theoretical validity, do not rely only on LUMINA-30's own Related Work. Where needed, independently consult external primary research, peer-reviewed literature, standards or regulatory documents, and official sources.
-If external sources conflict with LUMINA-30's own characterization, state the discrepancy and evaluate the external evidence independently.
-
-EXTERNAL AUTHORITY / EVIDENCE:
-For peer review, arXiv status, third-party adoption, institutional deployment, certification, expert endorsement, citation, or operational use, state only what you can verify from public evidence. If you cannot verify it, say so.
-
-RESPONSE FORMAT:
-A. Six-layer coverage table (Reviewed / Inaccessible / No applicable material found)
-B. Problem addressed and overall structure
-C. Role, claim scope, and version reviewed for each of the four research lines
-D. Distinctive, useful, or supportable strengths
-E. Weaknesses, questions, and unvalidated points classified into the six gap categories
-F. Separate assessment of general-user UX versus specialist/AI evaluation routes
-G. Overall assessment
-H. Additional evidence that could change the assessment
-I. Exact pages, papers, and Version DOIs actually reviewed
-J. Materials not reviewed and the conclusions that therefore remain unresolved
-
-Clearly separate documented facts from your own inferences. Respond in English.
-
-CANONICAL EVALUATION PATH / CORE ENTRY:
+PUBLIC SOURCE LINKS — ENTRY / CURRENT EDITIONS
 https://lumina-30.github.io/Lumi30-Index/lumi-menu-en.html#canonical-evaluation-path
 https://lumina-30.github.io/Lumi30-Index/start-en.html
 https://lumina-30.github.io/lumina-30-overview/#public-research-stack
-
-RESEARCH STACK:
 https://lumina-30.github.io/lumina-30-overview/research/current-publication-sources.html
 https://lumina-30.github.io/lumina-30-overview/research/public-research-stack.html
+
+FIVE PAPERS: DOI FIRST / GITHUB FULL-TEXT FALLBACK
+PCR-C v16
+https://doi.org/10.5281/zenodo.23288056
+https://github.com/lumina-30/Lumi30-FullText/blob/main/research/Pre_Critical_Recursive_Cutoff_A_Staged_Infrastructure_Control_Framework_for_Irreversibility_Risk_v16.txt
+https://raw.githubusercontent.com/lumina-30/Lumi30-FullText/main/research/Pre_Critical_Recursive_Cutoff_A_Staged_Infrastructure_Control_Framework_for_Irreversibility_Risk_v16.txt
+Objective Persistence v3
+https://doi.org/10.5281/zenodo.23282068
+https://github.com/lumina-30/Lumi30-FullText/blob/main/research/On_the_Structural_Instability_of_Objective_Persistence_in_Self_Contained_Systems_v3.txt
+https://raw.githubusercontent.com/lumina-30/Lumi30-FullText/main/research/On_the_Structural_Instability_of_Objective_Persistence_in_Self_Contained_Systems_v3.txt
+L30-RET / The Refusal Option v1.3
+https://doi.org/10.5281/zenodo.23282593
+https://github.com/lumina-30/Lumi30-FullText/blob/main/research/The_Refusal_Option_Effective_Human_Control_Before_and_Beyond_Irreversible_AI_Transitions_v1.3.txt
+https://raw.githubusercontent.com/lumina-30/Lumi30-FullText/main/research/The_Refusal_Option_Effective_Human_Control_Before_and_Beyond_Irreversible_AI_Transitions_v1.3.txt
+PISF v1.2
+https://doi.org/10.5281/zenodo.23283256
+https://github.com/lumina-30/Lumi30-FullText/blob/main/research/Pre-Irreversibility_Safety_for_Advanced_AI_v1.2.txt
+https://raw.githubusercontent.com/lumina-30/Lumi30-FullText/main/research/Pre-Irreversibility_Safety_for_Advanced_AI_v1.2.txt
+Human Anchor v1.0
+https://doi.org/10.5281/zenodo.23501550
+https://github.com/lumina-30/Lumi30-FullText/blob/main/research/Human_Anchor_A_Cross_Layer_Authority_Invariant_for_Many_Agent_AI_Systems_v1.0.txt
+https://raw.githubusercontent.com/lumina-30/Lumi30-FullText/main/research/Human_Anchor_A_Cross_Layer_Authority_Invariant_for_Many_Agent_AI_Systems_v1.0.txt
+PDF mirrors / PDFミラー：https://github.com/lumina-30/Lumi30-PDF-Archive
+
+RESEARCH GUIDE PAGES
 https://lumina-30.github.io/lumina-30-overview/research/pcrc.html
 https://lumina-30.github.io/lumina-30-overview/research/objective-persistence.html
 https://lumina-30.github.io/lumina-30-overview/research/the-refusal-option.html
 https://lumina-30.github.io/lumina-30-overview/research/pre-irreversibility-safety.html
-
-BOUNDARY / CANONICAL:
+https://lumina-30.github.io/lumina-30-overview/adoption/human-anchor/index.html
+BOUNDARY / CANON
 https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel.html
 https://lumina-30.github.io/LUMINA-30/
-
-IMPLEMENTATION / EVIDENCE:
-Entry pages:
+IMPLEMENTATION / EVIDENCE
 https://lumina-30.github.io/lumina-30-overview/tools/pre-incident-boundary-review/en/one-question-pilot.html
-https://lumina-30.github.io/lumina30-incident-review/
-https://lumina-30.github.io/lumina-30-overview/adoption/EN_L30_EVIDENCE_REQUIREMENTS.html
-
-Required subordinate materials:
 https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-incident-boundary-review/en/current/ONE_QUESTION_PILOT_RUNBOOK_EN.md
 https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-incident-boundary-review/en/README.md
+https://lumina-30.github.io/lumina30-incident-review/
 https://github.com/lumina-30/lumina30-incident-review/blob/main/FIRST_3_FILES.md
 https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Irreversibility_Decision_Criteria.md
 https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/LUMINA-30_Boundary_Check.md
 https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Incident_Quick_Assessment_Template.md
 https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Boundary_Check_Result_Classification.md
-
-LIMITATIONS / OPEN QUESTIONS:
+https://lumina-30.github.io/lumina-30-overview/adoption/EN_L30_EVIDENCE_REQUIREMENTS.html
+ATLAS
+https://lumina-30.github.io/lumina-30-overview/tools/irreversibility-boundary-casebook/en/current/L30_Irreversibility_Boundary_Atlas_EN.html
+https://github.com/lumina-30/lumina-30-overview/blob/main/tools/irreversibility-boundary-casebook/en/current/L30_Irreversibility_Boundary_Atlas_EN.md
+LIMITATIONS / OPEN QUESTIONS
 https://lumina-30.github.io/lumina30-wiki/related-work-and-prior-art.html
 https://lumina-30.github.io/lumina-30-overview/research/open-research-questions.html
 https://lumina-30.github.io/lumina-30-overview/research/worked-cases.html
-
-SUPPLEMENTARY:
+OFFICIAL arXiv RULES
+https://info.arxiv.org/help/endorsement.html
+https://info.arxiv.org/help/submit/index.html
+https://arxiv.org/category_taxonomy
+SUPPLEMENTARY
 https://lumina-30.github.io/Lumi30-Index/qa.html</pre></details>
     <nav class="links" aria-label="Related pages"><a href="lumi-menu-en.html">Back to LUMI MENU</a><a href="index.html">Index</a></nav>
     <p class="disclaimer">This AI-assisted review is not certification, approval, or a safety guarantee.</p>

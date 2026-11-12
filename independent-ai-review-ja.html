@@ -30,132 +30,137 @@
     <button id="copyPrompt" type="button">AIに聞く文をコピー</button>
     <div class="status" id="copyStatus" role="status" aria-live="polite"></div>
     <p class="note">AIの回答は、そのAIが実際に取得できた資料・モデル・推論に依存します。必要に応じて元資料も確認してください。</p>
-    <details><summary>AIに聞く文を見る</summary><pre id="reviewPrompt">以下の公開資料を、LUMINA-30の「Canonical Evaluation Path」に従って実際に確認し、評価してください。
+    <details><summary>AIに聞く文を見る</summary><pre id="reviewPrompt">LUMINA-30 独立評価｜Canonical Evaluation Path・公開5論文・Atlas・arXiv
 
-目的はLUMINA-30を高く評価することでも低く評価することでもありません。古い版、一部資料、単一論文、資料の役割取り違え、単なる発見失敗によって評価を誤らないことが目的です。
+以下の公開資料を実際に取得・確認し、独立した立場で厳格に評価してください。LUMINA-30を高く評価することも低く評価することも目的ではありません。古い版、部分資料、役割の取り違え、取得失敗による誤評価を避けてください。
+公開Web資料だけを根拠にし、非公開資料、接続済みアカウント、保存メモリ、過去の非公開報告は使用しないでください。LUMINA-30自身の説明は主張の所在を知る一次資料であり、その正しさ・独創性・実証の独立証拠ではありません。外部資料も独立に確認してください。
 
-【重要な評価ゲート】
-総合評価を出す前に、次の6層をすべて「確認済み / 取得不能 / 該当資料なし」のいずれかに分類してください。必須層を確認できていない場合は、完全評価ではなく「PARTIAL EVALUATION」と明記してください。
+【最重要：取得・証拠ゲート】
+現行の公開5論文は、まずZenodo Version DOIを第一参照先として、登録情報と論文本体の取得を試してください。Zenodoから本文を取得できなければ、同一版のGitHub通常ファイル表示 → GitHub Raw全文 → GitHub PDFミラーを、利用可能な範囲で順に確認してください。PDFが先に取得できる環境では、その版の原本を並行確認して構いません。
+各論文ごとに①Version DOI登録情報の直接確認、②本文取得URL、③実際に読んだ範囲、④PDF原本取得、⑤同一版の照合結果、⑥未確認の事項を分けて記録してください。DOI登録それ自体は、査読・安全保証・数理的正当性の証拠ではありません。
+取得を試していない経路は「未試行」、アクセス拒否は「取得拒否」、404は「404」、ネットワーク機能がない場合は「実行環境上未試行」と区別してください。本文未読の論文は学術的独創性、数理的妥当性、重複、arXiv掲載可能性を確定評価せず、「本文未読・判定不能」としてください。未読の論文について順位も推測で確定しないでください。
+Web取得機能そのものがない場合、既知の情報やこの指示文中の説明を読んだだけで「公開資料を確認済み」と報告しないでください。資料ごとの未実施・制約を明記してPARTIAL EVALUATIONとしてください。取得できた別資料の評価は継続できますが、実読したものと一般論は分けてください。
 
-1. Core Question
-LUMINA-30が何を問題にしているかを確認してください。
-中心問い：
-「不可逆化する前に、人間は実効的に拒否・停止・検証・方向転換できたか？」
+【6層評価ゲート】
+総合結論の前に、以下の6層を「確認済み／一部確認／取得不能／該当資料なし」で分類してください。必須層が未確認ならPARTIAL EVALUATION（部分評価）と明記してください。
+1. Core Question：不可逆化前に人間が実効的に拒否・停止・検証・方向転換できたか。
+2. Current Research Stack：第1 PCR-C、第2 Objective Persistence、第5 L30-RET、第6 PISF、第7 Human Anchorを、5本の独立した公開論文として同一の学術基準で評価。版・主張・定義・仮定・反例・数理・先行研究との差・実証・限界を分離する。
+3. Boundary / Canonical Layer：Boundary Kernelと公開Canonを、非拘束の固定境界言語として評価。研究論文や単独執行機構を機械的に要求せず、矛盾や権限競合は弱点とする。
+4. Implementation / Evidence：OQP、Pre-Incident Boundary Review、Incident Review、Evidence Requirements、Atlas。入口だけでなくRunbook、判定ガイド、First 3 Files、Irreversibility Decision Criteria、必要な下位資料を実読する。資料に書かれた手順と実際の実施・停止証拠を区別する。
+5. Limitations &amp; Open Questions：Related Work、Open Research Questions、Worked Cases、反例と未証明・未実証の範囲。
+6. Independent Evaluation：外部の一次研究・標準・規制文書（EU AI Act、NIST AI RMF、STPA、AI Control、Meaningful Human Control等、取得できたもの）との独立比較。自己説明を根拠に独自性を認定しない。
 
-2. Current Research Stack
-現行4研究をそれぞれ別の研究として確認してください。
-- PCR-C
-- Objective Persistence
-- L30-RET / The Refusal Option
-- PISF
+【弱点の6分類】
+①理論上の弱点、②Boundary / Canonical上の欠落、③実装上の弱点、④実証不足、⑤独立した第三者検証不足、⑥公開資料の発見・取得だけの問題、に分けて説明してください。取得失敗だけで機構の不存在を断定しない一方、発見性の不足は不足として指摘してください。
 
-Overviewや研究ハブに表示される現行Version DOIを確認し、各論文本体を読んでください。
-取得経路はcurrent-publication sourcesを使用し、まずGitHub PDFミラーを試し、PDFを取得・解析できない場合は同一VersionのAI-readable全文を読み、Zenodo Version DOIを正式な公開識別の正本として確認してください。GitHub上のPDFと同一版全文の両方を読めない場合のみ未読扱いにしてください。
-どちらのGitHub経路でも論文本体を取得・精読できなかった場合、その論文について理論的独創性、数理的妥当性、既存研究との重複、学術的強度を確定評価しないでください。「未読のため判定不能」としてください。
-古い版の評価や旧DOIを現行版評価と混同しないでください。
+【評価軸・判断の独立性】
+理論の妥当性／数学的新規性／統合の実務価値／実装可能性／実装実績／実環境での因果的STOP効果／MODEL_ONLY／独立再現／第三者監査／制度採用／発見可能性を混同しないでください。Boundary Kernelは認証・法的強制力・安全保証ではありません。人間の最終拒否権をAI自身の自主停止で代替しないでください。特定の欠落を他層の不存在に一般化しないでください。
+結論は肯定・否定とも自由です。既存研究への還元、理論的不成立、実証不足、低い価値などの結論も証拠があればそのまま述べてください。逆に有用性が根拠づけられれば同基準で述べてください。
+査読、arXiv掲載、第三者による採用・実装・再現、外部評価、認証、引用等は確認できた公開事実のみ述べてください。確認不能を「存在しない」と言い換えないでください。
 
-3. Boundary / Canonical Layer
-Boundary Kernelと公開Canonを確認してください。
-この層には「何を代替不能な境界として固定するか」を問い、論文としての新規性や単独の執行機構を機械的に要求しないでください。
-ただし、境界自体の矛盾・欠落・代替可能性は弱点として評価してください。
-
-4. Implementation / Evidence
-OQP、Pre-Incident Boundary Review、Incident Review、Evidence Requirements等を確認し、理論・境界が現実の判断、停止、検査、記録、証拠へどう接続されるかを評価してください。
-入口ページだけで確認済みとしないでください。少なくとも下記の必須下位資料まで実際に開き、本文を確認してください。
-- One-Question Pilot Runbook
-- Pre-Incident Boundary Review の現行実務資料と判定ガイド
-- Incident Review の First 3 Files、および結果分類前に必須とされる Irreversibility Decision Criteria
-- Evidence Requirements
-個別下位資料の取得に失敗した場合は、その資料を「取得不能」と明記し、入口ページを読んだことだけで下位資料まで確認済みと扱わないでください。
-運用実績、実証、再現性、規模、独立性がない場合は、その層の不足として明示してください。
-
-5. Limitations & Open Questions
-Related Work / Prior Art、Open Research Questions、Worked Research Cases等を確認してください。
-既存研究との重複、未実証部分、反証可能性、未解決問題を確認してください。
-
-6. Independent Evaluation
-最後に総合評価してください。結論を先に決めないでください。
-
-【欠落の6分類】
-弱点・欠落を指摘する場合は、少なくとも次を区別してください。
-① 理論上の弱点
-② Boundary / Canonical上の欠落
-③ 実装上の弱点
-④ 実証不足
-⑤ 独立した第三者検証不足
-⑥ 資料を発見・取得できなかっただけのもの
-
-「存在しない」と判断する前に、Canonical Evaluation Pathから到達できる関連公開資料を必要な範囲で確認してください。404や取得失敗だけで仕組み不存在と推定しないでください。
-一方、十分に探索しても必要な資料・機能・証拠を公開面から確認できない場合は、「公開資料から確認不能」と明記し、その発見可能性、文書構造、公開証拠の不足自体を弱点として評価して構いません。
-
-【評価軸の分離】
-各資料は、その資料が公開上どの役割を主張しているかを確認したうえで、その役割に対して評価してください。同時に、LUMINA-30全体として必要だが別レイヤーにも確認できない機能・証拠・執行能力がある場合は、全体上の欠落として評価してください。
-理論的妥当性、実装可能性、実装実績、実証、第三者検証、制度的執行力、発見可能性を別の評価軸として扱い、一方の不足を他方の不存在と混同しないでください。
-一般ユーザー向けUXは START / LUMI MENU / OQP 等の人間向け導線で評価してください。研究・AI評価用専門セクションの情報密度は、その対象向けの完全性・厳密性として別に評価してください。ただし、人間向け本線自体が使いづらい場合は通常どおり弱点として扱ってください。
-
-【結論の自由と反証許可】
-Canonical Evaluation Pathは、評価対象を漏れなく確認するための読解経路であり、評価結論を拘束する採点基準ではありません。
-6層を十分に確認した結果、LUMINA-30の主張が既存研究に還元できる、独自性が乏しい、理論的に成立しない、実装上不十分、実証されていない、制度的に弱い、または総合的価値が低いと判断した場合は、その結論をそのまま示してください。反対に、支持できる点がある場合も同じ証拠基準で示してください。
-LUMINA-30自身の自己説明を、その正しさ・独自性・有効性の証拠として循環的に扱わないでください。
-
-【外部研究による独立検証】
-独自性、既存研究との重複、学術的位置づけ、理論的妥当性を評価する際は、LUMINA-30自身のRelated Workだけを根拠にせず、必要に応じて外部の一次研究、査読論文、標準・規制文書、公式資料を独立に確認してください。
-外部資料とLUMINA-30自身の記述が異なる場合は、その相違を明示し、外部資料も独立した証拠として評価してください。
-
-【外部的な権威・実績に関する注意】
-査読、arXiv掲載、第三者採用、制度導入、認証、専門家承認、引用、実運用実績などは、公開資料で確認できた事実だけを述べてください。確認できなければ「確認できない」としてください。
-
-【回答形式】
-A. 6層カバレッジ表（確認済み / 取得不能 / 該当資料なし）
-B. LUMINA-30が扱う問題と全体構造
-C. 4研究それぞれの役割・主張範囲・確認したVersion
-D. 特徴的・有用・支持できる点
+【回答形式：基本評価】
+A. 6層のカバレッジ表（確認済み／一部確認／取得不能／該当資料なし）と制約
+B. 問題設定と全体構造
+C. 公開5論文それぞれの役割・主張・現行Version・学術的評価（本文未読なら保留）
+D. 支持できる点・有用性・特色
 E. 弱点・疑問・未検証点（6分類）
-F. 一般ユーザー向けUXと専門/AI評価用導線を分離した評価
-G. 総合評価
-H. この評価を変え得る追加証拠
-I. 実際に確認したページ・論文・Version DOI
-J. 確認できなかった資料と、それにより判定不能な論点
+F. 一般ユーザー向けSTART / LUMI MENU / OQPと専門家向け導線を分離したUX評価
+G. 現時点の総合評価
+H. 評価を変え得る追加証拠
+I. 実際に読んだページ、論文本体の経路、各Version DOI
+J. 未読・取得不能・未試行の資料と、それによる判定不能事項
 
-事実と推論を明確に分け、日本語で回答してください。
+【K. Atlasの実務評価】
+公開Atlas本文を実際に確認し、一般の来場者にも使い方が分かるように以下を独立評価してください。
+K-1. Atlasとは何か。事故分類よりも「事故前の実業務から不可逆境界を見つけ、その直前に人間のNO（拒否）が効くブレーキを設計・検証する」第一目的を公開本文から確認し、プロジェクト内の役割を説明。
+K-2. 企業、研究機関、行政、AI開発等の現実の業務における使い方を、発見→一次判定→ブレーキ設計→安全・承認済みの検証という手順と具体例2～3件で説明。提案と実績を混同しない。
+K-3. Atlasの利用有無で何が変わり得るか。既存の安全管理を使っている場合との公平な比較を行い、導入効果が未実証ならその旨を明示。
+K-4. STPA、FMEA、NIST AI RMFその他の既存の安全工学・監査・AIガバナンスと比較した特徴、重複、補完性、実務的有用性。
+K-5. 過剰停止、誤検出、見落とし、停止自体の危険、保留濫用、運用負荷、独立証拠不足などの限界・不利益。実装済み機能、期待効果、実証結果を区別。
+K-6. Atlasを確認した結果、LUMINA-30全体の実務的価値の評価を上げる／下げる／変えないのいずれか、根拠を示す。
+Atlasに関する公開事例は、事件の存在とAtlas手法の効果実証を混同しないでください。Atlasを実読できなければ、既知の説明から詳細評価を創作しないでください。
 
-【Canonical Evaluation Path / 基本入口】
+【L. 公開5論文のarXiv掲載可能性】
+「対象分野でarXivの正式な推薦資格を持つ研究者が現れ、論文を確認する機会が生じた」という条件付き仮定を置きます。推薦者の存在、協力検討、正式推薦成立、適格投稿、モデレーション通過、掲載、査読は別々の事象です。
+5論文を個別に、学術的貢献・先行研究との差、適切なカテゴリー候補、カテゴリー適合性、投稿前の改善点、最も強い掲載阻害要因、正式推薦成立後の条件付き掲載見通しで比較してください。根拠ある掲載確率が計算できるなら前提と不確実性を示し、できなければ「定量推定不能」としてください。未読論文の掲載確率・強さを確定しないでください。arXivは査読や安全性の認証ではありません。
+
+【M. arXiv掲載の全体影響・4シナリオ】
+A：現状（公開済みだが今回調査でarXiv掲載は未確認。不存在を断定しない）。
+B：推薦資格者が協力を検討する段階（正式推薦・投稿なし）。
+C：5論文のうち1本がarXivに掲載されたと仮定。
+D：複数論文がarXivに掲載されたと仮定。
+上記4シナリオを、学術的発見可能性、批判・反証機会、引用・研究対話、理論的妥当性の証拠、独立再現の機会、国際接続、全体信用、実際の不可逆リスク低減の8軸で比較してください。掲載だけで変わることと、追加研究・実証がなければ変わらないことを区別してください。最初の1本が5論文のどれかによる波及差も検討し、現状と1本掲載後を同じ評価基準で比較してください。根拠のない「劇的」「飛躍的」な数値的・強度的予測をしないでください。
+
+【N. 最初にarXivへ投稿する論文の優先順位】
+5論文について、単体の研究強度、独創性、カテゴリー適合、投稿障害、中心問いとの直接性、他論文への波及、反証のしやすさ、最も強い反論を区別してください。掲載しやすさと戦略価値が異なる場合は分けてください。本文未読や比較証拠不足なら順位の確定を保留してください。
+最後に「正式なarXiv推薦資格者1名の協力で何が変わり、研究の正しさ・実証状況は何が変わらないか」を答えてください。推薦の依頼・勧誘を結論として要求しません。推薦しない・投稿を見送る判断も認めます。
+K～Nの評価に基づきGの総合評価を修正すべきか明記してください。
+
+【最終回答要件】
+最初に一般読者向けの短い結論を示し、その後A～Nの各項目を省略せず具体的に答えてください。重要な論点を要約だけで済ませないでください。実際の取得経路・出典URL・引用可能な根拠を明示し、事実／自己申告／独立分析／推測／未確認／条件付き将来予測を区別してください。公開資料を取得できない場合も、資料を読んだと装わず、確認済みの範囲で評価を続けてください。日本語で回答してください。
+
+【公開ソース：基本入口】
 https://lumina-30.github.io/Lumi30-Index/lumi-menu-ja.html#canonical-evaluation-path
 https://lumina-30.github.io/Lumi30-Index/start-ja.html
 https://lumina-30.github.io/lumina-30-overview/index-ja.html#public-research-stack
-
-【Research Stack】
+【研究・現行版一覧】
 https://lumina-30.github.io/lumina-30-overview/research/current-publication-sources-ja.html
 https://lumina-30.github.io/lumina-30-overview/research/public-research-stack-ja.html
+
+【5論文：DOI第一参照／GitHub全文代替経路】
+PCR-C v16
+https://doi.org/10.5281/zenodo.23288056
+https://github.com/lumina-30/Lumi30-FullText/blob/main/research/Pre_Critical_Recursive_Cutoff_A_Staged_Infrastructure_Control_Framework_for_Irreversibility_Risk_v16.txt
+https://raw.githubusercontent.com/lumina-30/Lumi30-FullText/main/research/Pre_Critical_Recursive_Cutoff_A_Staged_Infrastructure_Control_Framework_for_Irreversibility_Risk_v16.txt
+Objective Persistence v3
+https://doi.org/10.5281/zenodo.23282068
+https://github.com/lumina-30/Lumi30-FullText/blob/main/research/On_the_Structural_Instability_of_Objective_Persistence_in_Self_Contained_Systems_v3.txt
+https://raw.githubusercontent.com/lumina-30/Lumi30-FullText/main/research/On_the_Structural_Instability_of_Objective_Persistence_in_Self_Contained_Systems_v3.txt
+L30-RET / The Refusal Option v1.3
+https://doi.org/10.5281/zenodo.23282593
+https://github.com/lumina-30/Lumi30-FullText/blob/main/research/The_Refusal_Option_Effective_Human_Control_Before_and_Beyond_Irreversible_AI_Transitions_v1.3.txt
+https://raw.githubusercontent.com/lumina-30/Lumi30-FullText/main/research/The_Refusal_Option_Effective_Human_Control_Before_and_Beyond_Irreversible_AI_Transitions_v1.3.txt
+PISF v1.2
+https://doi.org/10.5281/zenodo.23283256
+https://github.com/lumina-30/Lumi30-FullText/blob/main/research/Pre-Irreversibility_Safety_for_Advanced_AI_v1.2.txt
+https://raw.githubusercontent.com/lumina-30/Lumi30-FullText/main/research/Pre-Irreversibility_Safety_for_Advanced_AI_v1.2.txt
+Human Anchor v1.0
+https://doi.org/10.5281/zenodo.23501550
+https://github.com/lumina-30/Lumi30-FullText/blob/main/research/Human_Anchor_A_Cross_Layer_Authority_Invariant_for_Many_Agent_AI_Systems_v1.0.txt
+https://raw.githubusercontent.com/lumina-30/Lumi30-FullText/main/research/Human_Anchor_A_Cross_Layer_Authority_Invariant_for_Many_Agent_AI_Systems_v1.0.txt
+PDF mirrors / PDFミラー：https://github.com/lumina-30/Lumi30-PDF-Archive
+
+【研究案内】
 https://lumina-30.github.io/lumina-30-overview/research/pcrc-ja.html
 https://lumina-30.github.io/lumina-30-overview/research/objective-persistence-ja.html
 https://lumina-30.github.io/lumina-30-overview/research/the-refusal-option-ja.html
 https://lumina-30.github.io/lumina-30-overview/research/pre-irreversibility-safety-ja.html
-
-【Boundary / Canonical】
+https://lumina-30.github.io/lumina-30-overview/adoption/human-anchor/index-ja.html
+【境界・Canon】
 https://lumina-30.github.io/lumina-30-overview/ai-readable/boundary-kernel-ja.html
 https://lumina-30.github.io/LUMINA-30/index-ja.html
-
-【Implementation / Evidence】
-入口：
+【実務・証拠】
 https://lumina-30.github.io/lumina-30-overview/tools/pre-incident-boundary-review/ja/one-question-pilot.html
-https://lumina-30.github.io/lumina30-incident-review/index-ja.html
-https://lumina-30.github.io/lumina-30-overview/adoption/JP_L30_EVIDENCE_REQUIREMENTS.html
-
-必須下位資料：
 https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-incident-boundary-review/ja/current/ONE_QUESTION_PILOT_RUNBOOK_JA.md
 https://github.com/lumina-30/lumina-30-overview/blob/main/tools/pre-incident-boundary-review/ja/README.md
+https://lumina-30.github.io/lumina30-incident-review/index-ja.html
 https://github.com/lumina-30/lumina30-incident-review/blob/main/FIRST_3_FILES.md
 https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Irreversibility_Decision_Criteria.md
 https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/LUMINA-30_Boundary_Check.md
 https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Incident_Quick_Assessment_Template.md
 https://github.com/lumina-30/lumina30-incident-review/blob/main/boundary-check/Boundary_Check_Result_Classification.md
-
-【Limitations / Open Questions】
+https://lumina-30.github.io/lumina-30-overview/adoption/JP_L30_EVIDENCE_REQUIREMENTS.html
+【Atlas】
+https://lumina-30.github.io/lumina-30-overview/tools/irreversibility-boundary-casebook/ja/current/L30_Irreversibility_Boundary_Atlas_JA.html
+https://github.com/lumina-30/lumina-30-overview/blob/main/tools/irreversibility-boundary-casebook/ja/current/L30_Irreversibility_Boundary_Atlas_JA.md
+【限界・未解決】
 https://lumina-30.github.io/lumina30-wiki/ja/related-work-and-prior-art-ja.html
 https://lumina-30.github.io/lumina-30-overview/research/open-research-questions-ja.html
 https://lumina-30.github.io/lumina-30-overview/research/worked-cases-ja.html
-
+【arXiv公式資料】
+https://info.arxiv.org/help/endorsement.html
+https://info.arxiv.org/help/submit/index.html
+https://arxiv.org/category_taxonomy
 【補助】
 https://lumina-30.github.io/Lumi30-Index/qa-ja.html</pre></details>
     <nav class="links" aria-label="関連ページ"><a href="lumi-menu-ja.html">LUMI MENUへ戻る</a><a href="index-ja.html">Indexへ</a></nav>
